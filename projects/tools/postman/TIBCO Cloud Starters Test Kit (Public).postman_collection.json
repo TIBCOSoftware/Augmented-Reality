@@ -1,0 +1,684 @@
+{
+	"info": {
+		"_postman_id": "5d794ead-b8ae-4270-84d6-8bc75958d4fb",
+		"name": "TIBCO Cloud Starters Test Kit (Public)",
+		"description": "Publicaly available Postman Project on GitHub and part of \nTIBCO Cloud Starters Development Kit Docs Website. ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Get Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "79cb71f2-e9de-42f0-874b-2bd3566a9f9b",
+								"exec": [
+									"// set access token for TIBCO Cloud - Environment Username",
+									"",
+									"var jsonData = JSON.parse(responseBody)",
+									"pm.environment.set(\"access_token\", jsonData.access_token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "ropc_ipass",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sso-ext.tibco.com/as/token.oauth2",
+							"protocol": "https",
+							"host": [
+								"sso-ext",
+								"tibco",
+								"com"
+							],
+							"path": [
+								"as",
+								"token.oauth2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login OAuth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c422505b-84f2-426c-9b98-556fd2324b73",
+								"exec": [
+									"// clean new Postman function to extract Cookies for TSC and Domain",
+									"",
+									"var tsc = postman.getResponseCookie(\"tsc\");",
+									"var tscDecoded = decodeURIComponent(tsc.value);",
+									"",
+									"var domain = postman.getResponseCookie(\"domain\")",
+									"var decodedDomain = decodeURIComponent(domain.value)",
+									"",
+									"var allCloudCookie = \"tsc:\"+ tscDecoded + \";domain:\" + decodedDomain",
+									"",
+									"console.log(\"allCloudCookie : \" + allCloudCookie)",
+									"postman.setEnvironmentVariable(\"cloud_cookie\", allCloudCookie)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:8888"
+							},
+							{
+								"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+								"value": "2C2DCF4A6D4B961E99C5A4891AABFBF3"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Referer",
+								"value": "http://localhost:8888/apps/starter-login/index.html"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7"
+							},
+							{
+								"key": "Cookie",
+								"value": "_ga=GA1.1.1353138671.1523028947; _biz_uid=0549a2d0220a41d29ac3b4989f9ee0cf; _mkto_trk=id:221-BCQ-142&token:_mch-localhost-1523028947449-32513; _biz_flagsA=%7B%22Version%22%3A1%2C%22Mkto%22%3A%221%22%7D; _biz_EventA=%5B-1790454116%5D; Webstorm-5538b32f=dea33229-562a-46b3-808b-9bda3ac6f882; _gid=GA1.1.2078193170.1527503044; _biz_nA=864; _biz_pendingA=%5B%5D; _ga=GA1.1.1353138671.1523028947; _biz_uid=0549a2d0220a41d29ac3b4989f9ee0cf; _mkto_trk=id:221-BCQ-142&token:_mch-localhost-1523028947449-32513; _biz_flagsA=%7B%22Version%22%3A1%2C%22Mkto%22%3A%221%22%7D; _biz_EventA=%5B-1790454116%5D; Webstorm-5538b32f=dea33229-562a-46b3-808b-9bda3ac6f882; _gid=GA1.1.2078193170.1527503044; _biz_nA=864; _biz_pendingA=%5B%5D"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "AccessToken",
+									"value": "{{access_token}}"
+								},
+								{
+									"key": "TenantId",
+									"value": "bpm"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://liveapps.{{tenant}}/idm/v1/login-oauth",
+							"protocol": "https",
+							"host": [
+								"liveapps",
+								"{{tenant}}"
+							],
+							"path": [
+								"idm",
+								"v1",
+								"login-oauth"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6c45a177-0de1-4f9b-bd26-46e4f93c0481",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6ce47eda-afff-4065-8fce-2d00d54db763",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "WRP",
+			"item": [
+				{
+					"name": "Deploy PP",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c0770c2b-428f-4664-bb0f-d25b4c6f200f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{cloud_cookie}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "appContents",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "appName",
+									"value": "{{appName}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{tenant}}/webresource/v1/applications/{{appName}}/upload/",
+							"protocol": "https",
+							"host": [
+								"{{tenant}}"
+							],
+							"path": [
+								"webresource",
+								"v1",
+								"applications",
+								"{{appName}}",
+								"upload",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Upload a Web Application ZIP to TIBCO Cloud Web Resource Provisioning",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b34f984a-6ecf-469d-9246-a4ad79d7a470",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "21a677b6-1fdf-4416-a5a7-ef5bf22cb777",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Share State Configurator",
+			"item": [
+				{
+					"name": "Create Shared State",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "{{cloud_cookie}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{appName}}.client.context.PUBLIC\",\n    \"content\": {\n        \"json\": \"{\\\"customProperties\\\":{\\\"{{appName}}\\\":{\\\"configuration\\\": {\\\"customAttribute\\\": \\\"value\\\"} }}}\"\n    },\n    \"type\": \"PUBLIC\",\n    \"roles\": [{\n    \t\"entityId\": \"custSharedAppConfig\",\n    \t\"role\": \"OWNER\"}\n    ]\n}\n\n"
+						},
+						"url": {
+							"raw": "https://liveapps.{{tenant}}//clientstate/v1/states",
+							"protocol": "https",
+							"host": [
+								"liveapps",
+								"{{tenant}}"
+							],
+							"path": [
+								"",
+								"clientstate",
+								"v1",
+								"states"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Share Liveapp Application (private API)",
+			"item": [
+				{
+					"name": "Get Token (optional if you share from your Account)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "79cb71f2-e9de-42f0-874b-2bd3566a9f9b",
+								"exec": [
+									"// set access token for TIBCO Cloud - Share fromEmail",
+									"",
+									"var jsonData = JSON.parse(responseBody)",
+									"pm.environment.set(\"access_token\", jsonData.access_token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{fromEmail}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{fromPassword}}",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "ropc_ipass",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sso-ext.tibco.com/as/token.oauth2",
+							"protocol": "https",
+							"host": [
+								"sso-ext",
+								"tibco",
+								"com"
+							],
+							"path": [
+								"as",
+								"token.oauth2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login OAuth (optional if you share from your Account)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c422505b-84f2-426c-9b98-556fd2324b73",
+								"exec": [
+									"// clean new Postman function to extract Cookies for TSC and Domain",
+									"",
+									"var tsc = postman.getResponseCookie(\"tsc\");",
+									"var tscDecoded = decodeURIComponent(tsc.value);",
+									"",
+									"var domain = postman.getResponseCookie(\"domain\")",
+									"var decodedDomain = decodeURIComponent(domain.value)",
+									"",
+									"var allCloudCookie = \"tsc:\"+ tscDecoded + \";domain:\" + decodedDomain",
+									"",
+									"console.log(\"allCloudCookie : \" + allCloudCookie)",
+									"postman.setEnvironmentVariable(\"cloud_cookie\", allCloudCookie)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:8888"
+							},
+							{
+								"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+								"value": "2C2DCF4A6D4B961E99C5A4891AABFBF3"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Referer",
+								"value": "http://localhost:8888/apps/starter-login/index.html"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7"
+							},
+							{
+								"key": "Cookie",
+								"value": "_ga=GA1.1.1353138671.1523028947; _biz_uid=0549a2d0220a41d29ac3b4989f9ee0cf; _mkto_trk=id:221-BCQ-142&token:_mch-localhost-1523028947449-32513; _biz_flagsA=%7B%22Version%22%3A1%2C%22Mkto%22%3A%221%22%7D; _biz_EventA=%5B-1790454116%5D; Webstorm-5538b32f=dea33229-562a-46b3-808b-9bda3ac6f882; _gid=GA1.1.2078193170.1527503044; _biz_nA=864; _biz_pendingA=%5B%5D; _ga=GA1.1.1353138671.1523028947; _biz_uid=0549a2d0220a41d29ac3b4989f9ee0cf; _mkto_trk=id:221-BCQ-142&token:_mch-localhost-1523028947449-32513; _biz_flagsA=%7B%22Version%22%3A1%2C%22Mkto%22%3A%221%22%7D; _biz_EventA=%5B-1790454116%5D; Webstorm-5538b32f=dea33229-562a-46b3-808b-9bda3ac6f882; _gid=GA1.1.2078193170.1527503044; _biz_nA=864; _biz_pendingA=%5B%5D"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "AccessToken",
+									"value": "{{access_token}}"
+								},
+								{
+									"key": "TenantId",
+									"value": "bpm"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://liveapps.{{tenant}}/idm/v1/login-oauth",
+							"protocol": "https",
+							"host": [
+								"liveapps",
+								"{{tenant}}"
+							],
+							"path": [
+								"idm",
+								"v1",
+								"login-oauth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Applications",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d968133e-a3c6-47a3-9fd1-3ecc283dc1f8",
+								"exec": [
+									"// gets AppID for the App defined in Postman Collection Variables: ",
+									"// - shareApplicationName ",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"jsonData.forEach(function(app){",
+									"    console.log(\"App.id \" + app.id);",
+									"    console.log(\"App.Name \" + app.name);",
+									"    console.log(\"appName \" + pm.variables.get(\"shareApplicationName\"));",
+									"    if (app.name == pm.variables.get(\"shareApplicationName\")) {",
+									"        pm.environment.set(\"sharedAppID\", app.latestVersionId);",
+									"        console.log(\"App ID for \" + pm.variables.get(\"shareApplicationName\") + \" to share is \" + pm.environment.get(\"sharedAppID\"));",
+									"    }",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "{{cloud_cookie}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://liveapps.{{tenant}}/design/applications",
+							"protocol": "https",
+							"host": [
+								"liveapps",
+								"{{tenant}}"
+							],
+							"path": [
+								"design",
+								"applications"
+							]
+						},
+						"description": "setOrganisation"
+					},
+					"response": []
+				},
+				{
+					"name": "Share Application",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6f018524-28f5-462f-be18-839950807756",
+								"exec": [
+									"// Share App with AppID from call before",
+									"",
+									"// App is shared with the User EMail defined in the Collection Variables with",
+									"// - toEmail",
+									"",
+									"pm.environment.set(\"sharedAppID\", responseBody)",
+									"console.log(\"SharedAppID: \" + pm.environment.get(\"sharedAppID\"))"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "{{cloud_cookie}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"string\",\n  \"disableEmailNotification\": true,\n  \"recipients\": [ \"{{toEmail}}\" ]\n}"
+						},
+						"url": {
+							"raw": "https://liveapps.{{tenant}}/design/v1/applicationVersions/{{sharedAppID}}/applicationShare",
+							"protocol": "https",
+							"host": [
+								"liveapps",
+								"{{tenant}}"
+							],
+							"path": [
+								"design",
+								"v1",
+								"applicationVersions",
+								"{{sharedAppID}}",
+								"applicationShare"
+							]
+						},
+						"description": "setOrganisation"
+					},
+					"response": []
+				}
+			],
+			"description": "In case you perform the Optional Login\nApp is shared from the User defined in the Collection Variables as with\n - fromEmail\n - fromPassword\n\nto the User defined in the  Collection Variables\n - toEMail\n\nThis allows you to share an App from your Account with anyone else,\nor share from an Account where you know the Credentials.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "46bf6eca-9786-4ccb-bb4a-9d2b24ec9af9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "97cdeea0-a0c4-4004-8381-5b15404f86ef",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b544086d-8c32-4767-8ead-f115aa615cd9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6e60a75e-cce7-4053-801a-998a6bd16af5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "25801470-8406-4744-9997-ea5ae4f56bc4",
+			"key": "appName",
+			"value": "<your Appname>",
+			"type": "string"
+		},
+		{
+			"id": "dbcaeb50-5a80-4997-8f21-256bba5e579a",
+			"key": "shareApplicationName",
+			"value": "<your Appname to share>",
+			"type": "string"
+		},
+		{
+			"id": "cda5f60a-faa2-404e-aca3-d2553c2e0ee9",
+			"key": "fromEmail",
+			"value": "<from User Email>",
+			"type": "string"
+		},
+		{
+			"id": "dadb0cba-94d0-4ddc-9421-9e11a1c62e56",
+			"key": "fromPassword",
+			"value": "<from User Password>",
+			"type": "string"
+		},
+		{
+			"id": "d81dd933-b21b-4d00-9462-e3198fab07d1",
+			"key": "toEmail",
+			"value": "<from User Email>",
+			"type": "string"
+		}
+	]
+}
