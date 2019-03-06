@@ -1,8 +1,8 @@
 {
 	"info": {
 		"_postman_id": "5d794ead-b8ae-4270-84d6-8bc75958d4fb",
-		"name": "TIBCO Cloud Starters Test Kit (Public)",
-		"description": "Publicaly available Postman Project on GitHub and part of \nTIBCO Cloud Starters Development Kit Docs Website. ",
+		"name": "TIBCO Cloud Starters API Kit (Public)",
+		"description": "Publicaly available Postman Project on GitHub and part of \nTIBCO Cloud Starters Toolkit Docs Website. ",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
