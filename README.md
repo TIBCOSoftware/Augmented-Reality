@@ -1,6 +1,6 @@
-# TIBCO Cloud APIKit Repo
+# TIBCO Cloud™ API Kit Repo
 
-Allows quick and easy usage and testing TIBCO Cloud API's e.g. with 
+Allows quick and easy usage and testing of TIBCO Cloud™ API's e.g. with 
 
 - Postman Artefacts
 - SOAPUI Artefacts (planed)
