@@ -14,11 +14,13 @@ Sample Postman Environment Configuration for TIBCO Cloud Oregon.
 common Operation within this Postman Collection
 
 - Get TIBCO Cloud Access Token
-- Login to TIBCO Cloud LiveApps
+- Login to TIBCO Cloud LiveApps, V1,V2,V3
 - List available Application in TIBCO Cloud LiveApps
 - provision a App Zip to TIBCO Cloud LiveApps Web Resource Provisioning
 - set new Shared State for TIBCO Cloud LiveApps
 - send sharing Link of an TIBCO Cloud LiveApps Application
+
+> Recommended is to use Login V3, as this supports a Login with just one Request.
 
 #### ZIP
 Just Import this [PostmanJSON-V1.1.zip](PostmanJSON-V1.1.zip) into your Postman Workspace.
