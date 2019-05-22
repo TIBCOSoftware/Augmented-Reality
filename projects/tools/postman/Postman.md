@@ -21,6 +21,6 @@ common Operation within this Postman Collection
 - send sharing Link of an TIBCO Cloud LiveApps Application
 
 #### ZIP
-Just Import this [PostmanJSON-V1.0.zip](PostmanJSON-V1.0.zip) into your Postman Workspace.
+Just Import this [PostmanJSON-V1.1.zip](PostmanJSON-V1.1.zip) into your Postman Workspace.
 
 > can be quickly imported into any Postman using drag'n drop.
