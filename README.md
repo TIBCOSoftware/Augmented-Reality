@@ -1,8 +1,14 @@
-# TIBCO Cloud™ API Kit Repo
+# TIBCO LABS™ Augmented Reality Repo
 
-Allows quick and easy usage and testing of TIBCO Cloud™ API's e.g. with 
+Connect Enterprise Data and take actions is everything in future Augmented Reality Implementations.
+This packages allows quick and easy usage of TIBCO Product Offerings via Augmented Reality. <br>
 
-- Postman Artefacts
-- SOAPUI Artefacts (planed)
+All reusable Components implemented for Unity3D, to be used with Google Android or Microsoft Hololens v2. 
 
-> Part of [TIBCO Cloud™ Starters Toolkit](https://tibcosoftware.github.io/TCSToolkit/)
+- [Getting Started](docs/Getting-Started.md)
+
+> more Details about this Initiative here [TIBCO LABS™ - Augmented Reality Wiki](https://community.tibco.com/wiki/tibco-labstm-augmented-reality-wiki)
+
+# License
+Copyright © 2020. TIBCO Software Inc.
+This file is subject to the license terms contained in the license file that is distributed with this file.
