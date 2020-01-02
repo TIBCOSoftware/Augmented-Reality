@@ -10,5 +10,5 @@ All reusable Components implemented for Unity3D, to be used with Google Android 
 > more Details about this Initiative here [TIBCO LABS™ - Augmented Reality Wiki](https://community.tibco.com/wiki/tibco-labstm-augmented-reality-wiki)
 
 # License
-Copyright © 2020. TIBCO Software Inc.
+Copyright © 2020. TIBCO Software Inc.<br>
 This file is subject to the license terms contained in the license file that is distributed with this file.
