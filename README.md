@@ -1,7 +1,7 @@
 # TIBCO LABS™ Augmented Reality Repo
 
 Connect Enterprise Data and take actions is everything in future Augmented Reality Implementations.
-This packages allows quick and easy usage of TIBCO Product Offerings via Augmented Reality. <br>
+This packages allows quick and easy usage of TIBCO Product Offerings via Augmented Reality.<br>
 
 All reusable Components implemented for Unity3D, to be used with Google Android or Microsoft Hololens v2. 
 

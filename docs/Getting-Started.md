@@ -10,4 +10,4 @@ the following packages are available for download:
 - TIBCO Cloud™ Messaging Implementation
 - <i>more soon</i>
 
-> Note: we are under constant development, so have a look here from time to time to check for updates.
+> Note: We are under constant development, so have a look here from time to time to check for updates.
