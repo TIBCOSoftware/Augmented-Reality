@@ -1,0 +1,1377 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TIBCO.EFTL</name>
+    </assembly>
+    <members>
+        <member name="M:TIBCO.EFTL.WebSocketConnection.ForceDisconnect">
+            Force the client to disconnect bypassing all eFTL and WebSocket 
+            protocols. This method primarily exists for testing various 
+            reconnect scenarios.
+        </member>
+        <member name="T:TIBCO.EFTL.DurableType">
+            <summary>
+            Durable subscription types.
+            </summary>
+        </member>
+        <member name="F:TIBCO.EFTL.DurableType.SHARED">
+            <summary>
+            Shared durable type.
+            </summary>
+            <description>
+            Multiple cooperating subscribers can use the same shared durable
+            to each receive a portion of the subscription's messages.
+            </description>
+            <seealso cref="F:TIBCO.EFTL.EFTL.PROPERTY_DURABLE_TYPE"/>
+        </member>
+        <member name="F:TIBCO.EFTL.DurableType.LAST_VALUE">
+            <summary>
+            Last-value durable type.
+            </summary>
+            <description>
+            A last-value durable subscription stores only the most recent message
+            for each unique value of the <see cref="F:TIBCO.EFTL.EFTL.PROPERTY_DURABLE_KEY"/>.
+            </description>
+        </member>
+        <member name="T:TIBCO.EFTL.SubscriptionConstants">
+            <summary>
+            Subscription errors.
+            </summary>
+            <description>
+            <see cref="M:TIBCO.EFTL.ISubscriptionListener.OnError(System.String,System.Int32,System.String)"/>
+            returns these constants.
+            </description>
+        </member>
+        <member name="F:TIBCO.EFTL.SubscriptionConstants.SUBSCRIPTIONS_DISALLOWED">
+            
+             The administrator has disallowed the user from subscribing for
+             one-to-many messages.
+        </member>
+        <member name="F:TIBCO.EFTL.SubscriptionConstants.SUBSCRIPTION_FAILED">
+            
+            The eFTL server could not establish the subscription.
+            <p>
+            To determine the root cause, examine the server log.
+            </p>
+            <p>
+            You may attempt to subscribe again.
+            </p>
+        </member>
+        <member name="F:TIBCO.EFTL.SubscriptionConstants.SUBSCRIPTION_INVALID">
+            
+             The client supplied an invalid matcher or durable name in
+             the subscribe call.
+            
+        </member>
+        <member name="T:TIBCO.EFTL.MessageConstants">
+            <summary>
+            Message constants.
+            </summary>
+            <description>
+            Defines specific constants that can be used with eFTL messages.
+            </description>
+        </member>
+        <member name="F:TIBCO.EFTL.MessageConstants.FIELD_NAME_DESTINATION">
+            Message field name identifying the destination
+            of a message.
+            <p>
+            To publish a message on a specific destination include this
+            message field using <see cref="M:TIBCO.EFTL.IMessage.SetString(System.String,System.String)"/>.
+            </p>
+            <p>
+            To subscribe to messages published on a specific destination,
+            use a matcher that includes this message field name.
+            </p>
+        </member>
+        <member name="T:TIBCO.EFTL.FieldType">
+            <summary>
+            Message field types.
+            </summary>
+            <description>
+            Enumerates the legal types for eFTL message fields.
+            </description>
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.UNKNOWN">
+            Unknown field 
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.STRING">
+            String field.
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.LONG">
+            Long field.
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.DOUBLE">
+            Double field.
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.DATE">
+            Date field.
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.MESSAGE">
+            Sub-message field.
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.OPAQUE">
+            Opaque field.
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.STRING_ARRAY">
+            String array field.
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.LONG_ARRAY">
+            Long array field.
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.DOUBLE_ARRAY">
+            Double array field.
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.DATE_ARRAY">
+            Date array field
+        </member>
+        <member name="F:TIBCO.EFTL.FieldType.MESSAGE_ARRAY">
+            Message array field.
+        </member>
+        <member name="T:TIBCO.EFTL.ConnectionListenerConstants">
+            <summary>
+            Connection errors.
+            </summary>
+            <description>
+            <see cref="M:TIBCO.EFTL.IConnectionListener.OnError(TIBCO.EFTL.IConnection,System.Int32,System.String)"/>
+            returns these constants.
+            </description>
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.NORMAL">
+            Normal close.
+            <p>
+            Your program closed the connection by calling 
+            <see cref="M:TIBCO.EFTL.IConnection.Disconnect"/>.
+            You may now proceed with clean-up.
+            </p>
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.SHUTDOWN">
+            The server shut down the connection.
+            <p>
+            Programs may wait, then attempt to reconnect.
+            </p>
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.PROTOCOL">
+            Protocol error.  Please report this error to %TIBCO.
+            <p>
+            Programs may wait, then attempt to connect again.
+            </p>
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.BAD_DATA">
+             Invalid message from server.  Please report this error to %TIBCO.
+            
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.CONNECTION_ERROR">
+             Connection error.
+             <p>
+             Programs may attempt to reconnect.
+             </p>
+            
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.BAD_PAYLOAD">
+            Invalid network data.  Please report this error to %TIBCO.
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.POLICY_VIOLATION">
+             Policy violation. Please report this error to %TIBCO.
+            
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.MESSAGE_TOO_LARGE">
+            Message too large.
+            <p>
+            The eFTL server closed the connection because your program sent
+            a message that exceeds the server's limit.  (Administrators
+            configure this limit; the default limit is 32 kilobytes.)
+             </p>
+            <p>
+            You may attempt to reconnect.
+            </p>
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.SERVER_ERROR">
+             eFTL server error.  Please report this error to %TIBCO.
+            
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.FAILED_TLS_HANDSHAKE">
+            SSL handshake failed.
+            <p>
+            The client could not establish a secure connection to the eFTL
+            server.
+            </p>
+            <p>
+            Possible diagnoses:
+            </p>
+            <ul>
+              <li> Client rejected server certificate. </li>
+              <li> Encryption protocols do not match. </li>
+            </ul>
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.FORCE_CLOSE">
+            Force close.
+            <p>
+            The eFTL server closed the connection because another client with
+            the same client identifier has connected.
+            </p>
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.NOT_AUTHENTICATED">
+            Not authenticated.
+            <p>
+            The eFTL server could not authenticate the client's username and
+            password.
+            </p>
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.BAD_SUBSCRIPTION_ID">
+            Bad subscription identifier.
+            <p>
+            Invalid subscription ID in an unsubscribe call.
+            </p>
+        </member>
+        <member name="F:TIBCO.EFTL.ConnectionListenerConstants.SEND_DISALLOWED">
+            The server does not allow this user to publish messages.
+            <p>
+            Administrators configure permission to publish.
+            </p>
+        </member>
+        <member name="T:TIBCO.EFTL.CompletionListenerConstants">
+            <summary>
+            Completion errors.
+            </summary>
+            <description>
+            <see cref="M:TIBCO.EFTL.ICompletionListener.OnError(TIBCO.EFTL.IMessage,System.Int32,System.String)"/>
+            returns these constants.
+            </description>
+        </member>
+        <member name="F:TIBCO.EFTL.CompletionListenerConstants.PUBLISH_FAILED">
+             The server failed to forward the published message.
+             <p>
+             To determine the root cause, examine the server log.
+             </p>
+             <p>
+             You may attempt to publish again.
+             </p>
+            
+        </member>
+        <member name="F:TIBCO.EFTL.CompletionListenerConstants.PUBLISH_DISALLOWED">
+            The server does not allow this user to publish messages.
+            <p>
+            Administrators configure permission to publish.
+            </p>
+        </member>
+        <member name="T:TIBCO.EFTL.IConnection">
+             <summary>
+             A connection object represents a program's connection to an eFTL
+             server.
+             </summary>
+             <description>
+             Programs use connection objects to create messages, send messages,
+             and subscribe to messages.
+             <p>
+             Programs receive connection objects through
+             <see cref="T:TIBCO.EFTL.IConnectionListener"/> callbacks.
+             </p>
+             </description>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.GetClientId">
+            <summary>
+            Gets the client identifier for this connection.
+            </summary>
+            <description>
+            See <see cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/>.
+            </description>
+            <returns>
+            The client's identifier.
+            </returns>
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.Reconnect(System.Collections.Hashtable)">
+             <summary>
+             Reopen a closed connection. </summary>
+             <description>
+             <p>
+             You may call this method within your
+             <see cref="M:TIBCO.EFTL.IConnectionListener.OnDisconnect(TIBCO.EFTL.IConnection,System.Int32,System.String)"/> method.
+             </p>
+             <p>
+             This call returns immediately; connecting continues asynchronously.
+             When the connection is ready to use, the eFTL library calls your
+             <see cref="M:TIBCO.EFTL.IConnectionListener.OnReconnect(TIBCO.EFTL.IConnection)"/> callback.
+             </p>
+             <p>
+             Reconnecting automatically re-activates all
+             subscriptions on the connection.
+             The eFTL library invokes your
+             <see cref="M:TIBCO.EFTL.ISubscriptionListener.OnSubscribe(System.String)"/> callback
+             for each successful resubscription.
+             </p>
+             </description>
+             
+             <param name="props"> These properties affect the connection attempt.
+             You must supply username and password credentials each time.  All 
+             other properties remain stored from earlier connect and reconnect
+             calls.  New values overwrite stored values.
+             </param>
+             <seealso cref="F:TIBCO.EFTL.EFTL.PROPERTY_CLIENT_ID"/>
+             <seealso cref="F:TIBCO.EFTL.EFTL.PROPERTY_USERNAME"/>
+             <seealso cref="F:TIBCO.EFTL.EFTL.PROPERTY_PASSWORD"/>
+             <seealso cref="F:TIBCO.EFTL.EFTL.PROPERTY_TIMEOUT"/>
+             <seealso cref="F:TIBCO.EFTL.EFTL.PROPERTY_TRUST_ALL"/>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.Disconnect">
+             <summary>
+             Disconnect from the eFTL server.
+             </summary>
+             <description>
+             <p>
+             Programs may disconnect to free server resources.
+             </p>
+             This call returns immediately; disconnecting continues
+             asynchronously.
+             When the connection has closed, the eFTL library calls your
+             <see cref="M:TIBCO.EFTL.IConnectionListener.OnDisconnect(TIBCO.EFTL.IConnection,System.Int32,System.String)"/>} callback.
+             </description>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.IsConnected">
+            <summary>
+            Determine whether this connection to the eFTL server is open or
+            closed.
+            </summary>
+            
+            <returns> <c> true </c> if this connection is open;
+            <c> false </c> otherwise.
+            </returns>
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.CreateMessage">
+            <summary>
+            Create a <see cref="T:TIBCO.EFTL.IMessage"/>.
+            </summary>
+            
+            <returns> A new message object.
+            </returns>
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.Publish(TIBCO.EFTL.IMessage)">
+             <summary>
+             Publish a one-to-many message to all subscribing clients.
+             </summary>
+             <p>
+             It is good practice to publish each message to a specific
+             destination by using the message field name
+             <see cref="F:TIBCO.EFTL.MessageConstants.FIELD_NAME_DESTINATION"/>.
+             </p>
+             <p>
+             To direct a message to a specific destination,
+             add a string field to the message; for example:
+             </p>
+             <pre>
+             message.SetString(MessageConstants.FIELD_NAME_DESTINATION, "myTopic");
+             </pre>
+            
+             <param name="message"> Publish this message.
+             </param>
+            
+             <exception cref="T:System.Exception"> The connection is not open.
+             </exception>
+             <exception cref="T:System.Exception"> The message would exceed the 
+             eFTL server's maximum message size.
+             </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.Publish(TIBCO.EFTL.IMessage,TIBCO.EFTL.ICompletionListener)">
+             <summary>
+             Publish a one-to-many message to all subscribing clients.
+             </summary>
+             <p>
+             This call returns immediately; publishing continues
+             asynchronously.  When the publish completes successfully,
+             the eFTL library calls your 
+             <see cref="M:TIBCO.EFTL.ICompletionListener.OnCompletion(TIBCO.EFTL.IMessage)"/> callback.
+             </p>
+             <p>
+             It is good practice to publish each message to a specific
+             destination by using the message field name
+             <see cref="F:TIBCO.EFTL.MessageConstants.FIELD_NAME_DESTINATION"/>.
+             </p>
+             <p>
+             To direct a message to a specific destination,
+             add a string field to the message; for example:
+             </p>
+             <pre>
+             message.SetString(MessageConstants.FIELD_NAME_DESTINATION, "myTopic");
+             </pre>
+             
+             <param name="message"> Publish this message.
+             </param>
+             <param name="listener"> This listener defines callback methods for
+                            successful completion and for errors.
+             </param>
+            
+             <exception cref="T:System.Exception"> The connection is not open.
+             </exception>
+             <exception cref="T:System.Exception"> The message would exceed the 
+             eFTL server's maximum message size.
+             </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.Subscribe(System.String,TIBCO.EFTL.ISubscriptionListener)">
+             <summary>
+             Subscribe to messages.
+             </summary>
+             <description>
+             Register a subscription for one-to-many messages.
+             <p>
+             This call returns immediately; subscribing continues
+             asynchronously.  When the subscription is
+             ready to receive messages, the eFTL library calls your 
+             <see cref="M:TIBCO.EFTL.ISubscriptionListener.OnSubscribe(System.String)"/> callback.
+             </p>
+             <p>
+             A matcher can narrow subscription interest in the inbound
+             message stream.
+             </p>
+             <p>
+             It is good practice to subscribe to
+             messages published to a specific destination
+             using the message field name
+             <see cref="F:TIBCO.EFTL.MessageConstants.FIELD_NAME_DESTINATION"/>.
+             </p>
+             <p>
+             To subscribe for messages published to a specific destination,
+             create a subscription matcher for that destination; for example:
+             <code> {"_dest":"myTopic"} </code>
+             </p>
+             </description>
+            
+             <param name="matcher">
+             The subscription uses this content matcher to
+             narrow the message stream. 
+             </param>
+             <param name="listener">
+             This listener defines callback methods for
+             successful subscription, message arrival, and errors.
+             </param>        
+             
+             <returns> An identifier that represents the new subscription.
+             </returns>
+            
+             <exception cref="T:System.Exception"> The connection is not open.
+             </exception>
+             
+             <seealso cref="T:TIBCO.EFTL.ISubscriptionListener"/>
+             <seealso cref="M:TIBCO.EFTL.IConnection.Unsubscribe(System.String)"/>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.Subscribe(System.String,System.String,TIBCO.EFTL.ISubscriptionListener)">
+            
+             Create a durable subscriber to messages.
+             <p>
+             Register a durable subscription for one-to-many messages.
+             </p>
+             <p>
+             This call returns immediately; subscribing continues
+             asynchronously.  When the subscription is
+             ready to receive messages, the eFTL library calls your 
+             <see cref="M:TIBCO.EFTL.ISubscriptionListener.OnSubscribe(System.String)"/> callback.
+             </p>
+             <p>
+             A matcher can narrow subscription interest in the inbound
+             message stream.
+             </p>
+             <p>
+             It is good practice to subscribe to
+             messages published to a specific destination
+             using the message field name
+             <see cref="F:TIBCO.EFTL.MessageConstants.FIELD_NAME_DESTINATION"/>.
+             </p>
+             <p>
+             To subscribe for messages published to a specific destination,
+             create a subscription matcher for that destination; for example:
+             <code> {"_dest":"myTopic"} </code>
+             </p>
+             
+             <param name="matcher"> The subscription uses this matcher to
+                                narrow the message stream.
+             </param>
+             <param name="durable"> The subscription uses this durable name.
+             </param>
+             <param name="listener"> This listener defines callback methods for
+                             successful subscription, message arrival and
+                             errors.
+             </param>
+            
+             <returns> An identifier that represents the new subscription.
+             </returns>
+            
+             <exception cref="T:System.Exception"> The connection is not open.
+             </exception>
+            
+             <seealso cref="T:TIBCO.EFTL.ISubscriptionListener"/>
+             <seealso cref="M:TIBCO.EFTL.IConnection.Unsubscribe(System.String)"/>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.Subscribe(System.String,System.String,System.Collections.Hashtable,TIBCO.EFTL.ISubscriptionListener)">
+             Create a durable subscriber to messages.
+             <p>
+             Register a durable subscription for one-to-many messages.
+             </p>
+             <p>
+             This call returns immediately; subscribing continues
+             asynchronously.  When the subscription is
+             ready to receive messages, the eFTL library calls your 
+             <see cref="M:TIBCO.EFTL.ISubscriptionListener.OnSubscribe(System.String)"/> callback.
+             </p>
+             <p>
+             A matcher can narrow subscription interest in the inbound
+             message stream.
+             </p>
+             
+             <param name="matcher"> The subscription uses this matcher to
+                                narrow the message stream.
+             </param>
+             <param name="durable"> The subscription uses this durable name.
+             </param>
+             <param name="props">
+             These properties can be used to affect the subscription:
+               <list type="bullet">
+                 <item> <see cref="F:TIBCO.EFTL.EFTL.PROPERTY_DURABLE_TYPE"/> </item>
+                 <item> <see cref="F:TIBCO.EFTL.EFTL.PROPERTY_DURABLE_KEY"/> </item>
+               </list>
+             </param>
+             <param name="listener"> This listener defines callback methods for
+                             successful subscription, message arrival and
+                             errors.
+             </param>
+            
+             <returns> An identifier that represents the new subscription.
+             </returns>
+            
+             <exception cref="T:System.Exception"> The connection is not open.
+             </exception>
+            
+             <seealso cref="T:TIBCO.EFTL.ISubscriptionListener"/>
+             <seealso cref="M:TIBCO.EFTL.IConnection.Unsubscribe(System.String)"/>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.Unsubscribe(System.String)">
+             <summary>
+             Close a subscription.
+             </summary>
+             <description>
+             Programs receive subscription identifiers through their
+             <see cref="M:TIBCO.EFTL.ISubscriptionListener.OnSubscribe(System.String)"/> methods.
+             </description>
+             
+             <param name="subscriptionId"> Close this subscription.
+             </param>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnection.UnsubscribeAll">
+             <summary>
+             Close all subscriptions.
+             </summary>
+             <description>
+             <see cref="M:TIBCO.EFTL.IConnection.Subscribe(System.String,TIBCO.EFTL.ISubscriptionListener)"/>
+             <see cref="M:TIBCO.EFTL.IConnection.Subscribe(System.String,System.String,TIBCO.EFTL.ISubscriptionListener)"/>
+             </description>
+            
+        </member>
+        <member name="T:TIBCO.EFTL.ISubscriptionListener">
+             <summary>
+             Subscription event handler.
+             </summary>
+             <p>
+             You must implement this interface to process inbound messages and
+             other subscription events.
+             </p>
+             <p>
+             Supply an instance when you call
+             <see cref="M:TIBCO.EFTL.IConnection.Subscribe(System.String,System.String,TIBCO.EFTL.ISubscriptionListener)"/>
+             or
+             <see cref="M:TIBCO.EFTL.IConnection.Subscribe(System.String,TIBCO.EFTL.ISubscriptionListener)"/>.
+             </p>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.ISubscriptionListener.OnMessages(TIBCO.EFTL.IMessage[])">
+             <summary>
+             Process inbound messages.
+             </summary>
+             <p>
+             The eFTL library presents inbound messages to this method for
+             processing.  You must implement this method to process the
+             messages.
+             </p>
+             <p>
+             The messages are not thread-safe.  You may access a
+             message in any thread, but in only one thread at a time.
+             </p>      
+            
+             <param name="messages"> Inbound messages. 
+             </param>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.ISubscriptionListener.OnSubscribe(System.String)">
+             <summary>
+             A new subscription is ready to receive messages.
+             </summary>
+             <p>
+             The eFTL library may invoke this method after the first
+             message arrives. 
+             </p>
+             
+             <p>
+             To close the subscription,
+             call <see cref="M:TIBCO.EFTL.IConnection.Unsubscribe(System.String)"/>
+             with this subscription identifier.
+             </p>
+            
+             <param name="subscriptionId"> This subscription is ready.
+             </param>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.ISubscriptionListener.OnError(System.String,System.Int32,System.String)">
+             <summary>
+             Process subscription errors.
+             </summary>
+             <p>
+             Possible returned codes include:
+             <list type="bullet">
+             <item><see cref="F:TIBCO.EFTL.SubscriptionConstants.SUBSCRIPTIONS_DISALLOWED"/> </item>
+             <item><see cref="F:TIBCO.EFTL.SubscriptionConstants.SUBSCRIPTION_FAILED"/> </item>
+             <item><see cref="F:TIBCO.EFTL.SubscriptionConstants.SUBSCRIPTION_INVALID"/> </item>
+             </list>
+             </p>
+             
+             <param name="subscriptionId"> eFTL could not establish this subscription.
+             </param>
+             <param name="code"> This code categorizes the error.
+                         Your program can use this value in its response logic.
+             </param>
+             <param name="reason"> This string provides more detail.  Your program
+                           can use this value in error reporting and logging. 
+             </param>
+            
+        </member>
+        <member name="T:TIBCO.EFTL.EFTL">
+            <summary>
+            Programs use class EFTL to connect to an eFTL server.
+            </summary>
+        </member>
+        <member name="F:TIBCO.EFTL.EFTL.PROPERTY_USERNAME">
+            <summary>
+            Connect as this user; property name.
+            </summary>
+            <description>
+            Programs use this property to supply a username credential to the
+            <see cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/> call if the username is not specified
+            with the URL.
+            The server authenticates the user and password.
+            </description>
+        </member>
+        <member name="F:TIBCO.EFTL.EFTL.PROPERTY_PASSWORD">
+            <summary>
+            Connect using this password; property name.
+            </summary>
+            <description>
+            Programs use this property to supply a password credential to the
+            <see cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/> call if the password is not specified
+            with the URL.
+            The server authenticates the user and password.
+            </description>
+        </member>
+        <member name="F:TIBCO.EFTL.EFTL.PROPERTY_TIMEOUT">
+             <summary>
+             Connection attempt timeout; property name.
+             </summary>
+             <description>
+             Programs use this property to supply a timeout to the
+             <see cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/> call.
+             If the client cannot connect to the server
+             within this time limit (in seconds),
+             it stops trying to connect and invokes your
+             <see cref="M:TIBCO.EFTL.IConnectionListener.OnDisconnect(TIBCO.EFTL.IConnection,System.Int32,System.String)"/> method
+             with a
+             <see cref="F:TIBCO.EFTL.ConnectionListenerConstants.CONNECTION_ERROR"/>
+             code.
+             <p>
+             If you omit this property, the default timeout is 15.0 seconds.
+             </p>
+             </description>
+            
+             <seealso cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/>
+            
+        </member>
+        <member name="F:TIBCO.EFTL.EFTL.PROPERTY_CLIENT_ID">
+             <summary>
+             Connect using this client identifier; property name.
+             </summary>
+             <description>
+             Programs use this property to supply a client identifier to the
+             <see cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/> call if the client identifier is not 
+             specified with the URL.
+             The server uses the client
+             identifier to associate a particular client with a durable
+             subscription.
+             <p>
+             If you omit this property, the server assigns a unique client
+             identifier.
+             </p>
+             </description>
+            
+        </member>
+        <member name="F:TIBCO.EFTL.EFTL.PROPERTY_TRUST_ALL">
+            <summary>
+            Trust any eFTL server certificate; property name.
+            </summary>
+            <description>
+            When present with value <c>true</c>, the client accepts any
+            eFTL server certificate. Use this setting only in development 
+            environments. It is not secure, so it is unsuitable for production 
+            environments.
+            <p>
+            When absent or <c>false</c>, the client trusts only certificates 
+            installed on the client host computer.
+            </p>
+            </description>
+        </member>
+        <member name="F:TIBCO.EFTL.EFTL.PROPERTY_AUTO_RECONNECT_ATTEMPTS">
+             <summary>
+             Autoreconnect maximum attempts; property name.
+             </summary>
+             <description>
+             Programs use this property to supply the maximum number of autoreconnect attempts to the
+             <see cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/> call.
+             If the connection is lost, the client will attempt to automatically reconnect to the server.
+             If the number of autoreconnect attempts exceeds this value,
+             it stops trying to autoreconnect and invokes your
+             <see cref="M:TIBCO.EFTL.IConnectionListener.OnDisconnect(TIBCO.EFTL.IConnection,System.Int32,System.String)"/> method
+             with a
+             <see cref="F:TIBCO.EFTL.ConnectionListenerConstants.CONNECTION_ERROR"/>
+             code.
+             <p>
+             If you omit this property, the default number of attempts is 5.
+             </p>
+             </description>
+            
+             <seealso cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/>
+            
+        </member>
+        <member name="F:TIBCO.EFTL.EFTL.PROPERTY_AUTO_RECONNECT_MAX_DELAY">
+             <summary>
+             Autoreconnect maximum delay; property name.
+             </summary>
+             <description>
+             Programs use this property to supply the maximum delay (in seconds) between autoreconnect attempts to the
+             <see cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/> call.
+             If the connection is lost, the client will attempt to automatically reconnect to the server
+             after a delay of 1 second. For each subsequent attempt, the delay is doubled, to a maximum
+             determined by this property.
+             <p>
+             If you omit this property, the default maximum delay is 30 seconds.
+             </p>
+             </description>
+            
+             <seealso cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/>
+            
+        </member>
+        <member name="F:TIBCO.EFTL.EFTL.PROPERTY_DURABLE_TYPE">
+            <summary>
+            Create a durable subscription of this type; property name.
+            </summary>
+            <description>
+            Programs use this optional property to supply a durable type to the
+            <see cref="M:TIBCO.EFTL.IConnection.Subscribe(System.String,System.String,System.Collections.Hashtable,TIBCO.EFTL.ISubscriptionListener)"/>
+            call. If not specified the default durable type will be used.
+            </description>
+            <seealso cref="F:TIBCO.EFTL.DurableType.SHARED"/>
+            <seealso cref="F:TIBCO.EFTL.DurableType.LAST_VALUE"/>
+        </member>
+        <member name="F:TIBCO.EFTL.EFTL.PROPERTY_DURABLE_KEY">
+            <summary>
+            Specify the key field of a last-value durable subscription; property name.
+            </summary>
+            <description>
+            Programs use this property to supply a key field to the
+            <see cref="M:TIBCO.EFTL.IConnection.Subscribe(System.String,System.String,System.Collections.Hashtable,TIBCO.EFTL.ISubscriptionListener)"/>
+            call when the <see cref="F:TIBCO.EFTL.EFTL.PROPERTY_DURABLE_TYPE"/> property
+            is of type <see cref="F:TIBCO.EFTL.DurableType.LAST_VALUE"/>.
+            Note that the supplied key field must be a part of the durable
+            subscription's matcher.
+            </description>
+        </member>
+        <member name="M:TIBCO.EFTL.EFTL.GetVersion">
+             <summary>
+             Get the version of the eFTL .NET client library.
+             </summary>
+             
+             <returns> The version of the eFTL .NET client library.
+             </returns>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)">
+             <summary>
+             Connect to an eFTL server.
+             </summary>
+             <description>
+             This call returns immediately; connecting continues asynchronously.
+             When the connection is ready to use, the eFTL library calls your
+             <see cref="M:TIBCO.EFTL.IConnectionListener.OnConnect(TIBCO.EFTL.IConnection)"/> method, passing an
+             <see cref="T:TIBCO.EFTL.IConnection"/> object that you can use to publish and subscribe.
+             <p>
+             A program that uses more than one server channel must connect
+             separately to each channel.
+             </p>
+            
+             <param name="url">
+             The call connects to the eFTL server at this URL.
+               The URL can be in either of these forms:
+               <list type="bullet">
+                 <item> <c> ws://host:port/channel </c> </item>
+                 <item> <c> wss://host:port/channel </c> </item>
+               </list>
+             Optionally, the URL can contain the username, password, and/or
+             client identifier:
+               <list type="bullet">
+                 <item> <c> ws://username:password@host:port/channel?clientId=&lt;identifier&gt; </c> </item>
+                 <item> <c> wss://username:password@host:port/channel?clientId=&lt;identifier&gt; </c> </item>
+               </list>
+             </param>
+             <param name="props">
+             These properties affect the connection attempt:
+               <list type="bullet">
+                 <item> <see cref="F:TIBCO.EFTL.EFTL.PROPERTY_CLIENT_ID"/> </item>
+                 <item> <see cref="F:TIBCO.EFTL.EFTL.PROPERTY_USERNAME"/> </item>
+                 <item> <see cref="F:TIBCO.EFTL.EFTL.PROPERTY_PASSWORD"/> </item>
+                 <item> <see cref="F:TIBCO.EFTL.EFTL.PROPERTY_TIMEOUT"/> </item>
+                 <item> <see cref="F:TIBCO.EFTL.EFTL.PROPERTY_TRUST_ALL"/> </item>
+               </list>
+             </param>
+             <param name="listener">
+             Connection events invoke methods of this listener. 
+             </param>
+             </description>
+            
+             <seealso cref="T:TIBCO.EFTL.IConnectionListener"/>
+            
+        </member>
+        <member name="T:TIBCO.EFTL.IConnectionListener">
+             <summary>
+             Connection event handler.
+             
+             <p>
+             You must implement this interface to process connection events.
+             </p>
+             </summary>
+             <p>
+             Supply an instance when you call
+             <see cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/>.
+              </p>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnectionListener.OnConnect(TIBCO.EFTL.IConnection)">
+             <summary>
+             A new connection to the eFTL server is ready to use.
+             </summary>
+             <p>
+             The eFTL library invokes this method only after your program calls 
+             <see cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/>
+             (and not after <see cref="M:TIBCO.EFTL.IConnection.Reconnect(System.Collections.Hashtable)"/>).
+              </p>
+             
+             <param name="connection"> This connection is ready to use. </param>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnectionListener.OnReconnect(TIBCO.EFTL.IConnection)">
+             <summary>
+             A connection to the eFTL server has re-opened and is ready to use.
+             </summary>
+             <p>
+             The eFTL library invokes this method only after your program calls 
+             <see cref="M:TIBCO.EFTL.IConnection.Reconnect(System.Collections.Hashtable)"/>
+             (and not after <see cref="M:TIBCO.EFTL.EFTL.Connect(System.String,System.Collections.Hashtable,TIBCO.EFTL.IConnectionListener)"/>).
+              </p>
+             
+             <param name="connection"> This connection is ready to use. </param>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnectionListener.OnDisconnect(TIBCO.EFTL.IConnection,System.Int32,System.String)">
+             <summary>
+             A connection to the eFTL server has closed.
+             </summary>
+             <p>
+             Possible codes include:
+             <list type="bullet">
+                <item><see cref="F:TIBCO.EFTL.ConnectionListenerConstants.NORMAL"/> </item>
+                <item><see cref="F:TIBCO.EFTL.ConnectionListenerConstants.SHUTDOWN"/> </item>
+                <item><see cref="F:TIBCO.EFTL.ConnectionListenerConstants.CONNECTION_ERROR"/> </item>
+                <item><see cref="F:TIBCO.EFTL.ConnectionListenerConstants.POLICY_VIOLATION"/> </item>
+                <item><see cref="F:TIBCO.EFTL.ConnectionListenerConstants.MESSAGE_TOO_LARGE"/> </item>
+                <item><see cref="F:TIBCO.EFTL.ConnectionListenerConstants.SERVER_ERROR"/> </item>
+                <item><see cref="F:TIBCO.EFTL.ConnectionListenerConstants.FORCE_CLOSE"/> </item>
+                <item><see cref="F:TIBCO.EFTL.ConnectionListenerConstants.NOT_AUTHENTICATED"/> </item>
+             </list>
+             </p>
+             
+             <param name="connection"> This connection has closed. 
+             </param>
+             <param name="code"> This code categorizes the condition.  Your program can
+                         use this value in its response logic.
+             </param>
+             <param name="reason"> This string provides more detail.  Your program
+                           can use this value in error reporting and
+                           logging. 
+             </param>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IConnectionListener.OnError(TIBCO.EFTL.IConnection,System.Int32,System.String)">
+            <summary>
+            An error prevented an operation.  The connection remains open.
+            </summary>
+            <p>
+            Your implementation could alert the user.
+            </p>
+            Possible codes include:
+            <list type="bullet">
+               <item><see cref="F:TIBCO.EFTL.ConnectionListenerConstants.BAD_SUBSCRIPTION_ID"/> </item>
+               <item><see cref="F:TIBCO.EFTL.ConnectionListenerConstants.SEND_DISALLOWED"/> </item>
+            </list>
+            <param name="connection"> This connection reported an error. 
+            </param>
+            <param name="code"> This code categorizes the error.  Your program can
+                        use this value in its response logic. 
+            </param>
+            <param name="reason"> This string provides more detail.  Your program
+                          can use this value in error reporting and
+                          logging. 
+            </param>
+        </member>
+        <member name="T:TIBCO.EFTL.ICompletionListener">
+             <summary>
+             Completion event handler.
+             <p>
+             Implement this interface to process completion events.
+             </p>
+             </summary>
+             Supply an instance when you call
+             <see cref="M:TIBCO.EFTL.IConnection.Publish(TIBCO.EFTL.IMessage,TIBCO.EFTL.ICompletionListener)"/>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.ICompletionListener.OnCompletion(TIBCO.EFTL.IMessage)">
+            
+             A publish operation has completed successfully.
+             
+             <param name="message"> This message has been published.
+             </param>        
+            
+        </member>
+        <member name="M:TIBCO.EFTL.ICompletionListener.OnError(TIBCO.EFTL.IMessage,System.Int32,System.String)">
+            
+             A publish operation resulted in an error.
+             <p>
+             The message was not forwarded by the eFTL server.
+             </p>
+             <p>
+             When developing a client application, consider alerting the
+             user to the error.
+             </p>
+             Possible codes include:
+             <list type="bullet">
+                <item> <description> <see cref="F:TIBCO.EFTL.CompletionListenerConstants.PUBLISH_FAILED" /> </description> </item>
+                <item> <description> <see cref="F:TIBCO.EFTL.CompletionListenerConstants.PUBLISH_DISALLOWED" /> </description> </item>
+             </list>
+             
+             <param name="message"> This message was <i> not </i> published.
+             </param>       
+             <param name="code"> This code categorizes the error.  
+                                 Application programs may use this value
+                                 in response logic.
+             </param>
+             <param name="reason"> This string provides more detail about the 
+                                   error. Application programs may use this 
+                                   value for error reporting and logging.
+             </param>
+            
+        </member>
+        <member name="T:TIBCO.EFTL.IMessage">
+            <summary>
+            Message objects contain typed fields that map names to values. 
+            </summary>
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.IsFieldSet(System.String)">
+             <summary>
+             Determine whether a field is present in the message.
+             </summary>
+             
+             <param name="fieldName"> The method checks for this field. </param>
+            
+             <returns> <c>true</c> if the field is present;
+             <c>false</c> otherwise. 
+             </returns>
+            
+             <exception cref="T:System.ArgumentException"> The fieldName argument is null or empty. </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetFieldNames">
+             <summary>
+             Get the names of all fields present in a message.
+             </summary>
+             
+             <returns> An array of field names.
+             </returns>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetFieldType(System.String)">
+             <summary>
+             Get the type of a message field.
+             </summary>
+             
+             <param name="fieldName"> The name of the field. </param>
+            
+             <returns> The type of the field, if present;
+             <c>null</c> otherwise.
+             </returns>
+            
+             <exception cref="T:System.ArgumentException"> If the field name is null or empty.  </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetString(System.String,System.String)">
+             <summary>
+             Set a string field in a message.
+             </summary>
+             
+             <param name="fieldName"> The call sets this field. </param>
+             <param name="value"> The call sets this value. </param>
+                          To remove the field, supply <c>null</c>.
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.  </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetLong(System.String,System.Int64)">
+              <summary>
+             Set a long field in a message.
+             </summary>
+             
+             <param name="fieldName"> The call sets this field. </param>
+             <param name="value"> The call sets this value. </param>
+                          To remove the field, supply <c>null</c>.
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.  </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetDouble(System.String,System.Double)">
+              <summary>
+             Set a double field in a message.
+             </summary>
+             
+             <param name="fieldName"> The call sets this field. </param>
+             <param name="value"> The call sets this value.
+                          To remove the field, supply <c>null</c>. </param>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.  </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetDateTime(System.String,System.DateTime)">
+             <summary>
+             Set a date field in a message.
+             </summary>
+             
+             <param name="fieldName"> The call sets this field. </param>
+             <param name="value"> The call sets this value.
+                          To remove the field, supply <c>null</c>. </param>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetMessage(System.String,TIBCO.EFTL.IMessage)">
+             <summary>
+             Set a sub-message field in a message.
+             </summary>
+             
+             <p>
+             This method makes an independent copy of the sub-message, and
+             adds the copy to the message.  
+             After this method returns you can safely modify the
+             original sub-message.
+             </p>
+             
+             <param name="fieldName"> The call sets this field. </param>
+             <param name="value"> The call sets this value.
+                          To remove the field, supply <c>null</c>. </param>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetOpaque(System.String,System.Byte[])">
+             <summary>
+             Set an opaque field in a message.
+             </summary> 
+              
+             <param name="fieldName"> The call sets this field.  </param>
+             <param name="value"> The call sets this value.
+                          To remove the field, supply <c>null</c>
+                          </param>
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetArray(System.String,System.String[])">
+             <summary>
+             Set a string array field in a message.
+             </summary>
+             
+             <p>
+             This method makes an independent copy of the array and strings,
+             and adds the copy to the message.  After this method returns
+             you can safely modify the original array and its contents.
+             </p>
+             
+             <param name="fieldName"> The call sets this field. </param>
+             <param name="value"> The call sets this value.
+                          (Null is not a legal value within this array.)
+                          To remove the field, supply <c>null</c>. </param>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetArray(System.String,System.Int64[])">
+            
+             Set a long array field in a message.
+             <p>
+             This method makes an independent copy of the array, and
+             adds the copy to the message.  
+             After this method returns you can safely modify the
+             original array.
+             </p>
+             
+             <param name="fieldName"> The call sets this field. </param>
+             <param name="value"> The call sets this value.
+                          To remove the field, supply <c>null</c>. </param>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetArray(System.String,System.Double[])">
+            <summary>
+             Set a double array field in a message.
+             </summary>
+             
+             <p>
+             This method makes an independent copy of the array, and
+             adds the copy to the message.  
+             After this method returns you can safely modify the
+             original array.
+             </p>
+             
+             <param name="fieldName"> The call sets this field. </param>
+             <param name="value"> The call sets this value.
+                          To remove the field, supply <c>null</c>. </param>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetArray(System.String,System.DateTime[])">
+             <summary>
+             Set a date array field in a message.
+             </summary>
+             
+             <p>
+             This method makes an independent copy of the array, and
+             adds the copy to the message.  
+             After this method returns you can safely modify the
+             original array and its contents.
+             </p>
+             
+             <param name="fieldName"> The call sets this field. </param>
+             <param name="value"> The call sets this value.
+                          To remove the field, supply <c>null</c>. </param>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.SetArray(System.String,TIBCO.EFTL.IMessage[])">
+             <summary>
+             Set a message array field in a message.
+             </summary>
+             
+             <p>
+             This method makes an independent copy of the array and
+             messages, and adds the copy to the message.  After this method
+             returns you can safely modify the original array and its
+             contents.
+             </p>
+             <param name="fieldName"> The call sets this field. </param>
+             <param name="value"> The call sets this value.
+                          To remove the field, supply <c>null</c>. </param>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetString(System.String)">
+             <summary>
+             Get the value of a string field from a message.
+             </summary>
+             
+             <param name="fieldName"> Get this field. </param>
+            
+             <returns> The value of the field, if the field is present and has
+                     type <see cref="F:TIBCO.EFTL.FieldType.STRING"/>;
+                     <c>null</c> otherwise. </returns>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetLong(System.String)">
+             <summary>
+             Get the value of a long field from a message.
+             </summary>
+             
+             <param name="fieldName"> Get this field. </param>
+            
+             <returns> The value of the field, if the field is present and has
+                     type <see cref="F:TIBCO.EFTL.FieldType.LONG"/>;
+                     <c>null</c> otherwise. </returns>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetDouble(System.String)">
+             <summary>
+             Get the value of a double field from a message.
+             </summary>
+             
+             <param name="fieldName"> Get this field. </param>
+            
+             <returns> The value of the field, if the field is present and has
+                     type <see cref="F:TIBCO.EFTL.FieldType.DOUBLE"/>;
+                     <c>null</c> otherwise. </returns>
+            
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetDateTime(System.String)">
+             <summary>
+             Get the value of a date field from a message.
+             </summary>
+             
+             <param name="fieldName"> Get this field. </param>
+            
+             <returns> The value of the field, if the field is present and has
+                     type <see cref="F:TIBCO.EFTL.FieldType.DATE"/>;
+                     <c>null</c> otherwise.
+             </returns>
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.
+             </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetMessage(System.String)">
+             <summary>
+             Get the value of a sub-message field from a message.
+             </summary>
+             
+             <param name="fieldName"> Get this field. </param>
+            
+             <returns> The value of the field, if the field is present and has
+                     type <see cref="F:TIBCO.EFTL.FieldType.MESSAGE"/>;
+                     <c>null</c> otherwise.
+            
+             </returns>
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetOpaque(System.String)">
+             <summary>
+             Get the value of an opaque field from a message.
+             </summary>
+             
+             <param name="fieldName"> Get this field. </param>
+             
+             <returns> The value of the field, if the field is present
+                     and has type <see cref="F:TIBCO.EFTL.FieldType.OPAQUE"/>;
+                     <c>null</c> otherwise.
+             </returns>
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetStringArray(System.String)">
+             <summary>
+             Get the value of a string array field from a message.
+             </summary>
+             
+             <param name="fieldName"> Get this field. </param>
+            
+             <returns> The value of the field, if the field is present and has
+                     type <see cref="F:TIBCO.EFTL.FieldType.STRING_ARRAY"/>;
+                     <c>null</c> otherwise.
+              </returns>
+              
+              
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetLongArray(System.String)">
+             <summary>
+             Get the value of a long array field from a message.
+             </summary>
+             
+             <param name="fieldName"> Get this field. </param>
+            
+             
+             <returns> The value of the field, if the field is present and has
+                     type <see cref="F:TIBCO.EFTL.FieldType.LONG_ARRAY"/>;
+                      <c>null</c> otherwise.
+             </returns>
+             
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.  </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetDoubleArray(System.String)">
+             <summary>
+             Get the value of a double array field from a message.
+             </summary>
+             
+             <param name="fieldName"> Get this field. </param>
+            
+             <returns> The value of the field, if the field is present and has
+                     type <see cref="F:TIBCO.EFTL.FieldType.DOUBLE_ARRAY"/>;
+                     <c>null</c> otherwise.
+             </returns>
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.   </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetDateTimeArray(System.String)">
+             <summary>
+             Get the value of a date array field from a message.
+             </summary>
+             <param name="fieldName"> Get this field. </param>
+            
+             <returns> The value of the field, if the field is present and has
+                     type <see cref="F:TIBCO.EFTL.FieldType.DATE_ARRAY"/>;
+                     <c>null</c> otherwise.
+             </returns>
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.  </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.GetMessageArray(System.String)">
+             <summary>
+             Get the value of a message array field from a message.
+            </summary>
+            
+             <param name="fieldName"> Get this field.</param>
+            
+             <returns> The value of the field, if the field is present and has
+             </returns>
+             <exception cref="T:System.ArgumentException"> The field name is null or empty.  </exception>
+            
+        </member>
+        <member name="M:TIBCO.EFTL.IMessage.ClearField(System.String)">
+            <summary>
+             Clear a field in a message.
+            </summary>
+            <remarks>
+            Clearing a field clears the data from a field in the message
+            object.
+            </remarks>
+            <param name="name">
+            The method clears the field with this name.
+            </param>
+            <exception cref="T:System.Exception">
+            The field does not exist.
+            </exception>
+        </member>
+    </members>
+</doc>
