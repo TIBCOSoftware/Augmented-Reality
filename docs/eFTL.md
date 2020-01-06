@@ -18,11 +18,20 @@ Finally, update the Web Socket URI and Authkey with your TIBCO Cloud Subscriptio
 ![alt-text](img/WebSocketConfig.png "Image")
 
 ## sending Messages to Unity3D
+
+### using Flogo
 Here a sample using TIBCO Cloud Integration Flogo 
 
 ![alt-text](img/FlogoTCMSender.png "Image")
 
 Sample Data JSON: {"dataType":"Power","data":"130"}
+
+### using cURL
+TIBCO Cloud Messaging comes with a REST API, as well. So any REST Tool can be used for testing, too. Just replace [your-key] and [your-id] in the following command:
+
+``` bash
+curl -i -u :[your-key] https://messaging.cloud.tibco.com/tcm/TIB_SUB_[your-id]/channel/v1/publish -d '{"dataType":"Power","data":"130"}'
+```
 
 ## Hints
 the current Implementation subscribes to all destinations. 
