@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 namespace Unity3dAzure.WebSockets
 {
     public sealed class UnityWebSocketScriptDemo : UnityWebSocket
     {
-        const int IDLE_LIMIT = 180; // Update is invoked 60 times per seconds.
+        //const int IDLE_LIMIT = 180; // Update is invoked 60 times per seconds.
+        const int IDLE_LIMIT = 360; // Update is invoked 30 times per seconds.
 
         // Unity Inspector fields
         [SerializeField]
@@ -20,11 +20,8 @@ namespace Unity3dAzure.WebSockets
         
         [SerializeField]
         private bool AutoConnect = false;
-
         private string msg;
-    
         private string power = "0";
-
         private int idle = UnityWebSocketScriptDemo.IDLE_LIMIT;
         
         #region Web Socket connection
@@ -68,7 +65,7 @@ namespace Unity3dAzure.WebSockets
 
         private void idleState()
         {
-            Debug.Log("Idle State");
+            Debug.Log("FTL Idle State");
             power = "waiting ...";
         }
         void OnDisable()
@@ -84,13 +81,12 @@ namespace Unity3dAzure.WebSockets
             {
                 JsonObject body;
                 body = (JsonObject)message["body"];
-                Debug.Log("handleMessage " + body);
+                Debug.Log("FTL handleMessage " + body);
 
                 if (body.ContainsKey("dataType"))
                 {
-
                     string dataType = body["dataType"].ToString();
-                     Debug.Log("Message received: " + dataType);
+                    Debug.Log("FTL Message received: " + dataType);
 
                     switch (dataType)
                     {
@@ -100,7 +96,7 @@ namespace Unity3dAzure.WebSockets
                             break;
                         
                         default:
-                            Debug.Log("Message received " + dataType);
+                            Debug.Log("FTL Message received " + dataType);
                             break;
                     }
                 }
@@ -108,38 +104,42 @@ namespace Unity3dAzure.WebSockets
 
             } catch (Exception e)
             {
-                Debug.Log("Error in handleMessage " + e.Message);
+                Debug.Log("FTL Error in handleMessage " + e.Message);
             }
 
         }
         
         private void SetPower(JsonObject body)
         {
-            // *** {"dataType":"Power","data":"130"}
+            // *** Sample {"dataType":"Power","data":"130"}
             power = body["data"].ToString(); 
-
             Debug.Log("Data " + power );   
         }
 
         protected override void OnWebSocketOpen(object sender, EventArgs e)
         {
             this.msg = "Web socket is open";
-            Debug.Log("Open in Script");
+            Debug.Log("FTL Open in Script");
             base.OnWebSocketOpen(sender, e);
         }
         protected override void OnWebSocketError(object sender, WebSocketErrorEventArgs e)
         {
-            Debug.LogError("Web socket error: " + e.Message);
+            Debug.LogError("FTL Web socket error: " + e.Message);
             this.msg = e.Message;
             DisconnectWebSocket();
         }
         
         protected override void OnWebSocketClose (object sender, WebSocketCloseEventArgs e) {
-          Debug.Log ("Web socket closed with reason: " + e.Reason);
+          Debug.Log ("FTL Web socket closed with reason: " + e.Reason + " !");
           if (!e.WasClean) {
-            DisconnectWebSocket ();
-          }
-          DettachHandlers();
+                DisconnectWebSocket ();
+            }
+            DettachHandlers();
+
+            //Reconnect in case it is no usual Disconnect
+            if (e.Reason != " 1005") {
+                ReConnect();
+            } 
         }
 
         /*

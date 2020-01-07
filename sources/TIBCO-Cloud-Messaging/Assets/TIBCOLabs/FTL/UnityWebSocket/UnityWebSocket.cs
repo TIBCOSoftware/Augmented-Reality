@@ -8,7 +8,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-
 namespace Unity3dAzure.WebSockets {
     internal static class ProtocolOpConstants
     {
@@ -82,13 +81,14 @@ namespace Unity3dAzure.WebSockets {
         internal static readonly String ACTION_TIMEOUT = "timeout";
         internal static readonly String REQUEST_CURRENT = "current";
     }
+
     public abstract class UnityWebSocket : MonoBehaviour {
     public delegate void Data (byte[] rawData, string data, Boolean isBinary);
     public static Data OnData;
 
     protected string WebSocketUri;
-        protected string Client_id;
-        protected string Password;
+    protected string Client_id;
+    protected string Password;
     protected List<UnityKeyValue> Headers;
 
     protected IWebSocket _ws;
@@ -98,8 +98,8 @@ namespace Unity3dAzure.WebSockets {
 #region Web Socket methods
 
     public virtual void Connect () {
-            Client_id = "unity-"+System.Guid.NewGuid();
-             // Client_id and Password will be used in OnWebSocketOpen to do the authentication with TCM
+      Client_id = "unity-"+System.Guid.NewGuid();
+      // Client_id and Password will be used in OnWebSocketOpen to do the authentication with TCM
       ConnectWebSocket ();
     }
 
@@ -186,6 +186,7 @@ namespace Unity3dAzure.WebSockets {
         protected virtual void OnWebSocketClose (object sender, WebSocketCloseEventArgs e) {
       Debug.Log ("Web socket closed with reason: " + e.Reason);
       DettachHandlers();
+
     }
 
     protected virtual void OnWebSocketMessage (object sender, WebSocketMessageEventArgs e) {
@@ -294,19 +295,20 @@ namespace Unity3dAzure.WebSockets {
       _ws.SendAsync (data, callback);
     }
 
-    protected void ConnectWebSocket () {
+    protected void ConnectWebSocket() {
       if (string.IsNullOrEmpty (WebSocketUri)) {
         Debug.LogError ("WebSocketUri must be set");
         return;
       }
-
-      if (_ws == null || !_ws.IsConfigured()) {
-        var customHeaders = new List<KeyValuePair<string, string>>();
-        if (Headers != null) {
-          foreach (UnityKeyValue header in Headers) {
-            customHeaders.Add(new KeyValuePair<string, string>(header.key, header.value));
-          }
-        }
+            var customHeaders = new List<KeyValuePair<string, string>>();
+            if (_ws == null || !_ws.IsConfigured()) {
+                
+                if (Headers != null) {
+                    foreach (UnityKeyValue header in Headers) {
+                        customHeaders.Add(new KeyValuePair<string, string>(header.key, header.value));
+                    }
+                }
+            }
 
         Debug.Log ("Create Web Socket: " + WebSocketUri);
 #if ENABLE_WINMD_SUPPORT
@@ -317,7 +319,7 @@ namespace Unity3dAzure.WebSockets {
         _ws = new WebSocketMono();
 #endif
         _ws.ConfigureWebSocket(WebSocketUri, customHeaders);
-      }
+      
 
       if (!isAttached) {
         Debug.Log ("Connect Web Socket: " + _ws.Url());
@@ -345,9 +347,10 @@ namespace Unity3dAzure.WebSockets {
     }
 
     protected void DettachHandlers() {
-      if (!isAttached) {
-        return;
-      }
+      //change JGR
+      //if (!isAttached) {
+      //  return;
+      //}
       isAttached = false;
       _ws.OnError -= OnWebSocketError;
       _ws.OnOpen -= OnWebSocketOpen;
