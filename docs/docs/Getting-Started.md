@@ -6,7 +6,7 @@ TIBCO Labs™ Augmented Reality Packages can be easily Imported into Unity3D as 
 ## Current Packages
 the following packages are available for download:
 
-- TIBCO 3D Logo, incl. TIBCO colored Materials
+- TIBCO 3D Logo, incl. TIBCO colored Materials, [Details](Logos.md)
 - TIBCO Cloud™ Messaging Implementation, [Details](eFTL-Basic.md)
 - soon ... TIBCO Cloud™  LiveApps Connectivity
 - <i>and more!</i>
