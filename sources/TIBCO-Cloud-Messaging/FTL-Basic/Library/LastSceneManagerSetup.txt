@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/TIBCOLabs/CloudMessaging/Sample/CloudMessaging-TestScene.unity
+  isLoaded: 1
+  isActive: 1
