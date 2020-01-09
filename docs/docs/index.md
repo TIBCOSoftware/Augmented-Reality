@@ -4,7 +4,7 @@
 
 |      |      |
 | ---- | ---- |
-| ![Logo](TIBCOLabs-final.png) | Connect Enterprise Data and take actions is everything in any future Augmented Reality Implementation. The here provided packages allows quick and easy usage of TIBCO Product Offerings inside Augmented Reality Solutions. <br><br> We are looking to provide simple connectivity samples to connect to TIBCO Cloud Offerings and On-Prem Products, plus other useful. Assets. |
+| ![Logo](TIBCOLabs-final.png) | Connect Enterprise Data and take actions is everything in any future Augmented Reality Implementation. The here provided packages allows quick and easy usage of TIBCO Product Offerings inside Augmented Reality Solutions. <br><br> We are looking to provide simple connectivity samples to connect to TIBCO Cloud Offerings and On-Prem Products, plus other useful Assets. |
 
 ### Technology
 All reusable Components implemented for Unity3D using C#, to be used with Google Android Phones and Tablets or Microsoft Hololens v2.
