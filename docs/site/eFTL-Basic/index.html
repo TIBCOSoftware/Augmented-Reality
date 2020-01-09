@@ -347,8 +347,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-the-project" title="Configure the Project" class="md-nav__link">
-    Configure the Project
+  <a href="#use-the-sample-scene" title="Use the sample scene" class="md-nav__link">
+    Use the sample scene
   </a>
   
 </li>
@@ -367,6 +367,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#using-curl" title="using cURL" class="md-nav__link">
+    using cURL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#using-flogo" title="using Flogo" class="md-nav__link">
     using Flogo
   </a>
@@ -374,8 +381,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-curl" title="using cURL" class="md-nav__link">
-    using cURL
+  <a href="#how-it-works" title="How it works" class="md-nav__link">
+    How it works
   </a>
   
 </li>
@@ -444,8 +451,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-the-project" title="Configure the Project" class="md-nav__link">
-    Configure the Project
+  <a href="#use-the-sample-scene" title="Use the sample scene" class="md-nav__link">
+    Use the sample scene
   </a>
   
 </li>
@@ -464,6 +471,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#using-curl" title="using cURL" class="md-nav__link">
+    using cURL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#using-flogo" title="using Flogo" class="md-nav__link">
     using Flogo
   </a>
@@ -471,8 +485,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-curl" title="using cURL" class="md-nav__link">
-    using cURL
+  <a href="#how-it-works" title="How it works" class="md-nav__link">
+    How it works
   </a>
   
 </li>
@@ -508,25 +522,22 @@
                 
                 <h1 id="tibco-cloud-messaging-unity3d-package">TIBCO Cloud Messaging Unity3D Package</h1>
 <h2 id="overview">Overview</h2>
-<p>With this Package you can receive real-time Messages within Unity3D.</p>
+<p>This package allows you to connect a Unity Application to TIBCO Cloud Messaging using EFTL websocket protocol.
+It's based on UnityWebSocket and is working in Unity Editor and on Hololens (UWP).</p>
+<p>Once connected, the application can subscribe and receive realtime messages and update the scene accordingly.</p>
+<p>A simple sample code demonstrates how to display data in a TextMesh.</p>
 <h3 id="import-into-unity3d">Import into Unity3D</h3>
 <p>Just created a new Unity Project and import the custom Package.</p>
 <p><img alt="alt-text" src="../img/UnityAssets-FTL.png" title="Image" />
 <br><sup>Unity3D Library Assets</sup></p>
-<h3 id="configure-the-project">Configure the Project</h3>
-<ol>
-<li>Drag'n Drop the "Text" Object Prefab into your Scene, afterwards add the MainController to your Scene.</li>
-<li>Afterwards drag'n drop the "Text" Object to "Msg Text" Field of the Main Controller.</li>
-<li>Finally, update the Web Socket URI and Authkey with your TIBCO Cloud Subscription Details.</li>
-</ol>
+<h3 id="use-the-sample-scene">Use the sample scene</h3>
+<p>Open TIBCOLabs &gt; CloudMessaging &gt; Sample &gt; CloudMessaging-TestScene.</p>
+<p>The Scene contains a MainController Object.
+In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMessaginConnector with you TIBCO Cloud Subscription Details.</p>
 <p><img alt="alt-text" src="../img/WebSocketConfig.png" title="Image" />
 <br><sup>TIBCO Cloud Messaging Configuration</sup></p>
 <h2 id="sending-messages-to-unity3d">sending Messages to Unity3D</h2>
-<h3 id="using-flogo">using Flogo</h3>
-<p>Here a sample using TIBCO Cloud Integration Flogo </p>
-<p><img alt="alt-text" src="../img/FlogoTCMSender.png" title="Image" />
-<br><sup>TIBCO Cloud Integration Configuration</sup></p>
-<p>Full sample Data JSON, to copy: </p>
+<p>The sample is expecting this type of message :</p>
 <pre><code class="json">{&quot;dataType&quot;:&quot;Power&quot;,&quot;data&quot;:&quot;130&quot;}
 </code></pre>
 
@@ -535,11 +546,21 @@
 <pre><code class="bash">curl -i -u :[your-key] https://messaging.cloud.tibco.com/tcm/TIB_SUB_[your-id]/channel/v1/publish -d '{&quot;dataType&quot;:&quot;Power&quot;,&quot;data&quot;:&quot;130&quot;}'
 </code></pre>
 
+<h3 id="using-flogo">using Flogo</h3>
+<p>Here a sample using TIBCO Cloud Integration Flogo</p>
+<p><img alt="alt-text" src="../img/FlogoTCMSender.png" title="Image" />
+<br><sup>TIBCO Cloud Integration Configuration</sup></p>
 <blockquote>
-<p>the current Implementation subscribes to all instance messaging destinations. </p>
+<p>the current Implementation subscribes to all instance messaging destinations.</p>
 </blockquote>
+<h3 id="how-it-works">How it works</h3>
+<ol>
+<li>The MainController GameObject contains the TIBCO Cloud Messaging Connector and SimpleTextViewController</li>
+<li>The Controller extends DataHandler, it requires a connection (Connector Object) and receives messages.</li>
+<li>The Controller has a reference to the Text to update when it receives a message.</li>
+</ol>
 <h2 id="content">Content</h2>
-<p>ready to use <a href="https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Cloud-Messaging/FTL-Basic">Package</a> | 
+<p>ready to use <a href="https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Cloud-Messaging/FTL-Basic">Package</a> |
 Implementation <a href="https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Cloud-Messaging/FTL-Basic/Assets">Source</a></p>
                 
                   
