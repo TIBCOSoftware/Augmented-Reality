@@ -13,6 +13,7 @@ Just created a new Unity Project and import the custom Package.
 
 ![alt-text](img/UnityAssets-FTL.png "Image")
 <br><sup>Unity3D Library Assets</sup>
+
 ### Use the sample scene
 Open TIBCOLabs > CloudMessaging > Sample > CloudMessaging-TestScene.
 
@@ -20,8 +21,8 @@ The Scene contains a MainController Object.
 In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMessaginConnector with you TIBCO Cloud Subscription Details.
 
 
-![alt-text](img/WebSocketConfig.png "Image")
-<br><sup>TIBCO Cloud Messaging Configuration</sup>
+![alt-text](img/FTLSocketConfig.png "Image")
+<br><sup>TIBCO Cloud Messaging FTL Configuration</sup>
 
 ## sending Messages to Unity3D
 The sample is expecting this type of message :
