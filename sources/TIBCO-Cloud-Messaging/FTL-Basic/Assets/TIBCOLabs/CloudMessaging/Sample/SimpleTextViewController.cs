@@ -18,17 +18,12 @@ public class SimpleTextViewController : DataHandler
     private string text;
     private bool updateRequired = false;
 
-
     #region IDataHandler methods
     public override void OnData(JsonObject message)
     {
         try
         {
-
-
-
-            Debug.Log("Received EFTL message " + message);
-
+            Debug.Log("Received FTL message " + message);
 
             if (message.ContainsKey("dataType"))
             {
@@ -43,9 +38,11 @@ public class SimpleTextViewController : DataHandler
                         this.text = message["data"].ToString();
                         this.updateRequired = true;
                         break;
+
                     default:
                         Debug.Log("Unsupported dataType " + dataType);
                         break;
+
                 }
                 // publish ModelUpdate provide refreence to this model object
 
@@ -75,11 +72,5 @@ public class SimpleTextViewController : DataHandler
         textMesh.text = text;
         updateRequired = false;
     }
-
-
-
-
-
-
 }
 

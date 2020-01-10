@@ -11,8 +11,6 @@ using UnityEngine.UI;
 // created from Unity3dAzure.WebSockets 
 using Unity3dAzure.WebSockets; //  used for webSockets Events
 
-
-
 namespace TIBCO.LABS.EFTL
 {
     // ProtocolOpConstants
@@ -95,11 +93,15 @@ namespace TIBCO.LABS.EFTL
     {
         public delegate void MessageReceived (JsonObject message);
         public  MessageReceived OnEftlMessage;
+
+        [Header("Connection Details")]
+
         [SerializeField]
-        protected string WebSocketUri = "ws://127.0.0.1:8080";
-        protected string Client_id;
+        protected string FTLSocketUri = "wss://messaging.cloud.tibco.com/tcm/TIB_SUB_[your-id]/channel";
         [SerializeField]
         protected string AuthKey;
+
+        protected string Client_id;
         protected List<UnityKeyValue> Headers;
 
         protected IWebSocket _ws;
@@ -108,11 +110,8 @@ namespace TIBCO.LABS.EFTL
 
         #region MonoBehavior methods
         void OnEnable()
-        
         {
-     
-                Connect();
-            
+            Connect(); 
         }
         void OnDisable()
         {
@@ -125,8 +124,8 @@ namespace TIBCO.LABS.EFTL
 
         public virtual void Connect()
         {
+            // Client_id and Password will be used in OnWebSocketOpen to do the authentication with TCM FTL
             Client_id = "unity-" + System.Guid.NewGuid();
-            // Client_id and Password will be used in OnWebSocketOpen to do the authentication with TCM
             ConnectWebSocket();
         }
 
@@ -141,10 +140,9 @@ namespace TIBCO.LABS.EFTL
 
         protected virtual void OnWebSocketOpen(object sender, EventArgs e)
         {
-            Debug.Log("Web socket is open");
             string msg = "{\"op\":1,\"client_type\":\"c#\",\"client_verion\":\"3.4\",\"password\":\"";
             msg += AuthKey + "\",\"client_id\":\"" + "unity" + Client_id + "\"}";
-            Debug.Log(msg);
+            Debug.Log("FTL socket is open: " + msg);
             SendText(msg);
 
             /*
@@ -214,20 +212,32 @@ namespace TIBCO.LABS.EFTL
 
         protected virtual void OnWebSocketClose(object sender, WebSocketCloseEventArgs e)
         {
-            Debug.Log("Web socket closed with reason: " + e.Reason);
+            Debug.Log("FTL socket closed with reason: " + e.Reason );
             DettachHandlers();
+
+            // reconnect in case of unwanted Disconnect Errors
+            if (e.Code == 1006) // eFTLConnection Class Reference - Connection error (1006). Programs may attempt to reconnect.
+            {
+               Debug.Log("FTL socket reconnect!");
+               Connect();
+            }
+
+            // handle standard Unity3D Runtime Stop
+            if (e.Code == 1005) // Unity 3D App/Player stopped.
+            {
+                Debug.Log("FTL socket fully closed, because App stopped.");
+            }
         }
 
         protected virtual void OnWebSocketMessage(object sender, WebSocketMessageEventArgs e)
         {
-            Debug.LogFormat("Web socket {1} message:\n{0}", e.Data, e.IsBinary ? "binary" : "string");
+            //Debug.LogFormat("FTL socket {1} message:\n{0}", e.Data, e.IsBinary ? "binary" : "string");
 
             object obj = JsonValue.Parse(e.Data);
 
             if (obj is JsonArray)
             {
-                Debug.Log("Message Array received");
-                //handleMessages((JsonArray)obj);
+                Debug.Log("FTL Message Array received");
             }
             else if (obj is JsonObject)
             {
@@ -241,10 +251,10 @@ namespace TIBCO.LABS.EFTL
                     {
                         case ProtocolOpConstants.OP_HEARTBEAT:
                             //handleHeartbeat(message);
+                            Debug.Log("** FTL Heartbeat Message");
                             break;
                         case ProtocolOpConstants.OP_WELCOME:
                             handleWelcome(message);
-
                             break;
                         case ProtocolOpConstants.OP_SUBSCRIBED:
                             //handleSubscribed(message);
@@ -274,9 +284,9 @@ namespace TIBCO.LABS.EFTL
         }
         protected virtual void handleMessage(JsonObject message)
         {
-            Debug.Log("OP_EVENT");
+            //Debug.Log("OP_EVENT");
             JsonObject body = (JsonObject)message["body"];
-            // Raise web socket data handler event
+            // Raise FTL socket data handler event
             if (OnEftlMessage != null)
             {
                 OnEftlMessage(body);
@@ -284,13 +294,12 @@ namespace TIBCO.LABS.EFTL
         }
         private void handleWelcome(JsonObject message)
         {
-            Debug.Log("Welcome Message");
             JsonObject submessage = new JsonObject();
 
             submessage[ProtocolConstants.OP_FIELD] = ProtocolOpConstants.OP_SUBSCRIBE;
             submessage[ProtocolConstants.ID_FIELD] = "s." + System.Guid.NewGuid();
 
-            Debug.Log(submessage.ToString());
+            Debug.Log("FTL Welcome Message: " + submessage.ToString());
 
             SendText(submessage.ToString());
         }
@@ -298,7 +307,7 @@ namespace TIBCO.LABS.EFTL
 
         protected virtual void OnWebSocketError(object sender, WebSocketErrorEventArgs e)
         {
-            Debug.LogError("Web socket error: " + e.Message);
+            Debug.LogError("FTL socket error: " + e.Message);
             DisconnectWebSocket();
         }
 
@@ -308,7 +317,7 @@ namespace TIBCO.LABS.EFTL
         {
             if (_ws == null || !_ws.IsOpen())
             {
-                Debug.LogWarning("Web socket is not available to send text message. Try connecting?");
+                Debug.LogWarning("FTL socket is not available to send text message. Try connecting?");
                 return;
             }
             _ws.SendAsync(text, callback);
@@ -329,7 +338,7 @@ namespace TIBCO.LABS.EFTL
         {
             if (_ws == null || !_ws.IsOpen())
             {
-                Debug.LogWarning("Web socket is not available to send bytes. Try connecting?");
+                Debug.LogWarning("FTL socket is not available to send bytes. Try connecting?");
                 return;
             }
             _ws.SendAsync(data, callback);
@@ -337,37 +346,33 @@ namespace TIBCO.LABS.EFTL
 
         protected void ConnectWebSocket()
         {
-            if (string.IsNullOrEmpty(WebSocketUri))
+            if (string.IsNullOrEmpty(FTLSocketUri))
             {
-                Debug.LogError("WebSocketUri must be set");
+                Debug.LogError("FTL SocketUri must be set");
                 return;
             }
 
-            if (_ws == null || !_ws.IsConfigured())
+            var customHeaders = new List<KeyValuePair<string, string>>();
+            if (Headers != null)
             {
-                var customHeaders = new List<KeyValuePair<string, string>>();
-                if (Headers != null)
+                foreach (UnityKeyValue header in Headers)
                 {
-                    foreach (UnityKeyValue header in Headers)
-                    {
-                        customHeaders.Add(new KeyValuePair<string, string>(header.key, header.value));
-                    }
+                    customHeaders.Add(new KeyValuePair<string, string>(header.key, header.value));
                 }
+            }
 
-                Debug.Log("Create Web Socket: " + WebSocketUri);
 #if ENABLE_WINMD_SUPPORT
         Debug.Log ("Using UWP Web Socket");
         _ws = new WebSocketUWP();
 #elif UNITY_EDITOR || ENABLE_MONO
-        Debug.Log("Using Mono Web Socket");
+        Debug.Log("Using Mono FTL Socket");
         _ws = new WebSocketMono();
 #endif
-                _ws.ConfigureWebSocket(WebSocketUri, customHeaders);
-            }
 
             if (!isAttached)
             {
-                Debug.Log("Connect Web Socket: " + _ws.Url());
+                _ws.ConfigureWebSocket(FTLSocketUri, customHeaders);
+                Debug.Log("Connect FTL Socket: " + _ws.Url());
                 AttachHandlers();
                 _ws.ConnectAsync();
             }
@@ -377,7 +382,7 @@ namespace TIBCO.LABS.EFTL
         {
             if (_ws != null && isAttached)
             {
-                Debug.Log("Disconnect Web Socket");
+                Debug.Log("Disconnect FTL Socket");
                 _ws.CloseAsync();
             }
         }
@@ -397,10 +402,6 @@ namespace TIBCO.LABS.EFTL
 
         protected void DettachHandlers()
         {
-            if (!isAttached)
-            {
-                return;
-            }
             isAttached = false;
             _ws.OnError -= OnWebSocketError;
             _ws.OnOpen -= OnWebSocketOpen;

@@ -334,6 +334,18 @@ PrefabInstance:
       propertyPath: textMesh
       value: 
       objectReference: {fileID: 1911563285}
+    - target: {fileID: 1732229918, guid: 92a0db102741a4d4bbe366e110c7db51, type: 3}
+      propertyPath: WebSocketUri
+      value: wss://messaging.cloud.tibco.com/tcm/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/channel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732229918, guid: 92a0db102741a4d4bbe366e110c7db51, type: 3}
+      propertyPath: AuthKey
+      value: '[your auth key]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732229918, guid: 92a0db102741a4d4bbe366e110c7db51, type: 3}
+      propertyPath: FTLSocketUri
+      value: wss://messaging.cloud.tibco.com/tcm/TIB_SUB_[your-id]/channel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92a0db102741a4d4bbe366e110c7db51, type: 3}
 --- !u!1001 &1911563284

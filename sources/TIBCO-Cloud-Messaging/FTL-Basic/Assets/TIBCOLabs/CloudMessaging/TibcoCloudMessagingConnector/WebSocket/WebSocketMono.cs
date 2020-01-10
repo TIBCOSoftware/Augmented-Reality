@@ -23,9 +23,6 @@ namespace Unity3dAzure.WebSockets {
 
     private bool isAttached = false;
 
-
-
-
     public WebSocketMono() {
       ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(CheckValidCertificateCallback);
     }
@@ -38,7 +35,7 @@ namespace Unity3dAzure.WebSockets {
       
       string[] protocols = new string[] { "v1.eftl.tibco.com"};
       if (socket != null) {
-        throw new Exception("WebSocket is already configured!");
+        throw new Exception("FTL Socket is already configured!");
       }
 
       socket = new WebSocket(url,"v1.eftl.tibco.com");
@@ -51,7 +48,7 @@ namespace Unity3dAzure.WebSockets {
 
     public void ConnectAsync() {
       if (socket == null) {
-        Debug.LogError("WebSocket not configured!");
+        Debug.LogError("FTL Socket not configured!");
         return;
       }
       AttachHandlers();
