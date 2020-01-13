@@ -6,7 +6,7 @@ This package allows you to connect a Unity3D Application to [TIBCO Cloud Messagi
 Once connected, the application can subscribe and receive real-time messages and update the scene accordingly. The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh.
 
 ### Trail Account
-register for your own TIBCO Cloud Messaging trail account on this [Form](https://account.cloud.tibco.com/signup/tcm) to get your personal ID and Auth-Key under Settings.
+register for your own TIBCO Cloud Messaging trail account on this [Form](https://account.cloud.tibco.com/signup/tcm) to get your personal ID and Auth-Key under 'Authentication Keys' Settings Tab, beside the Subscription 'Status'.
 
 ### Import into Unity3D
 Just created a new Unity Project and import the custom Package.
