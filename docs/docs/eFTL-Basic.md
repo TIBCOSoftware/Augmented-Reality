@@ -1,12 +1,12 @@
 # TIBCO Cloud Messaging Unity3D Package
 
 ## Overview
-This package allows you to connect a Unity Application to TIBCO Cloud Messaging using EFTL websocket protocol.
-It's based on UnityWebSocket and is working in Unity Editor and on Hololens (UWP).
+This package allows you to connect a Unity3D Application to [TIBCO Cloud Messaging](https://www.tibco.com/products/tibco-cloud-messaging) using the eFTL websocket protocol. The Implementation is based on standard UnityWebSocket and is working in Unity3D Editor, and on Hololens (UWP).
 
-Once connected, the application can subscribe and receive realtime messages and update the scene accordingly.
+Once connected, the application can subscribe and receive real-time messages and update the scene accordingly. The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh.
 
-A simple sample code demonstrates how to display data in a TextMesh.
+### Trail Account
+register for your own TIBCO Cloud Messaging trail account on this [Form](https://account.cloud.tibco.com/signup/tcm) to get your personal ID and Auth-Key under Settings.
 
 ### Import into Unity3D
 Just created a new Unity Project and import the custom Package.
@@ -31,7 +31,7 @@ The sample is expecting this type of message :
 {"dataType":"Power","data":"130"}
 ```
 ### using cURL
-TIBCO Cloud Messaging comes with a REST API, as well. So any REST Tool can be used for testing, too. Just replace [your-key] and [your-id] in the following command:
+TIBCO Cloud Messaging comes with a REST API, as well. So any REST Tool can be used for testing, too. Just replace [your-id] and [your-key] in the following command:
 
 ``` bash
 curl -i -u :[your-key] https://messaging.cloud.tibco.com/tcm/TIB_SUB_[your-id]/channel/v1/publish -d '{"dataType":"Power","data":"130"}'

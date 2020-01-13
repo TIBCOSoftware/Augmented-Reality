@@ -340,6 +340,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#trail-account" title="Trail Account" class="md-nav__link">
+    Trail Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#import-into-unity3d" title="Import into Unity3D" class="md-nav__link">
     Import into Unity3D
   </a>
@@ -444,6 +451,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#trail-account" title="Trail Account" class="md-nav__link">
+    Trail Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#import-into-unity3d" title="Import into Unity3D" class="md-nav__link">
     Import into Unity3D
   </a>
@@ -522,10 +536,11 @@
                 
                 <h1 id="tibco-cloud-messaging-unity3d-package">TIBCO Cloud Messaging Unity3D Package</h1>
 <h2 id="overview">Overview</h2>
-<p>This package allows you to connect a Unity Application to TIBCO Cloud Messaging using EFTL websocket protocol.
-It's based on UnityWebSocket and is working in Unity Editor and on Hololens (UWP).</p>
+<p>This package allows you to connect a Unity Application to <a href="https://www.tibco.com/products/tibco-cloud-messaging">TIBCO Cloud Messaging</a> using eFTL websocket protocol. It's based on UnityWebSocket and is working in Unity Editor and on Hololens (UWP).</p>
 <p>Once connected, the application can subscribe and receive realtime messages and update the scene accordingly.</p>
 <p>A simple sample code demonstrates how to display data in a TextMesh.</p>
+<h3 id="trail-account">Trail Account</h3>
+<p>register for your own TIBCO Cloud Messaging trail account on this <a href="https://account.cloud.tibco.com/signup/tcm">Form</a> to get your personal ID and Auth-Key under Settings.</p>
 <h3 id="import-into-unity3d">Import into Unity3D</h3>
 <p>Just created a new Unity Project and import the custom Package.</p>
 <p><img alt="alt-text" src="../img/UnityAssets-FTL.png" title="Image" />
@@ -542,7 +557,7 @@ In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMe
 </code></pre>
 
 <h3 id="using-curl">using cURL</h3>
-<p>TIBCO Cloud Messaging comes with a REST API, as well. So any REST Tool can be used for testing, too. Just replace [your-key] and [your-id] in the following command:</p>
+<p>TIBCO Cloud Messaging comes with a REST API, as well. So any REST Tool can be used for testing, too. Just replace [your-id] and [your-key] in the following command:</p>
 <pre><code class="bash">curl -i -u :[your-key] https://messaging.cloud.tibco.com/tcm/TIB_SUB_[your-id]/channel/v1/publish -d '{&quot;dataType&quot;:&quot;Power&quot;,&quot;data&quot;:&quot;130&quot;}'
 </code></pre>
 
