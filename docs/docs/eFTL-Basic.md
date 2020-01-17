@@ -1,12 +1,12 @@
-# TIBCO Cloud Messaging Unity3D Package
+# TIBCO Cloud™ Messaging Unity3D Package
 
 ## Overview
-This package allows you to connect a Unity3D Application to [TIBCO Cloud Messaging](https://www.tibco.com/products/tibco-cloud-messaging) using the eFTL websocket protocol. The Implementation is based on standard UnityWebSocket and is working in Unity3D Editor, and on Hololens (UWP).
+This package allows you to connect a Unity3D Application to [TIBCO Cloud™ Messaging](https://www.tibco.com/products/tibco-cloud-messaging) using the eFTL websocket protocol. The Implementation is based on standard UnityWebSocket and is working in Unity3D Editor, and on Hololens (UWP).
 
 Once connected, the application can subscribe and receive real-time messages and update the scene accordingly. The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh.
 
 ### Trail Account
-register for your own TIBCO Cloud Messaging trail account on this [Form](https://account.cloud.tibco.com/signup/tcm) to get your personal ID and Auth-Key under 'Authentication Keys' Settings Tab, beside the Subscription 'Status'.
+register for your own TIBCO Cloud™ Messaging trail account on this [Form](https://account.cloud.tibco.com/signup/tcm) to get your personal ID and Auth-Key under 'Authentication Keys' Settings Tab, beside the Subscription 'Status'.
 
 ### Import into Unity3D
 Just created a new Unity Project and import the custom Package.
@@ -18,7 +18,7 @@ Just created a new Unity Project and import the custom Package.
 Open TIBCOLabs > CloudMessaging > Sample > CloudMessaging-TestScene.
 
 The Scene contains a MainController Object.
-In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMessaginConnector with you TIBCO Cloud Subscription Details.
+In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMessaginConnector with you TIBCO Cloud™ Subscription Details.
 
 
 ![alt-text](img/FTLSocketConfig.png "Image")
@@ -38,19 +38,15 @@ curl -i -u :[your-key] https://messaging.cloud.tibco.com/tcm/TIB_SUB_[your-id]/c
 ```
 
 ### using Flogo
-Here a sample using TIBCO Cloud Integration Flogo
+Here a sample using TIBCO Cloud™ Integration Flogo
 
 ![alt-text](img/FlogoTCMSender.png "Image")
 <br><sup>TIBCO Cloud Integration Configuration</sup>
 
-
-
-
-
 > the current Implementation subscribes to all instance messaging destinations.
 
 ### How it works
-1. The MainController GameObject contains the TIBCO Cloud Messaging Connector and SimpleTextViewController
+1. The MainController GameObject contains the TIBCO Cloud™ Messaging Connector and SimpleTextViewController
 2. The Controller extends DataHandler, it requires a connection (Connector Object) and receives messages.
 3. The Controller has a reference to the Text to update when it receives a message.
 
