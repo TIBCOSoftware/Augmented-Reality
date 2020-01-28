@@ -47,7 +47,7 @@ For Testing open Browser Developer Tools, and go to the Network Tab. Afterward, 
 ![alt-text](img/nimbus-json.png "Image")
 <br><sup>TIBCO Cloud™ Nimbus® JSON from Chrome Dev Tools</sup>
 
-Search for a Request like the following and copy the JSON response
+Search for a Request like the following and copy the JSON response.
 
 ```bash
 Request URL: https://nimbus.cloud.tibco.com/TIB_SUB_<your Subscription ID>/CtrlWebIsapi.dll/api/process-page/0:<your Nimbus Map ID>
