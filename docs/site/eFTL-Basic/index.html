@@ -42,7 +42,7 @@
     
     
       
-        <title>Cloud Messaging Basic - TIBCO LABS™ Augmented-Reality</title>
+        <title>Cloud Messaging - TIBCO LABS™ Augmented-Reality</title>
       
     
     
@@ -131,7 +131,7 @@
                 TIBCO LABS™ Augmented-Reality
               </span>
               <span class="md-header-nav__topic">
-                Cloud Messaging Basic
+                Cloud Messaging
               </span>
             
           
@@ -326,11 +326,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Cloud Messaging Basic
+        Cloud Messaging
       </label>
     
-    <a href="./" title="Cloud Messaging Basic" class="md-nav__link md-nav__link--active">
-      Cloud Messaging Basic
+    <a href="./" title="Cloud Messaging" class="md-nav__link md-nav__link--active">
+      Cloud Messaging
     </a>
     
       
@@ -408,6 +408,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-devices" title="Target Devices" class="md-nav__link">
+    Target Devices
+  </a>
   
 </li>
       
@@ -523,6 +530,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#target-devices" title="Target Devices" class="md-nav__link">
+    Target Devices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#content" title="Content" class="md-nav__link">
     Content
   </a>
@@ -546,9 +560,11 @@
               
                 
                 
-                <h1 id="tibco-cloudtm-messaging-unity3d-package">TIBCO Cloud™ Messaging Unity3D Package</h1>
+                <h1 id="tibco-cloudtm-messaging-unity3d-package">TIBCO Cloud™ Messaging - Unity3D Package</h1>
 <h2 id="overview">Overview</h2>
 <p>This package allows you to connect a Unity3D Application to <a href="https://www.tibco.com/products/tibco-cloud-messaging">TIBCO Cloud™ Messaging</a> using the eFTL websocket protocol. The Implementation is based on standard UnityWebSocket and is working in Unity3D Editor, and on Hololens (UWP).</p>
+<p><img alt="alt-text" src="../img/TCM-AR.png" title="Image" />
+<br><sup>TIBCO Cloud Messaging Panel</sup></p>
 <p>Once connected, the application can subscribe and receive real-time messages and update the scene accordingly. The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh.</p>
 <h3 id="trail-account">Trail Account</h3>
 <p>register for your own TIBCO Cloud™ Messaging trail account on this <a href="https://account.cloud.tibco.com/signup/tcm">Form</a> to get your personal ID and Auth-Key under 'Authentication Keys' Settings Tab, beside the Subscription 'Status'.</p>
@@ -563,8 +579,8 @@ In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMe
 <p><img alt="alt-text" src="../img/FTLSocketConfig.png" title="Image" />
 <br><sup>TIBCO Cloud Messaging FTL Configuration</sup></p>
 <h2 id="sending-messages-to-unity3d">sending Messages to Unity3D</h2>
-<p>The sample is expecting this type of message :</p>
-<pre><code class="json">{&quot;dataType&quot;:&quot;Power&quot;,&quot;data&quot;:&quot;130&quot;}
+<p>The sample is expecting this type of message:</p>
+<pre><code class="json">{&quot;dataType&quot;:&quot;Power&quot;,&quot;data&quot;:&quot;324&quot;}
 </code></pre>
 
 <h3 id="using-curl">using cURL</h3>
@@ -585,6 +601,8 @@ In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMe
 <li>The Controller extends DataHandler, it requires a connection (Connector Object) and receives messages.</li>
 <li>The Controller has a reference to the Text to update when it receives a message.</li>
 </ol>
+<h2 id="target-devices">Target Devices</h2>
+<p>Tested with Microsoft Hololens.</p>
 <h2 id="content">Content</h2>
 <p>ready to use <a href="https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Cloud-Messaging/FTL-Basic">Package</a> |
 Implementation <a href="https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Cloud-Messaging/FTL-Basic/Assets">Source</a></p>
