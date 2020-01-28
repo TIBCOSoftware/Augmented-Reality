@@ -33,9 +33,11 @@ nav:
   - Unity3D Packages:
     - Logos: Logos.md
     - 3D Charts: 3DCharts.md
-    - Cloud Messaging Basic: eFTL-Basic.md
+    - Cloud Messaging: eFTL-Basic.md
     #- Cloud Messaging Adv: eFTL-Adv.md
     #- Rendezvous: Rendezvous-Basic.md
+    #- Cloud Nimbus: Nimbus-Basic.md
+    #- Cloud Live Apps: LiveApps-Basic.md
 
 # Customization
 extra:

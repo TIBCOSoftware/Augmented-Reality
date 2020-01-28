@@ -1,7 +1,10 @@
-# TIBCO Cloud™ Messaging Unity3D Package
+# TIBCO Cloud™ Messaging - Unity3D Package
 
 ## Overview
 This package allows you to connect a Unity3D Application to [TIBCO Cloud™ Messaging](https://www.tibco.com/products/tibco-cloud-messaging) using the eFTL websocket protocol. The Implementation is based on standard UnityWebSocket and is working in Unity3D Editor, and on Hololens (UWP).
+
+![alt-text](img/TCM-AR.png "Image")
+<br><sup>TIBCO Cloud Messaging Panel</sup>
 
 Once connected, the application can subscribe and receive real-time messages and update the scene accordingly. The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh.
 
@@ -25,10 +28,10 @@ In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMe
 <br><sup>TIBCO Cloud Messaging FTL Configuration</sup>
 
 ## sending Messages to Unity3D
-The sample is expecting this type of message :
+The sample is expecting this type of message:
 
 ``` json
-{"dataType":"Power","data":"130"}
+{"dataType":"Power","data":"324"}
 ```
 ### using cURL
 TIBCO Cloud Messaging comes with a REST API, as well. So any REST Tool can be used for testing, too. Just replace [your-id] and [your-key] in the following command:
@@ -49,6 +52,9 @@ Here a sample using TIBCO Cloud™ Integration Flogo
 1. The MainController GameObject contains the TIBCO Cloud™ Messaging Connector and SimpleTextViewController
 2. The Controller extends DataHandler, it requires a connection (Connector Object) and receives messages.
 3. The Controller has a reference to the Text to update when it receives a message.
+
+## Target Devices
+Tested with Microsoft Hololens.
 
 ## Content
 ready to use [Package](https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Cloud-Messaging/FTL-Basic) |
