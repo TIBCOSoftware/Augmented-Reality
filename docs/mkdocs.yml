@@ -30,7 +30,7 @@ theme:
 nav:
   - Home: index.md
   - Getting Started: Getting-Started.md
-  - Unity3D Packages:
+  - Packages and Samples:
     - Logos: Logos.md
     - 3D Charts: 3DCharts.md
     - Cloud Messaging: eFTL-Basic.md
@@ -38,6 +38,8 @@ nav:
     #- Rendezvous: Rendezvous-Basic.md
     #- Cloud Nimbus: Nimbus-Basic.md
     #- Cloud Live Apps: LiveApps-Basic.md
+  - Explorations:
+    - Cloud Spotfire: Spotfire-Exploration.md
 
 # Customization
 extra:

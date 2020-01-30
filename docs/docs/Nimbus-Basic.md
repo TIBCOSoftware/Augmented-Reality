@@ -60,6 +60,16 @@ Store the JSON as 'NimbusMap.json' in your Unity 'Assets/Resources' Folder.
 Tested with AR supporting Android Smartphones and Tablets, [ARCore supported devices](https://developers.google.com/ar/discover/supported-devices).
 Glad to hear that it works with ARKit on iOS as well, feel free to raise a GitHub Issue to confirm.
 
+## Used Versions
+
+- Unity (2019.2.18f1)
+- Unity AR Foundations (3.1.0)
+- Unity AR Subsystem (3.1.0)
+- Unity ARCore XR Plugin (3.1.0)
+- TIBCO Cloud Nimbus (Release Jan.2020)
+- Android 10
+- Google Pixel XL
+
 ## Content
 ready to use [Package](https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Nimbus/Nimbus-Basic) |
 Implementation [Source](https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Nimbus/Nimbus-Basic/Assets)

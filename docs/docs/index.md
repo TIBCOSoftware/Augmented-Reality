@@ -7,11 +7,15 @@
 | ![Logo](TIBCOLabs-final.png) | Connect Enterprise Data and take actions is everything in any future Augmented Reality AR/XR Implementation. The here provided packages allows quick and easy usage of TIBCO® Product Offerings inside Augmented Reality AR/XR Solutions. <br><br> We are looking to provide simple connectivity samples to connect to TIBCO Cloud™ Offerings and On-Prem Products, plus other useful Assets. |
 
 ## Technology
-All reusable Components implemented for Unity3D using C#, to be used with Google Android Phones and Tablets or Microsoft Hololens, to be reused together with TIBCO Cloud™ connected Implementations.
+All reusable Components implemented for Unity3D using C#, to be used with Google Android Phones and Tablets or Microsoft Hololens, they can be quickly reused inside of TIBCO Cloud™ connected Implementations.
 
 <a href="Angular/docs/1.%20Prerequisites/">![getStarted](get-started.png "TCST Get Started")</a>
 
-More Details about this Initiative here [TIBCO LABS™ - Augmented Reality Wiki](https://community.tibco.com/wiki/tibco-labstm-augmented-reality-wiki) on TIBCO Community.
+More Details about this Initiative here [TIBCO LABS™ - Augmented Reality Wiki](https://community.tibco.com/wiki/tibco-labstm-augmented-reality-wiki), on
+
+![TIBCO LABS Details](img/TIBCO-Community.png "TIBCO LABS on TIBCO Community") 
+
+
 
 ## BSD 3-Clause License
 Copyright © 2020 TIBCO Software Inc. <br><br>

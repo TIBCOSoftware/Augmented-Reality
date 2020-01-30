@@ -1,0 +1,1036 @@
+{
+  "toolbar": {
+    "canFeedback": true,
+    "feedbackIndicator": {
+      "id": "7-59FA0493EA7145B89FD4F07EE1BFF488",
+      "lastUpdated": null
+    },
+    "canShare": true,
+    "shareParams": {
+      "url": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/CtrlWebIsapi.dll/app/diagram/0%3AE4A949151EC1468D9F86F04790B36AFE.59FA0493EA7145B89FD4F07EE1BFF488",
+      "title": "Inspection"
+    },
+    "canAddToHome": true,
+    "addToHomeParams": {
+      "__id": "webAddFavorite.show",
+      "type": 0,
+      "title": "Inspection",
+      "map": "0:E4A949151EC1468D9F86F04790B36AFE",
+      "dgm": "59FA0493EA7145B89FD4F07EE1BFF488"
+    },
+    "subscribed": false,
+    "subscribeParams": false,
+    "unsubscribeParams": {
+      "__id": "webActions.unsubscribe",
+      "map": "0:E4A949151EC1468D9F86F04790B36AFE",
+      "dgm": "59FA0493EA7145B89FD4F07EE1BFF488",
+      "csrftoken": "lq3ISAG3z72cVfQz"
+    },
+    "canViewReviewers": true,
+    "viewReviewersUrl": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/CtrlWebIsapi.dll/?__id=webDiagramReviewers.show&map=0%3AE4A949151EC1468D9F86F04790B36AFE&dgm=59FA0493EA7145B89FD4F07EE1BFF488",
+    "canExportToPdf": true,
+    "canExportToWord": true,
+    "canExportToPowerPoint": true,
+    "canGotoLevel": true,
+    "gotoLevelUrl": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/CtrlWebIsapi.dll/?__id=webGotoLevel.show&map=0%3AE4A949151EC1468D9F86F04790B36AFE&ret=%2FTIB_SUB_01BB7F22MGX01K6MQK0TD02DYV%2FCtrlWebIsapi.dll%2Fapi%2Fprocess-page%2F0%3AE4A949151EC1468D9F86F04790B36AFE",
+    "canAddAction": true,
+    "addActionParams": {
+      "__id": "webActionForm.show",
+      "hostid": "0D7926A2745B45A1B8F665C224820723",
+      "hosttype": 1
+    },
+    "canAddChangeRequest": true,
+    "addChangeRequestParams": {
+      "__id": "webChangeRequestPost.change",
+      "map": "0:E4A949151EC1468D9F86F04790B36AFE",
+      "dgm": "59FA0493EA7145B89FD4F07EE1BFF488"
+    },
+    "canManageAccessRights": true,
+    "manageAccessRightsParams": {
+      "__id": "webManageDiagramRights.show",
+      "map": "0:E4A949151EC1468D9F86F04790B36AFE",
+      "dgm": "59FA0493EA7145B89FD4F07EE1BFF488",
+      "snap": ""
+    },
+    "canUnlock": true,
+    "unlockParams": {
+      "__id": "webUnlockDiagram.show",
+      "map": "0:E4A949151EC1468D9F86F04790B36AFE",
+      "dgm": "59FA0493EA7145B89FD4F07EE1BFF488",
+      "snap": ""
+    },
+    "canExportToBusinessStudio": true,
+    "canRequestAuth": true,
+    "requestAuthParams": {
+      "__id": "webRequestDiagramsAuth.show",
+      "map": "0:E4A949151EC1468D9F86F04790B36AFE",
+      "dgm": "59FA0493EA7145B89FD4F07EE1BFF488"
+    },
+    "canEditDetails": true,
+    "editDetailsParams": {
+      "__id": "webEditDiagramDetails.show",
+      "map": "0:E4A949151EC1468D9F86F04790B36AFE",
+      "dgm": "59FA0493EA7145B89FD4F07EE1BFF488",
+      "snap": ""
+    },
+    "canEditDiagram": true,
+    "canAddFeedback": true,
+    "canRequestReview": true,
+    "canManageReviewers": true,
+    "canRequestAcknowledgement": false,
+    "canManageAcknowledgers": false,
+    "todos": {}
+  },
+  "diagram": {
+    "type": "modern",
+    "localeId": 1033,
+    "diagram": {
+      "revision": 22,
+      "diagramType": "dtSimple",
+      "diagramGuid": "59FA0493EA7145B89FD4F07EE1BFF488",
+      "mapId": "0:E4A949151EC1468D9F86F04790B36AFE",
+      "siblingMapId": "0:944FAA7766A24A7BA9F04DF03B81B98D",
+      "mapType": "mtDraft",
+      "authorizationStatus": "asNot",
+      "parentId": "",
+      "diagramTitle": "Device-Management",
+      "usesTheme": true,
+      "theme": {
+        "activity": {
+          "font": {
+            "name": "Source Sans Pro",
+            "size": 14,
+            "color": "#212121",
+            "styles": {
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "strikeout": false
+            }
+          },
+          "border": {
+            "color": "#878787"
+          },
+          "fill": {
+            "color": "#FFFFFF"
+          },
+          "tagColors": {
+            "control": "#04BE5B",
+            "external": "#E0E0E0",
+            "important": "#E60000",
+            "other": "#005A8C"
+          }
+        },
+        "flowline": {
+          "line": {
+            "color": "#878787"
+          }
+        },
+        "linetext": {
+          "font": {
+            "name": "Source Sans Pro",
+            "size": 14,
+            "color": "#212121",
+            "styles": {
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "strikeout": false
+            }
+          }
+        },
+        "resource": {
+          "font": {
+            "name": "Source Sans Pro",
+            "size": 16,
+            "color": "#FFFFFF",
+            "styles": {
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "strikeout": false
+            }
+          },
+          "fill": {
+            "color": "#0081CB"
+          },
+          "tagColors": {
+            "people": "#0081CB",
+            "system": "#0094EA",
+            "other": "#09A5FF"
+          }
+        }
+      },
+      "lockDiagramTitle": false,
+      "mapTitle": "Device-Management",
+      "localeId": 1033,
+      "templateId": "",
+      "swimLanes": {},
+      "background": {
+        "imageMode": 0
+      },
+      "objects": [
+        {
+          "templateObj": false,
+          "objectType": "otActivity",
+          "localId": 1,
+          "globalId": "FAB938D0BDE14E7487778A7FA7276580",
+          "objectId": 3,
+          "position": {
+            "x1": 160,
+            "y1": 340,
+            "x2": 320,
+            "y2": 460
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "font": {
+              "name": "Source Sans Pro",
+              "size": 14,
+              "color": "#212121",
+              "styles": {
+                "bold": false,
+                "italic": false,
+                "underline": false,
+                "strikeout": false
+              }
+            },
+            "penWidth": 1,
+            "penStyle": "psSolid",
+            "borderVisible": true,
+            "color": "#878787",
+            "brushColor": "#FFFFFF",
+            "brushStyle": "bsSolid"
+          },
+          "shadow": {
+            "visible": false,
+            "color": "#C0C0C0",
+            "style": "bsSolid",
+            "offsetX": 7,
+            "offsetY": 6,
+            "hatchColor": "#000000"
+          },
+          "properties": {
+            "visualId": 1,
+            "hintText": "1.  check Device visually first\r2. check temperature\r3. check for latest Software Version",
+            "commentaryText": "<p style=\"text-align:center\"><span style=\"font-size:11pt\"><span style=\"font-family:calibri\"><span style=\"color:#000000\">1.  </span></span></span><span style=\"font-size:11pt\"><span style=\"font-family:Calibri\"><span style=\"color:#000000\">check Device visually first</span></span></span></p><p style=\"text-align:center\"><span style=\"font-size:11pt\"><span style=\"font-family:calibri\"><span style=\"color:#000000\">2. check temperature</span></span></span></p><p style=\"text-align:center\"><span style=\"font-size:11pt\"><span style=\"font-family:calibri\"><span style=\"color:#000000\">3. check for latest Software Version</span></span></span></p>",
+            "showCommentaryAsHint": true,
+            "text": "Inspect",
+            "autoTaskType": "aattUser",
+            "visualIdOn": true,
+            "tag": "none"
+          },
+          "attachments": [
+            {
+              "attachmentType": "atFile",
+              "attachmentTypeDescr": "Document Link",
+              "globalId": "DBE47CE0E56F4AF0948310043B01B8F5",
+              "title": "Container Ship",
+              "hasAttAccess": true,
+              "icon": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/ui/common/icons/png32.png?629294030",
+              "icons": {
+                "small": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/ui/common/icons/png16.png?629294030",
+                "medium": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/ui/common/icons/png32.png?629294030",
+                "large": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/ui/common/icons/png48.png?629294030"
+              },
+              "language": {},
+              "properties": {
+                "targetId": "E81276B3CB7D4A25AEC8FDE2B722AA83",
+                "docId": 8,
+                "hasMaster": false,
+                "type": "document",
+                "hasTargetAccess": true,
+                "useFileAssociation": false,
+                "exeName": "",
+                "parameters": ""
+              },
+              "targetUrl": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/CtrlWebIsapi.dll/?__id=webDiagram.showFile&map=0%3AE4A949151EC1468D9F86F04790B36AFE&dgm=59FA0493EA7145B89FD4F07EE1BFF488&rev=22&di=15&ai=0&save=1"
+            },
+            {
+              "attachmentType": "atFile",
+              "attachmentTypeDescr": "Document Link",
+              "globalId": "6E6FAB6131E04900BF84647A2F611274",
+              "title": "CyberLogitec Shocks Industry with TIBCO",
+              "hasAttAccess": true,
+              "icon": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/ui/common/icons/cwl32.png?629294030",
+              "icons": {
+                "small": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/ui/common/icons/cwl16.png?629294030",
+                "medium": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/ui/common/icons/cwl32.png?629294030",
+                "large": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/ui/common/icons/cwl32.png?629294030"
+              },
+              "language": {},
+              "properties": {
+                "targetId": "2D5E00182F954376A5B88C0362A978C9",
+                "docId": 9,
+                "hasMaster": false,
+                "type": "url",
+                "hasTargetAccess": true,
+                "useFileAssociation": false,
+                "exeName": "",
+                "parameters": ""
+              },
+              "targetUrl": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/CtrlWebIsapi.dll/?__id=webDiagram.showFile&map=0%3AE4A949151EC1468D9F86F04790B36AFE&dgm=59FA0493EA7145B89FD4F07EE1BFF488&rev=22&di=15&ai=0&save=1"
+            }
+          ],
+          "resources": [
+            {
+              "localId": 12,
+              "globalId": "45014517455548C18A10017608ADA9D7",
+              "styleLocked": false,
+              "showHint": true,
+              "style": {
+                "font": {
+                  "name": "Source Sans Pro",
+                  "size": 16,
+                  "color": "#FFFFFF",
+                  "styles": {
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "strikeout": false
+                  }
+                },
+                "brushColor": "#0081CB",
+                "brushStyle": "bsSolid"
+              },
+              "properties": {
+                "resId": 4,
+                "name": "Customer Services",
+                "displayName": "",
+                "infoField1": "",
+                "infoField2": "",
+                "type": "none",
+                "resStatus": "rsCentral",
+                "visualId": 1,
+                "resRefId": 18,
+                "visible": true,
+                "costed": true,
+                "allocation": 100,
+                "hintText": "Customer Services"
+              }
+            }
+          ],
+          "bubbleText": {
+            "localId": 15,
+            "globalId": "B2A0B08463874BE69E00E59F90C6F5F3",
+            "styleLocked": false,
+            "showHint": true,
+            "style": {
+              "color": "#000000",
+              "penStyle": "psSolid",
+              "penWidth": 1,
+              "brushColor": "#FFFFFF",
+              "brushStyle": "bsSolid",
+              "hatchColor": "#000000",
+              "fillType": "ftBrush",
+              "brushGradient": "gdrTopToBottom"
+            },
+            "properties": {
+              "visualId": 1,
+              "hintText": "",
+              "visible": false,
+              "text": "<p style=\"text-align:center\"><span style=\"font-size:11pt\"><span style=\"font-family:calibri\"><span style=\"color:#000000\">Note: </span></span></span><span style=\"font-size:11pt\"><span style=\"font-family:Calibri\"><span style=\"color:#000000\">sometimes Auto-update is disabled</span></span></span></p>"
+            }
+          },
+          "drillDowns": []
+        },
+        {
+          "templateObj": false,
+          "objectType": "otLine",
+          "localId": 2,
+          "globalId": "22ADC990F71A480EB7BB0154D0ED905F",
+          "objectId": 1,
+          "line": {
+            "straight": true,
+            "linkPoints": [
+              {
+                "x": 0,
+                "y": 400
+              },
+              {
+                "x": 160,
+                "y": 400
+              }
+            ],
+            "showProbability": false,
+            "probability": 100,
+            "straightStyle": "ssDefault",
+            "sourceEdge": "",
+            "sourceObjectId": 0,
+            "destEdge": "LEFT_EDGE",
+            "destObjectId": 1,
+            "arrowOptions": "ARROWS_NORMAL",
+            "horizPreference": true,
+            "crowsFeetSource": false,
+            "crowsFeetDest": false,
+            "floatingDogLegStyle": "dlfs3Vector",
+            "arrowHeadStyle": "ahsSolid",
+            "lineStartStyle": "lssNone",
+            "flowlineGlobalId": "6EB60B93350D45A890D72A8561854645"
+          },
+          "position": {
+            "x1": 0,
+            "y1": 400,
+            "x2": 160,
+            "y2": 400
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "penWidth": 1,
+            "color": "#878787"
+          },
+          "properties": {
+            "visualId": 0,
+            "hintText": "",
+            "commentaryText": "",
+            "showCommentaryAsHint": true,
+            "text": ""
+          }
+        },
+        {
+          "templateObj": false,
+          "objectType": "otActivity",
+          "localId": 3,
+          "globalId": "D53FC5F1C8574C4F9FC167D918550D97",
+          "objectId": 4,
+          "position": {
+            "x1": 680,
+            "y1": 340,
+            "x2": 840,
+            "y2": 460
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "font": {
+              "name": "Source Sans Pro",
+              "size": 14,
+              "color": "#212121",
+              "styles": {
+                "bold": false,
+                "italic": false,
+                "underline": false,
+                "strikeout": false
+              }
+            },
+            "penWidth": 1,
+            "penStyle": "psSolid",
+            "borderVisible": true,
+            "color": "#878787",
+            "brushColor": "#FFFFFF",
+            "brushStyle": "bsSolid"
+          },
+          "shadow": {
+            "visible": false,
+            "color": "#C0C0C0",
+            "style": "bsSolid",
+            "offsetX": 7,
+            "offsetY": 6,
+            "hatchColor": "#000000"
+          },
+          "properties": {
+            "visualId": 2,
+            "hintText": "Nimbus AR by TIBCO Labs",
+            "commentaryText": "<p style=\"text-align:center\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri\"><span style=\"color:#000000\">Nimbus AR by TIBCO Labs</span></span></span></p>",
+            "showCommentaryAsHint": true,
+            "text": "Verify Pressure",
+            "autoTaskType": "aattUser",
+            "visualIdOn": true,
+            "tag": "none"
+          },
+          "resources": [
+            {
+              "localId": 13,
+              "globalId": "2D596D400A8C4118BC1B90DD16F2EAA0",
+              "styleLocked": false,
+              "showHint": true,
+              "style": {
+                "font": {
+                  "name": "Source Sans Pro",
+                  "size": 16,
+                  "color": "#FFFFFF",
+                  "styles": {
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "strikeout": false
+                  }
+                },
+                "brushColor": "#0081CB",
+                "brushStyle": "bsSolid"
+              },
+              "properties": {
+                "resId": 4,
+                "name": "Customer Services",
+                "displayName": "",
+                "infoField1": "",
+                "infoField2": "",
+                "type": "none",
+                "resStatus": "rsCentral",
+                "visualId": 2,
+                "resRefId": 18,
+                "visible": true,
+                "costed": true,
+                "allocation": 100,
+                "hintText": "Customer Services"
+              }
+            }
+          ],
+          "drillDowns": []
+        },
+        {
+          "templateObj": false,
+          "objectType": "otLine",
+          "localId": 4,
+          "globalId": "0BC5F6214A104A8BA35F1E3E428F059C",
+          "objectId": 2,
+          "line": {
+            "straight": true,
+            "linkPoints": [
+              {
+                "x": 840,
+                "y": 400
+              },
+              {
+                "x": 1000,
+                "y": 400
+              }
+            ],
+            "showProbability": false,
+            "probability": 100,
+            "straightStyle": "ssDefault",
+            "sourceEdge": "RIGHT_EDGE",
+            "sourceObjectId": 3,
+            "destEdge": "",
+            "destObjectId": 0,
+            "arrowOptions": "ARROWS_NORMAL",
+            "horizPreference": true,
+            "crowsFeetSource": false,
+            "crowsFeetDest": false,
+            "floatingDogLegStyle": "dlfs3Vector",
+            "arrowHeadStyle": "ahsSolid",
+            "lineStartStyle": "lssNone",
+            "flowlineGlobalId": "C0910EA92F794663A9A12DAA110150DB"
+          },
+          "position": {
+            "x1": 840,
+            "y1": 400,
+            "x2": 1000,
+            "y2": 400
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "penWidth": 1,
+            "color": "#878787"
+          },
+          "properties": {
+            "visualId": 0,
+            "hintText": "",
+            "commentaryText": "",
+            "showCommentaryAsHint": true,
+            "text": ""
+          }
+        },
+        {
+          "templateObj": false,
+          "objectType": "otLineText",
+          "localId": 5,
+          "globalId": "CD0F44EE394F4646872ABFE33209CF63",
+          "objectId": 22,
+          "position": {
+            "x1": 0,
+            "y1": 357,
+            "x2": 160,
+            "y2": 397
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "font": {
+              "name": "Source Sans Pro",
+              "size": 14,
+              "color": "#212121",
+              "styles": {
+                "bold": false,
+                "italic": false,
+                "underline": false,
+                "strikeout": false
+              }
+            }
+          },
+          "shadow": {
+            "visible": false,
+            "color": "#C0C0C0",
+            "style": "bsSolid",
+            "offsetX": 7,
+            "offsetY": 6,
+            "hatchColor": "#000000"
+          },
+          "properties": {
+            "visualId": 0,
+            "hintText": "",
+            "commentaryText": "",
+            "showCommentaryAsHint": true,
+            "text": "yearly"
+          },
+          "lineText": {
+            "lineId": 2
+          }
+        },
+        {
+          "templateObj": false,
+          "objectType": "otLineText",
+          "localId": 6,
+          "globalId": "1A3D17F2DBE54F24A1BE4CC55A0A22AA",
+          "objectId": 53,
+          "position": {
+            "x1": 840,
+            "y1": 357,
+            "x2": 1000,
+            "y2": 397
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "font": {
+              "name": "Source Sans Pro",
+              "size": 14,
+              "color": "#212121",
+              "styles": {
+                "bold": false,
+                "italic": false,
+                "underline": false,
+                "strikeout": false
+              }
+            }
+          },
+          "shadow": {
+            "visible": false,
+            "color": "#C0C0C0",
+            "style": "bsSolid",
+            "offsetX": 7,
+            "offsetY": 6,
+            "hatchColor": "#000000"
+          },
+          "properties": {
+            "visualId": 0,
+            "hintText": "",
+            "commentaryText": "",
+            "showCommentaryAsHint": true,
+            "text": "done"
+          },
+          "lineText": {
+            "lineId": 4
+          }
+        },
+        {
+          "templateObj": false,
+          "objectType": "otActivity",
+          "localId": 7,
+          "globalId": "B640DD5009D84A79A31C9974B336C6D0",
+          "objectId": 5,
+          "position": {
+            "x1": 420,
+            "y1": 340,
+            "x2": 580,
+            "y2": 460
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "font": {
+              "name": "Source Sans Pro",
+              "size": 14,
+              "color": "#212121",
+              "styles": {
+                "bold": false,
+                "italic": false,
+                "underline": false,
+                "strikeout": false
+              }
+            },
+            "penWidth": 1,
+            "penStyle": "psSolid",
+            "borderVisible": true,
+            "color": "#878787",
+            "brushColor": "#FFFFFF",
+            "brushStyle": "bsSolid"
+          },
+          "shadow": {
+            "visible": false,
+            "color": "#C0C0C0",
+            "style": "bsSolid",
+            "offsetX": 7,
+            "offsetY": 6,
+            "hatchColor": "#000000"
+          },
+          "properties": {
+            "visualId": 3,
+            "hintText": "",
+            "commentaryText": "",
+            "showCommentaryAsHint": true,
+            "text": "Adjust",
+            "autoTaskType": "aattUser",
+            "visualIdOn": true,
+            "tag": "none"
+          },
+          "resources": [
+            {
+              "localId": 14,
+              "globalId": "D0223ABEE7C64A5F9F0132161150141A",
+              "styleLocked": false,
+              "showHint": true,
+              "style": {
+                "font": {
+                  "name": "Source Sans Pro",
+                  "size": 16,
+                  "color": "#FFFFFF",
+                  "styles": {
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "strikeout": false
+                  }
+                },
+                "brushColor": "#0081CB",
+                "brushStyle": "bsSolid"
+              },
+              "properties": {
+                "resId": 4,
+                "name": "Customer Services",
+                "displayName": "",
+                "infoField1": "",
+                "infoField2": "",
+                "type": "none",
+                "resStatus": "rsCentral",
+                "visualId": 3,
+                "resRefId": 18,
+                "visible": true,
+                "costed": true,
+                "allocation": 100,
+                "hintText": "Customer Services"
+              }
+            }
+          ],
+          "drillDowns": []
+        },
+        {
+          "templateObj": false,
+          "objectType": "otLine",
+          "localId": 8,
+          "globalId": "86D68B38C5BE42A7976F997E587FFF91",
+          "objectId": 6,
+          "line": {
+            "straight": true,
+            "linkPoints": [
+              {
+                "x": 320,
+                "y": 400
+              },
+              {
+                "x": 420,
+                "y": 400
+              }
+            ],
+            "showProbability": false,
+            "probability": 100,
+            "straightStyle": "ssDefault",
+            "sourceEdge": "RIGHT_EDGE",
+            "sourceObjectId": 1,
+            "destEdge": "LEFT_EDGE",
+            "destObjectId": 7,
+            "arrowOptions": "ARROWS_NORMAL",
+            "horizPreference": true,
+            "crowsFeetSource": false,
+            "crowsFeetDest": false,
+            "floatingDogLegStyle": "dlfs3Vector",
+            "arrowHeadStyle": "ahsSolid",
+            "lineStartStyle": "lssNone",
+            "flowlineGlobalId": "28586BAE5C0349E5A097BC66564AEC1E"
+          },
+          "position": {
+            "x1": 320,
+            "y1": 400,
+            "x2": 420,
+            "y2": 400
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "penWidth": 1,
+            "color": "#878787"
+          },
+          "properties": {
+            "visualId": 0,
+            "hintText": "",
+            "commentaryText": "",
+            "showCommentaryAsHint": true,
+            "text": ""
+          }
+        },
+        {
+          "templateObj": false,
+          "objectType": "otLineText",
+          "localId": 9,
+          "globalId": "07C109A5B01344069C33980A3FFFC4BF",
+          "objectId": 7,
+          "position": {
+            "x1": 290,
+            "y1": 357,
+            "x2": 450,
+            "y2": 397
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "font": {
+              "name": "Source Sans Pro",
+              "size": 14,
+              "color": "#212121",
+              "styles": {
+                "bold": false,
+                "italic": false,
+                "underline": false,
+                "strikeout": false
+              }
+            }
+          },
+          "shadow": {
+            "visible": false,
+            "color": "#C0C0C0",
+            "style": "bsSolid",
+            "offsetX": 7,
+            "offsetY": 6,
+            "hatchColor": "#000000"
+          },
+          "properties": {
+            "visualId": 0,
+            "hintText": "",
+            "commentaryText": "",
+            "showCommentaryAsHint": true,
+            "text": "maintenance"
+          },
+          "lineText": {
+            "lineId": 8
+          }
+        },
+        {
+          "templateObj": false,
+          "objectType": "otLine",
+          "localId": 10,
+          "globalId": "3D989503B6D8455EA2E6C532F3925FD6",
+          "objectId": 8,
+          "line": {
+            "straight": true,
+            "linkPoints": [
+              {
+                "x": 580,
+                "y": 400
+              },
+              {
+                "x": 680,
+                "y": 400
+              }
+            ],
+            "showProbability": false,
+            "probability": 100,
+            "straightStyle": "ssDefault",
+            "sourceEdge": "RIGHT_EDGE",
+            "sourceObjectId": 7,
+            "destEdge": "LEFT_EDGE",
+            "destObjectId": 3,
+            "arrowOptions": "ARROWS_NORMAL",
+            "horizPreference": true,
+            "crowsFeetSource": false,
+            "crowsFeetDest": false,
+            "floatingDogLegStyle": "dlfs3Vector",
+            "arrowHeadStyle": "ahsSolid",
+            "lineStartStyle": "lssNone",
+            "flowlineGlobalId": "75818D79CF9B4E37B94A94DD985F1F1C"
+          },
+          "position": {
+            "x1": 580,
+            "y1": 400,
+            "x2": 680,
+            "y2": 400
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "penWidth": 1,
+            "color": "#878787"
+          },
+          "properties": {
+            "visualId": 0,
+            "hintText": "",
+            "commentaryText": "",
+            "showCommentaryAsHint": true,
+            "text": ""
+          }
+        },
+        {
+          "templateObj": false,
+          "objectType": "otLineText",
+          "localId": 11,
+          "globalId": "960978699F33408CAF55E0C4D7F97262",
+          "objectId": 9,
+          "position": {
+            "x1": 550,
+            "y1": 357,
+            "x2": 710,
+            "y2": 397
+          },
+          "positionLocked": false,
+          "showHint": true,
+          "style": {
+            "font": {
+              "name": "Source Sans Pro",
+              "size": 14,
+              "color": "#212121",
+              "styles": {
+                "bold": false,
+                "italic": false,
+                "underline": false,
+                "strikeout": false
+              }
+            }
+          },
+          "shadow": {
+            "visible": false,
+            "color": "#C0C0C0",
+            "style": "bsSolid",
+            "offsetX": 7,
+            "offsetY": 6,
+            "hatchColor": "#000000"
+          },
+          "properties": {
+            "visualId": 0,
+            "hintText": "",
+            "commentaryText": "",
+            "showCommentaryAsHint": true,
+            "text": "pressure adjusted"
+          },
+          "lineText": {
+            "lineId": 10
+          }
+        }
+      ],
+      "enableAutoProps": false,
+      "accessRights": "arWrite",
+      "controlPanel": {
+        "description": "",
+        "owner": {
+          "id": 7,
+          "name": "Joerg Grote"
+        },
+        "author": {
+          "id": 7,
+          "name": "Joerg Grote"
+        },
+        "version": "1",
+        "status": "draft"
+      }
+    },
+    "properties": {
+      "mapId": "0:E4A949151EC1468D9F86F04790B36AFE",
+      "diagramGuid": "59FA0493EA7145B89FD4F07EE1BFF488",
+      "hostId": "0D7926A2745B45A1B8F665C224820723"
+    }
+  },
+  "master": false,
+  "stakeholders": {
+    "items": [
+      {
+        "objectType": 25,
+        "id": 7,
+        "name": "Joerg Grote",
+        "role": [
+          "Eigentümer",
+          "Verfasser"
+        ],
+        "mask": 1,
+        "hasPhoto": false
+      }
+    ],
+    "buttonPermissions": {
+      "manageAuthorizers": true,
+      "manageReviewers": true
+    },
+    "count": 1
+  },
+  "details": {
+    "title": "Device-Management",
+    "mapTitle": "Device-Management",
+    "description": "",
+    "owner": "Joerg Grote",
+    "version": "1",
+    "levelNumber": "1",
+    "reviewDate": "",
+    "authCode": "Ausstehende aktualisierung",
+    "author": "Joerg Grote",
+    "date": "06.05.2019",
+    "status": 1,
+    "percentDone": 0,
+    "userStatus": "",
+    "iam": "",
+    "keywords": []
+  },
+  "changerequests": {
+    "items": [],
+    "count": 0
+  },
+  "actions": {
+    "items": [],
+    "count": 0
+  },
+  "reviews": {
+    "items": [],
+    "count": 0
+  },
+  "authorisationprogress": {
+    "items": []
+  },
+  "auditlog": {
+    "items": [
+      {
+        "date": 1557154083740,
+        "user": "Joerg Grote",
+        "status": "Ausstehende aktualisierung",
+        "version": "1",
+        "action": "Zugriffsrechte aktualisiert",
+        "type": "Draft",
+        "preview": "Access Rights Updated (Aktuelles diagramm)\r\n\r\n        Old Rights = Read and Write\r\n\r\n\r\n        New Rights = Read and Write"
+      }
+    ],
+    "count": 1,
+    "info": {
+      "start": 1,
+      "length": 1,
+      "total": 1,
+      "url": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/CtrlWebIsapi.dll/?__id=webLogs.showAuditLog&map=0%3AE4A949151EC1468D9F86F04790B36AFE&dgm=59FA0493EA7145B89FD4F07EE1BFF488"
+    }
+  },
+  "acknowledgementlog": {
+    "items": [],
+    "count": 0,
+    "info": {
+      "start": 1,
+      "length": 0,
+      "total": 0,
+      "url": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/CtrlWebIsapi.dll/?__id=webLogs.showAcknowlLog&map=0%3AE4A949151EC1468D9F86F04790B36AFE&dgm=59FA0493EA7145B89FD4F07EE1BFF488"
+    }
+  },
+  "changelog": {
+    "items": [],
+    "count": 0,
+    "info": {
+      "start": 1,
+      "length": 0,
+      "total": 0,
+      "url": "/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/CtrlWebIsapi.dll/?__id=webLogs.showChangeLog&map=0%3AE4A949151EC1468D9F86F04790B36AFE&dgm=59FA0493EA7145B89FD4F07EE1BFF488"
+    }
+  }
+}
