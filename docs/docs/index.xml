@@ -1,0 +1,254 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Augmented Reality – Documentation</title>
+    <link>https://tibcosoftware.github.io/augmented-reality/docs/</link>
+    <description>Recent content in Documentation on Project Augmented Reality</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://tibcosoftware.github.io/augmented-reality/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Logos and other Objects - Unity3D Package</title>
+      <link>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/logos/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/logos/</guid>
+      <description>
+        
+        
+        &lt;p&gt;With this Package you can used TIBCO Logos within Unity3D.&lt;/p&gt;
+&lt;h3 id=&#34;import-into-unity3d&#34;&gt;Import into Unity3D&lt;/h3&gt;
+&lt;p&gt;Just created a new Unity Project and import the custom Package.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;UnityAssets-Logo.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Unity3D Library Assets&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The Package includes a Material: tibStandardBlue, and a Shader: tibStandardShader&lt;/p&gt;
+&lt;h3 id=&#34;preview&#34;&gt;Preview&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;TIBCO-3DLogo.png&#34; alt=&#34;alt-text&#34; title=&#34;TIBCO Logo Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;TIBCO Logo with MRTK in Unity3D Preview-Mode&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
+&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Logos&#34;&gt;Package&lt;/a&gt; | 
+Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Logos/Assets&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: TIBCO Cloud™ Spotfire® - Exploration</title>
+      <link>https://tibcosoftware.github.io/augmented-reality/docs/explorations/spotfire-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/augmented-reality/docs/explorations/spotfire-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;Spotfire-Hololens.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Spotfire on Hololens Edge Browser&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;This Analytics Dashboard shows detailed Informations, and allows to interactively drill-down into all Chart Types.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The right information, at right time, and at the right AR Anchor position.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;trail-account&#34;&gt;Trail Account&lt;/h3&gt;
+&lt;p&gt;To try this yourself, just register for your own TIBCO Cloud™ Spotfire® trail account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/spotfire&#34;&gt;Form&lt;/a&gt; to get your own personal Subscription Account.&lt;/p&gt;
+&lt;h3 id=&#34;spotfire-api&#34;&gt;Spotfire API&lt;/h3&gt;
+&lt;p&gt;This TIBCO LABS Exploration is looking into AR API Support for TIBCO Cloud™ Spotfire® as well, this is a lot better to allow real &amp;lsquo;augmented&amp;rsquo; drill-downs into Analyses.&lt;/p&gt;
+&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens V2.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 3D Charts - Unity3D Package</title>
+      <link>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/3d-charts/</link>
+      <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/3d-charts/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This package helps to render easy 3D Charts within your Unity3D Application. All Charts fully created by using C# Scripting, with this they can fully dynamically be rendered with the provided Data in real-time.&lt;/p&gt;
+&lt;p&gt;Open &amp;lsquo;TIBCOLabs &amp;gt; Charts &amp;gt; Chart Demo Scene&amp;rsquo;. The Scene contains all Charts provided here, plus a Scene Description Panel, and some Scene Decoration Assets.&lt;/p&gt;
+&lt;p&gt;Some Assets using &amp;lsquo;TextMesh&amp;rsquo; others as well &amp;lsquo;TextMesh Pro&amp;rsquo;, so &amp;lsquo;TextMesh Pro&amp;rsquo; needs to be loaded into the Project Assets as soon you open the Scene and Unity3D is asking for this additional package.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;3DCharts.png&#34; alt=&#34;alt-text&#34; title=&#34;Demo Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Unity3D Charts Demo Scene&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;All components fully re-sizeable and to work well together with e.g. MRTK in the right size. In case you like to render the charts without the transparent boxes surround, just disable the ‘Mesh Renderer’ inside Unity3D Inspector and the chart will render without the box surround.&lt;/p&gt;
+&lt;h3 id=&#34;bar-chart&#34;&gt;Bar Chart&lt;/h3&gt;
+&lt;p&gt;Generates multiple Bars with the scaled Box surround, it will automatically be extended if there are more than tow Bars and gets smaller in case there is only one Bar to display.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;BarChart.png&#34; alt=&#34;alt-text&#34; title=&#34;Bar Chart Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Bar Chart Sample&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;BarChart-Settings.png&#34; alt=&#34;alt-text&#34; title=&#34;Bar Chart Settings Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Bar Chart Settings&lt;/sup&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This Prefab can be instantiated easily at run-time so that all Settings can be dynamically applied.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;pie-chart&#34;&gt;Pie Chart&lt;/h3&gt;
+&lt;p&gt;Generates a Pie Chart out of a number of Prefab Slices, this number is configurable and sizable.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;PieChart.png&#34; alt=&#34;alt-text&#34; title=&#34;Pie Chart Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Pie Chart Sample&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;PieChart-Settings.png&#34; alt=&#34;alt-text&#34; title=&#34;Pie Chart Settings Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Pie Chart Settings&lt;/sup&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This Prefab can be instantiated easily at run-time so that all Settings can be dynamically applied.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;import-into-unity3d&#34;&gt;Import into Unity3D&lt;/h2&gt;
+&lt;p&gt;Just created a new Unity Project and import the custom Package.&lt;/p&gt;
+&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
+&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Charts&#34;&gt;Package&lt;/a&gt; |
+Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Charts/Assets&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: TIBCO Cloud™ Messaging - Unity3D Package</title>
+      <link>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/cloud-messaging/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/cloud-messaging/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The Implementation is based on standard UnityWebSocket and is working in Unity3D Editor, Android ARCore, and on Microsoft Hololens (UWP).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;TCM-AR.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;TIBCO Cloud Messaging Panel&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Once connected, the application can subscribe and receive real-time messages and update the scene accordingly. The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh.&lt;/p&gt;
+&lt;h3 id=&#34;trail-account&#34;&gt;Trail Account&lt;/h3&gt;
+&lt;p&gt;register for your own TIBCO Cloud™ Messaging trail account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/tcm&#34;&gt;Form&lt;/a&gt; to get your personal ID and Auth-Key under &amp;lsquo;Authentication Keys&amp;rsquo; Settings Tab, beside the Subscription &amp;lsquo;Status&amp;rsquo;.&lt;/p&gt;
+&lt;h3 id=&#34;import-into-unity3d&#34;&gt;Import into Unity3D&lt;/h3&gt;
+&lt;p&gt;Just created a new Unity Project and import the ready to use Package from the &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Cloud-Messaging/FTL-Basic&#34;&gt;Packages Folder&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;UnityAssets-FTL.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Unity3D Library Assets&lt;/sup&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;drag&#39;n drop the &amp;lsquo;MainController&amp;rsquo; Prefab into your scene&lt;/li&gt;
+&lt;li&gt;drag&#39;n drop the &amp;lsquo;Text&amp;rsquo; Prefab into your scene&lt;/li&gt;
+&lt;li&gt;drag&#39;n drop the &amp;lsquo;Text&amp;rsquo; Object from your scene to the &amp;lsquo;MainControler&amp;rsquo;, &amp;lsquo;SimpleTextViewController&amp;rsquo; Component to the &amp;lsquo;Text Mesh&amp;rsquo; Field&lt;/li&gt;
+&lt;li&gt;configure your Web Socket URI and Authkey, in the &amp;lsquo;TibcoCloudMessagingConnector&amp;rsquo; Component&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;b&gt;done!&lt;/b&gt; Run Unity &amp;lsquo;Playmode&amp;rsquo;, and test first using cURL or Flogo - like described below.&lt;/p&gt;
+&lt;h3 id=&#34;use-the-sample-scene&#34;&gt;Use the Sample scene&lt;/h3&gt;
+&lt;p&gt;In the min. Implementation for Unity, open: &lt;i&gt;TIBCOLabs &amp;gt; CloudMessaging &amp;gt; Sample &amp;gt; CloudMessaging-TestScene&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;The ARCore Implementation contains additionally a AR Sample scene: &lt;i&gt;TIBCOLabs &amp;gt; CloudMessaging &amp;gt; CloudMessaging-AR&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;The Scene contains a MainController Object.
+In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMessaginConnector with you TIBCO Cloud™ Subscription Details.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;FTLSocketConfig.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;TIBCO Cloud Messaging FTL Configuration&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sending-messages&#34;&gt;sending Messages&lt;/h2&gt;
+&lt;p&gt;The sample is expecting this type of message:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;dataType&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Power&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;130&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The ARCore Sample supports as well an &amp;lsquo;Any&amp;rsquo; Datatype, more can be implemented in the &amp;lsquo;SimpleTextViewController&amp;rsquo; &amp;gt; &amp;lsquo;OnData&amp;rsquo; Handler.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;dataType&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Any&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;some Text/Alert from the Cloud&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;using-curl&#34;&gt;using cURL&lt;/h3&gt;
+&lt;p&gt;TIBCO Cloud Messaging comes with a REST API, as well. So any REST Tool can be used for testing, too. Just replace [your-id] and [your-key] in the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -i -u :&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;your-key&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt; https://messaging.cloud.tibco.com/tcm/TIB_SUB_&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;your-id&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;/channel/v1/publish -d &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;{&amp;#34;dataType&amp;#34;:&amp;#34;Power&amp;#34;,&amp;#34;data&amp;#34;:&amp;#34;130&amp;#34;}&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;using-flogo&#34;&gt;using Flogo&lt;/h3&gt;
+&lt;p&gt;Here a sample using TIBCO Cloud™ Integration Flogo&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;FlogoTCMSender.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;TIBCO Cloud Integration Configuration&lt;/sup&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;the current Implementation subscribes to all instance messaging destinations.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;The MainController GameObject contains the TIBCO Cloud™ Messaging Connector and SimpleTextViewController&lt;/li&gt;
+&lt;li&gt;The SimpleTextViewController extends &amp;lsquo;OnData&amp;rsquo; Handler, it requires a connection (Connector Object) and receives messages.&lt;/li&gt;
+&lt;li&gt;The SimpleTextViewController has a reference to the TextMesh to update when it receives a message.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;the ARCore Sample Project uses &amp;lsquo;TextMeshPro&amp;rsquo; an a pre-defined Panel Object, instead of just &amp;lsquo;TextMesh&amp;rsquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens, Android Smartphones, inside Unity Editor on Windows 10.&lt;/p&gt;
+&lt;h2 id=&#34;used-versions&#34;&gt;Used Versions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Unity (2019.2.18f1)&lt;/li&gt;
+&lt;li&gt;Unity AR Foundations (3.1.0)&lt;/li&gt;
+&lt;li&gt;Unity AR Subsystem (3.1.0)&lt;/li&gt;
+&lt;li&gt;Unity ARCore XR Plugin (3.1.0)&lt;/li&gt;
+&lt;li&gt;TIBCO Cloud Nimbus (Release Jan.2020)&lt;/li&gt;
+&lt;li&gt;Android 10&lt;/li&gt;
+&lt;li&gt;Google Pixel XL&lt;/li&gt;
+&lt;li&gt;Microsoft Hololens V1,V2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
+&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Cloud-Messaging/FTL-Basic&#34;&gt;Package&lt;/a&gt; |
+min. Implementation, as Unity Project &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Cloud-Messaging/FTL-Basic&#34;&gt;Source&lt;/a&gt;&lt;br&gt;
+Implementation, for ARCore &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Cloud-Messaging/FTL-ARCore&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: TIBCO Cloud™ Nimbus® - Unity3D Package</title>
+      <link>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/cloud-nimbus/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/cloud-nimbus/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This Sample shows a Nimbus Instruction Guide Activity, defined in the Web-based Maps Designer in the TIBCO Cloud.
+The Panel can be placed anywhere on the ground, moved around or fixed in the position. It can be adjusted in scale, rotation, and position-height using an Options Menu that can be opened using a 2-finger touch.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nimbus-maps-AR.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Unity3D Scene Sample&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Within this Sample, the Navigation between the different Activities is done using the arrow button at the left and right of the shown Activity.&lt;/p&gt;
+&lt;h3 id=&#34;trail-account&#34;&gt;Trail Account&lt;/h3&gt;
+&lt;p&gt;register for your own TIBCO Cloud™ Nimbus® trail account on this &lt;a href=&#34;https://www.tibco.com/products/tibco-cloud-nimbus/sign-up&#34;&gt;Form&lt;/a&gt; to get your personal Subscription Account.&lt;/p&gt;
+&lt;h3 id=&#34;nimbus-maps&#34;&gt;Nimbus Maps&lt;/h3&gt;
+&lt;p&gt;the Instruction Guide Activity Map of the in the sample above dynamically rendered in AR.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nimbus-map.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;TIBCO Cloud™ Nimbus® Map&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;In Nimbus Maps Designer the first Activity looks like follows&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nimbus-activity.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;TIBCO Cloud™ Nimbus® Map Activity Details&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Currently, this Sample Implementation supports the following Attributes of this Activity:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Diagram Title&lt;/li&gt;
+&lt;li&gt;Diagram Version&lt;/li&gt;
+&lt;li&gt;Diagram Owner&lt;/li&gt;
+&lt;li&gt;Activity Title&lt;/li&gt;
+&lt;li&gt;Activity Text/Instructions&lt;/li&gt;
+&lt;li&gt;Activity Comment/Hint&lt;/li&gt;
+&lt;li&gt;Activity Resource/Owner&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Remark: to support Activity Attachments / Links, etc. would be great to add near future.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;nimbus-api&#34;&gt;Nimbus API&lt;/h3&gt;
+&lt;p&gt;This TIBCO Labs Exploration focused as a first step to support the standard Nimbus JSON that is provided by the private API.
+We exploring Ideas of supporting on the fly Map changes as an option, too.&lt;/p&gt;
+&lt;h3 id=&#34;nimbus-json&#34;&gt;Nimbus JSON&lt;/h3&gt;
+&lt;p&gt;For Testing open Browser Developer Tools, and go to the Network Tab. Afterward, open your created Nimbus Map&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nimbus-json.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;TIBCO Cloud™ Nimbus® JSON from Chrome Dev Tools&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Search for a Request like the following and copy the JSON response.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Request URL: https://nimbus.cloud.tibco.com/TIB_SUB_&amp;lt;your Subscription ID&amp;gt;/CtrlWebIsapi.dll/api/process-page/0:&amp;lt;your Nimbus Map ID&amp;gt;
+Request Method: GET
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Store the JSON as &amp;lsquo;NimbusMap.json&amp;rsquo; in your Unity &amp;lsquo;Assets/Resources&amp;rsquo; Folder.&lt;/p&gt;
+&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with AR supporting Android Smartphones and Tablets, &lt;a href=&#34;https://developers.google.com/ar/discover/supported-devices&#34;&gt;ARCore supported devices&lt;/a&gt;.
+Glad to hear that it works with ARKit on iOS as well, feel free to raise a GitHub Issue to confirm.&lt;/p&gt;
+&lt;h2 id=&#34;used-versions&#34;&gt;Used Versions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Unity (2019.2.18f1)&lt;/li&gt;
+&lt;li&gt;Unity AR Foundations (3.1.0)&lt;/li&gt;
+&lt;li&gt;Unity AR Subsystem (3.1.0)&lt;/li&gt;
+&lt;li&gt;Unity ARCore XR Plugin (3.1.0)&lt;/li&gt;
+&lt;li&gt;TIBCO Cloud Nimbus (Release Jan.2020)&lt;/li&gt;
+&lt;li&gt;Android 10&lt;/li&gt;
+&lt;li&gt;Google Pixel XL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
+&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Nimbus/Nimbus-Basic&#34;&gt;Package&lt;/a&gt; |
+Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Nimbus/Nimbus-Basic/Assets&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
