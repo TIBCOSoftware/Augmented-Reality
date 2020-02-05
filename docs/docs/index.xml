@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project Augmented Reality – Documentation</title>
-    <link>https://tibcosoftware.github.io/augmented-reality/docs/</link>
+    <link>https://tibcosoftware.github.io/Augmented-Reality/docs/</link>
     <description>Recent content in Documentation on Project Augmented Reality</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="https://tibcosoftware.github.io/augmented-reality/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://tibcosoftware.github.io/Augmented-Reality/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Logos and other Objects - Unity3D Package</title>
-      <link>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/logos/</link>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/logos/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/logos/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/logos/</guid>
       <description>
         
         
@@ -40,10 +40,10 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
     
     <item>
       <title>Docs: TIBCO Cloud™ Spotfire® - Exploration</title>
-      <link>https://tibcosoftware.github.io/augmented-reality/docs/explorations/spotfire-exploration/</link>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/spotfire-exploration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/augmented-reality/docs/explorations/spotfire-exploration/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/spotfire-exploration/</guid>
       <description>
         
         
@@ -65,10 +65,10 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
     
     <item>
       <title>Docs: 3D Charts - Unity3D Package</title>
-      <link>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/3d-charts/</link>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/3d-charts/</link>
       <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/3d-charts/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/3d-charts/</guid>
       <description>
         
         
@@ -107,10 +107,10 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
     
     <item>
       <title>Docs: TIBCO Cloud™ Messaging - Unity3D Package</title>
-      <link>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/cloud-messaging/</link>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/cloud-messaging/</link>
       <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/cloud-messaging/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/cloud-messaging/</guid>
       <description>
         
         
@@ -185,10 +185,10 @@ Implementation, for ARCore &lt;a href=&#34;https://github.com/TIBCOSoftware/Augm
     
     <item>
       <title>Docs: TIBCO Cloud™ Nimbus® - Unity3D Package</title>
-      <link>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/cloud-nimbus/</link>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/cloud-nimbus/</link>
       <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/augmented-reality/docs/packages-and-samples/cloud-nimbus/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/cloud-nimbus/</guid>
       <description>
         
         
