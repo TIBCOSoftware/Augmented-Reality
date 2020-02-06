@@ -3,7 +3,7 @@ title: "Getting Started"
 linkTitle: "Getting Started"
 weight: 1
 description: >
-  your first Steps into TIBCO Process-Mining.
+  your first Steps into TIBCO's Cloud connected Augmented Reality.
 ---
 
 ## Augmented Reality Packages
