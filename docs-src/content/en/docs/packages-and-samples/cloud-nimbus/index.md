@@ -1,11 +1,11 @@
-<!---
+---
 title: "TIBCO Cloud™ Nimbus® - Unity3D Package"
 linkTitle: "TIBCO Cloud™ Nimbus®"
 date: 2020-02-05
 weight: 4
 description: >
   This package allows you to connect a Unity3D Application to [TIBCO Cloud™ Nimbus®](https://www.tibco.com/products/tibco-cloud-nimbus) using a JSON File.
---->
+---
 
 This Sample shows a Nimbus Instruction Guide Activity, defined in the Web-based Maps Designer in the TIBCO Cloud.
 The Panel can be placed anywhere on the ground, moved around or fixed in the position. It can be adjusted in scale, rotation, and position-height using an Options Menu that can be opened using a 2-finger touch. 

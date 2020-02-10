@@ -220,7 +220,7 @@
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-augmented-realitydocspackages-and-samplescloud-nimbus" href="/Augmented-Reality/docs/packages-and-samples/cloud-nimbus/"></a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-augmented-realitydocspackages-and-samplescloud-nimbus" href="/Augmented-Reality/docs/packages-and-samples/cloud-nimbus/">TIBCO Cloud™ Nimbus®</a>
       
       
     </li>
@@ -341,7 +341,7 @@
 	
 	
 	
-	<p class="-text-secondary pt-3 h6" >Reading time: 1 minutes and 54 seconds.</p>
+	<p class="-text-secondary pt-3 h6" >Reading time: 2 minutes and 18 seconds.</p>
 	<h1>Getting Started</h1>
 	<div class="lead">your first Steps into TIBCO's Cloud connected Augmented Reality.</div>
 	<h2 id="augmented-reality-packages">Augmented Reality Packages</h2>
@@ -366,12 +366,12 @@ full Documentation will follow.</li>
 <ul>
 <li>TIBCO Cloud™ Messaging Implementation, <a href="../packages-and-samples/cloud-messaging/">Details</a><br>
 Cloud messaging for reliable and secure data distribution in real-time with Enterprise Data from and to AR-Devices.</li>
+<li>TIBCO Cloud™ Nimbus® Connectivity, <a href="../packages-and-samples/cloud-nimbus/">Details</a><br>
+Define, Simplify, and Share Business Processes and Instruction Guides in Minutes - without any special technical notation or IT involvement.</li>
 </ul>
 <h2 id="roadmap">Roadmap</h2>
 <p>upcoming Samples and Packages provided by TIBCO TIBCO Labs™ Project Augmented Reality.</p>
 <ul>
-<li>TIBCO Cloud™ Nimbus® Connectivity<br>
-Define, Simplify, and Share Business Processes and Instruction Guides in Minutes - without any special technical notation or IT involvement.</li>
 <li>TIBCO Cloud™ Live Apps Connectivity<br>
 Low-code app development to quickly build, deploy, and innovate, and can be used in AR to take action on Cases.</li>
 <li>TIBCO Rendezvous® Connectivity<br>
@@ -382,7 +382,11 @@ Empower Everyone to Integrate Anything: Easier and faster API-led integration.</
 cloud-native API platform you can deploy anywhere, and manage APIs from everywhere, and use those API's from AR.</li>
 <li>TIBCO Cloud™ AuditSafe Connectivity<br>
 Easily add cloud audit trails, secured with blockchain, for any application, and actions taken in AR.</li>
-<li>TIBCO Cloud Spotfire® Connectivity
+<li>TIBCO EBX™ Software Connectivity<br>
+A single solution to govern, manage, and consume all shared data assets, also as AR Virtualizations.</li>
+<li>TIBCO® Data Virtualization Connectivity<br>
+enterprise data virtualization solution that orchestrates access to multiple and varied data sources and delivers the datasets and IT-curated data services foundation for nearly any solution.<br>To be considered as well in this &lsquo;Data Fabric&rsquo; space: TIBCO ComputeDB™, and TIBCO® Graph Database.</li>
+<li>TIBCO Cloud Spotfire® Connectivity<br>
 display the most complete analytics solution in the market, and makes it fast and easy for everyone to visualize new discoveries in data, in 3D, location based, or based on what you looking at in AR.</li>
 </ul>
 <blockquote>
@@ -417,6 +421,66 @@ display the most complete analytics solution in the market, and makes it fast an
     
 </div>
 
+	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="feedback--answer feedback--answer-yes">Yes</button>
+<button class="feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/TIBCOSoftware/Augmented-Reality/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/TIBCOSoftware/Augmented-Reality/issues/new">tell us how we can improve</a>.
+</p>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">Last modified February 6, 2020: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/7dce6b2c5d635e2d03f37ddc3a93debae037a968">fix docs (7dce6b2)</a>
