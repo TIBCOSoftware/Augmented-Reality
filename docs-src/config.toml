@@ -1,5 +1,5 @@
 baseURL = "https://tibcosoftware.github.io/Augmented-Reality/"
-title = "Project Augmented Reality"
+title = "Project ART"
 
 enableRobotsTXT = true
 
@@ -55,7 +55,7 @@ id = "UA-218413-1"
 
 [languages]
 [languages.en]
-title = "Project Augmented Reality"
+title = "Project ART"
 description = "Making the virtual world real"
 languageName ="English"
 # Weight used for sorting.

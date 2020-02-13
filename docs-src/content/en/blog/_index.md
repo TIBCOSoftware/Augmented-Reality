@@ -9,5 +9,5 @@ menu:
 
 This is the **blog** section. It has two categories: News and Releases.
 
-Files in these directories will be listed in reverse chronological order.
+Entries in these directories are listed in reverse chronological order.
 

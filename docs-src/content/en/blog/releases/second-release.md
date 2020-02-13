@@ -6,7 +6,7 @@ description: >
   Second **public** Release.
 ---
 
-second public Implementation Packages for Unity of the TIBCO LABS™ Project Augmented Reality, containing:
+second public Implementation Packages for Unity of the TIBCO LABS™ Project ART, containing:
 
 - new TIBCO Cloud™ Nimbus® Package and Sample
 
