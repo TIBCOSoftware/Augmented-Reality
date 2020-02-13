@@ -15,8 +15,8 @@ The Panel can be placed anywhere on the ground, moved around or fixed in the pos
 
 Within this Sample, the Navigation between the different Activities is done using the arrow button at the left and right of the shown Activity.
 
-### Trail Account
-register for your own TIBCO Cloud™ Nimbus® trail account on this [Form](https://www.tibco.com/products/tibco-cloud-nimbus/sign-up) to get your personal Subscription Account.
+### Trial Account
+register for your own TIBCO Cloud™ Nimbus® trial account on this [Sign-up Form](https://www.tibco.com/products/tibco-cloud-nimbus/sign-up) to get your personal Subscription Account.
 
 ### Nimbus Maps
 the Instruction Guide Activity Map of the in the sample above dynamically rendered in AR.
