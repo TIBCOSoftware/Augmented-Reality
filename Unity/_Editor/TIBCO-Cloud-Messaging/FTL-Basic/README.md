@@ -4,7 +4,7 @@
 
 This Unity3D packages provides components to
 * Connect to a TIBCO Cloud Messaging channel
-* Subscribe to receive realtime messages published on channel
+* Subscribe to receive real-time messages published on channel
 
 
-Using those components you can build AR experiences displaying realtime data coming from IoT sensors, enterprise applications, ...
+Using those components you can build AR experiences displaying real-time data coming from IoT sensors, enterprise applications, and more ...
