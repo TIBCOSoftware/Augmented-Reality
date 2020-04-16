@@ -71,7 +71,7 @@ weight = 1
 
 [params]
 copyright = "TIBCO Software Inc."
-privacy_policy = "https://www.tibco.com/company/privacy"
+privacy_policy = "https://www.tibco.com/company/terms-of-use"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]

@@ -1,0 +1,7 @@
+
+URLs to highlight:
+https://www.tibco.com/de/products/data-virtualization
+
+TDV Connectors
+https://www.tibco.com/sites/tibco/files/resources/DS-TDV_0.pdf
+https://www.cdata.com/solutions/dv/tibco/
