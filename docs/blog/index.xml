@@ -14,20 +14,22 @@
     
     
     <item>
-      <title>Blog: Second Release</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/02/06/second-release/</link>
-      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      <title>Blog: first Release</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/first-release/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/02/06/second-release/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/first-release/</guid>
       <description>
         
         
-        &lt;p&gt;second public Implementation Packages for Unity of the TIBCO LABS™ Project ART, containing:&lt;/p&gt;
+        &lt;p&gt;first public Implementation Packages for Unity of the TIBCO LABS™ Project ART, containing:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;new TIBCO Cloud™ Nimbus® Package and Sample&lt;/li&gt;
+&lt;li&gt;TIBCO Logo Package.&lt;/li&gt;
+&lt;li&gt;3D Charts, that can be used in AR Implementations for Hololens and ARCore.&lt;/li&gt;
+&lt;li&gt;TIBCO Cloud™ Messaging - Unity3D Package and Samples&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;please have a look back soon here.&lt;/p&gt;
+&lt;p&gt;please have a look back soon here, and check our Roadmap.&lt;/p&gt;
 &lt;/blockquote&gt;
 
       </description>
@@ -42,14 +44,14 @@
       <description>
         
         
-        &lt;p&gt;first public Implementation Packages for Unity of the TIBCO LABS™ Project ART, containing:&lt;/p&gt;
+        &lt;p&gt;first private Implementation Packages for Unity of the TIBCO LABS™ Project ART, containing:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;TIBCO Logo Package.&lt;/li&gt;
 &lt;li&gt;3D Charts, that can be used in AR Implementations for Hololens and ARCore.&lt;/li&gt;
 &lt;li&gt;TIBCO Cloud™ Messaging - Unity3D Package and Samples&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;please have a look back soon here.&lt;/p&gt;
+&lt;p&gt;working on legal reviews and internal approvals, going public.&lt;/p&gt;
 &lt;/blockquote&gt;
 
       </description>

@@ -14,15 +14,15 @@
     
     
     <item>
-      <title>Docs: Logos and other Objects - Unity3D Package</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/logos/</link>
+      <title>Docs: 3D Assets - Unity3D Package</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/3d-assets/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/logos/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/3d-assets/</guid>
       <description>
         
         
-        &lt;p&gt;With this Package you can used TIBCO Logos within Unity3D.&lt;/p&gt;
+        &lt;p&gt;With this Package you can used TIBCO Assets within Unity3D.&lt;/p&gt;
 &lt;h3 id=&#34;import-into-unity3d&#34;&gt;Import into Unity3D&lt;/h3&gt;
 &lt;p&gt;Just created a new Unity Project and import the custom Package.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;UnityAssets-Logo.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
@@ -32,8 +32,8 @@
 &lt;p&gt;&lt;img src=&#34;TIBCO-3DLogo.png&#34; alt=&#34;alt-text&#34; title=&#34;TIBCO Logo Image&#34;&gt;
 &lt;br&gt;&lt;sup&gt;TIBCO Logo with MRTK in Unity3D Preview-Mode&lt;/sup&gt;&lt;/p&gt;
 &lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
-&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Logos&#34;&gt;Package&lt;/a&gt; | 
-Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Logos/Assets&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Packages/TIBCO-Assets&#34;&gt;Package&lt;/a&gt; | 
+Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Editor/TIBCO-Assets&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
@@ -99,8 +99,8 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
 &lt;h2 id=&#34;import-into-unity3d&#34;&gt;Import into Unity3D&lt;/h2&gt;
 &lt;p&gt;Just created a new Unity Project and import the custom Package.&lt;/p&gt;
 &lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
-&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Charts&#34;&gt;Package&lt;/a&gt; |
-Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Charts/Assets&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Packages/TIBCO-Charts&#34;&gt;Package&lt;/a&gt; |
+Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Editor/TIBCO-Charts&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
@@ -121,7 +121,7 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
 &lt;h3 id=&#34;trial-account&#34;&gt;Trial Account&lt;/h3&gt;
 &lt;p&gt;register for your own TIBCO Cloud™ Messaging trial account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/tcm&#34;&gt;Sign-up Form&lt;/a&gt; to get your personal ID and Auth-Key under &amp;lsquo;Authentication Keys&amp;rsquo; Settings Tab, beside the Subscription &amp;lsquo;Status&amp;rsquo;.&lt;/p&gt;
 &lt;h3 id=&#34;import-into-unity3d&#34;&gt;Import into Unity3D&lt;/h3&gt;
-&lt;p&gt;Just created a new Unity Project and import the ready to use Package from the &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Cloud-Messaging/FTL-Basic&#34;&gt;Packages Folder&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Just created a new Unity Project and import the ready to use Package from the &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Packages/TIBCO-Cloud-Messaging/FTL-Basic&#34;&gt;Packages Folder&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;UnityAssets-FTL.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
 &lt;br&gt;&lt;sup&gt;Unity3D Library Assets&lt;/sup&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -176,76 +176,8 @@ In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMe
 &lt;li&gt;Microsoft Hololens V1,V2&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
-&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Cloud-Messaging/FTL-Basic&#34;&gt;Package&lt;/a&gt; |
-min. Implementation, as Unity Project &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Cloud-Messaging/FTL-Basic&#34;&gt;Source&lt;/a&gt;&lt;br&gt;
-Implementation, for ARCore &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Cloud-Messaging/FTL-ARCore&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: TIBCO Cloud™ Nimbus® - Unity3D Package</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/cloud-nimbus/</link>
-      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/cloud-nimbus/</guid>
-      <description>
-        
-        
-        &lt;p&gt;This Sample shows a Nimbus Instruction Guide Activity, defined in the Web-based Maps Designer in the TIBCO Cloud.
-The Panel can be placed anywhere on the ground, moved around or fixed in the position. It can be adjusted in scale, rotation, and position-height using an Options Menu that can be opened using a 2-finger touch.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nimbus-maps-AR.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
-&lt;br&gt;&lt;sup&gt;Unity3D Scene Sample&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Within this Sample, the Navigation between the different Activities is done using the arrow button at the left and right of the shown Activity.&lt;/p&gt;
-&lt;h3 id=&#34;trial-account&#34;&gt;Trial Account&lt;/h3&gt;
-&lt;p&gt;register for your own TIBCO Cloud™ Nimbus® trial account on this &lt;a href=&#34;https://www.tibco.com/products/tibco-cloud-nimbus/sign-up&#34;&gt;Sign-up Form&lt;/a&gt; to get your personal Subscription Account.&lt;/p&gt;
-&lt;h3 id=&#34;nimbus-maps&#34;&gt;Nimbus Maps&lt;/h3&gt;
-&lt;p&gt;the Instruction Guide Activity Map of the in the sample above dynamically rendered in AR.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nimbus-map.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
-&lt;br&gt;&lt;sup&gt;TIBCO Cloud™ Nimbus® Map&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;In Nimbus Maps Designer the first Activity looks like follows&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nimbus-activity.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
-&lt;br&gt;&lt;sup&gt;TIBCO Cloud™ Nimbus® Map Activity Details&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Currently, this Sample Implementation supports the following Attributes of this Activity:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Diagram Title&lt;/li&gt;
-&lt;li&gt;Diagram Version&lt;/li&gt;
-&lt;li&gt;Diagram Owner&lt;/li&gt;
-&lt;li&gt;Activity Title&lt;/li&gt;
-&lt;li&gt;Activity Text/Instructions&lt;/li&gt;
-&lt;li&gt;Activity Comment/Hint&lt;/li&gt;
-&lt;li&gt;Activity Resource/Owner&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Remark: to support Activity Attachments / Links, etc. would be great to add near future.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;nimbus-api&#34;&gt;Nimbus API&lt;/h3&gt;
-&lt;p&gt;This TIBCO Labs Exploration focused as a first step to support the standard Nimbus JSON that is provided by the private API.
-We exploring Ideas of supporting on the fly Map changes as an option, too.&lt;/p&gt;
-&lt;h3 id=&#34;nimbus-json&#34;&gt;Nimbus JSON&lt;/h3&gt;
-&lt;p&gt;For Testing open Browser Developer Tools, and go to the Network Tab. Afterward, open your created Nimbus Map&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nimbus-json.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
-&lt;br&gt;&lt;sup&gt;TIBCO Cloud™ Nimbus® JSON from Chrome Dev Tools&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Search for a Request like the following and copy the JSON response.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Request URL: https://nimbus.cloud.tibco.com/TIB_SUB_&amp;lt;your Subscription ID&amp;gt;/CtrlWebIsapi.dll/api/process-page/0:&amp;lt;your Nimbus Map ID&amp;gt;
-Request Method: GET
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Store the JSON as &amp;lsquo;NimbusMap.json&amp;rsquo; in your Unity &amp;lsquo;Assets/Resources&amp;rsquo; Folder.&lt;/p&gt;
-&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
-&lt;p&gt;Tested with AR supporting Android Smartphones and Tablets, &lt;a href=&#34;https://developers.google.com/ar/discover/supported-devices&#34;&gt;ARCore supported devices&lt;/a&gt;.
-Glad to hear that it works with ARKit on iOS as well, feel free to raise a GitHub Issue to confirm.&lt;/p&gt;
-&lt;h2 id=&#34;used-versions&#34;&gt;Used Versions&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Unity (2019.2.18f1)&lt;/li&gt;
-&lt;li&gt;Unity AR Foundations (3.1.0)&lt;/li&gt;
-&lt;li&gt;Unity AR Subsystem (3.1.0)&lt;/li&gt;
-&lt;li&gt;Unity ARCore XR Plugin (3.1.0)&lt;/li&gt;
-&lt;li&gt;TIBCO Cloud Nimbus (Release Jan.2020)&lt;/li&gt;
-&lt;li&gt;Android 10&lt;/li&gt;
-&lt;li&gt;Google Pixel XL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
-&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/packages/TIBCO-Nimbus/Nimbus-Basic&#34;&gt;Package&lt;/a&gt; |
-Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/sources/TIBCO-Nimbus/Nimbus-Basic/Assets&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Packages/TIBCO-Cloud-Messaging/FTL-Basic&#34;&gt;Package&lt;/a&gt; |
+min. Implementation, as Unity Project &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Editor/TIBCO-Cloud-Messaging/FTL-Basic&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
