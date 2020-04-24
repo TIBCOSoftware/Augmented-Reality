@@ -1,9 +1,3 @@
-/*
-* Copyright © 2020. TIBCO Software Inc.
-* This file is subject to the license terms contained
-* in the license file that is distributed with this file.
-*/
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,6 +7,7 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using TIBCO.LABS;
 
 // created from Unity3dAzure.WebSockets 
 using Unity3dAzure.WebSockets; //  used for webSockets Events
@@ -99,13 +94,22 @@ namespace TIBCO.LABS.EFTL
     {
         public delegate void MessageReceived (JsonObject message);
         public  MessageReceived OnEftlMessage;
+        public delegate void IsReady();
+        public IsReady OnReady;
+        
 
         [Header("Connection Details")]
+        [Tooltip("TIBCO-credentials.txt resource file must contains <prefix>.socketurl and <prefix>.authkey ")]
+        [SerializeField]
+        protected string ConnectionPropertyPrefix = "eftl";
+        // will user prefix.socketurl and prefix.authkey
+        [SerializeField]
+        protected List<string> MatcherList;
 
-        [SerializeField]
-        protected string FTLSocketUri = "wss://messaging.cloud.tibco.com/tcm/TIB_SUB_[your-id]/channel";
-        [SerializeField]
-        protected string AuthKey;
+        private string FTLSocketUri = "wss://messaging.cloud.tibco.com/tcm/TIB_SUB_[your-id]/channel";
+        
+        private string AuthKey = "your auth key";
+        
 
         protected string Client_id;
         protected List<UnityKeyValue> Headers;
@@ -115,8 +119,21 @@ namespace TIBCO.LABS.EFTL
         protected bool isAttached = false;
 
         #region MonoBehavior methods
+        void Start()
+        {
+           
+
+        }
         void OnEnable()
         {
+            var props = Utils.ReadCredentialsFile();
+            FTLSocketUri = props[ConnectionPropertyPrefix + ".socketurl"];
+            AuthKey = props[ConnectionPropertyPrefix + ".authkey"];
+            if ((AuthKey == null) || (FTLSocketUri == null))
+            {
+                throw new System.Exception(" entries for socketurl or authkey missing in credential file !");
+            }
+
             Connect(); 
         }
         void OnDisable()
@@ -263,7 +280,7 @@ namespace TIBCO.LABS.EFTL
                             handleWelcome(message);
                             break;
                         case ProtocolOpConstants.OP_SUBSCRIBED:
-                            //handleSubscribed(message);
+                            handleSubscribed(message);
                             break;
                         case ProtocolOpConstants.OP_UNSUBSCRIBED:
                             //handleUnsubscribed(message);
@@ -288,9 +305,15 @@ namespace TIBCO.LABS.EFTL
             }
             
         }
+        protected  void handleSubscribed(JsonObject message)
+        {
+            Debug.Log("OP_SUBSCRIBED " + message.ToString());
+            //JsonObject body = (JsonObject)message["body"];
+            
+        }
         protected virtual void handleMessage(JsonObject message)
         {
-            //Debug.Log("OP_EVENT");
+            Debug.Log("OP_EVENT "+message.ToString());
             JsonObject body = (JsonObject)message["body"];
             // Raise FTL socket data handler event
             if (OnEftlMessage != null)
@@ -300,14 +323,21 @@ namespace TIBCO.LABS.EFTL
         }
         private void handleWelcome(JsonObject message)
         {
-            JsonObject submessage = new JsonObject();
-
-            submessage[ProtocolConstants.OP_FIELD] = ProtocolOpConstants.OP_SUBSCRIBE;
-            submessage[ProtocolConstants.ID_FIELD] = "s." + System.Guid.NewGuid();
-
-            Debug.Log("FTL Welcome Message: " + submessage.ToString());
-
-            SendText(submessage.ToString());
+            if (this.MatcherList.Count > 0)
+            {
+                foreach (string s in this.MatcherList)
+                {
+                    Subscribe(s);
+                }
+            } else
+            {
+                Subscribe("{}");
+            }
+            
+            if (OnReady != null)
+            {
+                OnReady();
+            }
         }
 
 
@@ -318,6 +348,37 @@ namespace TIBCO.LABS.EFTL
         }
 
         #endregion
+
+        public void Publish(JsonObject message)
+        {
+            JsonObject envelope = new JsonObject();
+
+            
+
+            envelope.Add(ProtocolConstants.OP_FIELD, ProtocolOpConstants.OP_MESSAGE);
+            envelope.Add(ProtocolConstants.BODY_FIELD, message);
+
+            this.SendText(envelope.ToString());
+            
+        }
+
+        private void Subscribe( String matcher)
+        {
+            String subscriptionId = "s." + System.Guid.NewGuid();
+            JsonObject message = new JsonObject();
+
+            message[ProtocolConstants.OP_FIELD] = ProtocolOpConstants.OP_SUBSCRIBE;
+            message[ProtocolConstants.ID_FIELD] = subscriptionId;
+            if (matcher != null)
+                message[ProtocolConstants.MATCHER_FIELD] = matcher;
+
+            
+
+            Debug.Log("Subscribing to : " + matcher);
+
+            SendText(message.ToString());
+
+        }
 
         public void SendText(string text, Action<bool> callback = null)
         {

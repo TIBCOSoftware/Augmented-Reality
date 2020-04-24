@@ -112,6 +112,35 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2808444199445740851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0cd566ce62c49309555019fc546ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConnectionPropertyPrefix: eftl
+  MatcherList:
+  - '{"dataType":true}'
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2808444199445740851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbe626ba29967f41b78e76e78a6cbac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudMessagingConnector: {fileID: 5}
+  textMesh: {fileID: 1911563285}
 --- !u!1 &936109204
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,91 +292,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &1732229915
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2808444200935720488, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_Name
-      value: MainController
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.05654198
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.6162114
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.1405375
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2808444200935720490, guid: 92a0db102741a4d4bbe366e110c7db51,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1732229917, guid: 92a0db102741a4d4bbe366e110c7db51, type: 3}
-      propertyPath: textMesh
-      value: 
-      objectReference: {fileID: 1911563285}
-    - target: {fileID: 1732229918, guid: 92a0db102741a4d4bbe366e110c7db51, type: 3}
-      propertyPath: WebSocketUri
-      value: wss://messaging.cloud.tibco.com/tcm/TIB_SUB_01BB7F22MGX01K6MQK0TD02DYV/channel
-      objectReference: {fileID: 0}
-    - target: {fileID: 1732229918, guid: 92a0db102741a4d4bbe366e110c7db51, type: 3}
-      propertyPath: AuthKey
-      value: '[your auth key]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1732229918, guid: 92a0db102741a4d4bbe366e110c7db51, type: 3}
-      propertyPath: FTLSocketUri
-      value: wss://messaging.cloud.tibco.com/tcm/TIB_SUB_[your-id]/channel
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 92a0db102741a4d4bbe366e110c7db51, type: 3}
 --- !u!1001 &1911563284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -355,11 +299,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8100265067592964041, guid: b653fd7559a56134ea703c472c5361d4,
-        type: 3}
-      propertyPath: m_Name
-      value: Text
-      objectReference: {fileID: 0}
     - target: {fileID: 8100265067592964036, guid: b653fd7559a56134ea703c472c5361d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -415,6 +354,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8100265067592964041, guid: b653fd7559a56134ea703c472c5361d4,
+        type: 3}
+      propertyPath: m_Name
+      value: Text
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b653fd7559a56134ea703c472c5361d4, type: 3}
 --- !u!102 &1911563285 stripped
@@ -423,3 +367,35 @@ TextMesh:
     type: 3}
   m_PrefabInstance: {fileID: 1911563284}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2808444199445740849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2808444199445740851}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.05654198, y: 0.6162114, z: 2.1405375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2808444199445740851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2808444199445740849}
+  - component: {fileID: 5}
+  - component: {fileID: 6}
+  m_Layer: 0
+  m_Name: MainController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1

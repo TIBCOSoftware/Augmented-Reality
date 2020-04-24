@@ -19,6 +19,14 @@ namespace TIBCO.LABS.EFTL {
         {
       Debug.Log("handleMessage " + message);
     }
+        public virtual void CloudMessagingReady()
+        {
+            Debug.Log("TCM is ready ");
+        }
+        public void Publish(JsonObject message)
+        {
+            cloudMessagingConnector.Publish(message);
+        }
     
 
     
@@ -28,11 +36,13 @@ namespace TIBCO.LABS.EFTL {
     // Web Socket data handler
     void OnEnable () {
             cloudMessagingConnector.OnEftlMessage += OnData;
-    }
+            cloudMessagingConnector.OnReady += CloudMessagingReady;
+        }
 
     void OnDisable () {
             cloudMessagingConnector.OnEftlMessage -= OnData;
-    }
+            cloudMessagingConnector.OnReady -= CloudMessagingReady;
+        }
 
     #endregion
   }

@@ -31,6 +31,9 @@ public class SimpleTextViewController : DataHandler
                 string dataType = message["dataType"].ToString();
                 // Debug.Log("dataType " + dataType);
                 // Debug.Log("Message received " + dataType);
+
+                SendTextToDemoTcm("Unity received "+dataType);
+
                 switch (dataType)
                 {
                     
@@ -57,10 +60,28 @@ public class SimpleTextViewController : DataHandler
             Debug.Log("Error in handleMessage " + e.Message);
         }
     }
+    private  void SendTextToDemoTcm(string msg)
+    {
+        
+        JsonObject message = new JsonObject();
+
+        message["demo_tcm"] = msg;
+
+
+        this.Publish(message);
+    }
+
+    public override void CloudMessagingReady()
+    {
+        Debug.Log("TCM is ready ");
+        SendTextToDemoTcm("Unity demo starting");
+
+    }
     #endregion
     void Start()
     {
         textMesh.text = "waiting ...";
+        
     }
     void Update()
     {

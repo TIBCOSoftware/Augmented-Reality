@@ -6,5 +6,6 @@ using UnityEngine;
 namespace TIBCO.LABS.EFTL {
   public interface IDataHandler {
     void OnData (JsonObject message);
-  }
+    void Publish(JsonObject message);
+    }
 }
