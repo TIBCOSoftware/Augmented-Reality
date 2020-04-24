@@ -147,8 +147,8 @@ In the MainController, you can update the Connection property prefix (default is
 &lt;h2 id=&#34;message-publication&#34;&gt;Message Publication&lt;/h2&gt;
 &lt;p&gt;The sample is also publishing messages on the TIBCO Cloud™ Messaging channel. Those message have a field &amp;ldquo;demo_tcm&amp;rdquo; and can be viewed in the TIBCO Cloud™ Messaging demo.&lt;/p&gt;
 &lt;p&gt;To see the message published by the app, simply use TIBCO Cloud™ Messaging Demo app :
-From you TIBCO Cloud™ Messaging console, open the help panel and select &amp;ldquo;Run the demo&amp;rdquo;
-&lt;img src=&#34;TCM-RunDemo.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+From you TIBCO Cloud™ Messaging console, open the help panel and select &amp;ldquo;Run the demo&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;TCM-RunDemo.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
 &lt;br&gt;&lt;sup&gt;Accessing TIBCO Cloud Messaging Demo app &lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;You will access the Demo app. Messages published by our sample application will appear in the Subscriber panel of this demo app.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;TCM-RunDemo-Panel.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
