@@ -27,13 +27,13 @@
 <meta property="og:url" content="https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/cloud-messaging/" />
 <meta property="og:image" content="https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/cloud-messaging/TCM-AR-Cover.png"/>
 <meta property="article:published_time" content="2020-01-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-16T15:30:45+02:00" /><meta property="og:site_name" content="Project ART" />
+<meta property="article:modified_time" content="2020-04-23T23:14:54-07:00" /><meta property="og:site_name" content="Project ART" />
 <meta itemprop="name" content="TIBCO Cloud™ Messaging - Unity3D Package">
 <meta itemprop="description" content="This package allows you to connect a Unity3D Application to [TIBCO Cloud™ Messaging](https://www.tibco.com/products/tibco-cloud-messaging) using the eFTL websocket protocol.
 ">
 <meta itemprop="datePublished" content="2020-01-05T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-04-16T15:30:45&#43;02:00" />
-<meta itemprop="wordCount" content="444">
+<meta itemprop="dateModified" content="2020-04-23T23:14:54-07:00" />
+<meta itemprop="wordCount" content="657">
 <meta itemprop="image" content="https://tibcosoftware.github.io/Augmented-Reality/docs/packages-and-samples/cloud-messaging/TCM-AR-Cover.png">
 
 
@@ -327,6 +327,7 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#how-it-works">How it works</a></li>
+    <li><a href="#message-publication">Message Publication</a></li>
     <li><a href="#target-devices">Target Devices</a></li>
     <li><a href="#used-versions">Used Versions</a></li>
     <li><a href="#content">Content</a></li>
@@ -375,7 +376,7 @@ if (!doNotTrack) {
 
 
 
-<p class="-text-primary pt-3 h6" >Reading time: 2 minutes and 6 seconds.</p>
+<p class="-text-primary pt-3 h6" >Reading time: 3 minutes and 10 seconds.</p>
 <p>
 <div class="td-content">
 	<h1>TIBCO Cloud™ Messaging - Unity3D Package</h1>
@@ -383,7 +384,8 @@ if (!doNotTrack) {
 	<p>The Implementation is based on standard UnityWebSocket and is working in Unity3D Editor, Android ARCore, and on Microsoft Hololens (UWP).</p>
 <p><img src="TCM-AR.png" alt="alt-text" title="Image">
 <br><sup>TIBCO Cloud Messaging Panel</sup></p>
-<p>Once connected, the application can subscribe and receive real-time messages and update the scene accordingly. The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh.</p>
+<p>Once connected, the application can receive real-time messages and update the scene accordingly. It can also publish data to be consumed by other applications.</p>
+<p>The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh and how to publish messages.</p>
 <h3 id="trial-account">Trial Account</h3>
 <p>register for your own TIBCO Cloud™ Messaging trial account on this <a href="https://account.cloud.tibco.com/signup/tcm">Sign-up Form</a> to get your personal ID and Auth-Key under &lsquo;Authentication Keys&rsquo; Settings Tab, beside the Subscription &lsquo;Status&rsquo;.</p>
 <h3 id="import-into-unity3d">Import into Unity3D</h3>
@@ -394,16 +396,25 @@ if (!doNotTrack) {
 <li>drag'n drop the &lsquo;MainController&rsquo; Prefab into your scene</li>
 <li>drag'n drop the &lsquo;Text&rsquo; Prefab into your scene</li>
 <li>drag'n drop the &lsquo;Text&rsquo; Object from your scene to the &lsquo;MainControler&rsquo;, &lsquo;SimpleTextViewController&rsquo; Component to the &lsquo;Text Mesh&rsquo; Field</li>
-<li>configure your Web Socket URI and Authkey, in the &lsquo;TibcoCloudMessagingConnector&rsquo; Component</li>
+<li>configure your Web Socket URI and Authkey, in a file named &lsquo;TIBCO-credentials.txt&rsquo; placed in <i>TIBCOLabs &gt; Utils &gt; Resources </i> folder.</li>
 </ol>
 <p><b>done!</b> Run Unity &lsquo;Playmode&rsquo;, and test first using cURL or Flogo - like described below.</p>
 <h3 id="use-the-sample-scene">Use the Sample scene</h3>
-<p>In the min. Implementation for Unity, open: <i>TIBCOLabs &gt; CloudMessaging &gt; Sample &gt; CloudMessaging-TestScene</i></p>
+<p>In the Unity project a test scene is available at
+<i>TIBCOLabs &gt; CloudMessaging &gt; Sample &gt; CloudMessaging-TestScene</i></p>
 <p>The ARCore Implementation contains additionally a AR Sample scene: <i>TIBCOLabs &gt; CloudMessaging &gt; CloudMessaging-AR</i></p>
 <p>The Scene contains a MainController Object.
-In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMessaginConnector with you TIBCO Cloud™ Subscription Details.</p>
-<p><img src="FTLSocketConfig.png" alt="alt-text" title="Image">
+In the MainController, you can update the Connection property prefix (default is &ldquo;eftl&rdquo;).</p>
+<p>You can also modify the matcher list. The sample is subscribing to message containing the field &ldquo;dataType&rdquo;.
+<img src="FTLSocketConfig.png" alt="alt-text" title="Image">
 <br><sup>TIBCO Cloud Messaging FTL Configuration</sup></p>
+<p>The credentials, ie  Web Socket URI and Authkey must be declared in a file named &ldquo;TIBCO-credentials.txt&rdquo; and place in a Resources folder. You can use</p>
+<p><i>TIBCOLabs &gt; Utils &gt; Resources</i></p>
+<p>The folder contains a sample for you to copy.</p>
+<p>If you manage you credential file in git, it is a good practice to ignore TIBCO-credentials.txt so no credentials get checked-in with your source code.</p>
+<p><img src="TIBCOCredentialsFile.png" alt="alt-text" title="Image">
+<br><sup>Credential file</sup></p>
+<p>The file must contain [prefix].socketurl and [prefix].authkey with the values from your TIBCO Cloud™ Subscription Details. [prefix] being defined in the connection configuration panel.</p>
 <h2 id="sending-messages">sending Messages</h2>
 <p>The sample is expecting this type of message:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;dataType&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;Power&#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">&#34;data&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;130&#34;</span><span style="color:#000;font-weight:bold">}</span>
@@ -416,9 +427,6 @@ In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMe
 <p>Here a sample using TIBCO Cloud™ Integration Flogo</p>
 <p><img src="FlogoTCMSender.png" alt="alt-text" title="Image">
 <br><sup>TIBCO Cloud Integration Configuration</sup></p>
-<blockquote>
-<p>the current Implementation subscribes to all instance messaging destinations.</p>
-</blockquote>
 <h2 id="how-it-works">How it works</h2>
 <ol>
 <li>The MainController GameObject contains the TIBCO Cloud™ Messaging Connector and SimpleTextViewController</li>
@@ -428,6 +436,15 @@ In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMe
 <blockquote>
 <p>the ARCore Sample Project uses &lsquo;TextMeshPro&rsquo; an a pre-defined Panel Object, instead of just &lsquo;TextMesh&rsquo;.</p>
 </blockquote>
+<h2 id="message-publication">Message Publication</h2>
+<p>The sample is also publishing messages on the TIBCO Cloud™ Messaging channel. Those message have a field &ldquo;demo_tcm&rdquo; and can be viewed in the TIBCO Cloud™ Messaging demo.</p>
+<p>To see the message published by the app, simply use TIBCO Cloud™ Messaging Demo app :
+From you TIBCO Cloud™ Messaging console, open the help panel and select &ldquo;Run the demo&rdquo;
+<img src="TCM-RunDemo.png" alt="alt-text" title="Image">
+<br><sup>Accessing TIBCO Cloud Messaging Demo app </sup></p>
+<p>You will access the Demo app. Messages published by our sample application will appear in the Subscriber panel of this demo app.</p>
+<p><img src="TCM-RunDemo-Panel.png" alt="alt-text" title="Image">
+<br><sup>TIBCO Cloud Messaging Demo app panels </sup></p>
 <h2 id="target-devices">Target Devices</h2>
 <p>Tested with Microsoft Hololens, Android Smartphones, inside Unity Editor on Windows 10.</p>
 <h2 id="used-versions">Used Versions</h2>
@@ -507,7 +524,7 @@ min. Implementation, as Unity Project <a href="https://github.com/TIBCOSoftware/
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified April 16, 2020: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/37024a51266a7089b8a04aad9db1e8e3cb9e3b2e">restructure (37024a5)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified April 23, 2020: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/97f4a0087df28bc6a9ced58a5cc254bf2e0b120e">update Messaging doc with credential file and publish capability (97f4a00)</a>
 </div>
 </div>
 

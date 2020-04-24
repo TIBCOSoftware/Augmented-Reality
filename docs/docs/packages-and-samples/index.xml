@@ -92,7 +92,8 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
         &lt;p&gt;The Implementation is based on standard UnityWebSocket and is working in Unity3D Editor, Android ARCore, and on Microsoft Hololens (UWP).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;TCM-AR.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
 &lt;br&gt;&lt;sup&gt;TIBCO Cloud Messaging Panel&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Once connected, the application can subscribe and receive real-time messages and update the scene accordingly. The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh.&lt;/p&gt;
+&lt;p&gt;Once connected, the application can receive real-time messages and update the scene accordingly. It can also publish data to be consumed by other applications.&lt;/p&gt;
+&lt;p&gt;The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh and how to publish messages.&lt;/p&gt;
 &lt;h3 id=&#34;trial-account&#34;&gt;Trial Account&lt;/h3&gt;
 &lt;p&gt;register for your own TIBCO Cloud™ Messaging trial account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/tcm&#34;&gt;Sign-up Form&lt;/a&gt; to get your personal ID and Auth-Key under &amp;lsquo;Authentication Keys&amp;rsquo; Settings Tab, beside the Subscription &amp;lsquo;Status&amp;rsquo;.&lt;/p&gt;
 &lt;h3 id=&#34;import-into-unity3d&#34;&gt;Import into Unity3D&lt;/h3&gt;
@@ -103,16 +104,25 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
 &lt;li&gt;drag&#39;n drop the &amp;lsquo;MainController&amp;rsquo; Prefab into your scene&lt;/li&gt;
 &lt;li&gt;drag&#39;n drop the &amp;lsquo;Text&amp;rsquo; Prefab into your scene&lt;/li&gt;
 &lt;li&gt;drag&#39;n drop the &amp;lsquo;Text&amp;rsquo; Object from your scene to the &amp;lsquo;MainControler&amp;rsquo;, &amp;lsquo;SimpleTextViewController&amp;rsquo; Component to the &amp;lsquo;Text Mesh&amp;rsquo; Field&lt;/li&gt;
-&lt;li&gt;configure your Web Socket URI and Authkey, in the &amp;lsquo;TibcoCloudMessagingConnector&amp;rsquo; Component&lt;/li&gt;
+&lt;li&gt;configure your Web Socket URI and Authkey, in a file named &amp;lsquo;TIBCO-credentials.txt&amp;rsquo; placed in &lt;i&gt;TIBCOLabs &amp;gt; Utils &amp;gt; Resources &lt;/i&gt; folder.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;b&gt;done!&lt;/b&gt; Run Unity &amp;lsquo;Playmode&amp;rsquo;, and test first using cURL or Flogo - like described below.&lt;/p&gt;
 &lt;h3 id=&#34;use-the-sample-scene&#34;&gt;Use the Sample scene&lt;/h3&gt;
-&lt;p&gt;In the min. Implementation for Unity, open: &lt;i&gt;TIBCOLabs &amp;gt; CloudMessaging &amp;gt; Sample &amp;gt; CloudMessaging-TestScene&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;In the Unity project a test scene is available at
+&lt;i&gt;TIBCOLabs &amp;gt; CloudMessaging &amp;gt; Sample &amp;gt; CloudMessaging-TestScene&lt;/i&gt;&lt;/p&gt;
 &lt;p&gt;The ARCore Implementation contains additionally a AR Sample scene: &lt;i&gt;TIBCOLabs &amp;gt; CloudMessaging &amp;gt; CloudMessaging-AR&lt;/i&gt;&lt;/p&gt;
 &lt;p&gt;The Scene contains a MainController Object.
-In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMessaginConnector with you TIBCO Cloud™ Subscription Details.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;FTLSocketConfig.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+In the MainController, you can update the Connection property prefix (default is &amp;ldquo;eftl&amp;rdquo;).&lt;/p&gt;
+&lt;p&gt;You can also modify the matcher list. The sample is subscribing to message containing the field &amp;ldquo;dataType&amp;rdquo;.
+&lt;img src=&#34;FTLSocketConfig.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
 &lt;br&gt;&lt;sup&gt;TIBCO Cloud Messaging FTL Configuration&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The credentials, ie  Web Socket URI and Authkey must be declared in a file named &amp;ldquo;TIBCO-credentials.txt&amp;rdquo; and place in a Resources folder. You can use&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;TIBCOLabs &amp;gt; Utils &amp;gt; Resources&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;The folder contains a sample for you to copy.&lt;/p&gt;
+&lt;p&gt;If you manage you credential file in git, it is a good practice to ignore TIBCO-credentials.txt so no credentials get checked-in with your source code.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;TIBCOCredentialsFile.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Credential file&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The file must contain [prefix].socketurl and [prefix].authkey with the values from your TIBCO Cloud™ Subscription Details. [prefix] being defined in the connection configuration panel.&lt;/p&gt;
 &lt;h2 id=&#34;sending-messages&#34;&gt;sending Messages&lt;/h2&gt;
 &lt;p&gt;The sample is expecting this type of message:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;dataType&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Power&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;130&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
@@ -125,9 +135,6 @@ In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMe
 &lt;p&gt;Here a sample using TIBCO Cloud™ Integration Flogo&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;FlogoTCMSender.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
 &lt;br&gt;&lt;sup&gt;TIBCO Cloud Integration Configuration&lt;/sup&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;the current Implementation subscribes to all instance messaging destinations.&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;The MainController GameObject contains the TIBCO Cloud™ Messaging Connector and SimpleTextViewController&lt;/li&gt;
@@ -137,6 +144,15 @@ In the MainController, update the Web Socket URI and Authkey of the TIBCOCloudMe
 &lt;blockquote&gt;
 &lt;p&gt;the ARCore Sample Project uses &amp;lsquo;TextMeshPro&amp;rsquo; an a pre-defined Panel Object, instead of just &amp;lsquo;TextMesh&amp;rsquo;.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;message-publication&#34;&gt;Message Publication&lt;/h2&gt;
+&lt;p&gt;The sample is also publishing messages on the TIBCO Cloud™ Messaging channel. Those message have a field &amp;ldquo;demo_tcm&amp;rdquo; and can be viewed in the TIBCO Cloud™ Messaging demo.&lt;/p&gt;
+&lt;p&gt;To see the message published by the app, simply use TIBCO Cloud™ Messaging Demo app :
+From you TIBCO Cloud™ Messaging console, open the help panel and select &amp;ldquo;Run the demo&amp;rdquo;
+&lt;img src=&#34;TCM-RunDemo.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Accessing TIBCO Cloud Messaging Demo app &lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;You will access the Demo app. Messages published by our sample application will appear in the Subscriber panel of this demo app.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;TCM-RunDemo-Panel.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;TIBCO Cloud Messaging Demo app panels &lt;/sup&gt;&lt;/p&gt;
 &lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
 &lt;p&gt;Tested with Microsoft Hololens, Android Smartphones, inside Unity Editor on Windows 10.&lt;/p&gt;
 &lt;h2 id=&#34;used-versions&#34;&gt;Used Versions&lt;/h2&gt;
