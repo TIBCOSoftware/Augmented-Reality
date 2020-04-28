@@ -1,3 +1,3 @@
 # Hololens 2 Sample TIBCO Cloud Messaging integration
 
-check documentation [here](https://www.tibco.com/products/tibco-messaging) 
+check documentation [here](https://tibcosoftware.github.io/Augmented-Reality/docs/samples/cloud-messaging-hololens2/) 
