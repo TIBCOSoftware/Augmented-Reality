@@ -1,0 +1,80 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project ART – Samples</title>
+    <link>https://tibcosoftware.github.io/Augmented-Reality/docs/samples/</link>
+    <description>Recent content in Samples on Project ART</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://tibcosoftware.github.io/Augmented-Reality/docs/samples/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Hololens 2 TIBCO Cloud Messaging integration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/samples/cloud-messaging-hololens2/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/samples/cloud-messaging-hololens2/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
+&lt;p&gt;This Project is using our Unity3D packages in a simple demo app.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CloudMessagingObserverScene&lt;/code&gt; contains a simple object (from MRTK samples) and a Connection to TIBCO Cloud Messaging service under the &lt;code&gt;MainController&lt;/code&gt; object.&lt;/p&gt;
+&lt;p&gt;The App will publish messages when some interaction happen on the object. At the moment the app is detection the following events&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BecameVisible and BecameInvisble&lt;/li&gt;
+&lt;li&gt;HasFocus and LostFocus&lt;/li&gt;
+&lt;li&gt;[PointerName]Down&lt;/li&gt;
+&lt;li&gt;[PointerName]Clicked&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PointerName is &lt;em&gt;PokePointer&lt;/em&gt; or &lt;em&gt;DefaultControllerPointer&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;You can see the messages  in the TIBCO Cloud Messaging &amp;ldquo;Demo application&amp;rdquo; :
+from &lt;a href=&#34;https://messaging.cloud.tibco.com/&#34;&gt;https://messaging.cloud.tibco.com/&lt;/a&gt; one the Help panel (question mark in the page header) and select &lt;em&gt;Run the Demo&lt;/em&gt; link.&lt;/p&gt;
+&lt;p&gt;From the same &amp;ldquo;Demo Application&amp;rdquo; you can send messages to change the color of the object.
+Just enter&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;set color red&lt;/li&gt;
+&lt;li&gt;set color blue&lt;/li&gt;
+&lt;li&gt;set color green&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is a sample application, so we have implemented a very simple, text based set of commands. The sample can be extended to implement solutions using elaborated JSON messages.&lt;/p&gt;
+&lt;p&gt;A panel in the Scene is also displaying received messages.&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Open the project in Unity 2019.2.17f1&lt;/li&gt;
+&lt;li&gt;Import MRTK 2.3.0 foundation&lt;/li&gt;
+&lt;li&gt;Import TIBCOFTL Package (from this repository under Packages folder)&lt;/li&gt;
+&lt;li&gt;Set your Credentials&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can test in Unity Editor.&lt;/p&gt;
+&lt;p&gt;Deploy on Hololens and enjoy.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Set credentials&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For security reasons,  credential are stored as property keys in a resource file named &lt;em&gt;TIBCO-credentials.txt&lt;/em&gt; which is ignored from git so credentials are not checked in.&lt;/p&gt;
+&lt;p&gt;The directory &lt;em&gt;TIBCOLabs &amp;gt; Utils &amp;gt; Resources&lt;/em&gt;  contains a sample resource file. You can copy it with a the correct name or just create &lt;em&gt;TIBCO-credentials.txt&lt;/em&gt; resource and have the following lines :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;eftl.socketurl = Web Socket URI&lt;/li&gt;
+&lt;li&gt;eftl.authkey =   your authentication key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Prerequisite&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Get a TIBCO Cloud Account with TIBCO Cloud Messaging subscription.&lt;/p&gt;
+&lt;p&gt;Obtain the channel URL and one Authentication key.&lt;/p&gt;
+&lt;h2 id=&#34;details&#34;&gt;Details&lt;/h2&gt;
+&lt;p&gt;Check the script &lt;code&gt;InteractionEventPublisher&lt;/code&gt; attached to the object.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;p&gt;Receiving and sending messages is a very powerful capability to implement the business logic of your application outside the Unity code. In an other sample we will show how to use a rule engine (based on complex event processing capabilities offered by TIBCO Cloud Events) to detect some interaction patterns and udpate the scene.&lt;/p&gt;
+&lt;p&gt;Messaging can also be used for inter application communication scenario.&lt;/p&gt;
+&lt;p&gt;We will also add events to the InteractionEventPublisher. (IsTouched, GetCloser, &amp;hellip;).&lt;/p&gt;
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+&lt;p&gt;Implementation, as Unity Project &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/Hololens2/Messaging-SampleApp&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
