@@ -33,7 +33,7 @@
 ">
 <meta itemprop="datePublished" content="2020-01-05T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-28T09:18:17&#43;02:00" />
-<meta itemprop="wordCount" content="657">
+<meta itemprop="wordCount" content="740">
 <meta itemprop="image" content="https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-messaging/TCM-AR-Cover.png">
 
 
@@ -355,8 +355,18 @@ if (!doNotTrack) {
         <li><a href="#using-flogo">using Flogo</a></li>
       </ul>
     </li>
-    <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#message-publication">Message Publication</a></li>
+    <li><a href="#how-it-works">How it works</a>
+      <ul>
+        <li><a href="#publish-messages">Publish Messages</a></li>
+        <li><a href="#subscribe-messages">Subscribe Messages</a></li>
+      </ul>
+    </li>
+    <li><a href="#tcm-demo-web-app">TCM Demo Web App</a>
+      <ul>
+        <li><a href="#message-publication">Message Publication</a></li>
+        <li><a href="#message-subscription">Message Subscription</a></li>
+      </ul>
+    </li>
     <li><a href="#target-devices">Target Devices</a></li>
     <li><a href="#used-versions">Used Versions</a></li>
     <li><a href="#content">Content</a></li>
@@ -405,7 +415,7 @@ if (!doNotTrack) {
 
 
 
-<p class="-text-primary pt-3 h6" >Reading time: 3 minutes and 10 seconds.</p>
+<p class="-text-primary pt-3 h6" >Reading time: 3 minutes and 34 seconds.</p>
 <p>
 <div class="td-content">
 	<h1>TIBCO Cloud™ Messaging - Unity3D Package</h1>
@@ -457,15 +467,27 @@ In the MainController, you can update the Connection property prefix (default is
 <p><img src="FlogoTCMSender.png" alt="alt-text" title="Image">
 <br><sup>TIBCO Cloud Integration Configuration</sup></p>
 <h2 id="how-it-works">How it works</h2>
+<h3 id="publish-messages">Publish Messages</h3>
+<ol>
+<li>you can always publish messages by e.g. using the following</li>
+</ol>
+<pre><code>    JsonObject message = new JsonObject();
+    message[&quot;demo_tcm&quot;] = msg;
+    this.Publish(message);
+</code></pre><blockquote>
+<p>you should always use a JSON format to publish messages, the above sample get subscribed by the TCM Demo Web App.</p>
+</blockquote>
+<h3 id="subscribe-messages">Subscribe Messages</h3>
 <ol>
 <li>The MainController GameObject contains the TIBCO Cloud™ Messaging Connector and SimpleTextViewController</li>
 <li>The SimpleTextViewController extends &lsquo;OnData&rsquo; Handler, it requires a connection (Connector Object) and receives messages.</li>
 <li>The SimpleTextViewController has a reference to the TextMesh to update when it receives a message.</li>
 </ol>
 <blockquote>
-<p>the ARCore Sample Project uses &lsquo;TextMeshPro&rsquo; an a pre-defined Panel Object, instead of just &lsquo;TextMesh&rsquo;.</p>
+<p>the ARCore and Hololens Sample Projects use &lsquo;TextMeshPro&rsquo; an a pre-defined Panel Object, instead of just &lsquo;TextMesh&rsquo;.</p>
 </blockquote>
-<h2 id="message-publication">Message Publication</h2>
+<h2 id="tcm-demo-web-app">TCM Demo Web App</h2>
+<h3 id="message-publication">Message Publication</h3>
 <p>The sample is also publishing messages on the TIBCO Cloud™ Messaging channel. Those message have a field &ldquo;demo_tcm&rdquo; and can be viewed in the TIBCO Cloud™ Messaging demo.</p>
 <p>To see the message published by the app, simply use TIBCO Cloud™ Messaging Demo app :
 From you TIBCO Cloud™ Messaging console, open the help panel and select &ldquo;Run the demo&rdquo;</p>
@@ -474,6 +496,12 @@ From you TIBCO Cloud™ Messaging console, open the help panel and select &ldquo
 <p>You will access the Demo app. Messages published by our sample application will appear in the Subscriber panel of this demo app.</p>
 <p><img src="TCM-RunDemo-Panel.png" alt="alt-text" title="Image">
 <br><sup>TIBCO Cloud Messaging Demo app panels </sup></p>
+<h3 id="message-subscription">Message Subscription</h3>
+<p>to subscribe to TIBCO Cloud™ Messaging channel, the Messaging Connector &lsquo;Matcher&rsquo; have to be configured, to contain the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;demo_tcm&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>In the SimpleTextViewController.cs add the lines marked here:</p>
+<p><img src="TCM-ViewController.png" alt="alt-text" title="Image">
+<br><sup>Unity - SimpleTextViewController.cs </sup></p>
 <h2 id="target-devices">Target Devices</h2>
 <p>Tested with Microsoft Hololens, Android Smartphones, inside Unity Editor on Windows 10.</p>
 <h2 id="used-versions">Used Versions</h2>
