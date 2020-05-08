@@ -94,6 +94,7 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
 &lt;br&gt;&lt;sup&gt;TIBCO Cloud Messaging Panel&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Once connected, the application can receive real-time messages and update the scene accordingly. It can also publish data to be consumed by other applications.&lt;/p&gt;
 &lt;p&gt;The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh and how to publish messages.&lt;/p&gt;
+&lt;h2 id=&#34;step-by-step&#34;&gt;Step by Step&lt;/h2&gt;
 &lt;h3 id=&#34;trial-account&#34;&gt;Trial Account&lt;/h3&gt;
 &lt;p&gt;register for your own TIBCO Cloud™ Messaging trial account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/tcm&#34;&gt;Sign-up Form&lt;/a&gt; to get your personal ID and Auth-Key under &amp;lsquo;Authentication Keys&amp;rsquo; Settings Tab, beside the Subscription &amp;lsquo;Status&amp;rsquo;.&lt;/p&gt;
 &lt;h3 id=&#34;import-into-unity3d&#34;&gt;Import into Unity3D&lt;/h3&gt;
@@ -106,7 +107,13 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
 &lt;li&gt;drag&#39;n drop the &amp;lsquo;Text&amp;rsquo; Object from your scene to the &amp;lsquo;MainControler&amp;rsquo;, &amp;lsquo;SimpleTextViewController&amp;rsquo; Component to the &amp;lsquo;Text Mesh&amp;rsquo; Field&lt;/li&gt;
 &lt;li&gt;configure your Web Socket URI and Authkey, in a file named &amp;lsquo;TIBCO-credentials.txt&amp;rsquo; placed in &lt;i&gt;TIBCOLabs &amp;gt; Utils &amp;gt; Resources &lt;/i&gt; folder.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;b&gt;done!&lt;/b&gt; Run Unity &amp;lsquo;Playmode&amp;rsquo;, and test first using cURL or Flogo - like described below.&lt;/p&gt;
+&lt;p&gt;All set! now run Unity &amp;lsquo;Playmode&amp;rsquo;, and test your implementation using cURL or Flogo first - e.g. like described below.&lt;/p&gt;
+&lt;h4 id=&#34;alternative-sample-panels&#34;&gt;Alternative Sample Panels&lt;/h4&gt;
+&lt;p&gt;We provide more advanced sample Panels, both using &amp;lsquo;TextMeshPro&amp;rsquo; so the &amp;lsquo;SimpleTextViewController&amp;rsquo; need to be slightly modified in his interface.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FTLPanelPrefab-Basic.unitypackage :: contains used Fonts, Images, etc. and can be used in any Unity Project e.g. ARCore Projects.&lt;/li&gt;
+&lt;li&gt;FTLPanelPrefab-MRTK.unitypackage :: supports repositioning, follow-me, re-sizing, this sample is build for Hololens and need MRTK.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;use-the-sample-scene&#34;&gt;Use the Sample scene&lt;/h3&gt;
 &lt;p&gt;In the Unity project a test scene is available at
 &lt;i&gt;TIBCOLabs &amp;gt; CloudMessaging &amp;gt; Sample &amp;gt; CloudMessaging-TestScene&lt;/i&gt;&lt;/p&gt;

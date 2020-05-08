@@ -27,13 +27,13 @@
 <meta property="og:url" content="https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-messaging/" />
 <meta property="og:image" content="https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-messaging/TCM-AR-Cover.png"/>
 <meta property="article:published_time" content="2020-01-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-28T09:18:17+02:00" /><meta property="og:site_name" content="Project ART" />
+<meta property="article:modified_time" content="2020-05-06T20:10:46+02:00" /><meta property="og:site_name" content="Project ART" />
 <meta itemprop="name" content="TIBCO Cloud™ Messaging - Unity3D Package">
 <meta itemprop="description" content="This package allows you to connect a Unity3D Application to [TIBCO Cloud™ Messaging](https://www.tibco.com/products/tibco-cloud-messaging) using the eFTL websocket protocol.
 ">
 <meta itemprop="datePublished" content="2020-01-05T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-04-28T09:18:17&#43;02:00" />
-<meta itemprop="wordCount" content="740">
+<meta itemprop="dateModified" content="2020-05-06T20:10:46&#43;02:00" />
+<meta itemprop="wordCount" content="804">
 <meta itemprop="image" content="https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-messaging/TCM-AR-Cover.png">
 
 
@@ -342,7 +342,7 @@ if (!doNotTrack) {
 
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#step-by-step">Step by Step</a>
       <ul>
         <li><a href="#trial-account">Trial Account</a></li>
         <li><a href="#import-into-unity3d">Import into Unity3D</a></li>
@@ -415,7 +415,7 @@ if (!doNotTrack) {
 
 
 
-<p class="-text-primary pt-3 h6" >Reading time: 3 minutes and 34 seconds.</p>
+<p class="-text-primary pt-3 h6" >Reading time: 3 minutes and 51 seconds.</p>
 <p>
 <div class="td-content">
 	<h1>TIBCO Cloud™ Messaging - Unity3D Package</h1>
@@ -425,6 +425,7 @@ if (!doNotTrack) {
 <br><sup>TIBCO Cloud Messaging Panel</sup></p>
 <p>Once connected, the application can receive real-time messages and update the scene accordingly. It can also publish data to be consumed by other applications.</p>
 <p>The Package contains a simple sample Implementation that demonstrates how to display the received data in a Scene TextMesh and how to publish messages.</p>
+<h2 id="step-by-step">Step by Step</h2>
 <h3 id="trial-account">Trial Account</h3>
 <p>register for your own TIBCO Cloud™ Messaging trial account on this <a href="https://account.cloud.tibco.com/signup/tcm">Sign-up Form</a> to get your personal ID and Auth-Key under &lsquo;Authentication Keys&rsquo; Settings Tab, beside the Subscription &lsquo;Status&rsquo;.</p>
 <h3 id="import-into-unity3d">Import into Unity3D</h3>
@@ -437,7 +438,13 @@ if (!doNotTrack) {
 <li>drag'n drop the &lsquo;Text&rsquo; Object from your scene to the &lsquo;MainControler&rsquo;, &lsquo;SimpleTextViewController&rsquo; Component to the &lsquo;Text Mesh&rsquo; Field</li>
 <li>configure your Web Socket URI and Authkey, in a file named &lsquo;TIBCO-credentials.txt&rsquo; placed in <i>TIBCOLabs &gt; Utils &gt; Resources </i> folder.</li>
 </ol>
-<p><b>done!</b> Run Unity &lsquo;Playmode&rsquo;, and test first using cURL or Flogo - like described below.</p>
+<p>All set! now run Unity &lsquo;Playmode&rsquo;, and test your implementation using cURL or Flogo first - e.g. like described below.</p>
+<h4 id="alternative-sample-panels">Alternative Sample Panels</h4>
+<p>We provide more advanced sample Panels, both using &lsquo;TextMeshPro&rsquo; so the &lsquo;SimpleTextViewController&rsquo; need to be slightly modified in his interface.</p>
+<ul>
+<li>FTLPanelPrefab-Basic.unitypackage :: contains used Fonts, Images, etc. and can be used in any Unity Project e.g. ARCore Projects.</li>
+<li>FTLPanelPrefab-MRTK.unitypackage :: supports repositioning, follow-me, re-sizing, this sample is build for Hololens and need MRTK.</li>
+</ul>
 <h3 id="use-the-sample-scene">Use the Sample scene</h3>
 <p>In the Unity project a test scene is available at
 <i>TIBCOLabs &gt; CloudMessaging &gt; Sample &gt; CloudMessaging-TestScene</i></p>
@@ -581,7 +588,7 @@ min. Implementation, as Unity Project <a href="https://github.com/TIBCOSoftware/
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified April 28, 2020: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/dbb3d47934cfcf9f29688c55aa7f472034c1cb16">docs update (dbb3d47)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified May 6, 2020: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/99a2360d61724c3e98714a5bbba52b85dd5cb263">update docs (99a2360)</a>
 </div>
 </div>
 
