@@ -14,6 +14,24 @@
     
     
     <item>
+      <title>Blog: WebXR Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/28/webxr-exploration/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/28/webxr-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Augmented Reality &lt;b&gt;without&lt;/b&gt; a special Devices and a native App is possible today.&lt;br&gt;
+Check out or latest LABS Demo Implemenation called &lt;a href=&#34;Augmented-Reality/docs/explorations/webxr-exploration/&#34;&gt;ARTwalker&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AR with pure HTML, CSS and Javascript, connected to TIBCO Cloud Services.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: 3nd September Release</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/25/3nd-september-release/</link>
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
@@ -75,6 +93,20 @@ Next, we started to work with WebXR as well, to support all kind Devices near fu
 &lt;blockquote&gt;
 &lt;p&gt;please have a look back soon here, and check our Roadmap.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Spotfire Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/spotfire-exploration/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/spotfire-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;running TIBCO Cloud Spotfire in AR is possible, check &lt;a href=&#34;Augmented-Reality/docs/explorations/spotfire-exploration/&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
