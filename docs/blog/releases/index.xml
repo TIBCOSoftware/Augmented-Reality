@@ -14,6 +14,29 @@
     
     
     <item>
+      <title>Blog: 3nd September Release</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/25/3nd-september-release/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/25/3nd-september-release/</guid>
+      <description>
+        
+        
+        &lt;p&gt;third public Implementation Packages for Unity of the TIBCO LABS™ Project ART, containing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add browse cases incl. attachments, implementation to TIBCO Cloud™ Live Apps - Unity3D Package&lt;/li&gt;
+&lt;li&gt;work in progress details about upcoming Unity3D Package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We are glad having in the meantime three Hololens V2 devices.&lt;br&gt;
+Next, we started to work with WebXR as well, to support all kind Devices near future.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;please have a look back soon here, and check our Roadmap.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: 2nd April Release</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/27/2nd-april-release/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>

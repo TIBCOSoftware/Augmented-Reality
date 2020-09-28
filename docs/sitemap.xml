@@ -33,8 +33,13 @@
   </url>
   
   <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-liveapps/</loc>
+    <lastmod>2020-09-24T15:36:24-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-messaging/</loc>
-    <lastmod>2020-05-06T20:10:46+02:00</lastmod>
+    <lastmod>2020-05-19T19:57:57+02:00</lastmod>
   </url>
   
   <url>
@@ -55,6 +60,11 @@
   <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/releases/</loc>
     <lastmod>2020-04-16T12:02:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/25/3nd-september-release/</loc>
+    <lastmod>2020-09-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
