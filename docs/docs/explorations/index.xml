@@ -14,6 +14,85 @@
     
     
     <item>
+      <title>Docs: TIBCO Bike - Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/bike-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/bike-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;TIBCO is honored to sponsor an international women pro cycling team “Team TIBCO Silicon Valley Bank”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cycling.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;At major TIBCO events, we expose one of the fancy bikes and invite visitors to ride 30 seconds to do their best. This is the “Team TIBCO Bike Challenge”. TIBCO Data Science stack is used to collect data from a series of sensors (heart rate, crank revolution, the power generated, …) to display metrics of the performance in real-time and establish a leader board. They are usually encouraged by one of the team members herself!&lt;/p&gt;
+&lt;p&gt;We have decided to “augment” this experience.&lt;/p&gt;
+&lt;h3 id=&#34;use-case-1&#34;&gt;Use case 1&lt;/h3&gt;
+&lt;p&gt;Now, a spectator can wear  Microsoft Hololens glasses and look at the Team TIBCO Bike Challenge while someone is trying to beat a record. The app displays different information depending on the direction you are looking at:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ARbike1.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Use case 1&lt;/sup&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;heart rate when looking at the body,&lt;/li&gt;
+&lt;li&gt;speed when looking at the front wheel&lt;/li&gt;
+&lt;li&gt;power on the rear wheel&lt;/li&gt;
+&lt;li&gt;cadence on pedals.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Those data come from the TIBCO Cloud Messaging channel and are received in the Unity Application on the Hololens glasses.&lt;/p&gt;
+&lt;h3 id=&#34;use-case-2&#34;&gt;Use case 2&lt;/h3&gt;
+&lt;p&gt;The application is also showing a virtual board with photos of all team members.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ARbike2.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Use case 2&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;When clicking on a photo, an information card moves close to the user, rotates and reveals information about the selected runner.&lt;/p&gt;
+&lt;p&gt;All information on the team members comes from  TIBCO Cloud LiveApps, our case management solution.&lt;/p&gt;
+&lt;h3 id=&#34;architecture&#34;&gt;Architecture&lt;/h3&gt;
+&lt;p&gt;Sensor Data from the physical Bike get connected using a lightweight Flogo Implementation running on a Raspberry Pi to TIBCO Cloud Messaging and Stream Data, Spotfire and finally Microsoft Hololens.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ARbike-arch.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Nimbus Activity on Hololens 2&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Development stack&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft Hololens&lt;/li&gt;
+&lt;li&gt;Unity 3D 2019.4 and Visual Studio&lt;/li&gt;
+&lt;li&gt;REST connection to TIBCO Cloud™ LiveApps&lt;/li&gt;
+&lt;li&gt;WebSockets connection to TIBCO Cloud™ Messaging FTL&lt;/li&gt;
+&lt;li&gt;TIBCO Cloud™&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;more-details-about-this-exploration&#34;&gt;More Details about this Exploration&lt;/h2&gt;
+&lt;p&gt;check out this YouTube Video&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/rLxD2raIG1k&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens V1 and V2.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: TIBCO Cloud™ Nimbus® - Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/nimbus-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/nimbus-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Nimbus Map Activities can get loaded into any AR Experience  of Hololens 2, by looking at a mashine specific QR Code. 
+This allows to add little or complex Instruction guides anywhere and make them contextual.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nimbus-in-AR.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Nimbus Activity on Hololens 2&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;All details can get modified without and implementation change or adjustment, just by using Nimbus Web UI.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nimbus-in-AR2.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Nimbus Activity on Hololens 2&lt;/sup&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The right information, at right time, and at the right QR Code position.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;more-details-about-this-exploration&#34;&gt;More Details about this Exploration&lt;/h2&gt;
+&lt;p&gt;check out this YouTube Video&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/KqH29R3L_RE&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens V2.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: TIBCO Cloud™ Spotfire® - Exploration</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/spotfire-exploration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
