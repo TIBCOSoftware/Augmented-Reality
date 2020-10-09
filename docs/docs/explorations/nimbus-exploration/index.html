@@ -21,22 +21,22 @@
 <link rel="icon" type="image/png" href="/Augmented-Reality/favicons/android-192x192.png" sizes="192x192">
 
 <title>TIBCO Cloud™ Nimbus® - Exploration | Project ART</title><meta property="og:title" content="TIBCO Cloud™ Nimbus® - Exploration" />
-<meta property="og:description" content="Just a little Exploration on [TIBCO Cloud™ Nimbus®](https://www.tibco.com/products/tibco-cloud-nimbus) 
+<meta property="og:description" content="Our Exploration on [TIBCO Cloud™ Nimbus®](https://www.tibco.com/products/tibco-cloud-nimbus) 
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/nimbus-exploration/" />
-<meta property="article:modified_time" content="2020-10-08T17:59:19+02:00" /><meta property="og:site_name" content="Project ART" />
+<meta property="article:modified_time" content="2020-10-08T18:03:20+02:00" /><meta property="og:site_name" content="Project ART" />
 <meta itemprop="name" content="TIBCO Cloud™ Nimbus® - Exploration">
-<meta itemprop="description" content="Just a little Exploration on [TIBCO Cloud™ Nimbus®](https://www.tibco.com/products/tibco-cloud-nimbus) 
+<meta itemprop="description" content="Our Exploration on [TIBCO Cloud™ Nimbus®](https://www.tibco.com/products/tibco-cloud-nimbus) 
 ">
-<meta itemprop="dateModified" content="2020-10-08T17:59:19&#43;02:00" />
-<meta itemprop="wordCount" content="92">
+<meta itemprop="dateModified" content="2020-10-08T18:03:20&#43;02:00" />
+<meta itemprop="wordCount" content="181">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TIBCO Cloud™ Nimbus® - Exploration"/>
-<meta name="twitter:description" content="Just a little Exploration on [TIBCO Cloud™ Nimbus®](https://www.tibco.com/products/tibco-cloud-nimbus) 
+<meta name="twitter:description" content="Our Exploration on [TIBCO Cloud™ Nimbus®](https://www.tibco.com/products/tibco-cloud-nimbus) 
 "/>
 
 
@@ -346,6 +346,8 @@ if (!doNotTrack) {
 
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#future-work">Future Work</a></li>
     <li><a href="#more-details-about-this-exploration">More Details about this Exploration</a></li>
     <li><a href="#target-devices">Target Devices</a></li>
   </ul>
@@ -393,21 +395,34 @@ if (!doNotTrack) {
 
 
 
-<p class="-text-primary pt-3 h6" >Reading time: 0 minutes and 25 seconds.</p>
+<p class="-text-primary pt-3 h6" >Reading time: 0 minutes and 49 seconds.</p>
 <p>
 <div class="td-content">
 	<h1>TIBCO Cloud™ Nimbus® - Exploration</h1>
-	<div class="lead">Just a little Exploration on <a href="https://www.tibco.com/products/tibco-cloud-nimbus">TIBCO Cloud™ Nimbus®</a></div>
+	<div class="lead">Our Exploration on <a href="https://www.tibco.com/products/tibco-cloud-nimbus">TIBCO Cloud™ Nimbus®</a></div>
 	<p>Nimbus Map Activities can get loaded into any AR Experience  of Hololens 2, by looking at a mashine specific QR Code. 
 This allows to add little or complex Instruction guides anywhere and make them contextual.</p>
 <p><img src="nimbus-in-AR.gif" alt="alt-text" title="Image">
 <br><sup>Nimbus Activity on Hololens 2</sup></p>
-<p>All details can get modified without and implementation change or adjustment, just by using Nimbus Web UI.</p>
+<p>All details can get modified without and implementation change or adjustment, more Activities can get added on the fly.
+New QR Codes can get created easily by just taking the last Path ID from a Nimbus Cloud URL. e.g. &ldquo;0:123456abc&hellip;.&rdquo;</p>
+<p>And all this just by using Nimbus Web UI.</p>
 <p><img src="nimbus-in-AR2.gif" alt="alt-text" title="Image">
-<br><sup>Nimbus Activity on Hololens 2</sup></p>
+<br><sup>Nimbus Web UI</sup></p>
 <blockquote>
 <p>The right information, at right time, and at the right QR Code position.</p>
 </blockquote>
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+<li>with this first Implemenation, Instruction Guides can get places already everywhere.</li>
+<li>No Adjustments are nessesary in the Implmentation itself.</li>
+</ul>
+<h2 id="future-work">Future Work</h2>
+<ul>
+<li>display Nimbus Attachments next to an Object (Videos, Images)</li>
+<li>use QRCode Position, Scale and Rotation to place other 3D Ojects as kind of overlay</li>
+<li>add realtime IoT Sensor Details next to the Object (e.g. Warnings, Logs, etc.)</li>
+</ul>
 <h2 id="more-details-about-this-exploration">More Details about this Exploration</h2>
 <p>check out this YouTube Video</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KqH29R3L_RE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -476,7 +491,7 @@ This allows to add little or complex Instruction guides anywhere and make them c
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified October 8, 2020: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/1834839e696cc57e001478b0dc33acb00b3df0d3">adding Nimbus and Bike Exploration (1834839)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified October 8, 2020: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/a5d5e2759984c43738e5909fc27d0ae68b4b8c6c">adding Nimbus and Bike Exploration (a5d5e27)</a>
 </div>
 </div>
 

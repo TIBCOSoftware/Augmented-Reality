@@ -77,12 +77,25 @@
 This allows to add little or complex Instruction guides anywhere and make them contextual.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;nimbus-in-AR.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
 &lt;br&gt;&lt;sup&gt;Nimbus Activity on Hololens 2&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;All details can get modified without and implementation change or adjustment, just by using Nimbus Web UI.&lt;/p&gt;
+&lt;p&gt;All details can get modified without and implementation change or adjustment, more Activities can get added on the fly.
+New QR Codes can get created easily by just taking the last Path ID from a Nimbus Cloud URL. e.g. &amp;ldquo;0:123456abc&amp;hellip;.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;And all this just by using Nimbus Web UI.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;nimbus-in-AR2.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
-&lt;br&gt;&lt;sup&gt;Nimbus Activity on Hololens 2&lt;/sup&gt;&lt;/p&gt;
+&lt;br&gt;&lt;sup&gt;Nimbus Web UI&lt;/sup&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The right information, at right time, and at the right QR Code position.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;with this first Implemenation, Instruction Guides can get places already everywhere.&lt;/li&gt;
+&lt;li&gt;No Adjustments are nessesary in the Implmentation itself.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;future-work&#34;&gt;Future Work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;display Nimbus Attachments next to an Object (Videos, Images)&lt;/li&gt;
+&lt;li&gt;use QRCode Position, Scale and Rotation to place other 3D Ojects as kind of overlay&lt;/li&gt;
+&lt;li&gt;add realtime IoT Sensor Details next to the Object (e.g. Warnings, Logs, etc.)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;more-details-about-this-exploration&#34;&gt;More Details about this Exploration&lt;/h2&gt;
 &lt;p&gt;check out this YouTube Video&lt;/p&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/KqH29R3L_RE&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
