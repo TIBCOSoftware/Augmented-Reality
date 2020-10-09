@@ -150,5 +150,22 @@ Next, we started to work with WebXR as well, to support all kind Devices near fu
       </description>
     </item>
     
+    <item>
+      <title>Blog: Bike Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2019/06/09/bike-exploration/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2019/06/09/bike-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;check out our Bike &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/bike-exploration/&#34;&gt;Exploration&lt;/a&gt; for the  international women pro cycling team “Team TIBCO Silicon Valley Bank”&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;based on Hololens 1 connected to TIBCO Cloud Services.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>
