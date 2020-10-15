@@ -509,6 +509,9 @@ In the MainController, you can update the Connection property prefix (default is
 &lt;p&gt;Here a sample using TIBCO Cloud™ Integration Flogo&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;FlogoTCMSender.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
 &lt;br&gt;&lt;sup&gt;TIBCO Cloud Integration Configuration&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;in-action&#34;&gt;In Action&lt;/h2&gt;
+&lt;p&gt;Step by Step Video with TIBCO Messaging in Augmented Reality&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/vVvJdojTF44&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;
 &lt;h3 id=&#34;publish-messages&#34;&gt;Publish Messages&lt;/h3&gt;
 &lt;ol&gt;
