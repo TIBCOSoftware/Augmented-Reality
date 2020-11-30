@@ -164,7 +164,6 @@ Just follow this &lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;URL ARTwalker&lt
 &lt;br&gt;&lt;sup&gt;ARTwalker Gameplay&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Some of the key features and capabilities of ARTWalker are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Project ART from TIBCO LABS&lt;/li&gt;
 &lt;li&gt;Unique account detection (no passwords)&lt;/li&gt;
 &lt;li&gt;Tracking of Client IP for fraud prevention/detection&lt;/li&gt;
 &lt;li&gt;GPS tracking capabilities&lt;/li&gt;
@@ -184,7 +183,7 @@ Just follow this &lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;URL ARTwalker&lt
 &lt;h3 id=&#34;api-gateway&#34;&gt;API Gateway&lt;/h3&gt;
 &lt;p&gt;TIBCO Mashery to avoid CORS, Security and Throttling issues, and to handle a huge number of potential end-users using the mobile App.&lt;/p&gt;
 &lt;h3 id=&#34;integration-layer&#34;&gt;Integration Layer&lt;/h3&gt;
-&lt;p&gt;TIBCO Cloud Integration Flogo micro service for user creation, collect updates, and fraud detection, e.g. we don&#39;t allow&lt;/p&gt;
+&lt;p&gt;TIBCO Cloud Integration Flogo micro service for user creation, collect updates, and fraud detection, e.g. we don&amp;rsquo;t allow&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;to quick updates on the same location (relax at least 1 minute, before updating the next location)&lt;/li&gt;
 &lt;li&gt;to set geo-marker to close together&lt;/li&gt;
@@ -202,7 +201,7 @@ All Data is made available to TIBCO Cloud Spotfire using standard Connectors.&lt
 &lt;p&gt;All the data generated is fed into a dashboard which will display the location of all the participants as well as the overall results that identify the top participants.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;ARTwalker-dashboard.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;
 &lt;br&gt;&lt;sup&gt;ARTwalker Dashboard&lt;/sup&gt;&lt;/p&gt;
-&lt;h2 id=&#34;whats-next&#34;&gt;What&#39;s next?&lt;/h2&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next?&lt;/h2&gt;
 &lt;p&gt;We plan to extend this early implementation with more features, and run a Challenge with great prices on one of the upcoming &lt;a href=&#34;https://www.tibco.com/events/series/open-source-community-day-ossday&#34;&gt;OSS Community days&lt;/a&gt;. &lt;b&gt;Stay Tuned!&lt;/b&gt;&lt;/p&gt;
 
       </description>

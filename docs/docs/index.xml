@@ -189,7 +189,6 @@ Just follow this &lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;URL ARTwalker&lt
 &lt;br&gt;&lt;sup&gt;ARTwalker Gameplay&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Some of the key features and capabilities of ARTWalker are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Project ART from TIBCO LABS&lt;/li&gt;
 &lt;li&gt;Unique account detection (no passwords)&lt;/li&gt;
 &lt;li&gt;Tracking of Client IP for fraud prevention/detection&lt;/li&gt;
 &lt;li&gt;GPS tracking capabilities&lt;/li&gt;
@@ -209,7 +208,7 @@ Just follow this &lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;URL ARTwalker&lt
 &lt;h3 id=&#34;api-gateway&#34;&gt;API Gateway&lt;/h3&gt;
 &lt;p&gt;TIBCO Mashery to avoid CORS, Security and Throttling issues, and to handle a huge number of potential end-users using the mobile App.&lt;/p&gt;
 &lt;h3 id=&#34;integration-layer&#34;&gt;Integration Layer&lt;/h3&gt;
-&lt;p&gt;TIBCO Cloud Integration Flogo micro service for user creation, collect updates, and fraud detection, e.g. we don&#39;t allow&lt;/p&gt;
+&lt;p&gt;TIBCO Cloud Integration Flogo micro service for user creation, collect updates, and fraud detection, e.g. we don&amp;rsquo;t allow&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;to quick updates on the same location (relax at least 1 minute, before updating the next location)&lt;/li&gt;
 &lt;li&gt;to set geo-marker to close together&lt;/li&gt;
@@ -227,7 +226,7 @@ All Data is made available to TIBCO Cloud Spotfire using standard Connectors.&lt
 &lt;p&gt;All the data generated is fed into a dashboard which will display the location of all the participants as well as the overall results that identify the top participants.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;ARTwalker-dashboard.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;
 &lt;br&gt;&lt;sup&gt;ARTwalker Dashboard&lt;/sup&gt;&lt;/p&gt;
-&lt;h2 id=&#34;whats-next&#34;&gt;What&#39;s next?&lt;/h2&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next?&lt;/h2&gt;
 &lt;p&gt;We plan to extend this early implementation with more features, and run a Challenge with great prices on one of the upcoming &lt;a href=&#34;https://www.tibco.com/events/series/open-source-community-day-ossday&#34;&gt;OSS Community days&lt;/a&gt;. &lt;b&gt;Stay Tuned!&lt;/b&gt;&lt;/p&gt;
 
       </description>
@@ -353,7 +352,7 @@ Just enter&lt;/p&gt;
 &lt;h2 id=&#34;build-a-sample-liveapps-application&#34;&gt;Build a sample LiveApps application&lt;/h2&gt;
 &lt;p&gt;In order to experiment this Unity package, you need an existing TIBCO Cloud™ LiveApps appplication.&lt;/p&gt;
 &lt;h3 id=&#34;trial-account&#34;&gt;Trial Account&lt;/h3&gt;
-&lt;p&gt;If you don&#39;t have a TIBCO Cloud™ account with LiveApps capability you may register for your own TIBCO Cloud™ LiveApps trial account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/liveapps&#34;&gt;Sign-up Form&lt;/a&gt;.
+&lt;p&gt;If you don&amp;rsquo;t have a TIBCO Cloud™ account with LiveApps capability you may register for your own TIBCO Cloud™ LiveApps trial account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/liveapps&#34;&gt;Sign-up Form&lt;/a&gt;.
 Then, obtain your personal ID and Authorization key under &amp;lsquo;Authentication Keys&amp;rsquo; Settings Tab, beside the Subscription &amp;lsquo;Status&amp;rsquo; in you TIBCO Cloud™ account.&lt;/p&gt;
 &lt;h3 id=&#34;info-card-business-application&#34;&gt;&amp;ldquo;Info Card&amp;rdquo; business application&lt;/h3&gt;
 &lt;p&gt;The following video shows you how to create a LiveApps application in 5 minutes to handle &amp;ldquo;Info Cards&amp;rdquo;. The LiveApps Unity package contains a sample using this application.
@@ -469,9 +468,9 @@ Have a look at the sample &lt;i&gt;BoardViewController&lt;/i&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;UnityAssets-FTL.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
 &lt;br&gt;&lt;sup&gt;Unity3D Library Assets&lt;/sup&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;drag&#39;n drop the &amp;lsquo;MainController&amp;rsquo; Prefab into your scene&lt;/li&gt;
-&lt;li&gt;drag&#39;n drop the &amp;lsquo;Text&amp;rsquo; Prefab into your scene&lt;/li&gt;
-&lt;li&gt;drag&#39;n drop the &amp;lsquo;Text&amp;rsquo; Object from your scene to the &amp;lsquo;MainControler&amp;rsquo;, &amp;lsquo;SimpleTextViewController&amp;rsquo; Component to the &amp;lsquo;Text Mesh&amp;rsquo; Field&lt;/li&gt;
+&lt;li&gt;drag&amp;rsquo;n drop the &amp;lsquo;MainController&amp;rsquo; Prefab into your scene&lt;/li&gt;
+&lt;li&gt;drag&amp;rsquo;n drop the &amp;lsquo;Text&amp;rsquo; Prefab into your scene&lt;/li&gt;
+&lt;li&gt;drag&amp;rsquo;n drop the &amp;lsquo;Text&amp;rsquo; Object from your scene to the &amp;lsquo;MainControler&amp;rsquo;, &amp;lsquo;SimpleTextViewController&amp;rsquo; Component to the &amp;lsquo;Text Mesh&amp;rsquo; Field&lt;/li&gt;
 &lt;li&gt;configure your Web Socket URI and Authkey, in a file named &amp;lsquo;TIBCO-credentials.txt&amp;rsquo; placed in &lt;i&gt;TIBCOLabs &amp;gt; Utils &amp;gt; Resources &lt;/i&gt; folder.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;All set! now run Unity &amp;lsquo;Playmode&amp;rsquo;, and test your implementation using cURL or Flogo first - e.g. like described below.&lt;/p&gt;
