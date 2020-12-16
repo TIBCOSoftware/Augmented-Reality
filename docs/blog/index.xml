@@ -14,6 +14,24 @@
     
     
     <item>
+      <title>Blog: Marker Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/12/16/marker-exploration/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/12/16/marker-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Augmented Reality &lt;b&gt;without&lt;/b&gt; special Devices needs, or native Apps is possible today.&lt;br&gt;
+Check out or latest LABS Surprise Implementation &lt;a href=&#34;Augmented-Reality/docs/explorations/marker-exploration/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AR with pure HTML, CSS and Javascript, connected to TIBCO Cloud Services.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Nimbus Exploration</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/10/08/nimbus-exploration/</link>
       <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
@@ -39,8 +57,8 @@
       <description>
         
         
-        &lt;p&gt;Augmented Reality &lt;b&gt;without&lt;/b&gt; a special Devices and a native App is possible today.&lt;br&gt;
-Check out or latest LABS Demo Implemenation called &lt;a href=&#34;Augmented-Reality/docs/explorations/webxr-exploration/&#34;&gt;ARTwalker&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;Augmented Reality &lt;b&gt;without&lt;/b&gt; special Devices needs, or native Apps is possible today.&lt;br&gt;
+Check out or latest LABS Demo Implementation called &lt;a href=&#34;Augmented-Reality/docs/explorations/webxr-exploration/&#34;&gt;ARTwalker&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;AR with pure HTML, CSS and Javascript, connected to TIBCO Cloud Services.&lt;/p&gt;
 &lt;/blockquote&gt;
