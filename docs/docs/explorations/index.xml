@@ -216,9 +216,9 @@ All Data is made available to TIBCO Cloud Spotfire using standard Connectors.&lt
       <description>
         
         
-        &lt;p&gt;&lt;span&gt;&lt;img src=&#34;AR-Marker1.jpg&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;   &lt;img src=&#34;AR-Marker2.jpg&#34; style=&#34;height:400px&#34;&gt;   &lt;img src=&#34;AR-Marker3.jpg&#34; style=&#34;height:400px&#34;&gt;&lt;/span&gt;
+        &lt;p&gt;&lt;span&gt;&lt;img src=&#34;AR-Marker1.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;   &lt;img src=&#34;AR-Marker2.png&#34; style=&#34;height:400px&#34;&gt;   &lt;img src=&#34;AR-Marker3.jpg&#34; style=&#34;height:400px&#34;&gt;&lt;/span&gt;
 &lt;br&gt;&lt;sup&gt;AR Marker Splash, Instructions, and AR Screen&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Join us for an Christmas Surprise AR experience, where you can place a Surprise into your living room.
+&lt;p&gt;Join us for an AR surprise experience, where you can place a Surprise into your living room or office.
 This Implementation is based on A-Frame and Three.js, and it comes with usage ways.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Marker based, &amp;hellip; here you need to print a Marker first and place it somewhere.&lt;/li&gt;
