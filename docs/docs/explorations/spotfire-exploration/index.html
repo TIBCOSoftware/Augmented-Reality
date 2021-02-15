@@ -22,12 +22,12 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/spotfire-exploration/" />
-<meta property="article:modified_time" content="2020-04-16T12:02:41+02:00" /><meta property="og:site_name" content="Project ART" />
+<meta property="article:modified_time" content="2021-02-15T10:23:02+01:00" /><meta property="og:site_name" content="Project ART" />
 <meta itemprop="name" content="TIBCO Cloud™ Spotfire® - Exploration">
 <meta itemprop="description" content="Just a little Exploration on [TIBCO Cloud™ Spotfire®](https://www.tibco.com/products/tibco-spotfire) 
 ">
-<meta itemprop="dateModified" content="2020-04-16T12:02:41+02:00" />
-<meta itemprop="wordCount" content="96">
+<meta itemprop="dateModified" content="2021-02-15T10:23:02+01:00" />
+<meta itemprop="wordCount" content="165">
 
 
 
@@ -399,6 +399,7 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#trail-account">Trail Account</a></li>
         <li><a href="#spotfire-api">Spotfire API</a></li>
+        <li><a href="#implementation">Implementation</a></li>
       </ul>
     </li>
     <li><a href="#target-devices">Target Devices</a></li>
@@ -461,6 +462,12 @@ if (!doNotTrack) {
 <p>To try this yourself, just register for your own TIBCO Cloud™ Spotfire® trail account on this <a href="https://account.cloud.tibco.com/signup/spotfire">Form</a> to get your own personal Subscription Account.</p>
 <h3 id="spotfire-api">Spotfire API</h3>
 <p>This TIBCO LABS Exploration is looking into AR API Support for TIBCO Cloud™ Spotfire® as well, this is a lot better to allow real &lsquo;augmented&rsquo; drill-downs into Analyses.</p>
+<h3 id="implementation">Implementation</h3>
+<p>to open a public available Spotfire Dashboard on Hololens, just use the following within your Unity 3D Imlementation and Report will be shown within a Browser Window as part of your Scene:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">  <span style="color:#000">Application</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">OpenURL</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">spotfire</span> <span style="color:#000">dashboard</span> <span style="color:#000">url</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">);</span>
+</code></pre></div><blockquote>
+<p>Note: Spotfire can get adjusted in Theme and Visualization Mods to make fonts and colour fit better into any Augmented Reality Space. With this any datasource can get added quickly any 3D Experience.</p>
+</blockquote>
 <h2 id="target-devices">Target Devices</h2>
 <p>Tested with Microsoft Hololens V2.</p>
 
@@ -528,7 +535,7 @@ if (!doNotTrack) {
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified April 16, 2020: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/f0953ff02b115868654fecf82ef09e8be753a4bb">init (f0953ff)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 15, 2021: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/6679af9ac43454d93f56456a677023fb477e07d2">Update index.md (6679af9)</a>
 </div>
 </div>
 
