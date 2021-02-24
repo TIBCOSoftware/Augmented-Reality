@@ -123,11 +123,13 @@ New QR Codes can get created easily by just taking the last Path ID from a Nimbu
 &lt;h3 id=&#34;trail-account&#34;&gt;Trail Account&lt;/h3&gt;
 &lt;p&gt;To try this yourself, just register for your own TIBCO Cloud™ Spotfire® trail account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/spotfire&#34;&gt;Form&lt;/a&gt; to get your own personal Subscription Account.&lt;/p&gt;
 &lt;h3 id=&#34;spotfire-api&#34;&gt;Spotfire API&lt;/h3&gt;
-&lt;p&gt;This TIBCO LABS Exploration is looking into AR API Support for TIBCO Cloud™ Spotfire® as well, this is a lot better to allow real &amp;lsquo;augmented&amp;rsquo; drill-downs into Analyses.&lt;/p&gt;
+&lt;p&gt;This TIBCO LABS Exploration is looking into AR API Support for TIBCO Cloud™ Spotfire® as well, this is a lot better to allow real &amp;lsquo;augmented&amp;rsquo; drill-downs into Analyses.
+By opening a Device own browser this Sample is working for Spotfire Cloud and any Spotfire on-prem installation, that has the Spotfire Webplayer available for End-Users.&lt;/p&gt;
 &lt;h3 id=&#34;implementation&#34;&gt;Implementation&lt;/h3&gt;
 &lt;p&gt;to open a public available Spotfire Dashboard on Hololens, just use the following within your Unity 3D Imlementation and Report will be shown within a Browser Window as part of your Scene:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;  &lt;span style=&#34;color:#000&#34;&gt;Application&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;OpenURL&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;spotfire&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;dashboard&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With this Hololens V2 allows to open the Browser within the same Scene together with other Objects. (Hololens V1 jumps directly out of the App Scene)&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Note: Spotfire can get adjusted in Theme and Visualization Mods to make fonts and colour fit better into any Augmented Reality Space. With this any datasource can get added quickly any 3D Experience.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;sample-showcase-recording&#34;&gt;Sample Showcase Recording&lt;/h3&gt;
