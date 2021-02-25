@@ -135,7 +135,7 @@ By opening a Device own browser this Sample is working for Spotfire Cloud and an
 &lt;h3 id=&#34;sample-showcase-recording&#34;&gt;Sample Showcase Recording&lt;/h3&gt;
 &lt;p&gt;little Sample Video to show how this could look like.&lt;/p&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/IDmK0aEtFCI&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;h3 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h3&gt;
 &lt;p&gt;Tested with Microsoft Hololens V2.&lt;/p&gt;
 
       </description>
@@ -154,7 +154,7 @@ By opening a Device own browser this Sample is working for Spotfire Cloud and an
 &lt;br&gt;&lt;sup&gt;ARTwalker Splash, Login, and Ingame Screen&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Join us for an AR experience while you stretch your legs during a break. Learn how WebXR and TIBCO technology can be leveraged to use AR to interact with the world around you. The more you walk, the more interactions you will capture, and the long-distance that you will accrue. Check in real-time to our leaderboard.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;All implemented in pure HTML, CSS, and JavaScript + GTLF 3D Objects.&lt;/b&gt;&lt;/p&gt;
-&lt;h3 id=&#34;get-started&#34;&gt;Get Started&lt;/h3&gt;
+&lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
 &lt;p&gt;WebXR comes with the benefits of no native App need to get downloaded, you can run the Game directly from a URL.
 On the other Hand WebXR is very early technology, means it is not yet supported by all kind of browsers and Devices by today.
 Next, WebXR and AR in general consums a lot of processing and battery power.&lt;/p&gt;
@@ -169,7 +169,7 @@ Just follow this &lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;URL ARTwalker&lt
 Just follow this &lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;URL ARTwalker&lt;/a&gt; (&lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;https://bit.ly/2ZiKODx&lt;/a&gt;)&lt;/p&gt;
 &lt;h5 id=&#34;qr-code&#34;&gt;QR Code&lt;/h5&gt;
 &lt;p&gt;&lt;img src=&#34;ARTwalker-QR.png&#34; style=&#34;height:200px&#34;&gt;&lt;/img&gt;&lt;/p&gt;
-&lt;h3 id=&#34;gameplay&#34;&gt;Gameplay&lt;/h3&gt;
+&lt;h2 id=&#34;gameplay&#34;&gt;Gameplay&lt;/h2&gt;
 &lt;p&gt;here a little sequence of how the Gameplay looks in this technology demo.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;ARTwalker.gif&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;
 &lt;br&gt;&lt;sup&gt;ARTwalker Gameplay&lt;/sup&gt;&lt;/p&gt;
