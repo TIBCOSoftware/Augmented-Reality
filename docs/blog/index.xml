@@ -14,6 +14,24 @@
     
     
     <item>
+      <title>Blog: May 2021 Explorations</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/05/may-2021-explorations/</link>
+      <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/05/may-2021-explorations/</guid>
+      <description>
+        
+        
+        &lt;p&gt;We started 2021 with 2 Explorations, one using Web AR technologies, and one more using Hololens 2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/hololens/computervision-exploration/&#34;&gt;Hololens and Computer Vision&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/hololens/computervision-exploration/&#34;&gt;ScanSmart AR Web, for online event gamification&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Marker Exploration</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/12/16/marker-exploration/</link>
       <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
@@ -23,7 +41,7 @@
         
         
         &lt;p&gt;Augmented Reality &lt;b&gt;without&lt;/b&gt; special Devices needs, or native Apps is possible today.&lt;br&gt;
-Check out or latest LABS Surprise Implementation &lt;a href=&#34;Augmented-Reality/docs/explorations/marker-exploration/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+Check out or latest LABS Surprise Implementation &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/web/marker-exploration/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;AR with pure HTML, CSS and Javascript, connected to TIBCO Cloud Services.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -40,7 +58,7 @@ Check out or latest LABS Surprise Implementation &lt;a href=&#34;Augmented-Reali
       <description>
         
         
-        &lt;p&gt;adding TIBCO Cloud Nimbus Augmented Reality &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/nimbus-exploration/&#34;&gt;Exploration&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;adding TIBCO Cloud Nimbus Augmented Reality &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/hololens/nimbus-exploration/&#34;&gt;Exploration&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;based on Hololens 2 connected to TIBCO Cloud Services.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -58,7 +76,7 @@ Check out or latest LABS Surprise Implementation &lt;a href=&#34;Augmented-Reali
         
         
         &lt;p&gt;Augmented Reality &lt;b&gt;without&lt;/b&gt; special Devices needs, or native Apps is possible today.&lt;br&gt;
-Check out or latest LABS Demo Implementation called &lt;a href=&#34;Augmented-Reality/docs/explorations/webxr-exploration/&#34;&gt;ARTwalker&lt;/a&gt;&lt;/p&gt;
+Check out or latest LABS Demo Implementation called &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/web/webxr-exploration/&#34;&gt;ARTwalker&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;AR with pure HTML, CSS and Javascript, connected to TIBCO Cloud Services.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -67,11 +85,11 @@ Check out or latest LABS Demo Implementation called &lt;a href=&#34;Augmented-Re
     </item>
     
     <item>
-      <title>Blog: 3nd September Release</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/25/3nd-september-release/</link>
+      <title>Blog: 3nd September 2020 Release</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/25/3nd-september-2020-release/</link>
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/25/3nd-september-release/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/25/3nd-september-2020-release/</guid>
       <description>
         
         
@@ -90,11 +108,11 @@ Next, we started to work with WebXR as well, to support all kind Devices near fu
     </item>
     
     <item>
-      <title>Blog: 2nd April Release</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/27/2nd-april-release/</link>
+      <title>Blog: 2nd April 2020 Release</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/27/2nd-april-2020-release/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/27/2nd-april-release/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/27/2nd-april-2020-release/</guid>
       <description>
         
         
@@ -111,11 +129,11 @@ Next, we started to work with WebXR as well, to support all kind Devices near fu
     </item>
     
     <item>
-      <title>Blog: first Release</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/first-release/</link>
+      <title>Blog: first Release 2020</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/first-release-2020/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/first-release/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/first-release-2020/</guid>
       <description>
         
         
@@ -141,17 +159,17 @@ Next, we started to work with WebXR as well, to support all kind Devices near fu
       <description>
         
         
-        &lt;p&gt;running TIBCO Cloud Spotfire in AR is possible, check &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/spotfire-exploration/&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;running TIBCO Cloud Spotfire in AR is possible, check &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/hololens/spotfire-exploration/&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Blog: Initial Release</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2019/12/13/initial-release/</link>
+      <title>Blog: Initial Release 2019</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2019/12/13/initial-release-2019/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2019/12/13/initial-release/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2019/12/13/initial-release-2019/</guid>
       <description>
         
         
@@ -177,7 +195,7 @@ Next, we started to work with WebXR as well, to support all kind Devices near fu
       <description>
         
         
-        &lt;p&gt;check out our Bike &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/bike-exploration/&#34;&gt;Exploration&lt;/a&gt; for the  international women pro cycling team “Team TIBCO Silicon Valley Bank”&lt;/p&gt;
+        &lt;p&gt;check out our Bike &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/hololens/bike-exploration/&#34;&gt;Exploration&lt;/a&gt; for the  international women pro cycling team “Team TIBCO Silicon Valley Bank”&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;based on Hololens 1 connected to TIBCO Cloud Services.&lt;/p&gt;
 &lt;/blockquote&gt;

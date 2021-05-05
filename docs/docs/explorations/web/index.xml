@@ -1,0 +1,213 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project ART – Web Explorations</title>
+    <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/</link>
+    <description>Recent content in Web Explorations on Project ART</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: WebXR Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/webxr-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/webxr-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;span&gt;&lt;img src=&#34;ARTwalker-splash.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;   &lt;img src=&#34;ARTwalker-login.png&#34; style=&#34;height:400px&#34;&gt;   &lt;img src=&#34;ARTwalker-ingame.png&#34; style=&#34;height:400px&#34;&gt;&lt;/span&gt;
+&lt;br&gt;&lt;sup&gt;ARTwalker Splash, Login, and Ingame Screen&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Join us for an AR experience while you stretch your legs during a break. Learn how WebXR and TIBCO technology can be leveraged to use AR to interact with the world around you. The more you walk, the more interactions you will capture, and the long-distance that you will accrue. Check in real-time to our leader-board.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;All implemented in pure HTML, CSS, and JavaScript + GTLF 3D Objects.&lt;/b&gt;&lt;/p&gt;
+&lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
+&lt;p&gt;WebXR comes with the benefits of no native App need to get downloaded, you can run the Game directly from a URL.
+On the other Hand WebXR is very early technology, means it is not yet supported by all kind of browsers and Devices by today.
+Next, WebXR and AR in general consumes a lot of processing and battery power.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All you need is a smartphone or tablet that support AR. (&lt;a href=&#34;https://developers.google.com/ar/discover/supported-devices&#34;&gt;Android ARcore&lt;/a&gt; | &lt;a href=&#34;https://developer.apple.com/library/archive/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/DeviceCompatibilityMatrix/DeviceCompatibilityMatrix.html&#34;&gt;Apple ARkit&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;android&#34;&gt;Android&lt;/h4&gt;
+&lt;p&gt;Android devices will need to have the latest version of the Chrome browser (v85+) installed.&lt;br&gt;
+Just follow this &lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;URL ARTwalker&lt;/a&gt; or scan the QR-Code below.&lt;/p&gt;
+&lt;h4 id=&#34;apple&#34;&gt;Apple&lt;/h4&gt;
+&lt;p&gt;iOS devices will need to download the &lt;a href=&#34;https://apps.apple.com/de/app/webxr-viewer/id1295998056&#34;&gt;WebXR Viewer 2.0&lt;/a&gt; app build by Mozilla from the Apple app store.&lt;br&gt;
+Just follow this &lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;URL ARTwalker&lt;/a&gt; (&lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;https://bit.ly/2ZiKODx&lt;/a&gt;)&lt;/p&gt;
+&lt;h5 id=&#34;qr-code&#34;&gt;QR Code&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;ARTwalker-QR.png&#34; style=&#34;height:200px&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h2 id=&#34;gameplay&#34;&gt;Gameplay&lt;/h2&gt;
+&lt;p&gt;here a little sequence of how the Gameplay looks in this technology demo.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ARTwalker.gif&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;
+&lt;br&gt;&lt;sup&gt;ARTwalker Gameplay&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Some of the key features and capabilities of ARTWalker are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unique account detection (no passwords)&lt;/li&gt;
+&lt;li&gt;Tracking of Client IP for fraud prevention/detection&lt;/li&gt;
+&lt;li&gt;GPS tracking capabilities&lt;/li&gt;
+&lt;li&gt;GPS distance checking and distance walked counting&lt;/li&gt;
+&lt;li&gt;GPS speed checking (reject request when traveling to fast)&lt;/li&gt;
+&lt;li&gt;AR space distance checking&lt;/li&gt;
+&lt;li&gt;Challenge points counting&lt;/li&gt;
+&lt;li&gt;Remembering returning Users&lt;/li&gt;
+&lt;li&gt;A full analysis of results via Spotfire dashboard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;techology-overview&#34;&gt;Techology Overview&lt;/h2&gt;
+&lt;p&gt;This is the architecture behind the ARTwalker application, with all used and connected TIBCO Cloud Components.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ARTwalker-backend.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;
+&lt;br&gt;&lt;sup&gt;ARTwalker Backend&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hosted-app&#34;&gt;Hosted App&lt;/h3&gt;
+&lt;p&gt;static browser-based Augmented Reality App hosted on AWS S3 with AWS CloudFront.&lt;/p&gt;
+&lt;h3 id=&#34;api-gateway&#34;&gt;API Gateway&lt;/h3&gt;
+&lt;p&gt;TIBCO Mashery to avoid CORS, Security and Throttling issues, and to handle a huge number of potential end-users using the mobile App.&lt;/p&gt;
+&lt;h3 id=&#34;integration-layer&#34;&gt;Integration Layer&lt;/h3&gt;
+&lt;p&gt;TIBCO Cloud Integration Flogo micro service for user creation, collect updates, and fraud detection, e.g. we don&amp;rsquo;t allow&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;to quick updates on the same location (relax at least 1 minute, before updating the next location)&lt;/li&gt;
+&lt;li&gt;to set geo-marker to close together&lt;/li&gt;
+&lt;li&gt;to set geo-marker to far&lt;/li&gt;
+&lt;li&gt;speed faster than 25 km/h (you should walk, or use a bike)&lt;/li&gt;
+&lt;li&gt;to switch the Client IP more than 3 times back to the same (to avoid device hopping between locations)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;all configurable using Flogo Service Properties.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;no-code-data-layer&#34;&gt;No-Code Data Layer&lt;/h3&gt;
+&lt;p&gt;TIBCO Cloud Live Apps to store user stats, states, and profile, incl. case-actions.&lt;br&gt; 
+All Data is made available to TIBCO Cloud Spotfire using standard Connectors.&lt;/p&gt;
+&lt;h3 id=&#34;spotfire-dashboard&#34;&gt;Spotfire Dashboard&lt;/h3&gt;
+&lt;p&gt;All the data generated is fed into a dashboard which will display the location of all the participants as well as the overall results that identify the top participants.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ARTwalker-dashboard.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;
+&lt;br&gt;&lt;sup&gt;ARTwalker Dashboard&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next?&lt;/h2&gt;
+&lt;p&gt;We plan to extend this early implementation with more features, and run a Challenge with great prices on one of the upcoming &lt;a href=&#34;https://www.tibco.com/events/series/open-source-community-day-ossday&#34;&gt;OSS Community days&lt;/a&gt;. &lt;b&gt;Stay Tuned!&lt;/b&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Marker Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/marker-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/marker-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;span&gt;&lt;img src=&#34;AR-Marker1.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;   &lt;img src=&#34;AR-Marker2.png&#34; style=&#34;height:400px&#34;&gt;   &lt;img src=&#34;AR-Marker3.jpg&#34; style=&#34;height:400px&#34;&gt;&lt;/span&gt;
+&lt;br&gt;&lt;sup&gt;AR Marker Splash, Instructions, and AR Screen&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Join us for an AR surprise experience, where you can place a Surprise into your living room or office.
+This Implementation is based on A-Frame and Three.js, and it comes with usage ways.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Marker based, &amp;hellip; here you need to print a Marker first and place it somewhere.&lt;/li&gt;
+&lt;li&gt;WebXR based, &amp;hellip; with Object self placement, anywhere.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;b&gt;All implemented in pure HTML, CSS, and JavaScript + GTLF 3D Objects.&lt;/b&gt;&lt;/p&gt;
+&lt;h5 id=&#34;qr-code&#34;&gt;QR Code&lt;/h5&gt;
+&lt;p&gt;Scan the following QR Code using your smartphone or tablet,&lt;br&gt;and you get forwarded to &lt;a href=&#34;https://bit.ly/37adLGa&#34;&gt;URL https://bit.ly/37adLGa&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;AR-Marker-QR.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h4 id=&#34;marker-based-experience&#34;&gt;Marker based experience&lt;/h4&gt;
+&lt;p&gt;print this &lt;b&gt;&lt;a href=&#34;https://www.labs.tibcocloud.com/apps/labstree/data/tib.png&#34; target=&#34;_blank&#34;&gt;AR-Marker&lt;/a&gt;&lt;/b&gt;, and place it somewhere. The Augmented Object get placed directly over the Marker. You can even re-size and rotate it using your fingers.&lt;/p&gt;
+&lt;p&gt;Even smaller or multiple marker are working smoothly, but keep the black border when printing.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;supported on iOS and Android Devices, with browsers like Safari, Chrome, and Firefox.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;marker-based-experience-1&#34;&gt;Marker based experience&lt;/h4&gt;
+&lt;p&gt;Devices that support WebXR get a button displayed next to the &amp;lsquo;START EXPERIENCE&amp;rsquo; button called &amp;lsquo;self position Variant&amp;rsquo;.
+Here you can place the Object anywhere, &lt;i&gt;without the need for a printed Marker.&lt;/i&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is mostly available just on Android Devices&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;overlay-content&#34;&gt;Overlay content&lt;/h3&gt;
+&lt;p&gt;The key features and capabilities are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Help, displayed for a view seconds for each Icon&lt;/li&gt;
+&lt;li&gt;Hide Overlay Menu for some seconds, to e.g. create a screenshot without Overlay&lt;/li&gt;
+&lt;li&gt;copy Link to the App into Clipboard, to e.g. share the Link via WhatsApp or Twitter, etc.&lt;/li&gt;
+&lt;li&gt;open a EMail Template containing the Link, to share the App with friends or colleagues&lt;/li&gt;
+&lt;li&gt;start App from beginning.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hosted-app&#34;&gt;Hosted App&lt;/h3&gt;
+&lt;p&gt;static browser-based Augmented Reality App hosted on AWS S3 with AWS CloudFront.&lt;/p&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next?&lt;/h2&gt;
+&lt;p&gt;This is a good base-line for other upcoming TIBCO Cloud connected experiences. &lt;b&gt;Stay Tuned!&lt;/b&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: ScanSmart Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/scansmart-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/scansmart-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;span&gt;&lt;img src=&#34;ScanSmart1.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;   &lt;img src=&#34;ScanSmart2.png&#34; style=&#34;height:400px&#34;&gt;   &lt;img src=&#34;ScanSmart3.gif&#34; style=&#34;height:400px&#34;&gt;&lt;/span&gt;
+&lt;br&gt;&lt;sup&gt;ScanSmart Splash, Instructions, and AR Screen&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-scansmart&#34;&gt;What is ScanSmart?&lt;/h2&gt;
+&lt;p&gt;ScanSmart is an augmented reality (AR) application, that runs on the TIBCO Connected Intelligence Cloud that allows you to win prizes while attending online event sessions!&lt;/p&gt;
+&lt;img src=&#34;ScanSmart-Overview.png&#34; style=&#34;height:400px&#34;&gt;
+&lt;h2 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h2&gt;
+&lt;p&gt;With your mobile device camera, use ScanSmart to scan QR codes (such as on a Powerpoint slide) to bring AR elements (such as holograms in different shapes and forms) into the camera view.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;supported on iOS and Android Devices, with browsers like Safari, Chrome, and Firefox.&lt;br&gt;
+No App install required! Just follow the during the event provided URL,&lt;br&gt;
+or scan a QR code containing the URL with your mobile device.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;what-different-ar-markers&#34;&gt;What different AR markers?&lt;/h2&gt;
+&lt;p&gt;during online event sessions there can be&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Word puzzle” marker&lt;/li&gt;
+&lt;li&gt;“On-the-spot-prize” marker&lt;/li&gt;
+&lt;li&gt;Three “regular” marker, containing 3D Objects or Video playbacks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-are-the-different-challenges&#34;&gt;What are the different challenges?&lt;/h2&gt;
+&lt;p&gt;there are 3 type of challenges supported by the App currently&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;connect letters that you can discover in AR in the right order and get extra points, &lt;br&gt;when entering the right secret word into the App.&lt;/li&gt;
+&lt;li&gt;scan “On-the-spot-prize” session specific markers quickly, just the first e.g. 4 win extra prizes.&lt;/li&gt;
+&lt;li&gt;Overall Event winners with most points, get big prizes - e.g. TOP 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-are-the-app-features&#34;&gt;What are the App Features?&lt;/h2&gt;
+&lt;p&gt;the Application supports the following features&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;App in a Nutshell Guide&lt;/li&gt;
+&lt;li&gt;Visit App Rules&lt;/li&gt;
+&lt;li&gt;register and on-board new attendees&lt;/li&gt;
+&lt;li&gt;remember attendees&lt;/li&gt;
+&lt;li&gt;scan AR markers&lt;/li&gt;
+&lt;li&gt;show different types of AR objects&lt;/li&gt;
+&lt;li&gt;display TOP 5 overall attendee stats&lt;/li&gt;
+&lt;li&gt;show current points, and if the puzzle is already resolved&lt;/li&gt;
+&lt;li&gt;enter Puzzle Word&lt;/li&gt;
+&lt;li&gt;help&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;technology-behind&#34;&gt;Technology behind&lt;/h2&gt;
+&lt;p&gt;This App is fully based on TIBCO Connected Intelligence Cloud (CIC), this allows quickly adjustable API&amp;rsquo;s, plus fraud detection, easy to attendee case management, and great reporting of the overall status.&lt;/p&gt;
+&lt;img src=&#34;ScanSmart-Architecture.png&#34; style=&#34;height:400px&#34;&gt;
+&lt;h3 id=&#34;sample-api-service&#34;&gt;Sample API Service&lt;/h3&gt;
+&lt;p&gt;build with CIC Integration Flogo flows&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ScanSmart-API.png&#34; style=&#34;height:400px&#34;&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; this service also enrich the reporting with Geo-Location details based on the attendee Client IP.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;sample-status-dashboards&#34;&gt;Sample status dashboards&lt;/h3&gt;
+&lt;p&gt;build with CIC Spotfire&lt;/p&gt;
+&lt;img src=&#34;ScanSmart-Spotfire1.png&#34; style=&#34;height:300px&#34;&gt;
+&lt;img src=&#34;ScanSmart-Spotfire2.png&#34; style=&#34;height:300px&#34;&gt;
+&lt;h2 id=&#34;where-to-try-it&#34;&gt;Where to try it?&lt;/h2&gt;
+&lt;p&gt;We will use the Web Application at Open Source Community day &lt;br&gt;
+#OSSday on May 20, 2021 &lt;b&gt;&lt;a href=&#34;https://tibco.swoogo.com/ossday21/&#34; target=&#34;_blank&#34;&gt;Join Us!&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

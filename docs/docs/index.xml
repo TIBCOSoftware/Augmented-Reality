@@ -40,10 +40,10 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
     
     <item>
       <title>Docs: TIBCO Bike - Exploration</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/bike-exploration/</link>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/bike-exploration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/bike-exploration/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/bike-exploration/</guid>
       <description>
         
         
@@ -90,15 +90,84 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
     </item>
     
     <item>
-      <title>Docs: TIBCO Cloud™ Nimbus® - Exploration</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/nimbus-exploration/</link>
+      <title>Docs: Computer Vision - Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/computervision-exploration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/nimbus-exploration/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/computervision-exploration/</guid>
       <description>
         
         
-        &lt;p&gt;Nimbus Map Activities can get loaded into any AR Experience  of Hololens 2, by looking at a mashine specific QR Code. 
+        &lt;p&gt;A picture is worth more than a thousand words. Computer Vision (CV) is the field of Artificial Intelligence (AI) that enables computers to analyze the real world. Using Deep Learning models, machines can accurately identify and classify objects from within digital images and take action based on what they see driving an increased level of adoption of vision-guided robotics. Learn how to achieve end-to-end CV and AR solutions for your organization by analyzing machinery sensor data and images in edge, AR and VR environments with TIBCO.&lt;/p&gt;
+&lt;p&gt;This Exploration showcase how to handle a Hololens 2 as a IoT Device inside Project Air™ and &lt;a href=&#34;https://www.edgexfoundry.org/&#34;&gt;EdgeX Foundry&lt;/a&gt;, plus use the Holographic device for an Computer Vision and Deep Learning use case.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;AR_ComputerVision.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Computer Vision Scan on Hololens 2&lt;/sup&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; Hololens shows holographic objects always ~2cm to high in Video Recordings,&lt;br&gt;
+they appear in Hololens itself on the right position!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;business-use-cases&#34;&gt;Business use cases&lt;/h2&gt;
+&lt;p&gt;there are many use cases where a human can get supported by computer vision e.g.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Detect suspicious data on physical labels&lt;/li&gt;
+&lt;li&gt;Find defects on physical objects&lt;/li&gt;
+&lt;li&gt;Identify incorrect object placements&lt;/li&gt;
+&lt;li&gt;and more &amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When a suspicious scenario get detected, actions in this context can directly get executed by this human e.g.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open instruction guide&lt;/li&gt;
+&lt;li&gt;Raise case / ticket&lt;/li&gt;
+&lt;li&gt;Show additional statistics&lt;/li&gt;
+&lt;li&gt;Contact helpdesk, or an expert&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;to mention only some!&lt;/p&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;High-level Architecture Blueprint&lt;/p&gt;
+&lt;img src=&#34;AR_ComputerVision_Architecture_EdgeX.png&#34; style=&#34;height:400px&#34;&gt;
+&lt;h3 id=&#34;project-art---cv-app&#34;&gt;Project ART - CV App&lt;/h3&gt;
+&lt;p&gt;Handle taking Images, via voice command and send them via MQTT to EdgeX&lt;/p&gt;
+&lt;h3 id=&#34;project-air---edgex&#34;&gt;Project Air - EdgeX&lt;/h3&gt;
+&lt;p&gt;Project Air is fully based on EdgeX. The Project Air UI allows to configure Computer Vision Models and Edge Analytics on the fly using the IoT Pipeline,
+The Pipeline allows to deploy CV Models as well. Finally the validated Data get send back to Hololens, again via MQTT.&lt;/p&gt;
+&lt;h3 id=&#34;tibco-team-studio&#34;&gt;TIBCO Team Studio&lt;/h3&gt;
+&lt;p&gt;Used for all preprocessing, and for ML Model / deep learning model training.&lt;/p&gt;
+&lt;h2 id=&#34;more-details-about-this-exploration&#34;&gt;More Details about this Exploration&lt;/h2&gt;
+&lt;p&gt;check out this YouTube Video&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/ExLdoqSSdmc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;How do you deploy and inference a computer vision model at the edge?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tip: Use IoT TIBCO Project AIR™&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How do you use Augmented Reality to visualize machine learning results?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tip: Use AR TIBCO Project ART™&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How do you train a computer vision model and do analytics at the edge?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tip: Use TIBCO Team Studio™&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Can you do it all at the same time?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SURE!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens V2.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: TIBCO Cloud™ Nimbus® - Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/nimbus-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/nimbus-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Nimbus Map Activities can get loaded into any AR Experience  of Hololens 2, by looking at a machine specific QR Code. 
 This allows to add little or complex Instruction guides anywhere and make them contextual.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;nimbus-in-AR.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
 &lt;br&gt;&lt;sup&gt;Nimbus Activity on Hololens 2&lt;/sup&gt;&lt;/p&gt;
@@ -112,14 +181,14 @@ New QR Codes can get created easily by just taking the last Path ID from a Nimbu
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;with this first Implemenation, Instruction Guides can get places already everywhere.&lt;/li&gt;
-&lt;li&gt;No Adjustments are nessesary in the Implmentation itself.&lt;/li&gt;
+&lt;li&gt;with this first Implementation, Instruction Guides can get places already everywhere.&lt;/li&gt;
+&lt;li&gt;No Adjustments are necessary in the Implementation itself.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;future-work&#34;&gt;Future Work&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;display Nimbus Attachments next to an Object (Videos, Images)&lt;/li&gt;
-&lt;li&gt;use QRCode Position, Scale and Rotation to place other 3D Ojects as kind of overlay&lt;/li&gt;
-&lt;li&gt;add realtime IoT Sensor Details next to the Object (e.g. Warnings, Logs, etc.)&lt;/li&gt;
+&lt;li&gt;use QRCode Position, Scale and Rotation to place other 3D Objects as kind of overlay&lt;/li&gt;
+&lt;li&gt;add real-time IoT Sensor Details next to the Object (e.g. Warnings, Logs, etc.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;more-details-about-this-exploration&#34;&gt;More Details about this Exploration&lt;/h2&gt;
 &lt;p&gt;check out this YouTube Video&lt;/p&gt;
@@ -132,10 +201,10 @@ New QR Codes can get created easily by just taking the last Path ID from a Nimbu
     
     <item>
       <title>Docs: TIBCO Cloud™ Spotfire® - Exploration</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/spotfire-exploration/</link>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/spotfire-exploration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/spotfire-exploration/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/spotfire-exploration/</guid>
       <description>
         
         
@@ -151,11 +220,11 @@ New QR Codes can get created easily by just taking the last Path ID from a Nimbu
 &lt;p&gt;This TIBCO LABS Exploration is looking into AR API Support for TIBCO Cloud™ Spotfire® as well, this is a lot better to allow real &amp;lsquo;augmented&amp;rsquo; drill-downs into Analyses.
 By opening a Device own browser this Sample is working for Spotfire Cloud and any Spotfire on-prem installation, that has the Spotfire Webplayer available for End-Users.&lt;/p&gt;
 &lt;h3 id=&#34;implementation&#34;&gt;Implementation&lt;/h3&gt;
-&lt;p&gt;to open a public available Spotfire Dashboard on Hololens, just use the following within your Unity 3D Imlementation and Report will be shown within a Browser Window as part of your Scene:&lt;/p&gt;
+&lt;p&gt;to open a public available Spotfire Dashboard on Hololens, just use the following within your Unity 3D Implementation and Report will be shown within a Browser Window as part of your Scene:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;  &lt;span style=&#34;color:#000&#34;&gt;Application&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;OpenURL&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;spotfire&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;dashboard&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With this Hololens V2 allows to open the Browser within the same Scene together with other Objects. (Hololens V1 jumps directly out of the App Scene)&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Note: Spotfire can get adjusted in Theme and Visualization Mods to make fonts and colour fit better into any Augmented Reality Space. With this any datasource can get added quickly any 3D Experience.&lt;/p&gt;
+&lt;p&gt;Note: Spotfire can get adjusted in Theme and Visualization Mods to make fonts and color fit better into any Augmented Reality Space. With this any data-source can get added quickly any 3D Experience.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;sample-showcase-recording&#34;&gt;Sample Showcase Recording&lt;/h3&gt;
 &lt;p&gt;little Sample Video to show how this could look like.&lt;/p&gt;
@@ -168,21 +237,21 @@ By opening a Device own browser this Sample is working for Spotfire Cloud and an
     
     <item>
       <title>Docs: WebXR Exploration</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/webxr-exploration/</link>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/webxr-exploration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/webxr-exploration/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/webxr-exploration/</guid>
       <description>
         
         
         &lt;p&gt;&lt;span&gt;&lt;img src=&#34;ARTwalker-splash.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;   &lt;img src=&#34;ARTwalker-login.png&#34; style=&#34;height:400px&#34;&gt;   &lt;img src=&#34;ARTwalker-ingame.png&#34; style=&#34;height:400px&#34;&gt;&lt;/span&gt;
 &lt;br&gt;&lt;sup&gt;ARTwalker Splash, Login, and Ingame Screen&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Join us for an AR experience while you stretch your legs during a break. Learn how WebXR and TIBCO technology can be leveraged to use AR to interact with the world around you. The more you walk, the more interactions you will capture, and the long-distance that you will accrue. Check in real-time to our leaderboard.&lt;/p&gt;
+&lt;p&gt;Join us for an AR experience while you stretch your legs during a break. Learn how WebXR and TIBCO technology can be leveraged to use AR to interact with the world around you. The more you walk, the more interactions you will capture, and the long-distance that you will accrue. Check in real-time to our leader-board.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;All implemented in pure HTML, CSS, and JavaScript + GTLF 3D Objects.&lt;/b&gt;&lt;/p&gt;
 &lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
 &lt;p&gt;WebXR comes with the benefits of no native App need to get downloaded, you can run the Game directly from a URL.
 On the other Hand WebXR is very early technology, means it is not yet supported by all kind of browsers and Devices by today.
-Next, WebXR and AR in general consums a lot of processing and battery power.&lt;/p&gt;
+Next, WebXR and AR in general consumes a lot of processing and battery power.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;All you need is a smartphone or tablet that support AR. (&lt;a href=&#34;https://developers.google.com/ar/discover/supported-devices&#34;&gt;Android ARcore&lt;/a&gt; | &lt;a href=&#34;https://developer.apple.com/library/archive/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/DeviceCompatibilityMatrix/DeviceCompatibilityMatrix.html&#34;&gt;Apple ARkit&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -225,7 +294,7 @@ Just follow this &lt;a href=&#34;https://bit.ly/2ZiKODx&#34;&gt;URL ARTwalker&lt
 &lt;li&gt;to set geo-marker to close together&lt;/li&gt;
 &lt;li&gt;to set geo-marker to far&lt;/li&gt;
 &lt;li&gt;speed faster than 25 km/h (you should walk, or use a bike)&lt;/li&gt;
-&lt;li&gt;to switch the Client IP more than 3 times back to the same (to avoid device hopping beween locations)&lt;/li&gt;
+&lt;li&gt;to switch the Client IP more than 3 times back to the same (to avoid device hopping between locations)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;all configurable using Flogo Service Properties.&lt;/p&gt;
@@ -281,6 +350,56 @@ All Data is made available to TIBCO Cloud Spotfire using standard Connectors.&lt
 &lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
 &lt;p&gt;ready to use &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Packages/TIBCO-Charts&#34;&gt;Package&lt;/a&gt; |
 Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Editor/TIBCO-Charts&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Marker Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/marker-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/marker-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;span&gt;&lt;img src=&#34;AR-Marker1.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;   &lt;img src=&#34;AR-Marker2.png&#34; style=&#34;height:400px&#34;&gt;   &lt;img src=&#34;AR-Marker3.jpg&#34; style=&#34;height:400px&#34;&gt;&lt;/span&gt;
+&lt;br&gt;&lt;sup&gt;AR Marker Splash, Instructions, and AR Screen&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Join us for an AR surprise experience, where you can place a Surprise into your living room or office.
+This Implementation is based on A-Frame and Three.js, and it comes with usage ways.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Marker based, &amp;hellip; here you need to print a Marker first and place it somewhere.&lt;/li&gt;
+&lt;li&gt;WebXR based, &amp;hellip; with Object self placement, anywhere.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;b&gt;All implemented in pure HTML, CSS, and JavaScript + GTLF 3D Objects.&lt;/b&gt;&lt;/p&gt;
+&lt;h5 id=&#34;qr-code&#34;&gt;QR Code&lt;/h5&gt;
+&lt;p&gt;Scan the following QR Code using your smartphone or tablet,&lt;br&gt;and you get forwarded to &lt;a href=&#34;https://bit.ly/37adLGa&#34;&gt;URL https://bit.ly/37adLGa&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;AR-Marker-QR.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h4 id=&#34;marker-based-experience&#34;&gt;Marker based experience&lt;/h4&gt;
+&lt;p&gt;print this &lt;b&gt;&lt;a href=&#34;https://www.labs.tibcocloud.com/apps/labstree/data/tib.png&#34; target=&#34;_blank&#34;&gt;AR-Marker&lt;/a&gt;&lt;/b&gt;, and place it somewhere. The Augmented Object get placed directly over the Marker. You can even re-size and rotate it using your fingers.&lt;/p&gt;
+&lt;p&gt;Even smaller or multiple marker are working smoothly, but keep the black border when printing.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;supported on iOS and Android Devices, with browsers like Safari, Chrome, and Firefox.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;marker-based-experience-1&#34;&gt;Marker based experience&lt;/h4&gt;
+&lt;p&gt;Devices that support WebXR get a button displayed next to the &amp;lsquo;START EXPERIENCE&amp;rsquo; button called &amp;lsquo;self position Variant&amp;rsquo;.
+Here you can place the Object anywhere, &lt;i&gt;without the need for a printed Marker.&lt;/i&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is mostly available just on Android Devices&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;overlay-content&#34;&gt;Overlay content&lt;/h3&gt;
+&lt;p&gt;The key features and capabilities are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Help, displayed for a view seconds for each Icon&lt;/li&gt;
+&lt;li&gt;Hide Overlay Menu for some seconds, to e.g. create a screenshot without Overlay&lt;/li&gt;
+&lt;li&gt;copy Link to the App into Clipboard, to e.g. share the Link via WhatsApp or Twitter, etc.&lt;/li&gt;
+&lt;li&gt;open a EMail Template containing the Link, to share the App with friends or colleagues&lt;/li&gt;
+&lt;li&gt;start App from beginning.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hosted-app&#34;&gt;Hosted App&lt;/h3&gt;
+&lt;p&gt;static browser-based Augmented Reality App hosted on AWS S3 with AWS CloudFront.&lt;/p&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next?&lt;/h2&gt;
+&lt;p&gt;This is a good base-line for other upcoming TIBCO Cloud connected experiences. &lt;b&gt;Stay Tuned!&lt;/b&gt;&lt;/p&gt;
 
       </description>
     </item>
@@ -579,51 +698,70 @@ min. Implementation, as Unity Project &lt;a href=&#34;https://github.com/TIBCOSo
     </item>
     
     <item>
-      <title>Docs: Marker Exploration</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/marker-exploration/</link>
+      <title>Docs: ScanSmart Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/scansmart-exploration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/marker-exploration/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/scansmart-exploration/</guid>
       <description>
         
         
-        &lt;p&gt;&lt;span&gt;&lt;img src=&#34;AR-Marker1.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;   &lt;img src=&#34;AR-Marker2.png&#34; style=&#34;height:400px&#34;&gt;   &lt;img src=&#34;AR-Marker3.jpg&#34; style=&#34;height:400px&#34;&gt;&lt;/span&gt;
-&lt;br&gt;&lt;sup&gt;AR Marker Splash, Instructions, and AR Screen&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Join us for an AR surprise experience, where you can place a Surprise into your living room or office.
-This Implementation is based on A-Frame and Three.js, and it comes with usage ways.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Marker based, &amp;hellip; here you need to print a Marker first and place it somewhere.&lt;/li&gt;
-&lt;li&gt;WebXR based, &amp;hellip; with Object self placement, anywhere.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;b&gt;All implemented in pure HTML, CSS, and JavaScript + GTLF 3D Objects.&lt;/b&gt;&lt;/p&gt;
-&lt;h5 id=&#34;qr-code&#34;&gt;QR Code&lt;/h5&gt;
-&lt;p&gt;Scan the following QR Code using your smartphone or tablet,&lt;br&gt;and you get forwarded to &lt;a href=&#34;https://bit.ly/37adLGa&#34;&gt;URL https://bit.ly/37adLGa&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;AR-Marker-QR.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;&lt;/p&gt;
-&lt;h4 id=&#34;marker-based-experience&#34;&gt;Marker based experience&lt;/h4&gt;
-&lt;p&gt;print this &lt;b&gt;&lt;a href=&#34;https://www.labs.tibcocloud.com/apps/labstree/data/tib.png&#34; target=&#34;_blank&#34;&gt;AR-Marker&lt;/a&gt;&lt;/b&gt;, and place it somewhere. The Augmented Object get placed directly over the Marker. You can even re-size and rotate it using your fingers.&lt;/p&gt;
-&lt;p&gt;Even smaller or multiple marker are working smoothly, but keep the black border when printing.&lt;/p&gt;
+        &lt;p&gt;&lt;span&gt;&lt;img src=&#34;ScanSmart1.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;   &lt;img src=&#34;ScanSmart2.png&#34; style=&#34;height:400px&#34;&gt;   &lt;img src=&#34;ScanSmart3.gif&#34; style=&#34;height:400px&#34;&gt;&lt;/span&gt;
+&lt;br&gt;&lt;sup&gt;ScanSmart Splash, Instructions, and AR Screen&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-scansmart&#34;&gt;What is ScanSmart?&lt;/h2&gt;
+&lt;p&gt;ScanSmart is an augmented reality (AR) application, that runs on the TIBCO Connected Intelligence Cloud that allows you to win prizes while attending online event sessions!&lt;/p&gt;
+&lt;img src=&#34;ScanSmart-Overview.png&#34; style=&#34;height:400px&#34;&gt;
+&lt;h2 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h2&gt;
+&lt;p&gt;With your mobile device camera, use ScanSmart to scan QR codes (such as on a Powerpoint slide) to bring AR elements (such as holograms in different shapes and forms) into the camera view.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;supported on iOS and Android Devices, with browsers like Safari, Chrome, and Firefox.&lt;/p&gt;
+&lt;p&gt;supported on iOS and Android Devices, with browsers like Safari, Chrome, and Firefox.&lt;br&gt;
+No App install required! Just follow the during the event provided URL,&lt;br&gt;
+or scan a QR code containing the URL with your mobile device.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;marker-based-experience-1&#34;&gt;Marker based experience&lt;/h4&gt;
-&lt;p&gt;Devices that support WebXR get a button displayed next to the &amp;lsquo;START EXPERIENCE&amp;rsquo; button called &amp;lsquo;self position Variant&amp;rsquo;.
-Here you can place the Object anywhere, &lt;i&gt;without the need for a printed Marker.&lt;/i&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is mostly available just on Android Devices&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;overlay-content&#34;&gt;Overlay content&lt;/h3&gt;
-&lt;p&gt;The key features and capabilities are:&lt;/p&gt;
+&lt;h2 id=&#34;what-different-ar-markers&#34;&gt;What different AR markers?&lt;/h2&gt;
+&lt;p&gt;during online event sessions there can be&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Help, displayed for a view seconds for each Icon&lt;/li&gt;
-&lt;li&gt;Hide Overlay Menu for some seconds, to e.g. create a screenshot without Overlay&lt;/li&gt;
-&lt;li&gt;copy Link to the App into Clipboard, to e.g. share the Link via WhatsApp or Twitter, etc.&lt;/li&gt;
-&lt;li&gt;open a EMail Template containing the Link, to share the App with friends or colleagues&lt;/li&gt;
-&lt;li&gt;start App from beginning.&lt;/li&gt;
+&lt;li&gt;“Word puzzle” marker&lt;/li&gt;
+&lt;li&gt;“On-the-spot-prize” marker&lt;/li&gt;
+&lt;li&gt;Three “regular” marker, containing 3D Objects or Video playbacks&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;hosted-app&#34;&gt;Hosted App&lt;/h3&gt;
-&lt;p&gt;static browser-based Augmented Reality App hosted on AWS S3 with AWS CloudFront.&lt;/p&gt;
-&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next?&lt;/h2&gt;
-&lt;p&gt;This is a good base-line for other upcoming TIBCO Cloud connected experiences. &lt;b&gt;Stay Tuned!&lt;/b&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-are-the-different-challenges&#34;&gt;What are the different challenges?&lt;/h2&gt;
+&lt;p&gt;there are 3 type of challenges supported by the App currently&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;connect letters that you can discover in AR in the right order and get extra points, &lt;br&gt;when entering the right secret word into the App.&lt;/li&gt;
+&lt;li&gt;scan “On-the-spot-prize” session specific markers quickly, just the first e.g. 4 win extra prizes.&lt;/li&gt;
+&lt;li&gt;Overall Event winners with most points, get big prizes - e.g. TOP 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-are-the-app-features&#34;&gt;What are the App Features?&lt;/h2&gt;
+&lt;p&gt;the Application supports the following features&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;App in a Nutshell Guide&lt;/li&gt;
+&lt;li&gt;Visit App Rules&lt;/li&gt;
+&lt;li&gt;register and on-board new attendees&lt;/li&gt;
+&lt;li&gt;remember attendees&lt;/li&gt;
+&lt;li&gt;scan AR markers&lt;/li&gt;
+&lt;li&gt;show different types of AR objects&lt;/li&gt;
+&lt;li&gt;display TOP 5 overall attendee stats&lt;/li&gt;
+&lt;li&gt;show current points, and if the puzzle is already resolved&lt;/li&gt;
+&lt;li&gt;enter Puzzle Word&lt;/li&gt;
+&lt;li&gt;help&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;technology-behind&#34;&gt;Technology behind&lt;/h2&gt;
+&lt;p&gt;This App is fully based on TIBCO Connected Intelligence Cloud (CIC), this allows quickly adjustable API&amp;rsquo;s, plus fraud detection, easy to attendee case management, and great reporting of the overall status.&lt;/p&gt;
+&lt;img src=&#34;ScanSmart-Architecture.png&#34; style=&#34;height:400px&#34;&gt;
+&lt;h3 id=&#34;sample-api-service&#34;&gt;Sample API Service&lt;/h3&gt;
+&lt;p&gt;build with CIC Integration Flogo flows&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ScanSmart-API.png&#34; style=&#34;height:400px&#34;&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; this service also enrich the reporting with Geo-Location details based on the attendee Client IP.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;sample-status-dashboards&#34;&gt;Sample status dashboards&lt;/h3&gt;
+&lt;p&gt;build with CIC Spotfire&lt;/p&gt;
+&lt;img src=&#34;ScanSmart-Spotfire1.png&#34; style=&#34;height:300px&#34;&gt;
+&lt;img src=&#34;ScanSmart-Spotfire2.png&#34; style=&#34;height:300px&#34;&gt;
+&lt;h2 id=&#34;where-to-try-it&#34;&gt;Where to try it?&lt;/h2&gt;
+&lt;p&gt;We will use the Web Application at Open Source Community day &lt;br&gt;
+#OSSday on May 20, 2021 &lt;b&gt;&lt;a href=&#34;https://tibco.swoogo.com/ossday21/&#34; target=&#34;_blank&#34;&gt;Join Us!&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
 
       </description>
     </item>

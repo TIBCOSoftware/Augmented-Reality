@@ -8,33 +8,43 @@
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/bike-exploration/</loc>
-    <lastmod>2020-10-08T18:03:20+02:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/bike-exploration/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/computervision-exploration/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/getting-started/</loc>
-    <lastmod>2020-09-28T10:00:11+02:00</lastmod>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/nimbus-exploration/</loc>
-    <lastmod>2020-10-09T16:19:16+02:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/nimbus-exploration/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/spotfire-exploration/</loc>
-    <lastmod>2021-02-25T10:21:55+01:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/spotfire-exploration/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/webxr-exploration/</loc>
-    <lastmod>2021-02-25T10:21:55+01:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/webxr-exploration/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/packages/3d-charts/</loc>
     <lastmod>2020-04-28T09:18:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/marker-exploration/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
@@ -63,8 +73,8 @@
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/marker-exploration/</loc>
-    <lastmod>2021-01-04T21:09:28+01:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/scansmart-exploration/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
@@ -78,53 +88,68 @@
   </url>
   
   <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/releases/</loc>
     <lastmod>2020-04-16T12:02:41+02:00</lastmod>
   </url>
   
   <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/05/may-2021-explorations/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/12/16/marker-exploration/</loc>
-    <lastmod>2020-12-16T13:48:27+01:00</lastmod>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/10/08/nimbus-exploration/</loc>
-    <lastmod>2020-10-09T17:04:01+02:00</lastmod>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/28/webxr-exploration/</loc>
-    <lastmod>2020-12-16T13:48:27+01:00</lastmod>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/25/3nd-september-release/</loc>
-    <lastmod>2020-09-25T10:04:00+02:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/09/25/3nd-september-2020-release/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/27/2nd-april-release/</loc>
-    <lastmod>2020-04-28T09:18:17+02:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/27/2nd-april-2020-release/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/first-release/</loc>
-    <lastmod>2020-04-16T15:30:45+02:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/first-release-2020/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2020/04/16/spotfire-exploration/</loc>
-    <lastmod>2021-01-25T14:54:12+01:00</lastmod>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2019/12/13/initial-release/</loc>
-    <lastmod>2020-04-16T15:30:45+02:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2019/12/13/initial-release-2019/</loc>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2019/06/09/bike-exploration/</loc>
-    <lastmod>2020-10-09T17:13:23+02:00</lastmod>
+    <lastmod>2021-05-05T16:29:25+02:00</lastmod>
   </url>
   
   <url>

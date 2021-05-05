@@ -1,0 +1,214 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project ART – Hololens Explorations</title>
+    <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/</link>
+    <description>Recent content in Hololens Explorations on Project ART</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: TIBCO Bike - Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/bike-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/bike-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;TIBCO is honored to sponsor an international women pro cycling team “Team TIBCO Silicon Valley Bank”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cycling.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;At major TIBCO events, we expose one of the fancy bikes and invite visitors to ride 30 seconds to do their best. This is the “Team TIBCO Bike Challenge”. TIBCO Data Science stack is used to collect data from a series of sensors (heart rate, crank revolution, the power generated, …) to display metrics of the performance in real-time and establish a leader board. They are usually encouraged by one of the team members herself!&lt;/p&gt;
+&lt;p&gt;We have decided to “augment” this experience.&lt;/p&gt;
+&lt;h3 id=&#34;use-case-1&#34;&gt;Use case 1&lt;/h3&gt;
+&lt;p&gt;Now, a spectator can wear  Microsoft Hololens glasses and look at the Team TIBCO Bike Challenge while someone is trying to beat a record. The app displays different information depending on the direction you are looking at:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ARbike1.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Use case 1&lt;/sup&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;heart rate when looking at the body,&lt;/li&gt;
+&lt;li&gt;speed when looking at the front wheel&lt;/li&gt;
+&lt;li&gt;power on the rear wheel&lt;/li&gt;
+&lt;li&gt;cadence on pedals.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Those data come from the TIBCO Cloud Messaging channel and are received in the Unity Application on the Hololens glasses.&lt;/p&gt;
+&lt;h3 id=&#34;use-case-2&#34;&gt;Use case 2&lt;/h3&gt;
+&lt;p&gt;The application is also showing a virtual board with photos of all team members.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ARbike2.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Use case 2&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;When clicking on a photo, an information card moves close to the user, rotates and reveals information about the selected runner.&lt;/p&gt;
+&lt;p&gt;All information on the team members comes from  TIBCO Cloud LiveApps, our case management solution.&lt;/p&gt;
+&lt;h3 id=&#34;architecture&#34;&gt;Architecture&lt;/h3&gt;
+&lt;p&gt;Sensor Data from the physical Bike get connected using a lightweight Flogo Implementation running on a Raspberry Pi to TIBCO Cloud Messaging and Stream Data, Spotfire and finally Microsoft Hololens.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ARbike-arch.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Nimbus Activity on Hololens 2&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Development stack&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft Hololens&lt;/li&gt;
+&lt;li&gt;Unity 3D 2019.4 and Visual Studio&lt;/li&gt;
+&lt;li&gt;REST connection to TIBCO Cloud™ LiveApps&lt;/li&gt;
+&lt;li&gt;WebSockets connection to TIBCO Cloud™ Messaging FTL&lt;/li&gt;
+&lt;li&gt;TIBCO Cloud™&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;more-details-about-this-exploration&#34;&gt;More Details about this Exploration&lt;/h2&gt;
+&lt;p&gt;check out this YouTube Video&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/rLxD2raIG1k&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens V1 and V2.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Computer Vision - Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/computervision-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/computervision-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;A picture is worth more than a thousand words. Computer Vision (CV) is the field of Artificial Intelligence (AI) that enables computers to analyze the real world. Using Deep Learning models, machines can accurately identify and classify objects from within digital images and take action based on what they see driving an increased level of adoption of vision-guided robotics. Learn how to achieve end-to-end CV and AR solutions for your organization by analyzing machinery sensor data and images in edge, AR and VR environments with TIBCO.&lt;/p&gt;
+&lt;p&gt;This Exploration showcase how to handle a Hololens 2 as a IoT Device inside Project Air™ and &lt;a href=&#34;https://www.edgexfoundry.org/&#34;&gt;EdgeX Foundry&lt;/a&gt;, plus use the Holographic device for an Computer Vision and Deep Learning use case.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;AR_ComputerVision.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Computer Vision Scan on Hololens 2&lt;/sup&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; Hololens shows holographic objects always ~2cm to high in Video Recordings,&lt;br&gt;
+they appear in Hololens itself on the right position!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;business-use-cases&#34;&gt;Business use cases&lt;/h2&gt;
+&lt;p&gt;there are many use cases where a human can get supported by computer vision e.g.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Detect suspicious data on physical labels&lt;/li&gt;
+&lt;li&gt;Find defects on physical objects&lt;/li&gt;
+&lt;li&gt;Identify incorrect object placements&lt;/li&gt;
+&lt;li&gt;and more &amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When a suspicious scenario get detected, actions in this context can directly get executed by this human e.g.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open instruction guide&lt;/li&gt;
+&lt;li&gt;Raise case / ticket&lt;/li&gt;
+&lt;li&gt;Show additional statistics&lt;/li&gt;
+&lt;li&gt;Contact helpdesk, or an expert&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;to mention only some!&lt;/p&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;High-level Architecture Blueprint&lt;/p&gt;
+&lt;img src=&#34;AR_ComputerVision_Architecture_EdgeX.png&#34; style=&#34;height:400px&#34;&gt;
+&lt;h3 id=&#34;project-art---cv-app&#34;&gt;Project ART - CV App&lt;/h3&gt;
+&lt;p&gt;Handle taking Images, via voice command and send them via MQTT to EdgeX&lt;/p&gt;
+&lt;h3 id=&#34;project-air---edgex&#34;&gt;Project Air - EdgeX&lt;/h3&gt;
+&lt;p&gt;Project Air is fully based on EdgeX. The Project Air UI allows to configure Computer Vision Models and Edge Analytics on the fly using the IoT Pipeline,
+The Pipeline allows to deploy CV Models as well. Finally the validated Data get send back to Hololens, again via MQTT.&lt;/p&gt;
+&lt;h3 id=&#34;tibco-team-studio&#34;&gt;TIBCO Team Studio&lt;/h3&gt;
+&lt;p&gt;Used for all preprocessing, and for ML Model / deep learning model training.&lt;/p&gt;
+&lt;h2 id=&#34;more-details-about-this-exploration&#34;&gt;More Details about this Exploration&lt;/h2&gt;
+&lt;p&gt;check out this YouTube Video&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/ExLdoqSSdmc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;How do you deploy and inference a computer vision model at the edge?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tip: Use IoT TIBCO Project AIR™&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How do you use Augmented Reality to visualize machine learning results?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tip: Use AR TIBCO Project ART™&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How do you train a computer vision model and do analytics at the edge?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tip: Use TIBCO Team Studio™&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Can you do it all at the same time?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SURE!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens V2.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: TIBCO Cloud™ Nimbus® - Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/nimbus-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/nimbus-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Nimbus Map Activities can get loaded into any AR Experience  of Hololens 2, by looking at a machine specific QR Code. 
+This allows to add little or complex Instruction guides anywhere and make them contextual.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nimbus-in-AR.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Nimbus Activity on Hololens 2&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;All details can get modified without and implementation change or adjustment, more Activities can get added on the fly.
+New QR Codes can get created easily by just taking the last Path ID from a Nimbus Cloud URL. e.g. &amp;ldquo;0:123456abc&amp;hellip;.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;And all this just by using Nimbus Web UI.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nimbus-in-AR2.gif&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Nimbus Web UI&lt;/sup&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The right information, at right time, and at the right QR Code position.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;with this first Implementation, Instruction Guides can get places already everywhere.&lt;/li&gt;
+&lt;li&gt;No Adjustments are necessary in the Implementation itself.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;future-work&#34;&gt;Future Work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;display Nimbus Attachments next to an Object (Videos, Images)&lt;/li&gt;
+&lt;li&gt;use QRCode Position, Scale and Rotation to place other 3D Objects as kind of overlay&lt;/li&gt;
+&lt;li&gt;add real-time IoT Sensor Details next to the Object (e.g. Warnings, Logs, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;more-details-about-this-exploration&#34;&gt;More Details about this Exploration&lt;/h2&gt;
+&lt;p&gt;check out this YouTube Video&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/KqH29R3L_RE&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens V2.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: TIBCO Cloud™ Spotfire® - Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/spotfire-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/spotfire-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;Spotfire-Hololens.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;Spotfire on Hololens Edge Browser&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;This Analytics Dashboard shows detailed Informations, and allows to interactively drill-down into all Chart Types.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The right information, at right time, and at the right AR Anchor position.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;trail-account&#34;&gt;Trail Account&lt;/h3&gt;
+&lt;p&gt;To try this yourself, just register for your own TIBCO Cloud™ Spotfire® trail account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/spotfire&#34;&gt;Form&lt;/a&gt; to get your own personal Subscription Account.&lt;/p&gt;
+&lt;h3 id=&#34;spotfire-api&#34;&gt;Spotfire API&lt;/h3&gt;
+&lt;p&gt;This TIBCO LABS Exploration is looking into AR API Support for TIBCO Cloud™ Spotfire® as well, this is a lot better to allow real &amp;lsquo;augmented&amp;rsquo; drill-downs into Analyses.
+By opening a Device own browser this Sample is working for Spotfire Cloud and any Spotfire on-prem installation, that has the Spotfire Webplayer available for End-Users.&lt;/p&gt;
+&lt;h3 id=&#34;implementation&#34;&gt;Implementation&lt;/h3&gt;
+&lt;p&gt;to open a public available Spotfire Dashboard on Hololens, just use the following within your Unity 3D Implementation and Report will be shown within a Browser Window as part of your Scene:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;  &lt;span style=&#34;color:#000&#34;&gt;Application&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;OpenURL&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;spotfire&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;dashboard&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With this Hololens V2 allows to open the Browser within the same Scene together with other Objects. (Hololens V1 jumps directly out of the App Scene)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Spotfire can get adjusted in Theme and Visualization Mods to make fonts and color fit better into any Augmented Reality Space. With this any data-source can get added quickly any 3D Experience.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;sample-showcase-recording&#34;&gt;Sample Showcase Recording&lt;/h3&gt;
+&lt;p&gt;little Sample Video to show how this could look like.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/IDmK0aEtFCI&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h3&gt;
+&lt;p&gt;Tested with Microsoft Hololens V2.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
