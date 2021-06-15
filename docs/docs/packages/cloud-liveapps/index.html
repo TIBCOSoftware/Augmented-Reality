@@ -22,14 +22,14 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-liveapps/" />
-<meta property="article:published_time" content="2020-01-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-24T15:36:24-07:00" /><meta property="og:site_name" content="Project ART" />
+<meta property="article:published_time" content="2021-06-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-06-15T18:01:25+02:00" /><meta property="og:site_name" content="Project ART" />
 <meta itemprop="name" content="TIBCO Cloud™ LiveApps - Unity3D Package">
 <meta itemprop="description" content="This package allows you to connect a Unity3D Application to [TIBCO Cloud™ LiveApps](https://www.tibco.com/products/tibco-cloud-live-apps).
 ">
-<meta itemprop="datePublished" content="2020-01-05T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-09-24T15:36:24-07:00" />
-<meta itemprop="wordCount" content="815">
+<meta itemprop="datePublished" content="2021-06-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-06-15T18:01:25+02:00" />
+<meta itemprop="wordCount" content="891">
 
 
 
@@ -474,6 +474,7 @@ if (!doNotTrack) {
     </li>
     <li><a href="#api-details">API details</a>
       <ul>
+        <li><a href="#authentication">Authentication</a></li>
         <li><a href="#connection-to-liveapps">connection to LiveApps</a></li>
         <li><a href="#read-liveapps-cases">read LiveApps cases</a></li>
         <li><a href="#create-a-liveapps-case">create a LiveApps case</a></li>
@@ -564,6 +565,24 @@ In the MainController, you can update the Connection property prefix (default is
 <br><sup>TIBCO LiveApps cases in Unity Editor</sup></p>
 <p>The sample application is creating a Card for &ldquo;ant&rdquo; if the card does not exist so you can see how to create LiveApps cases and attach documents.</p>
 <h2 id="api-details">API details</h2>
+<h3 id="authentication">Authentication</h3>
+<p>This Implementation supports two ways of Authentication to TIBCO Cloud.</p>
+<p>Both can be defined via a resource file in Unity &lsquo;Resources&rsquo; Folder, called &lsquo;TIBCO-credentials.txt&rsquo;.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">liveapps.user <span style="color:#ce5c00;font-weight:bold">=</span> someone@domain.com
+liveapps.method <span style="color:#ce5c00;font-weight:bold">=</span> oauth <span style="color:#ce5c00;font-weight:bold">||</span> password
+liveapps.region <span style="color:#ce5c00;font-weight:bold">=</span> US <span style="color:#ce5c00;font-weight:bold">||</span> EU <span style="color:#ce5c00;font-weight:bold">||</span> EA
+
+<span style="color:#8f5902;font-style:italic"># via &#39;oauth&#39;</span>
+
+liveapps.oauth <span style="color:#ce5c00;font-weight:bold">=</span> CIC~...&lt;your CIC oAuth Key&gt;
+
+<span style="color:#8f5902;font-style:italic"># via &#39;password&#39;</span>
+
+liveapps.password <span style="color:#ce5c00;font-weight:bold">=</span> &lt;your CIC password&gt;
+liveapps.clientID <span style="color:#ce5c00;font-weight:bold">=</span> Jsf95ioVIq...&lt;your CIC Org Client ID&gt;...73iI
+</code></pre></div><blockquote>
+<p>We stored a sample of it into &lsquo;Assets\TIBCOLabs\LiveApps\Resources&rsquo; folder.</p>
+</blockquote>
 <h3 id="connection-to-liveapps">connection to LiveApps</h3>
 <p>Just add TIBCOLiveAppsConnector script in your scene and set the credentials to be connected to your LiveApps instance.</p>
 <p>Create a controller script by extending &ldquo;TIBCOLiveAppsHandler&rdquo;.
@@ -571,10 +590,8 @@ Have a look at the sample <i>BoardViewController</i>.</p>
 <p>ConnectionReady is invoke when the connector successfully connects to LiveApps.</p>
 <p>The connector object has the following public methods :</p>
 <h3 id="read-liveapps-cases">read LiveApps cases</h3>
-<blockquote>
-<p>public void GetAllCases(string applicationName, string stateName, string searchString, bool getArtifacts = false, Action<CaseInfoWrapper> onComplete=null)</p>
-</blockquote>
-<p>To get a list all cases in a LiveApps application,</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">GetAllCases</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">applicationName</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">stateName</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">searchString</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">bool</span> <span style="color:#000">getArtifacts</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Action</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">CaseInfoWrapper</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">onComplete</span><span style="color:#000;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>To get a list all cases in a LiveApps application,</p>
 <ul>
 <li>in the given state if state is not null.</li>
 <li>matching the searchString if not null</li>
@@ -584,32 +601,26 @@ Have a look at the sample <i>BoardViewController</i>.</p>
 <p>The implementation is asynchronous and will call the onComplete callback on completion. The callback has a parameter of type <i>CaseInfoWrapper</i> holding the cases.</p>
 <p>You may check the structures in <i>TIBCOLiveAppsConnector.cs</i></p>
 <p>To Manipulate the case data easily create a class representing the LiveApps case information. in our example we are using :</p>
-<pre><code>public class ElementData
-  {
-    public string Name;
-    public string Description;
-    public UnityEngine.Texture2D texture;
-  }
-</code></pre>
-<p>We have the 2 fields from LiveApps application and we have added a texture to store the first document of type image.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ElementData</span>
+      <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">Name</span><span style="color:#000;font-weight:bold">;</span>
+        <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">Description</span><span style="color:#000;font-weight:bold">;</span>
+        <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">UnityEngine</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Texture2D</span> <span style="color:#000">texture</span><span style="color:#000;font-weight:bold">;</span>
+      <span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>We have the 2 fields from LiveApps application and we have added a texture to store the first document of type image.</p>
 <p>In the OnCase callback you can create instances from the CaseInfoWrapper data :</p>
-<pre><code>foreach (CaseInfo item in data.items) {
-  ElementData card = JsonUtility.FromJson&lt;ElementData&gt;(item.casedata);
-  ...
-</code></pre>
-<h3 id="create-a-liveapps-case">create a LiveApps case</h3>
-<blockquote>
-<p>public void CreateCase(string applicationName, System.Object data, string creatorName = null, Action<ActionResponse> onComplete = null)</p>
-</blockquote>
-<p>See the sample on how to create the data object.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">    <span style="color:#204a87;font-weight:bold">foreach</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">CaseInfo</span> <span style="color:#000">item</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">data</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">items</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">ElementData</span> <span style="color:#000">card</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">JsonUtility</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FromJson</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">ElementData</span><span style="color:#000;font-weight:bold">&gt;(</span><span style="color:#000">item</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">casedata</span><span style="color:#000;font-weight:bold">);</span>
+      <span style="color:#000;font-weight:bold">...</span>
+</code></pre></div><h3 id="create-a-liveapps-case">create a LiveApps case</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">CreateCase</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">applicationName</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">System</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Object</span> <span style="color:#000">data</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">creatorName</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Action</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">ActionResponse</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">onComplete</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>See the sample on how to create the data object.</p>
 <p>If the creatorName is null, the connector will use the first creator.</p>
 <p>The onComplete callback has an <i>ActionResponse</i> parameter.</p>
 <h3 id="attach-a-document-to-an-existing-case-instance">attach a document to an existing case instance</h3>
-<blockquote>
-<p>public void AttachDocument(string caseReference, string documentName, string description, byte[] data, string mimeType,Action onComplete=null)</p>
-</blockquote>
-<h2 id="target-devices">Target Devices</h2>
-<p>Tested with Microsoft Hololens, Android Smartphones and Unity Editor on Windows 10.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">AttachDocument</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">caseReference</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">documentName</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">description</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">byte</span><span style="color:#000;font-weight:bold">[]</span> <span style="color:#000">data</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">mimeType</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">Action</span> <span style="color:#000">onComplete</span><span style="color:#000;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="target-devices">Target Devices</h2>
+<p>Tested with Microsoft Hololens 1 &amp; 2, Android Smartphones and Unity Editor on Windows 10.</p>
 <h2 id="used-versions">Used Versions</h2>
 <ul>
 <li>Unity (2019.4.10f1)</li>
@@ -691,7 +702,7 @@ Have a look at the sample <i>BoardViewController</i>.</p>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified September 24, 2020: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/fb83fdb78ee00c40ded489673f962cbc3ee08cdf">update doc for LiveApps connector (fb83fdb)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified June 15, 2021: <a  href="https://github.com/TIBCOSoftware/Augmented-Reality//commit/910758c799170cb6dc7f384f6ba4b655b8365068">update with CIC oauth details (910758c)</a>
 </div>
 </div>
 

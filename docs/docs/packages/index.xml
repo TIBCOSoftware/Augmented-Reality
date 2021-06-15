@@ -83,7 +83,7 @@ Implementation &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Realit
     <item>
       <title>Docs: TIBCO Cloud™ LiveApps - Unity3D Package</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-liveapps/</link>
-      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-liveapps/</guid>
       <description>
@@ -121,6 +121,24 @@ In the MainController, you can update the Connection property prefix (default is
 &lt;br&gt;&lt;sup&gt;TIBCO LiveApps cases in Unity Editor&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;The sample application is creating a Card for &amp;ldquo;ant&amp;rdquo; if the card does not exist so you can see how to create LiveApps cases and attach documents.&lt;/p&gt;
 &lt;h2 id=&#34;api-details&#34;&gt;API details&lt;/h2&gt;
+&lt;h3 id=&#34;authentication&#34;&gt;Authentication&lt;/h3&gt;
+&lt;p&gt;This Implementation supports two ways of Authentication to TIBCO Cloud.&lt;/p&gt;
+&lt;p&gt;Both can be defined via a resource file in Unity &amp;lsquo;Resources&amp;rsquo; Folder, called &amp;lsquo;TIBCO-credentials.txt&amp;rsquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;liveapps.user &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; someone@domain.com
+liveapps.method &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; oauth &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;||&lt;/span&gt; password
+liveapps.region &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; US &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;||&lt;/span&gt; EU &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;||&lt;/span&gt; EA
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# via &amp;#39;oauth&amp;#39;&lt;/span&gt;
+
+liveapps.oauth &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; CIC~...&amp;lt;your CIC oAuth Key&amp;gt;
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# via &amp;#39;password&amp;#39;&lt;/span&gt;
+
+liveapps.password &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &amp;lt;your CIC password&amp;gt;
+liveapps.clientID &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; Jsf95ioVIq...&amp;lt;your CIC Org Client ID&amp;gt;...73iI
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;We stored a sample of it into &amp;lsquo;Assets\TIBCOLabs\LiveApps\Resources&amp;rsquo; folder.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;connection-to-liveapps&#34;&gt;connection to LiveApps&lt;/h3&gt;
 &lt;p&gt;Just add TIBCOLiveAppsConnector script in your scene and set the credentials to be connected to your LiveApps instance.&lt;/p&gt;
 &lt;p&gt;Create a controller script by extending &amp;ldquo;TIBCOLiveAppsHandler&amp;rdquo;.
@@ -128,10 +146,8 @@ Have a look at the sample &lt;i&gt;BoardViewController&lt;/i&gt;.&lt;/p&gt;
 &lt;p&gt;ConnectionReady is invoke when the connector successfully connects to LiveApps.&lt;/p&gt;
 &lt;p&gt;The connector object has the following public methods :&lt;/p&gt;
 &lt;h3 id=&#34;read-liveapps-cases&#34;&gt;read LiveApps cases&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;public void GetAllCases(string applicationName, string stateName, string searchString, bool getArtifacts = false, Action&lt;CaseInfoWrapper&gt; onComplete=null)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;To get a list all cases in a LiveApps application,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;GetAllCases&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;applicationName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;stateName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;searchString&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;bool&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;getArtifacts&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Action&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;CaseInfoWrapper&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;onComplete&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To get a list all cases in a LiveApps application,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;in the given state if state is not null.&lt;/li&gt;
 &lt;li&gt;matching the searchString if not null&lt;/li&gt;
@@ -141,32 +157,26 @@ Have a look at the sample &lt;i&gt;BoardViewController&lt;/i&gt;.&lt;/p&gt;
 &lt;p&gt;The implementation is asynchronous and will call the onComplete callback on completion. The callback has a parameter of type &lt;i&gt;CaseInfoWrapper&lt;/i&gt; holding the cases.&lt;/p&gt;
 &lt;p&gt;You may check the structures in &lt;i&gt;TIBCOLiveAppsConnector.cs&lt;/i&gt;&lt;/p&gt;
 &lt;p&gt;To Manipulate the case data easily create a class representing the LiveApps case information. in our example we are using :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public class ElementData
-  {
-    public string Name;
-    public string Description;
-    public UnityEngine.Texture2D texture;
-  }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We have the 2 fields from LiveApps application and we have added a texture to store the first document of type image.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ElementData&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Description&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UnityEngine&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Texture2D&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;texture&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We have the 2 fields from LiveApps application and we have added a texture to store the first document of type image.&lt;/p&gt;
 &lt;p&gt;In the OnCase callback you can create instances from the CaseInfoWrapper data :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;foreach (CaseInfo item in data.items) {
-  ElementData card = JsonUtility.FromJson&amp;lt;ElementData&amp;gt;(item.casedata);
-  ...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;create-a-liveapps-case&#34;&gt;create a LiveApps case&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;public void CreateCase(string applicationName, System.Object data, string creatorName = null, Action&lt;ActionResponse&gt; onComplete = null)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;See the sample on how to create the data object.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;foreach&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;CaseInfo&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;item&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;items&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#000&#34;&gt;ElementData&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;card&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;JsonUtility&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FromJson&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ElementData&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;item&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;casedata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-a-liveapps-case&#34;&gt;create a LiveApps case&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;CreateCase&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;applicationName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Object&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;creatorName&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Action&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ActionResponse&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;onComplete&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See the sample on how to create the data object.&lt;/p&gt;
 &lt;p&gt;If the creatorName is null, the connector will use the first creator.&lt;/p&gt;
 &lt;p&gt;The onComplete callback has an &lt;i&gt;ActionResponse&lt;/i&gt; parameter.&lt;/p&gt;
 &lt;h3 id=&#34;attach-a-document-to-an-existing-case-instance&#34;&gt;attach a document to an existing case instance&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;public void AttachDocument(string caseReference, string documentName, string description, byte[] data, string mimeType,Action onComplete=null)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
-&lt;p&gt;Tested with Microsoft Hololens, Android Smartphones and Unity Editor on Windows 10.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;AttachDocument&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;caseReference&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;documentName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;description&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;byte&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[]&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;mimeType&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Action&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;onComplete&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens 1 &amp;amp; 2, Android Smartphones and Unity Editor on Windows 10.&lt;/p&gt;
 &lt;h2 id=&#34;used-versions&#34;&gt;Used Versions&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Unity (2019.4.10f1)&lt;/li&gt;

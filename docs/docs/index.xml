@@ -405,6 +405,123 @@ Here you can place the Object anywhere, &lt;i&gt;without the need for a printed 
     </item>
     
     <item>
+      <title>Docs: TIBCO Cloud™ LiveApps - Unity3D Package</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-liveapps/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-liveapps/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The Implementation leverages TIBCO Cloud™ and TIBCO Cloud™ LiveApp REST APIs. It is working in Unity3D Editor, Android ARCore, and on Microsoft Hololens (UWP).&lt;/p&gt;
+&lt;p&gt;Once connected to an existing LiveApps business application, the Unity app can retrieve cases information including attached documents and display this information in a 3D scene.&lt;/p&gt;
+&lt;p&gt;It is also possible to create new case instances from a Unity3D application and attach documents to the cases.&lt;/p&gt;
+&lt;p&gt;The Package contains a sample Scene that demonstrates how to create cases, attach documents, retrieve a list of cases and display the received data as information cards.&lt;/p&gt;
+&lt;h2 id=&#34;build-a-sample-liveapps-application&#34;&gt;Build a sample LiveApps application&lt;/h2&gt;
+&lt;p&gt;In order to experiment this Unity package, you need an existing TIBCO Cloud™ LiveApps appplication.&lt;/p&gt;
+&lt;h3 id=&#34;trial-account&#34;&gt;Trial Account&lt;/h3&gt;
+&lt;p&gt;If you don&amp;rsquo;t have a TIBCO Cloud™ account with LiveApps capability you may register for your own TIBCO Cloud™ LiveApps trial account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/liveapps&#34;&gt;Sign-up Form&lt;/a&gt;.
+Then, obtain your personal ID and Authorization key under &amp;lsquo;Authentication Keys&amp;rsquo; Settings Tab, beside the Subscription &amp;lsquo;Status&amp;rsquo; in you TIBCO Cloud™ account.&lt;/p&gt;
+&lt;h3 id=&#34;info-card-business-application&#34;&gt;&amp;ldquo;Info Card&amp;rdquo; business application&lt;/h3&gt;
+&lt;p&gt;The following video shows you how to create a LiveApps application in 5 minutes to handle &amp;ldquo;Info Cards&amp;rdquo;. The LiveApps Unity package contains a sample using this application.
+The &amp;ldquo;Info Card&amp;rdquo; let you create flash &amp;lsquo;cards&amp;rsquo; about any topic by entering a category, a name, a description and by uploading a picture associated with the card.
+In our example we are creating &amp;lsquo;cards&amp;rsquo; about animals.
+The Unity sample Scene connect to your LiveApps account, retrieves the cards and displays the information including the attached picture.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/y0t35A8jtgI&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;how-to-use-the-package&#34;&gt;How to use the package&lt;/h2&gt;
+&lt;h3 id=&#34;import-into-unity3d&#34;&gt;Import into Unity3D&lt;/h3&gt;
+&lt;p&gt;Just created a new Unity Project, configure it for your target, and import the ready to use Package from the &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Packages/TIBCO-Cloud-LiveApps&#34;&gt;Packages Folder&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;use-the-sample-scene&#34;&gt;Use the Sample scene&lt;/h3&gt;
+&lt;p&gt;The package contains a test scene at
+&lt;i&gt;TIBCOLabs &amp;gt; LiveApps &amp;gt; Sample &amp;gt; BoardScene&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;The Scene contains a MainController Object.
+In the MainController, you can update the Connection property prefix (default is &amp;ldquo;liveapps&amp;rdquo;). It is used to read properties in the credential file :&lt;/p&gt;
+&lt;p&gt;the credentials must be declared in a file named &amp;ldquo;TIBCO-credentials.txt&amp;rdquo; and placed in a Resources folder. For example in &lt;i&gt;TIBCOLabs &amp;gt; Utils &amp;gt; Resources&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;The file must contain [prefix].username, [prefix].password and [prefix].clientid with the values from your TIBCO Cloud™ Subscription Details&lt;/p&gt;
+&lt;p&gt;The package contains a sample credential file for you to copy.&lt;/p&gt;
+&lt;p&gt;On the script BoardViewController.cs attached to the main controller check that &amp;ldquo;LiveApps App Name&amp;rdquo; matches the name of the LiveApps application you have created. The default is &amp;ldquo;Info Card&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;When playing the BoardScene in unity Editor, you should see the data retrieved from LiveApps application in the form of cards :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;LiveAppsUnityEditor.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;TIBCO LiveApps cases in Unity Editor&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The sample application is creating a Card for &amp;ldquo;ant&amp;rdquo; if the card does not exist so you can see how to create LiveApps cases and attach documents.&lt;/p&gt;
+&lt;h2 id=&#34;api-details&#34;&gt;API details&lt;/h2&gt;
+&lt;h3 id=&#34;authentication&#34;&gt;Authentication&lt;/h3&gt;
+&lt;p&gt;This Implementation supports two ways of Authentication to TIBCO Cloud.&lt;/p&gt;
+&lt;p&gt;Both can be defined via a resource file in Unity &amp;lsquo;Resources&amp;rsquo; Folder, called &amp;lsquo;TIBCO-credentials.txt&amp;rsquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;liveapps.user &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; someone@domain.com
+liveapps.method &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; oauth &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;||&lt;/span&gt; password
+liveapps.region &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; US &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;||&lt;/span&gt; EU &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;||&lt;/span&gt; EA
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# via &amp;#39;oauth&amp;#39;&lt;/span&gt;
+
+liveapps.oauth &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; CIC~...&amp;lt;your CIC oAuth Key&amp;gt;
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# via &amp;#39;password&amp;#39;&lt;/span&gt;
+
+liveapps.password &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &amp;lt;your CIC password&amp;gt;
+liveapps.clientID &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; Jsf95ioVIq...&amp;lt;your CIC Org Client ID&amp;gt;...73iI
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;We stored a sample of it into &amp;lsquo;Assets\TIBCOLabs\LiveApps\Resources&amp;rsquo; folder.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;connection-to-liveapps&#34;&gt;connection to LiveApps&lt;/h3&gt;
+&lt;p&gt;Just add TIBCOLiveAppsConnector script in your scene and set the credentials to be connected to your LiveApps instance.&lt;/p&gt;
+&lt;p&gt;Create a controller script by extending &amp;ldquo;TIBCOLiveAppsHandler&amp;rdquo;.
+Have a look at the sample &lt;i&gt;BoardViewController&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;ConnectionReady is invoke when the connector successfully connects to LiveApps.&lt;/p&gt;
+&lt;p&gt;The connector object has the following public methods :&lt;/p&gt;
+&lt;h3 id=&#34;read-liveapps-cases&#34;&gt;read LiveApps cases&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;GetAllCases&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;applicationName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;stateName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;searchString&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;bool&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;getArtifacts&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Action&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;CaseInfoWrapper&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;onComplete&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To get a list all cases in a LiveApps application,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;in the given state if state is not null.&lt;/li&gt;
+&lt;li&gt;matching the searchString if not null&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Use either a state or a searchString but not both.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;retrieveDocuments&lt;/i&gt; : true to get artifacts ie documents and images associated with the cases.&lt;/p&gt;
+&lt;p&gt;The implementation is asynchronous and will call the onComplete callback on completion. The callback has a parameter of type &lt;i&gt;CaseInfoWrapper&lt;/i&gt; holding the cases.&lt;/p&gt;
+&lt;p&gt;You may check the structures in &lt;i&gt;TIBCOLiveAppsConnector.cs&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;To Manipulate the case data easily create a class representing the LiveApps case information. in our example we are using :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ElementData&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Description&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;UnityEngine&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Texture2D&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;texture&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We have the 2 fields from LiveApps application and we have added a texture to store the first document of type image.&lt;/p&gt;
+&lt;p&gt;In the OnCase callback you can create instances from the CaseInfoWrapper data :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;foreach&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;CaseInfo&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;item&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;items&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#000&#34;&gt;ElementData&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;card&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;JsonUtility&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FromJson&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ElementData&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;item&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;casedata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-a-liveapps-case&#34;&gt;create a LiveApps case&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;CreateCase&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;applicationName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;System&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Object&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;creatorName&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Action&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ActionResponse&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;onComplete&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See the sample on how to create the data object.&lt;/p&gt;
+&lt;p&gt;If the creatorName is null, the connector will use the first creator.&lt;/p&gt;
+&lt;p&gt;The onComplete callback has an &lt;i&gt;ActionResponse&lt;/i&gt; parameter.&lt;/p&gt;
+&lt;h3 id=&#34;attach-a-document-to-an-existing-case-instance&#34;&gt;attach a document to an existing case instance&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;AttachDocument&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;caseReference&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;documentName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;description&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;byte&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[]&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;mimeType&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Action&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;onComplete&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens 1 &amp;amp; 2, Android Smartphones and Unity Editor on Windows 10.&lt;/p&gt;
+&lt;h2 id=&#34;used-versions&#34;&gt;Used Versions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Unity (2019.4.10f1)&lt;/li&gt;
+&lt;li&gt;Unity AR Foundations (3.1.0)&lt;/li&gt;
+&lt;li&gt;Unity AR Subsystem (3.1.0)&lt;/li&gt;
+&lt;li&gt;Unity ARCore XR Plugin (3.1.0)&lt;/li&gt;
+&lt;li&gt;Android 10&lt;/li&gt;
+&lt;li&gt;Google Pixel XL&lt;/li&gt;
+&lt;li&gt;Microsoft Hololens V2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
+&lt;p&gt;git repositories :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Packages/TIBCO-Cloud-LiveApps&#34;&gt;Package&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Editor/TIBCO-Cloud-LiveApps&#34;&gt;Source&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Hololens 2 TIBCO Cloud Messaging integration</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/docs/samples/cloud-messaging-hololens2/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
@@ -462,113 +579,6 @@ Just enter&lt;/p&gt;
 &lt;p&gt;We will also add events to the InteractionEventPublisher. (IsTouched, GetCloser, &amp;hellip;).&lt;/p&gt;
 &lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
 &lt;p&gt;Implementation, as Unity Project &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/Hololens2/Messaging-SampleApp&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: TIBCO Cloud™ LiveApps - Unity3D Package</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-liveapps/</link>
-      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/packages/cloud-liveapps/</guid>
-      <description>
-        
-        
-        &lt;p&gt;The Implementation leverages TIBCO Cloud™ and TIBCO Cloud™ LiveApp REST APIs. It is working in Unity3D Editor, Android ARCore, and on Microsoft Hololens (UWP).&lt;/p&gt;
-&lt;p&gt;Once connected to an existing LiveApps business application, the Unity app can retrieve cases information including attached documents and display this information in a 3D scene.&lt;/p&gt;
-&lt;p&gt;It is also possible to create new case instances from a Unity3D application and attach documents to the cases.&lt;/p&gt;
-&lt;p&gt;The Package contains a sample Scene that demonstrates how to create cases, attach documents, retrieve a list of cases and display the received data as information cards.&lt;/p&gt;
-&lt;h2 id=&#34;build-a-sample-liveapps-application&#34;&gt;Build a sample LiveApps application&lt;/h2&gt;
-&lt;p&gt;In order to experiment this Unity package, you need an existing TIBCO Cloud™ LiveApps appplication.&lt;/p&gt;
-&lt;h3 id=&#34;trial-account&#34;&gt;Trial Account&lt;/h3&gt;
-&lt;p&gt;If you don&amp;rsquo;t have a TIBCO Cloud™ account with LiveApps capability you may register for your own TIBCO Cloud™ LiveApps trial account on this &lt;a href=&#34;https://account.cloud.tibco.com/signup/liveapps&#34;&gt;Sign-up Form&lt;/a&gt;.
-Then, obtain your personal ID and Authorization key under &amp;lsquo;Authentication Keys&amp;rsquo; Settings Tab, beside the Subscription &amp;lsquo;Status&amp;rsquo; in you TIBCO Cloud™ account.&lt;/p&gt;
-&lt;h3 id=&#34;info-card-business-application&#34;&gt;&amp;ldquo;Info Card&amp;rdquo; business application&lt;/h3&gt;
-&lt;p&gt;The following video shows you how to create a LiveApps application in 5 minutes to handle &amp;ldquo;Info Cards&amp;rdquo;. The LiveApps Unity package contains a sample using this application.
-The &amp;ldquo;Info Card&amp;rdquo; let you create flash &amp;lsquo;cards&amp;rsquo; about any topic by entering a category, a name, a description and by uploading a picture associated with the card.
-In our example we are creating &amp;lsquo;cards&amp;rsquo; about animals.
-The Unity sample Scene connect to your LiveApps account, retrieves the cards and displays the information including the attached picture.&lt;/p&gt;
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/y0t35A8jtgI&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;h2 id=&#34;how-to-use-the-package&#34;&gt;How to use the package&lt;/h2&gt;
-&lt;h3 id=&#34;import-into-unity3d&#34;&gt;Import into Unity3D&lt;/h3&gt;
-&lt;p&gt;Just created a new Unity Project, configure it for your target, and import the ready to use Package from the &lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Packages/TIBCO-Cloud-LiveApps&#34;&gt;Packages Folder&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;use-the-sample-scene&#34;&gt;Use the Sample scene&lt;/h3&gt;
-&lt;p&gt;The package contains a test scene at
-&lt;i&gt;TIBCOLabs &amp;gt; LiveApps &amp;gt; Sample &amp;gt; BoardScene&lt;/i&gt;&lt;/p&gt;
-&lt;p&gt;The Scene contains a MainController Object.
-In the MainController, you can update the Connection property prefix (default is &amp;ldquo;liveapps&amp;rdquo;). It is used to read properties in the credential file :&lt;/p&gt;
-&lt;p&gt;the credentials must be declared in a file named &amp;ldquo;TIBCO-credentials.txt&amp;rdquo; and placed in a Resources folder. For example in &lt;i&gt;TIBCOLabs &amp;gt; Utils &amp;gt; Resources&lt;/i&gt;.&lt;/p&gt;
-&lt;p&gt;The file must contain [prefix].username, [prefix].password and [prefix].clientid with the values from your TIBCO Cloud™ Subscription Details&lt;/p&gt;
-&lt;p&gt;The package contains a sample credential file for you to copy.&lt;/p&gt;
-&lt;p&gt;On the script BoardViewController.cs attached to the main controller check that &amp;ldquo;LiveApps App Name&amp;rdquo; matches the name of the LiveApps application you have created. The default is &amp;ldquo;Info Card&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;When playing the BoardScene in unity Editor, you should see the data retrieved from LiveApps application in the form of cards :&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;LiveAppsUnityEditor.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
-&lt;br&gt;&lt;sup&gt;TIBCO LiveApps cases in Unity Editor&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;The sample application is creating a Card for &amp;ldquo;ant&amp;rdquo; if the card does not exist so you can see how to create LiveApps cases and attach documents.&lt;/p&gt;
-&lt;h2 id=&#34;api-details&#34;&gt;API details&lt;/h2&gt;
-&lt;h3 id=&#34;connection-to-liveapps&#34;&gt;connection to LiveApps&lt;/h3&gt;
-&lt;p&gt;Just add TIBCOLiveAppsConnector script in your scene and set the credentials to be connected to your LiveApps instance.&lt;/p&gt;
-&lt;p&gt;Create a controller script by extending &amp;ldquo;TIBCOLiveAppsHandler&amp;rdquo;.
-Have a look at the sample &lt;i&gt;BoardViewController&lt;/i&gt;.&lt;/p&gt;
-&lt;p&gt;ConnectionReady is invoke when the connector successfully connects to LiveApps.&lt;/p&gt;
-&lt;p&gt;The connector object has the following public methods :&lt;/p&gt;
-&lt;h3 id=&#34;read-liveapps-cases&#34;&gt;read LiveApps cases&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;public void GetAllCases(string applicationName, string stateName, string searchString, bool getArtifacts = false, Action&lt;CaseInfoWrapper&gt; onComplete=null)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;To get a list all cases in a LiveApps application,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;in the given state if state is not null.&lt;/li&gt;
-&lt;li&gt;matching the searchString if not null&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Use either a state or a searchString but not both.&lt;/p&gt;
-&lt;p&gt;&lt;i&gt;retrieveDocuments&lt;/i&gt; : true to get artifacts ie documents and images associated with the cases.&lt;/p&gt;
-&lt;p&gt;The implementation is asynchronous and will call the onComplete callback on completion. The callback has a parameter of type &lt;i&gt;CaseInfoWrapper&lt;/i&gt; holding the cases.&lt;/p&gt;
-&lt;p&gt;You may check the structures in &lt;i&gt;TIBCOLiveAppsConnector.cs&lt;/i&gt;&lt;/p&gt;
-&lt;p&gt;To Manipulate the case data easily create a class representing the LiveApps case information. in our example we are using :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public class ElementData
-  {
-    public string Name;
-    public string Description;
-    public UnityEngine.Texture2D texture;
-  }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We have the 2 fields from LiveApps application and we have added a texture to store the first document of type image.&lt;/p&gt;
-&lt;p&gt;In the OnCase callback you can create instances from the CaseInfoWrapper data :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;foreach (CaseInfo item in data.items) {
-  ElementData card = JsonUtility.FromJson&amp;lt;ElementData&amp;gt;(item.casedata);
-  ...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;create-a-liveapps-case&#34;&gt;create a LiveApps case&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;public void CreateCase(string applicationName, System.Object data, string creatorName = null, Action&lt;ActionResponse&gt; onComplete = null)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;See the sample on how to create the data object.&lt;/p&gt;
-&lt;p&gt;If the creatorName is null, the connector will use the first creator.&lt;/p&gt;
-&lt;p&gt;The onComplete callback has an &lt;i&gt;ActionResponse&lt;/i&gt; parameter.&lt;/p&gt;
-&lt;h3 id=&#34;attach-a-document-to-an-existing-case-instance&#34;&gt;attach a document to an existing case instance&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;public void AttachDocument(string caseReference, string documentName, string description, byte[] data, string mimeType,Action onComplete=null)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
-&lt;p&gt;Tested with Microsoft Hololens, Android Smartphones and Unity Editor on Windows 10.&lt;/p&gt;
-&lt;h2 id=&#34;used-versions&#34;&gt;Used Versions&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Unity (2019.4.10f1)&lt;/li&gt;
-&lt;li&gt;Unity AR Foundations (3.1.0)&lt;/li&gt;
-&lt;li&gt;Unity AR Subsystem (3.1.0)&lt;/li&gt;
-&lt;li&gt;Unity ARCore XR Plugin (3.1.0)&lt;/li&gt;
-&lt;li&gt;Android 10&lt;/li&gt;
-&lt;li&gt;Google Pixel XL&lt;/li&gt;
-&lt;li&gt;Microsoft Hololens V2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
-&lt;p&gt;git repositories :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Packages/TIBCO-Cloud-LiveApps&#34;&gt;Package&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/TIBCOSoftware/Augmented-Reality/tree/master/Unity/_Editor/TIBCO-Cloud-LiveApps&#34;&gt;Source&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
       </description>
     </item>
