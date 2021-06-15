@@ -17,15 +17,10 @@ namespace TIBCO.InfoCard
         public Text Name;
         public Text Description;
 
-
         public SpriteRenderer spriteRenderer;
-
 
         [HideInInspector]
         public ElementData data;
-
-
-
   
         /**
          * Set the display data for this element based on the given parsed JSON data
@@ -51,9 +46,6 @@ namespace TIBCO.InfoCard
 
             }
             
-            
-
-     
 
             // Set our name so the container can alphabetize
              transform.parent.name = data.info.Name;

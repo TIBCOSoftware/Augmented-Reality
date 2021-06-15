@@ -152,9 +152,11 @@ namespace TIBCO.LABS.LIVEAPPS
 
         // public enum EnumRegion  { US, EU, AU }
         public const string DOMAIN = "liveapps";
-        private string clientID; // 
-        private string userEmail;
-        private string password;
+        private string userEmail; // CIC User email
+        private string method; // oauth || password
+        private string oauth; // CIC oAuth Key
+        private string password; // user pass
+        private string clientID; // CIC Org .Client ID
         private string regionSelected;
         private string apiDomain;
 
@@ -167,14 +169,13 @@ namespace TIBCO.LABS.LIVEAPPS
         void Start()
         {
 
-
             TextAsset asset = Resources.Load<TextAsset>(LIVEAPPS_PROPS_FILE);
             if (null == asset)
             {
                 throw new System.Exception(LIVEAPPS_PROPS_FILE + " file missing in Resources folder.");
             }
 
-            Debug.Log("Credential " + asset.text);
+            //Debug.Log("Credential " + asset.text);
             var props = new Dictionary<string, string>();
             foreach (var row in asset.text.Split('\n'))
             {
@@ -194,6 +195,8 @@ namespace TIBCO.LABS.LIVEAPPS
 
             }
             userEmail = props[ConnectionPropertyPrefix + ".user"];
+            method = props[ConnectionPropertyPrefix + ".method"];
+            oauth = props[ConnectionPropertyPrefix + ".oauth"];
             password = props[ConnectionPropertyPrefix + ".password"];
             clientID = props[ConnectionPropertyPrefix + ".clientID"];
             regionSelected = props[ConnectionPropertyPrefix + ".region"];
@@ -207,17 +210,17 @@ namespace TIBCO.LABS.LIVEAPPS
                     break;
             }
 
-
-            StartCoroutine(Login());
-            Debug.Log("LiveApps login");
-
-        }
-        void Update()
-        {
-            // Debug.Log(".");
+            if (method=="password")
+            {
+                Debug.Log("LiveApps login ...");
+                StartCoroutine(Login());
+            } else
+            {
+                Debug.Log("directly GetSandbox ...");
+                StartCoroutine(skipLogin());
+            }
         }
         #endregion
-
 
         IEnumerator Login()
         {
@@ -243,32 +246,21 @@ namespace TIBCO.LABS.LIVEAPPS
                 {
                     OnReady();
                 }
-
             }
             else
             {
                 Debug.Log("Login to LiveApps failed.");
             }
-
-
-
         }
-        protected virtual IEnumerator RunAfterLogin()
-        {
-            yield return null;
-        }
-        IEnumerator GetSandbox()
-        {
-            string SANDBOX_URL = string.Format("https://{0}.cloud.tibco.com/organisation/sandboxes?$filter=type eq Production", apiDomain);
-            UnityWebRequest uwr = UnityWebRequest.Get(SANDBOX_URL);
-            uwr.SetRequestHeader("Cookie", tsc);
-            uwr.SetRequestHeader("Cookie", domain);
-            yield return uwr.SendWebRequest();
-            string resultString = uwr.downloadHandler.text;
 
-            var sandbox = JsonUtility.FromJson<SandboxInfoWrapper>("{ \"items\" :" + resultString + "}");
-            sandboxId = sandbox.items[0].id;
-            Debug.Log("sandbox id : " + sandbox.items[0].id);
+        IEnumerator skipLogin()
+        {
+                yield return StartCoroutine(GetSandbox());
+                Debug.Log("LiveApps connected");
+                if (OnReady != null)
+                {
+                    OnReady();
+                }
         }
 
         private void extractCookie(UnityWebRequest uwr)
@@ -279,14 +271,46 @@ namespace TIBCO.LABS.LIVEAPPS
             domain = cookies.Substring(cookies.LastIndexOf("domain")).Split(';')[0];
             Debug.Log("domain " + domain);
         }
+
+        protected virtual IEnumerator RunAfterLogin()
+        {
+            yield return null;
+        }
+        IEnumerator GetSandbox()
+        {
+            string SANDBOX_URL = string.Format("https://{0}.cloud.tibco.com/organisation/sandboxes?$filter=type eq Production", apiDomain);
+            UnityWebRequest uwr = UnityWebRequest.Get(SANDBOX_URL);
+            if (method == "password")
+            {
+                uwr.SetRequestHeader("Cookie", tsc);
+                uwr.SetRequestHeader("Cookie", domain);
+            } else
+            {
+                uwr.SetRequestHeader("Authorization", "Bearer " + oauth);
+            }
+            yield return uwr.SendWebRequest();
+            string resultString = uwr.downloadHandler.text;
+
+            var sandbox = JsonUtility.FromJson<SandboxInfoWrapper>("{ \"items\" :" + resultString + "}");
+            sandboxId = sandbox.items[0].id;
+            Debug.Log("sandbox id : " + sandbox.items[0].id);
+        }
+
         protected IEnumerator GetApplicationInfo(string applicationName)
         {
             ApplicationInfo application = null;
             // Get states, actions, creators
             string TYPES_URL = string.Format("https://{0}.cloud.tibco.com/case/types?$sandbox={1}&$select=b,ac,c,s&$filter=applicationName eq '{2}'", apiDomain, sandboxId, applicationName);
             UnityWebRequest uwr = UnityWebRequest.Get(TYPES_URL);
-            uwr.SetRequestHeader("Cookie", tsc);
-            uwr.SetRequestHeader("Cookie", domain);
+            if (method == "password")
+            {
+                uwr.SetRequestHeader("Cookie", tsc);
+                uwr.SetRequestHeader("Cookie", domain);
+            }
+            else
+            {
+                uwr.SetRequestHeader("Authorization", "Bearer " + oauth);
+            }
             yield return uwr.SendWebRequest();
             string resultString = uwr.downloadHandler.text;
 
@@ -303,12 +327,8 @@ namespace TIBCO.LABS.LIVEAPPS
                 Debug.Log(appList.errorMsg);
                 yield return null;
             }
-
-
-
-
-
         }
+
         public void GetAllCases(string applicationName, string stateName, string searchString, bool getArtifacts = false, Action<CaseInfoWrapper> onComplete=null)
         {
 
@@ -396,16 +416,21 @@ namespace TIBCO.LABS.LIVEAPPS
             string CASES_URL = string.Format("https://{0}.cloud.tibco.com/case/cases?$sandbox={1}&$select=c,cr&$filter=applicationId eq {2} and typeId eq 1 {3}{4}&$top=100", apiDomain, sandboxId, applicationId, stateCriteria, searchCriteria);
             Debug.Log("get cases : " + CASES_URL);
             UnityWebRequest uwr = UnityWebRequest.Get(CASES_URL);
-            uwr.SetRequestHeader("Cookie", tsc);
-            uwr.SetRequestHeader("Cookie", domain);
+            if (method == "password")
+            {
+                uwr.SetRequestHeader("Cookie", tsc);
+                uwr.SetRequestHeader("Cookie", domain);
+            }
+            else
+            {
+                uwr.SetRequestHeader("Authorization", "Bearer " + oauth);
+            }
             yield return uwr.SendWebRequest();
             string resultString = uwr.downloadHandler.text;
             Debug.Log("cases response : " + resultString);
             caseList = JsonUtility.FromJson<CaseInfoWrapper>("{ \"items\" :" + resultString + "}");
 
             yield return caseList;
-
-
         }
 
         protected IEnumerator GetCaseArtifacts(string caseReference)
@@ -416,14 +441,20 @@ namespace TIBCO.LABS.LIVEAPPS
 
             string CASES_URL = string.Format("https://{0}.cloud.tibco.com/webresource/caseFolders/{1}/artifacts?$sandbox={2}", apiDomain, caseReference, sandboxId);
             UnityWebRequest uwr = UnityWebRequest.Get(CASES_URL);
-            uwr.SetRequestHeader("Cookie", tsc);
-            uwr.SetRequestHeader("Cookie", domain);
+            if (method == "password")
+            {
+                uwr.SetRequestHeader("Cookie", tsc);
+                uwr.SetRequestHeader("Cookie", domain);
+            }
+            else
+            {
+                uwr.SetRequestHeader("Authorization", "Bearer " + oauth);
+            }
             yield return uwr.SendWebRequest();
             string resultString = uwr.downloadHandler.text;
             Debug.Log("artifact response : " + resultString);
             if (!resultString.Contains("errorCode"))
             {
-
                 try
                 {
                     artifactList = JsonUtility.FromJson<ArtifactInfoWrapper>("{ \"items\" :" + resultString + "}");
@@ -435,18 +466,23 @@ namespace TIBCO.LABS.LIVEAPPS
             }
 
             yield return artifactList;
-
-
         }
+
         protected IEnumerator GetArtifact(string caseReference, string artifactName)
         {
             Debug.Log("LiveApps GetArtifact " + caseReference + " " + artifactName);
 
-
             string TYPES_URL = string.Format("https://{0}.cloud.tibco.com/webresource/folders/{1}/{2}/{3}", apiDomain, caseReference, sandboxId, artifactName);
             UnityWebRequest uwr = UnityWebRequest.Get(TYPES_URL);
-            uwr.SetRequestHeader("Cookie", tsc);
-            uwr.SetRequestHeader("Cookie", domain);
+            if (method == "password")
+            {
+                uwr.SetRequestHeader("Cookie", tsc);
+                uwr.SetRequestHeader("Cookie", domain);
+            }
+            else
+            {
+                uwr.SetRequestHeader("Authorization", "Bearer " + oauth);
+            }
             yield return uwr.SendWebRequest();
             Debug.Log("doc " + uwr.downloadHandler);
             string resultString = uwr.downloadHandler.text;
@@ -456,6 +492,7 @@ namespace TIBCO.LABS.LIVEAPPS
             // return as string -> should test the mimeType !
             yield return resultString;
         }
+
         protected IEnumerator GetArtifactAsTexture(string caseReference, ArtifactInfo artifact)
         {
             Debug.Log("LiveApps GetArtifact " + caseReference + " " + artifact.name);
@@ -463,11 +500,17 @@ namespace TIBCO.LABS.LIVEAPPS
 
             string TYPES_URL = string.Format("https://{0}.cloud.tibco.com/webresource/folders/{1}/{2}/{3}", apiDomain, caseReference, sandboxId, artifact.name);
             UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(TYPES_URL);
-            uwr.SetRequestHeader("Cookie", tsc);
-            uwr.SetRequestHeader("Cookie", domain);
+            if (method == "password")
+            {
+                uwr.SetRequestHeader("Cookie", tsc);
+                uwr.SetRequestHeader("Cookie", domain);
+            }
+            else
+            {
+                uwr.SetRequestHeader("Authorization", "Bearer " + oauth);
+            }
             yield return uwr.SendWebRequest();
             Debug.Log("doc " + uwr.downloadHandler);
-
 
             if (uwr.isNetworkError || uwr.isHttpError)
             {
@@ -479,11 +522,10 @@ namespace TIBCO.LABS.LIVEAPPS
             }
             yield return myTexture;
         }
+
         public void CreateCase(string applicationName, System.Object data, string creatorName = null, Action<ActionResponse> onComplete = null)
         {
-           
             StartCoroutine(AsyncCreateCase(applicationName, data, creatorName, onComplete));
-          
         }
         protected IEnumerator AsyncCreateCase(string applicationName, System.Object data, string creatorName = null, Action<ActionResponse> onComplete = null)
         {
@@ -529,10 +571,6 @@ protected IEnumerator _CreateCase(string applicationName, System.Object data, st
                 applicationsMap.Add(applicationName, application);
             } catch (ArgumentException) { }
             
-           
-
-            
-
 
             ActionInfo action= application.creators[0];
             if (creatorName != null)
@@ -558,8 +596,15 @@ protected IEnumerator _CreateCase(string applicationName, System.Object data, st
                 uwr.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(body));
                 uwr.downloadHandler = new DownloadHandlerBuffer();
                 uwr.SetRequestHeader("Content-Type", "application/json");
-                uwr.SetRequestHeader("Cookie", tsc);
-                uwr.SetRequestHeader("Cookie", domain);
+                if (method == "password")
+                {
+                    uwr.SetRequestHeader("Cookie", tsc);
+                    uwr.SetRequestHeader("Cookie", domain);
+                }
+                else
+                {
+                    uwr.SetRequestHeader("Authorization", "Bearer " + oauth);
+                }
                 uwr.SetRequestHeader("Accept", "application/json");
                 yield return uwr.SendWebRequest();
 
@@ -574,9 +619,6 @@ protected IEnumerator _CreateCase(string applicationName, System.Object data, st
             {
                 yield return null;
             }
-
-
-
         }
 
         protected IEnumerator PostAction(ApplicationInfo application, CaseInfo casedata, string actionName)
@@ -601,8 +643,15 @@ protected IEnumerator _CreateCase(string applicationName, System.Object data, st
                 uwr.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(body));
                 uwr.downloadHandler = new DownloadHandlerBuffer();
                 uwr.SetRequestHeader("Content-Type", "application/json");
-                uwr.SetRequestHeader("Cookie", tsc);
-                uwr.SetRequestHeader("Cookie", domain);
+                if (method == "password")
+                {
+                    uwr.SetRequestHeader("Cookie", tsc);
+                    uwr.SetRequestHeader("Cookie", domain);
+                }
+                else
+                {
+                    uwr.SetRequestHeader("Authorization", "Bearer " + oauth);
+                }
                 uwr.SetRequestHeader("Accept", "application/json");
                 yield return uwr.SendWebRequest();
 
@@ -618,9 +667,8 @@ protected IEnumerator _CreateCase(string applicationName, System.Object data, st
             }
 
             //yield return StartCoroutine(getAllCases(applicationName));
-
-
         }
+
         public void AttachDocument(string caseReference, string documentName, string description, byte[] data, string mimeType,Action onComplete=null)
         {
             
@@ -637,10 +685,17 @@ protected IEnumerator _CreateCase(string applicationName, System.Object data, st
             form.AddBinaryData("artifactContents", data, documentName, mimeType);
 
             UnityWebRequest uwr = UnityWebRequest.Post(ACTION_URL, form);
-            
-           // uwr.method = "POST";
-            uwr.SetRequestHeader("Cookie", tsc);
-            uwr.SetRequestHeader("Cookie", domain);
+
+            // uwr.method = "POST";
+            if (method == "password")
+            {
+                uwr.SetRequestHeader("Cookie", tsc);
+                uwr.SetRequestHeader("Cookie", domain);
+            }
+            else
+            {
+                uwr.SetRequestHeader("Authorization", "Bearer " + oauth);
+            }
             uwr.SetRequestHeader("Accept", "application/json");
 
             yield return uwr.SendWebRequest();

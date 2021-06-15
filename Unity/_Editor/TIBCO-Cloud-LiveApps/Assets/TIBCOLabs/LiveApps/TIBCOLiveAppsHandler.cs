@@ -30,19 +30,16 @@ namespace TIBCO.LABS.LIVEAPPS
 
 
 
-
         #region Unity lifecycle
 
         // Web Socket data handler
         void OnEnable()
         {
-           
             connector.OnReady += ConnectionReady;
         }
 
         void OnDisable()
         {
-          
             connector.OnReady -= ConnectionReady;
         }
 

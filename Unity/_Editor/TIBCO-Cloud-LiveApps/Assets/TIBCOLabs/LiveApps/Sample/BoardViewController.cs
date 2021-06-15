@@ -5,9 +5,6 @@ using UnityEngine;
 using UnityEngine.Windows;
 using TIBCO.LABS.LIVEAPPS;
 
-
-
-
 namespace TIBCO.InfoCard
 {
     
@@ -42,7 +39,7 @@ namespace TIBCO.InfoCard
             connector.GetAllCases(LiveAppsAppName, "Active", "", true, OnCaseData); // true to get artifacts ie documents and images
 
         }
-        private  void CreateInfoCard(string category, string name, string description)
+        private void CreateInfoCard(string category, string name, string description)
         {
             InfoCardWrapper card = new InfoCardWrapper();
             
@@ -64,7 +61,7 @@ namespace TIBCO.InfoCard
             //var img = texture.EncodeToPNG();
             byte[] img;
             img =  File.ReadAllBytes(Application.dataPath+ "/TIBCOLabs/LiveApps/Resources/"+TEST_IMAGE_NAME+".jpg");
-                 Debug.Log("img length " + img.Length);
+            Debug.Log("img length " + img.Length);
             connector.AttachDocument(data.caseReference, TEST_IMAGE_NAME+".jpg", "picture", img, "image/jpeg", () =>
             {
                 connector.GetAllCases(LiveAppsAppName, "Active", "", true, OnCaseData);
