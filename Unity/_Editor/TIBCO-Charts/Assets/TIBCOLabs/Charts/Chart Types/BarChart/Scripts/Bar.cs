@@ -37,7 +37,8 @@ public class Bar : MonoBehaviour
 
             if (!centered)
             {
-               transform.position = new Vector3(transform.position.x, transform.parent.position.y - transform.parent.localScale.y/2 + transform.parent.localScale.y * currSize /2, 0);
+               // fix set from z=0 to 'transform.parent.position.z'
+               transform.position = new Vector3(transform.position.x, transform.parent.position.y - transform.parent.localScale.y/2 + transform.parent.localScale.y * currSize /2, transform.parent.position.z);
             }
         }
     }
