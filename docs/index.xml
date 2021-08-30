@@ -35,6 +35,23 @@
     </item>
     
     <item>
+      <title>Blog: CiC Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/06/cic-exploration/</link>
+      <pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/06/cic-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;adding TIBCO Cloud Augmented Reality &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/hololens/cic-exploration/&#34;&gt;Exploration&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;based on Hololens 2 connected to TIBCO Cloud Services.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: May 2021 Explorations</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/05/may-2021-explorations/</link>
       <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
@@ -219,23 +236,6 @@ Next, we started to work with WebXR as well, to support all kind Devices near fu
         &lt;p&gt;check out our Bike &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/hololens/bike-exploration/&#34;&gt;Exploration&lt;/a&gt; for the  international women pro cycling team “Team TIBCO Silicon Valley Bank”&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;based on Hololens 1 connected to TIBCO Cloud Services.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Blog: CiC Exploration</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/1/01/01/cic-exploration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/1/01/01/cic-exploration/</guid>
-      <description>
-        
-        
-        &lt;p&gt;adding TIBCO Cloud Augmented Reality &lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/hololens/cic-exploration/&#34;&gt;Exploration&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;based on Hololens 2 connected to TIBCO Cloud Services.&lt;/p&gt;
 &lt;/blockquote&gt;
 
       </description>
