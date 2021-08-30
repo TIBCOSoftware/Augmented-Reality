@@ -65,6 +65,36 @@
     </item>
     
     <item>
+      <title>Docs: TIBCO Cloud™ Deployment - Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/cic-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/cic-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Simple Web Resource Provisioning App deployment using a AR Expierence that extense your daily Workscreen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;CIC-deploy-AR.png&#34; alt=&#34;alt-text&#34; title=&#34;Image&#34;&gt;
+&lt;br&gt;&lt;sup&gt;CiC App Deployment via Hololens 2&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Just open the Exploration App in Hololens and connect it with your TIBCO intelligence cloud subscription.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;hellip; simple as that!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;benefits&#34;&gt;Benefits&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;simplification of daily work tasks&lt;/li&gt;
+&lt;li&gt;benefits from using augmented reality and keep your computer screen for Apps where it is built for.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;more-details-about-this-exploration&#34;&gt;More Details about this Exploration&lt;/h2&gt;
+&lt;p&gt;check out this YouTube Video&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/zi6Fe88wWLU&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;target-devices&#34;&gt;Target Devices&lt;/h2&gt;
+&lt;p&gt;Tested with Microsoft Hololens V2.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Computer Vision - Exploration</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/computervision-exploration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

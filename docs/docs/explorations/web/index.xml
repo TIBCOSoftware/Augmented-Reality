@@ -84,8 +84,6 @@ All Data is made available to TIBCO Cloud Spotfire using standard Connectors.&lt
 &lt;p&gt;All the data generated is fed into a dashboard which will display the location of all the participants as well as the overall results that identify the top participants.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;ARTwalker-dashboard.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;
 &lt;br&gt;&lt;sup&gt;ARTwalker Dashboard&lt;/sup&gt;&lt;/p&gt;
-&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next?&lt;/h2&gt;
-&lt;p&gt;We plan to extend this early implementation with more features, and run a Challenge with great prices on one of the upcoming &lt;a href=&#34;https://www.tibco.com/events/series/open-source-community-day-ossday&#34;&gt;OSS Community days&lt;/a&gt;. &lt;b&gt;Stay Tuned!&lt;/b&gt;&lt;/p&gt;
 
       </description>
     </item>
