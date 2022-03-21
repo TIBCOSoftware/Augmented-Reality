@@ -14,6 +14,90 @@
     
     
     <item>
+      <title>Docs: IoT Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/iot-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/iot-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;span&gt;&lt;img src=&#34;air-xr.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;&lt;/span&gt;
+&lt;br&gt;&lt;sup&gt;Trolley Demo&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Exploration on a &amp;ldquo;digital twin&amp;rdquo; Experiences.&lt;br&gt;&lt;br&gt;
+Everybody can see at the same time, the same behavior of a moving trolley, including the temperature and vibration, coming from the device itself of from one of the App users.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;All implemented in pure HTML, CSS, and JavaScript&lt;/b&gt;&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;p&gt;Some of the key features and capabilities are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;moving trolley animation&lt;/li&gt;
+&lt;li&gt;user can kick to trolley&lt;/li&gt;
+&lt;li&gt;when 3 times &amp;lsquo;kicked&amp;rsquo; it stops moving&lt;/li&gt;
+&lt;li&gt;incoming FTL message animation&lt;/li&gt;
+&lt;li&gt;updated temperature on the trolley box&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;all working on Mobile Devices, Desktop Browser, inside TIBCO Spotfire Analytics, or even Hololens 2.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;techology-overview&#34;&gt;Techology Overview&lt;/h2&gt;
+&lt;p&gt;This is the architecture behind the application, with all used and connected TIBCO Cloud Components.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;air-ftl.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;
+&lt;br&gt;&lt;sup&gt;Architecture&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hosted-app&#34;&gt;Hosted App&lt;/h3&gt;
+&lt;p&gt;static browser-based Web App hosted on AWS S3 with AWS CloudFront.&lt;/p&gt;
+&lt;h3 id=&#34;messaging&#34;&gt;Messaging&lt;/h3&gt;
+&lt;p&gt;TIBCO Cloud Messaging to allow shared XR/VR/AR Experiences in realtime.&lt;/p&gt;
+&lt;h3 id=&#34;project-air&#34;&gt;Project AIR&lt;/h3&gt;
+&lt;p&gt;The Project based on EdgeX Foundry, filter, and transform messages coming from MQTT, and send/retrieve them as content based messages to and from TIBCO Cloud Messaging - FTL.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Process Mining Exploration</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/pm-exploration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/pm-exploration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;span&gt;&lt;img src=&#34;discover-xr.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;&lt;/span&gt;
+&lt;br&gt;&lt;sup&gt;Diagram Screenshot&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Exploration on browsing Nimbus Folders and Diagrams in XR, VR, AR.&lt;br&gt;
+All Diagrams created by using TIBCO LABS Project Discover, the Process Mining Solution on TIBCO Cloud.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;All implemented in pure HTML, CSS, and JavaScript&lt;/b&gt;&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;p&gt;Some of the key features and capabilities are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;browse folders&lt;/li&gt;
+&lt;li&gt;navigate back to root folders&lt;/li&gt;
+&lt;li&gt;open a diagram&lt;/li&gt;
+&lt;li&gt;select and focus to one flow activity&lt;/li&gt;
+&lt;li&gt;open a specific Diagram via process id in the App URL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;all working on Mobile Devices, Desktop Browser, inside TIBCO Spotfire Analytics, or even Hololens 2.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;techology-overview&#34;&gt;Techology Overview&lt;/h2&gt;
+&lt;p&gt;This is the architecture behind the application, with all used and connected TIBCO Cloud Components.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;xr-realtime-api.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;
+&lt;br&gt;&lt;sup&gt;Architecture&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hosted-app&#34;&gt;Hosted App&lt;/h3&gt;
+&lt;p&gt;static browser-based Web App hosted on AWS S3 with AWS CloudFront.&lt;/p&gt;
+&lt;h3 id=&#34;messaging&#34;&gt;Messaging&lt;/h3&gt;
+&lt;p&gt;TIBCO Cloud Messaging to allow shared XR/VR/AR Experiences in realtime.&lt;/p&gt;
+&lt;h3 id=&#34;integration-layer&#34;&gt;Integration Layer&lt;/h3&gt;
+&lt;p&gt;TIBCO Cloud Integration Flogo micro service listen to events from Messaging and provide feeedback&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;genericResponder.png&#34; style=&#34;height:400px&#34;&gt;&lt;/img&gt;
+&lt;br&gt;&lt;sup&gt;Flogo flow&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;nimbus-api&#34;&gt;Nimbus API&lt;/h3&gt;
+&lt;p&gt;public Cloud API provide access to diagrams and floders.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: WebXR Exploration</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/webxr-exploration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

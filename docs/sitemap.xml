@@ -28,8 +28,16 @@
   </url>
   
   <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/iot-exploration/</loc>
+  </url>
+  
+  <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/hololens/nimbus-exploration/</loc>
     <lastmod>2021-05-05T16:29:25+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/docs/explorations/web/pm-exploration/</loc>
   </url>
   
   <url>
@@ -108,18 +116,33 @@
   </url>
   
   <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2022/03/06/process-mining-explorations/</loc>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2022/02/03/iot-explorations/</loc>
+    <lastmod>2022-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/06/15/june-2021-release/</loc>
     <lastmod>2021-06-15T18:16:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/06/cic-exploration/</loc>
-    <lastmod>2021-08-30T17:12:42+02:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/06/05/cv-explorations/</loc>
+    <lastmod>2021-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/05/may-2021-explorations/</loc>
-    <lastmod>2021-05-05T16:45:08+02:00</lastmod>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/06/cic-exploration/</loc>
+    <lastmod>2021-08-30T17:33:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/05/gamification-explorations/</loc>
+    <lastmod>2021-05-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>

@@ -14,6 +14,40 @@
     
     
     <item>
+      <title>Blog: Process Mining Explorations</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2022/03/06/process-mining-explorations/</link>
+      <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2022/03/06/process-mining-explorations/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Exploration on using Web XR technologies, together with TIBCO LABS Project Discover.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/web/pm-exploration/&#34;&gt;Process Mining Exploration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: IoT Explorations</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2022/02/03/iot-explorations/</link>
+      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2022/02/03/iot-explorations/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Exploration on using Web XR technologies, together with TIBCO LABS Project AIR.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/web/iot-exploration/&#34;&gt;IoT Exploration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: June 2021 Release</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/06/15/june-2021-release/</link>
       <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
@@ -36,6 +70,23 @@
     </item>
     
     <item>
+      <title>Blog: CV Explorations</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/06/05/cv-explorations/</link>
+      <pubDate>Sat, 05 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/06/05/cv-explorations/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Exploration on more using Hololens 2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/hololens/computervision-exploration/&#34;&gt;Hololens and Computer Vision&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: CiC Exploration</title>
       <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/06/cic-exploration/</link>
       <pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate>
@@ -53,17 +104,16 @@
     </item>
     
     <item>
-      <title>Blog: May 2021 Explorations</title>
-      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/05/may-2021-explorations/</link>
+      <title>Blog: Gamification Explorations</title>
+      <link>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/05/gamification-explorations/</link>
       <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/05/may-2021-explorations/</guid>
+      <guid>https://tibcosoftware.github.io/Augmented-Reality/blog/2021/05/05/gamification-explorations/</guid>
       <description>
         
         
-        &lt;p&gt;We started 2021 with 2 Explorations, one using Web AR technologies, and one more using Hololens 2&lt;/p&gt;
+        &lt;p&gt;Exploration, on using Web AR technologies&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/hololens/computervision-exploration/&#34;&gt;Hololens and Computer Vision&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://tibcosoftware.github.io/Augmented-Reality/Augmented-Reality/docs/explorations/web/scansmart-exploration/&#34;&gt;ScanSmart AR Web, for online event gamification&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
