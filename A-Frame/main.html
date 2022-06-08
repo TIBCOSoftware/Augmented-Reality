@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A-Frame: Quest movement and interaction</title>
+    <meta name="description" content="Moving around an A-Frame scene with Quest touch controllers.">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="js/aframe-environment-component.js"></script>
+    <script src="js/controller-listener.js"></script>
+    <script src="js/player-move.js"></script>
+    <script src="js/raycaster-extras.js"></script>
+    <script src="js/tibco/tibco-liveapps.js"></script>
+</head>
+
+<body>
+
+<script>
+// if raycaster is pointing at this object, press trigger to change color
+AFRAME.registerComponent("raycaster-color-change", {
+    init: function ()
+    {
+        this.colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+        this.controllerData = document.querySelector("#controller-data").components["controller-listener"];
+        this.hoverData      = this.el.components["raycaster-target"];
+    },
+
+    tick: function()
+    {
+        if (this.hoverData.hasFocus && this.controllerData.rightTrigger.pressed )
+        {
+            let index = Math.floor( this.colors.length * Math.random() );
+            let color = this.colors[index];
+            this.el.setAttribute("color", color);
+        }
+
+        if (!this.hoverData.hasFocus || this.controllerData.rightTrigger.released)
+        {
+            this.el.setAttribute("color", "#CCCCCC");
+        }
+    }
+});
+
+
+</script>
+
+<a-scene environment="preset: default;" renderer="antialias: true;">
+
+    <a-assets>
+        <img id="gradient" src="images/gradient-fade.png" />
+    </a-assets>
+
+    <a-sky
+        color = "#000337">
+    </a-sky>
+
+    <!-- use a simple mesh for raycasting/navigation -->
+    <a-plane
+        width="100" height="100"
+        rotation="-90 0 0"
+        position="0 0.01 0"
+        visible="false"
+        class="groundPlane"
+        raycaster-target>
+    </a-plane>
+
+    <a-entity
+        id="player"
+        position="0 0 0"
+        player-move="controllerListenerId: #controller-data;
+                     navigationMeshClass: groundPlane;">
+
+        <a-camera></a-camera>
+
+        <a-entity
+            id="controller-data"
+            controller-listener="leftControllerId:  #left-controller;
+                                 rightControllerId: #right-controller;">
+        </a-entity>
+
+        <a-entity
+            id="left-controller"
+            oculus-touch-controls="hand: left">
+        </a-entity>
+
+        <!-- experiment with raycasting interval; slight performance improvement but jittery appearance in world -->
+        <a-entity
+            id="right-controller"
+            oculus-touch-controls="hand: right"
+            raycaster="objects: .raycaster-target; interval: 0;"
+            raycaster-extras="controllerListenerId: #controller-data;
+                              beamImageSrc: #gradient; beamLength: 0.5;">
+        </a-entity>
+
+    </a-entity>
+
+    <a-entity position = "-1 0.5 -3" tibco-liveapps="applicationName:Info Card"></a-entity>
+
+    
+
+    <a-sphere
+        radius = "1.25"
+        position = "0 1.25 -5"
+        color = "#DDBB00"
+        raycaster-target>
+    </a-sphere>
+
+
+
+</a-scene>
+
+</body>
+</html>
