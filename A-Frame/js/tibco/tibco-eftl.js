@@ -1,8 +1,8 @@
 
 AFRAME.registerComponent('tibco-eftl', {
   schema: {
-    URL: {type: 'string'},
-    key: {type: 'string'},
+    URL: {type: 'string', default: EFTL_URL},
+    key: {type: 'string', default: EFTL_KEY},
     matcher: {type: 'string',default: ''}
   },
   init: function () {

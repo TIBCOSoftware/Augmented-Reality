@@ -1,5 +1,5 @@
 
-const authorization = "Bearer CIC~aV4OL21PcLY-2y-TS0dqf2Fz";
+const authorization = CIC_TOKEN;
 
 function requestOptions(authorization) {
   var myHeaders = new Headers();

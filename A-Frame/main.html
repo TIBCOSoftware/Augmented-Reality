@@ -9,6 +9,7 @@
     <script src="js/controller-listener.js"></script>
     <script src="js/player-move.js"></script>
     <script src="js/raycaster-extras.js"></script>
+    <script src="js/tibco/credentials.js"></script>
     <script src="js/tibco/tibco-liveapps.js"></script>
     <script src="js/tibco/eftl.js"></script>
     <script src="js/tibco/tibco-eftl.js"></script>
@@ -18,6 +19,7 @@
 <body>
 
 <script>
+
 // place object on top of an object
 AFRAME.registerComponent('on-top', {
   schema: {
@@ -127,7 +129,7 @@ AFRAME.registerComponent("raycaster-color-change", {
 
     <!--a-entity position = "-1 0.5 -3" tibco-liveapps="applicationName:Info Card; search:Industrial">
   </a-entity-->
-    <a-entity id="eftl" tibco-eftl="URL:wss://tib-sub-01bb7f22mgx01k6mqk0td02dyv-apps.messaging.cloud.tibco.com/channel; key:eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnQiOlsicHViIiwic3ViIl0sImdzYmMiOiJUSUJfU1VCXzAxQkI3RjIyTUdYMDFLNk1RSzBURDAyRFlWIiwiaWF0IjoxNjU2NTk3MTE4LCJyb2xlIjoiQVJUIiwic3ViIjoiODA5OGIyMTgyY2YxNGM1OTkwMTFlZGExODBhZTkyMjMiLCJzdmMiOlsiZWZ0bCJdfQ.D6rHuWGuT9GvT_mn4lcBEmVduKGKlaMWAEVSkfdu9ga3B1bXX1R0lN3p5ZIzdMliLvthH5Diw4mYjW0eklLH1fD6iSAkEYpcfQHTpPZ7QSxhregME4XkJJGRSWUszjUXxSjcXLq6s4k0E7q6-XTIMAA-xmBcqhPA8xQscz12oQw7K3LvRhgSULwfA8lsrBovRdxVJMXSu7CGnKWSuU2rUKHTqlTbKBeIdpd9n5758Rvo6zXDmtYMgi_9rEBiRbNZ3PQlLY_2fByXFhL-3TCbf5L6qs6CQQg2S8UkgfUU-AmakGGGfjYUlBm8lo05fMwH6fu_sph8N45Jqmh3o5WGCA"></a-entity>
+    <a-entity id="eftl" tibco-eftl></a-entity>
 
     <a-entity position = "0 2 -1"  light="type: directional; color: #BBB; target:#light-target; castShadow:true;">
       <a-entity id="light-target" position = "0 -1 -1"></a-entity>
