@@ -127,17 +127,14 @@ AFRAME.registerComponent("raycaster-color-change", {
 
     </a-entity>
 
-    <!--a-entity position = "-1 0.5 -3" tibco-liveapps="applicationName:Info Card; search:Industrial">
-  </a-entity-->
+    <a-entity position = "-1 0.5 -3" tibco-liveapps="applicationName:Info Card; search:Industrial"></a-entity>
     <a-entity id="eftl" tibco-eftl></a-entity>
 
-    <a-entity position = "0 2 -1"  light="type: directional; color: #BBB; target:#light-target; castShadow:true;">
-      <a-entity id="light-target" position = "0 -1 -1"></a-entity>
-    </a-entity>
+    <a-entity position = "1 5 0"  light="type: directional; color: #BBB; target:#table; castShadow:true "></a-entity>
 
 
    <a-box id="table" shadow="receive: true" depth="1" height="1" width="1" position="0 0.5 -2" color="#5c5c5c"></a-box>
-   <a-gltf-model on-top="target:#table" position="0 1 -2"  src="assets/power_box/power_box_01_1k.gltf"></a-gltf-model>
+   <a-gltf-model on-top="target:#table" position="0 1 -2"  src="assets/power_box/power_box_01_1k.gltf" shadow="cast: true;receive: false"></a-gltf-model>
 
    <a-entity position="-1.5 1 -1.5" tibco-eftl-display="eftlListenerId:#eftl"/>
 
