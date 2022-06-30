@@ -1,5 +1,5 @@
 
-const authorization = "<your CIC key>";
+const authorization = "Bearer CIC~aV4OL21PcLY-2y-TS0dqf2Fz";
 
 function requestOptions(authorization) {
   var myHeaders = new Headers();
@@ -22,9 +22,9 @@ async function getApplicationInfo(sandboxId,applicationName, authorization) {
   .then(result =>  JSON.parse(result));
 }
 
-async function getCases(sandboxId,applicationId,authorization) {
+async function getCases(sandboxId,applicationId,search,authorization) {
   return fetch(
-    `/case/cases?$sandbox=${sandboxId}&$filter=applicationId eq ${applicationId} and typeId eq 1&$select=c,cr&$top=100&$search=Animals`,
+    `/case/cases?$sandbox=${sandboxId}&$filter=applicationId eq ${applicationId} and typeId eq 1&$select=c,cr&$top=100&$search=${search}`,
     requestOptions(authorization))
     .then(response => response.text())
     .then(result =>  JSON.parse(result))
@@ -105,7 +105,8 @@ AFRAME.registerComponent('tibco-case', {
 
   AFRAME.registerComponent('tibco-liveapps', {
     schema: {
-      applicationName: {type: 'string'}
+      applicationName: {type: 'string'},
+      search: {type:'string'}
     },
     init: function () {
       var myHeaders = new Headers();
@@ -122,7 +123,7 @@ AFRAME.registerComponent('tibco-case', {
         this.sandboxId = JSON.parse(result)[0].id;
         return getApplicationInfo(this.sandboxId, this.data.applicationName, authorization);
       })
-      .then(info => getCases(this.sandboxId,info[0].applicationId,authorization))
+      .then(info => getCases(this.sandboxId,info[0].applicationId,this.data.search,authorization))
       .then(data => {this.cases = data; this.displayCases()})
       .catch(error => console.log('error', error));
     },

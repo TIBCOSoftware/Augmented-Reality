@@ -12,7 +12,7 @@ namespace TIBCO.LABS.LIVEAPPS
 {
 
 
-    #region API data definition  
+    #region API data definition
     [System.Serializable]
     public class LoginInfo
     {
@@ -100,7 +100,7 @@ namespace TIBCO.LABS.LIVEAPPS
     public class ActionResponse
     {
         public string applicationName; // not in LiveApps API. Added to help the onCaseCreated callback
-        
+
         public string errorMsg;
         public string errorCode;
         public string id;
@@ -318,7 +318,7 @@ namespace TIBCO.LABS.LIVEAPPS
             if (appList.errorMsg == null)
             {
                 application = appList.items[0];
-                
+
 
                 yield return application;
             }
@@ -344,7 +344,7 @@ namespace TIBCO.LABS.LIVEAPPS
                 applicationsMap.Add(applicationName, application);
             }
             catch (ArgumentException) { }
-            
+
 
             routine = _GetApplicationCases(application, stateName, searchString);
             yield return StartCoroutine(routine);
@@ -407,7 +407,7 @@ namespace TIBCO.LABS.LIVEAPPS
             }
 
             var applicationId = application.applicationId;
-            
+
             if ((searchString != null) && (searchString != ""))
             {
                 searchCriteria = string.Format("&$search={0}", searchCriteria); // create the serach criteria
@@ -543,7 +543,7 @@ namespace TIBCO.LABS.LIVEAPPS
                 {
                     Debug.Log("Case created " + caseref.caseReference);
                     caseref.applicationName = applicationName;
-                    
+
                     if (onComplete != null)
                     {
                         onComplete(caseref);
@@ -570,7 +570,7 @@ protected IEnumerator _CreateCase(string applicationName, System.Object data, st
             {
                 applicationsMap.Add(applicationName, application);
             } catch (ArgumentException) { }
-            
+
 
             ActionInfo action= application.creators[0];
             if (creatorName != null)
@@ -585,7 +585,7 @@ protected IEnumerator _CreateCase(string applicationName, System.Object data, st
                 actionRequest.id = action.id;
                 actionRequest.applicationId = application.applicationId;
                 actionRequest.sandboxId = sandboxId;
-                actionRequest.data = JsonUtility.ToJson(data); 
+                actionRequest.data = JsonUtility.ToJson(data);
                 string body = JsonUtility.ToJson(actionRequest);
                 Debug.Log("Post createCase : " + body);
 
@@ -671,17 +671,17 @@ protected IEnumerator _CreateCase(string applicationName, System.Object data, st
 
         public void AttachDocument(string caseReference, string documentName, string description, byte[] data, string mimeType,Action onComplete=null)
         {
-            
+
             StartCoroutine(AsyncAttachDocument( caseReference, documentName, description, data, mimeType, onComplete));
-       
+
         }
         protected IEnumerator AsyncAttachDocument( string caseReference, string documentName, string description, byte[] data, string mimeType, Action onComplete = null)
         {
             string ACTION_URL = string.Format("https://{0}.cloud.tibco.com/webresource/v1/caseFolders/{1}/artifacts/{2}/upload?$sandbox={3}&description={4}", apiDomain,caseReference,documentName,sandboxId,description);
-           
+
             // Create a Web Form
             WWWForm form = new WWWForm();
-           
+
             form.AddBinaryData("artifactContents", data, documentName, mimeType);
 
             UnityWebRequest uwr = UnityWebRequest.Post(ACTION_URL, form);
@@ -699,9 +699,9 @@ protected IEnumerator _CreateCase(string applicationName, System.Object data, st
             uwr.SetRequestHeader("Accept", "application/json");
 
             yield return uwr.SendWebRequest();
-            string resultString = uwr.downloadHandler.text; 
+            string resultString = uwr.downloadHandler.text;
             Debug.Log("Attach document response " + resultString);
-           
+
             //var response = JsonUtility.FromJson<ActionResponse>(resultString);
             if (onComplete != null)
             {

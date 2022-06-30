@@ -1,0 +1,228 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v1.6.16",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0,
+        1
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "power_box_01_door"
+    },
+    {
+      "mesh": 1,
+      "name": "power_box_01_box"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "power_box_01",
+      "normalTexture": {
+        "index": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicRoughnessTexture": {
+          "index": 2
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Plane",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "name": "Cube.002",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ],
+  "images": [
+    {
+      "mimeType": "image/jpeg",
+      "name": "power_box_01_nor_gl_8k",
+      "uri": "textures/power_box_01_nor_gl_1k.jpg"
+    },
+    {
+      "mimeType": "image/jpeg",
+      "name": "power_box_01_diff_8k",
+      "uri": "textures/power_box_01_diff_1k.jpg"
+    },
+    {
+      "mimeType": "image/jpeg",
+      "name": "power_box_01_arm_8k",
+      "uri": "textures/power_box_01_arm_1k.jpg"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1256,
+      "max": [
+        -0.1607396900653839,
+        0.24160124361515045,
+        0.37175601720809937
+      ],
+      "min": [
+        -0.18047532439231873,
+        -0.24546150863170624,
+        0.03987506031990051
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1256,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1256,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 4248,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 19196,
+      "max": [
+        0.1750074177980423,
+        0.251571387052536,
+        0.04702533781528473
+      ],
+      "min": [
+        -0.17049908638000488,
+        -0.251571387052536,
+        -0.04748108983039856
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 19196,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 19196,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 59568,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 15072,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 15072,
+      "byteOffset": 15072
+    },
+    {
+      "buffer": 0,
+      "byteLength": 10048,
+      "byteOffset": 30144
+    },
+    {
+      "buffer": 0,
+      "byteLength": 8496,
+      "byteOffset": 40192
+    },
+    {
+      "buffer": 0,
+      "byteLength": 230352,
+      "byteOffset": 48688
+    },
+    {
+      "buffer": 0,
+      "byteLength": 230352,
+      "byteOffset": 279040
+    },
+    {
+      "buffer": 0,
+      "byteLength": 153568,
+      "byteOffset": 509392
+    },
+    {
+      "buffer": 0,
+      "byteLength": 119136,
+      "byteOffset": 662960
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 782096,
+      "uri": "power_box_01.bin"
+    }
+  ]
+}

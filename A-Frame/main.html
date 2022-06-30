@@ -15,6 +15,35 @@
 <body>
 
 <script>
+// place object on top of an object
+AFRAME.registerComponent('on-top', {
+  schema: {
+    target: {
+      type: 'string'
+    }
+  },
+  init: function() {
+    var el = this.el;
+    var data = this.data;
+    var model = el.object3D;
+    this.target = document.querySelector(this.data.target).object3D;
+    // compute bounding box
+    var bbox = new THREE.Box3().setFromObject(this.target);
+    var dim = bbox.max.sub(bbox.min);
+    this.targetHeight=dim.y;
+    el.addEventListener('model-loaded', function(e) {
+      var obj = this.el.getObject3D('mesh');
+      // compute bounding box
+      var bbox = new THREE.Box3().setFromObject(obj);
+      console.log(bbox.min, bbox.max);
+      var dim = bbox.max.sub(bbox.min);
+      this.el.object3D.position.x = this.target.position.x;
+      this.el.object3D.position.y = this.target.position.y+(this.targetHeight/2)+(dim.y/2);
+      this.el.object3D.position.z = this.target.position.z;
+
+    }.bind(this));
+  }
+});
 // if raycaster is pointing at this object, press trigger to change color
 AFRAME.registerComponent("raycaster-color-change", {
     init: function ()
@@ -44,7 +73,7 @@ AFRAME.registerComponent("raycaster-color-change", {
 
 </script>
 
-<a-scene environment="preset: default;" renderer="antialias: true;">
+<a-scene environment="preset: tron;" renderer="antialias: true;">
 
     <a-assets>
         <img id="gradient" src="images/gradient-fade.png" />
@@ -94,16 +123,21 @@ AFRAME.registerComponent("raycaster-color-change", {
 
     </a-entity>
 
-    <a-entity position = "-1 0.5 -3" tibco-liveapps="applicationName:Info Card"></a-entity>
+    <a-entity position = "-1 0.5 -3" tibco-liveapps="applicationName:Info Card; search:Industrial"></a-entity>
 
-    
+    <a-entity position = "0 2 -1"  light="type: directional; color: #BBB; target:#light-target">
+      <a-entity id="light-target" position = "0 -1 -1"></a-entity>
+    </a-entity>
 
-    <a-sphere
+   <a-gltf-model on-top="target:#table" position = "0 1 -2"  src="assets/power_box/power_box_01_1k.gltf"></a-gltf-model>
+   <a-box id="table" depth="1" height="1" width="1" position="0 0.5 -2" color="#5c5c5c">
+   </a-box>
+    <!--a-sphere
         radius = "1.25"
         position = "0 1.25 -5"
         color = "#DDBB00"
         raycaster-target>
-    </a-sphere>
+    </a-sphere-->
 
 
 
