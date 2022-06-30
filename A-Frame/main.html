@@ -10,6 +10,9 @@
     <script src="js/player-move.js"></script>
     <script src="js/raycaster-extras.js"></script>
     <script src="js/tibco/tibco-liveapps.js"></script>
+    <script src="js/tibco/eftl.js"></script>
+    <script src="js/tibco/tibco-eftl.js"></script>
+    <script src="js/tibco/tibco-eftl-display.js"></script>
 </head>
 
 <body>
@@ -24,22 +27,21 @@ AFRAME.registerComponent('on-top', {
   },
   init: function() {
     var el = this.el;
-    var data = this.data;
-    var model = el.object3D;
-    this.target = document.querySelector(this.data.target).object3D;
-    // compute bounding box
-    var bbox = new THREE.Box3().setFromObject(this.target);
-    var dim = bbox.max.sub(bbox.min);
-    this.targetHeight=dim.y;
+    this.baseObject = document.querySelector(this.data.target).object3D;
+
     el.addEventListener('model-loaded', function(e) {
+      // compute bounding box
+      var box = new THREE.Box3().setFromObject(this.baseObject);
+      var dim = box.max.sub(box.min);
+      this.baseObjectHeight=dim.y;
       var obj = this.el.getObject3D('mesh');
       // compute bounding box
       var bbox = new THREE.Box3().setFromObject(obj);
-      console.log(bbox.min, bbox.max);
+      //console.log(bbox.min, bbox.max);
       var dim = bbox.max.sub(bbox.min);
-      this.el.object3D.position.x = this.target.position.x;
-      this.el.object3D.position.y = this.target.position.y+(this.targetHeight/2)+(dim.y/2);
-      this.el.object3D.position.z = this.target.position.z;
+      this.el.object3D.position.x = this.baseObject.position.x;
+      this.el.object3D.position.y = this.baseObject.position.y+(this.baseObjectHeight/2)+(dim.y/2);
+      this.el.object3D.position.z = this.baseObject.position.z;
 
     }.bind(this));
   }
@@ -123,15 +125,20 @@ AFRAME.registerComponent("raycaster-color-change", {
 
     </a-entity>
 
-    <a-entity position = "-1 0.5 -3" tibco-liveapps="applicationName:Info Card; search:Industrial"></a-entity>
+    <!--a-entity position = "-1 0.5 -3" tibco-liveapps="applicationName:Info Card; search:Industrial">
+  </a-entity-->
+    <a-entity id="eftl" tibco-eftl="URL:wss://tib-sub-01bb7f22mgx01k6mqk0td02dyv-apps.messaging.cloud.tibco.com/channel; key:eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnQiOlsicHViIiwic3ViIl0sImdzYmMiOiJUSUJfU1VCXzAxQkI3RjIyTUdYMDFLNk1RSzBURDAyRFlWIiwiaWF0IjoxNjU2NTk3MTE4LCJyb2xlIjoiQVJUIiwic3ViIjoiODA5OGIyMTgyY2YxNGM1OTkwMTFlZGExODBhZTkyMjMiLCJzdmMiOlsiZWZ0bCJdfQ.D6rHuWGuT9GvT_mn4lcBEmVduKGKlaMWAEVSkfdu9ga3B1bXX1R0lN3p5ZIzdMliLvthH5Diw4mYjW0eklLH1fD6iSAkEYpcfQHTpPZ7QSxhregME4XkJJGRSWUszjUXxSjcXLq6s4k0E7q6-XTIMAA-xmBcqhPA8xQscz12oQw7K3LvRhgSULwfA8lsrBovRdxVJMXSu7CGnKWSuU2rUKHTqlTbKBeIdpd9n5758Rvo6zXDmtYMgi_9rEBiRbNZ3PQlLY_2fByXFhL-3TCbf5L6qs6CQQg2S8UkgfUU-AmakGGGfjYUlBm8lo05fMwH6fu_sph8N45Jqmh3o5WGCA"></a-entity>
 
-    <a-entity position = "0 2 -1"  light="type: directional; color: #BBB; target:#light-target">
+    <a-entity position = "0 2 -1"  light="type: directional; color: #BBB; target:#light-target; castShadow:true;">
       <a-entity id="light-target" position = "0 -1 -1"></a-entity>
     </a-entity>
 
-   <a-gltf-model on-top="target:#table" position = "0 1 -2"  src="assets/power_box/power_box_01_1k.gltf"></a-gltf-model>
-   <a-box id="table" depth="1" height="1" width="1" position="0 0.5 -2" color="#5c5c5c">
-   </a-box>
+
+   <a-box id="table" shadow="receive: true" depth="1" height="1" width="1" position="0 0.5 -2" color="#5c5c5c"></a-box>
+   <a-gltf-model on-top="target:#table" position="0 1 -2"  src="assets/power_box/power_box_01_1k.gltf"></a-gltf-model>
+
+   <a-entity position="-1.5 1 -1.5" tibco-eftl-display="eftlListenerId:#eftl"/>
+
     <!--a-sphere
         radius = "1.25"
         position = "0 1.25 -5"
