@@ -1,5 +1,11 @@
 
+/*
+* define credentials information
+*
+*/
 
-const CIC_TOKEN = "your CIC token";
-const EFTL_URL = "EFTL wss url";
-const EFTL_KEY = "EFTL authorization key";
+const credentials = {
+  "CIC_TOKEN": "your CIC token",
+  "EFTL_URL": "EFTL wss url",
+  "EFTL_KEY": "EFTL authorization key"
+}

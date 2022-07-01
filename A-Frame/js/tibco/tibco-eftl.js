@@ -1,14 +1,19 @@
 
 AFRAME.registerComponent('tibco-eftl', {
   schema: {
-    URL: {type: 'string', default: EFTL_URL},
-    key: {type: 'string', default: EFTL_KEY},
+    URL: {type: 'string', default: "EFTL_URL1"},
+    key: {type: 'string', default: "EFTL_KEY1"},
     matcher: {type: 'string',default: ''}
   },
   init: function () {
-    console.log(` Login with ${this.data.key}`);
-    eFTL.connect(this.data.URL, {
-      password: this.data.key,
+
+    const URL = credentials[this.data.URL];
+    const key = credentials[this.data.key];
+    if (URL === undefined) { throw (`${this.data.URL} is not defined in credentials.js`)};
+    if (key === undefined) { throw (`${this.data.key} is not defined in credentials.js`)};
+    console.log(` Login with \n${this.data.key} = ${key} \n${this.data.URL} = ${URL} `);
+    eFTL.connect(URL, {
+      password: key,
       clientId: 'art-'+(Math.random()*100000000).toString(),
       onConnect: function(connection) {
         console.log('Connected to TIBCO Cloud Messaging');

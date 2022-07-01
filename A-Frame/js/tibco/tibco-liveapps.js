@@ -1,5 +1,6 @@
 
-const authorization = CIC_TOKEN;
+const authorization = credentials["CIC_TOKEN"];
+if (authorization === undefined) { throw (`CIC_TOKEN is not defined in credentials.js`)};
 
 function requestOptions(authorization) {
   var myHeaders = new Headers();
