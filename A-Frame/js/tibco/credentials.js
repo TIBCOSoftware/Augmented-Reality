@@ -5,7 +5,7 @@
 */
 
 const credentials = {
-  "CIC_TOKEN": "Bearer CIC~aV4OL21PcLY-2y-TS0dqf2Fz",
-  "EFTL_URL": "wss://tib-sub-01bb7f22mgx01k6mqk0td02dyv-apps.messaging.cloud.tibco.com/channel",
-  "EFTL_KEY": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnQiOlsicHViIiwic3ViIl0sImdzYmMiOiJUSUJfU1VCXzAxQkI3RjIyTUdYMDFLNk1RSzBURDAyRFlWIiwiaWF0IjoxNjU2NTk3MTE4LCJyb2xlIjoiQVJUIiwic3ViIjoiODA5OGIyMTgyY2YxNGM1OTkwMTFlZGExODBhZTkyMjMiLCJzdmMiOlsiZWZ0bCJdfQ.D6rHuWGuT9GvT_mn4lcBEmVduKGKlaMWAEVSkfdu9ga3B1bXX1R0lN3p5ZIzdMliLvthH5Diw4mYjW0eklLH1fD6iSAkEYpcfQHTpPZ7QSxhregME4XkJJGRSWUszjUXxSjcXLq6s4k0E7q6-XTIMAA-xmBcqhPA8xQscz12oQw7K3LvRhgSULwfA8lsrBovRdxVJMXSu7CGnKWSuU2rUKHTqlTbKBeIdpd9n5758Rvo6zXDmtYMgi_9rEBiRbNZ3PQlLY_2fByXFhL-3TCbf5L6qs6CQQg2S8UkgfUU-AmakGGGfjYUlBm8lo05fMwH6fu_sph8N45Jqmh3o5WGCA"
+  "CIC_TOKEN": "your CIC token",
+  "EFTL_URL": "EFTL wss url",
+  "EFTL_KEY": "EFTL authorization key"
 }
