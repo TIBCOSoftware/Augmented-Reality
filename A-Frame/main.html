@@ -36,13 +36,14 @@ AFRAME.registerComponent('on-top', {
       var box = new THREE.Box3().setFromObject(this.baseObject);
       var dim = box.max.sub(box.min);
       this.baseObjectHeight=dim.y;
+      this.baseObjecTop=box.max.y;
       var obj = this.el.getObject3D('mesh');
       // compute bounding box
       var bbox = new THREE.Box3().setFromObject(obj);
       //console.log(bbox.min, bbox.max);
       var dim = bbox.max.sub(bbox.min);
       this.el.object3D.position.x = this.baseObject.position.x;
-      this.el.object3D.position.y = this.baseObject.position.y+(this.baseObjectHeight/2)+(dim.y/2);
+      this.el.object3D.position.y = this.baseObjecTop - bbox.min.y;
       this.el.object3D.position.z = this.baseObject.position.z;
 
     }.bind(this));
@@ -74,18 +75,28 @@ AFRAME.registerComponent("raycaster-color-change", {
     }
 });
 
+AFRAME.registerComponent("robot-arm", {
+    init: function ()
+    {
+      var forearm = document.createElement('a-gltf-model');
+      forearm.setAttribute('src', `assets/arm/forearm.gltf`);
+      forearm.setAttribute('shadow',"cast: true;receive: false");
+      forearm.object3D.position.z = 0.4;
+      forearm.object3D.position.x = 0.0;
+      forearm.object3D.position.y = 0.0;
+      this.el.appendChild(forearm);
+    }
+});
+
 
 </script>
 
-<a-scene environment="preset: tron;" renderer="antialias: true;">
+<a-scene environment="preset: tron;dressing: none" renderer="antialias: true;">
+
 
     <a-assets>
         <img id="gradient" src="images/gradient-fade.png" />
     </a-assets>
-
-    <a-sky
-        color = "#000337">
-    </a-sky>
 
     <!-- use a simple mesh for raycasting/navigation -->
     <a-plane
@@ -127,15 +138,23 @@ AFRAME.registerComponent("raycaster-color-change", {
 
     </a-entity>
 
-    <a-entity position = "-1 0.5 -3" tibco-liveapps="applicationName:Info Card; search:Industrial"></a-entity>
+    <a-entity  id="liveapps" tibco-liveapps="applicationName:Info Card; search:Industrial"></a-entity>
+    <a-entity  tibco-liveapps-display="liveappsLoaderId:#liveapps;attr:Name;equals:Power Box" position = "-1 0.5 -3"></a-entity>
+
     <a-entity id="eftl" tibco-eftl="URL:EFTL_URL;key:EFTL_KEY"></a-entity>
 
     <a-entity position = "1 5 0"  light="type: directional; color: #BBB; target:#table; castShadow:true "></a-entity>
 
 
-   <a-box id="table" shadow="receive: true" depth="1" height="1" width="1" position="0 0.5 -2" color="#5c5c5c"></a-box>
-   <a-gltf-model on-top="target:#table" position="0 1 -2"  src="assets/power_box/power_box_01_1k.gltf" shadow="cast: true;receive: false"></a-gltf-model>
-
+   <!--a-box id="table" shadow="receive: true" depth="1" height="1" width="1" position="0 0.5 -2" color="#284a9e"></a-box-->
+   <a-cylinder id="table1" shadow="receive: true" color="#284a9e" height="1" radius="0.5" position="0 0.5 -2"></a-cylinder>
+   <a-gltf-model on-top="target:#table1"  src="assets/power_box/power_box_01_1k.gltf" shadow="cast: true;receive: false">
+  </a-gltf-model>
+   <a-cylinder id="table2" shadow="receive: true" color="#284a9e" height="1" radius="0.5" position="2 0.5 -2"></a-cylinder>
+   <a-gltf-model on-top="target:#table2"  src="assets/arm/arm.glb" shadow="cast: true;receive: false"></a-gltf-model>
+   <a-cylinder id="table3" shadow="receive: true" color="#284a9e" height="1" radius="0.5" position="-2 0.5 -2"></a-cylinder>
+   <a-entity robot-arm on-top="target:#table3" ></a-entity>
+   <!--a-gltf-model on-top="target:#table"  src="assets/extinguisher/extinguisher.gltf" shadow="cast: true;receive: false"></a-gltf-model-->
    <a-entity position="-1.5 1 -1.5" tibco-eftl-display="eftlListenerId:#eftl"/>
 
     <!--a-sphere
