@@ -4,7 +4,7 @@ if (authorization === undefined) { throw (`CIC_TOKEN is not defined in credentia
 
 function requestOptions(authorization) {
   var myHeaders = new Headers();
-  myHeaders.append("Authorization", authorization);
+  myHeaders.append("Authorization", "Bearer "+authorization);
 
   var requestOptions = {
     method: 'GET',
@@ -156,7 +156,7 @@ async function getCases(sandboxId,applicationId,search,authorization) {
     },
     init: function () {
       var myHeaders = new Headers();
-      myHeaders.append("Authorization", authorization);
+      myHeaders.append("Authorization", "Bearer "+authorization);
       this.cases = [];
       var requestOptions = {
         method: 'GET',
