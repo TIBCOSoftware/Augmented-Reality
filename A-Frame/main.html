@@ -14,6 +14,7 @@
     <script src="js/tibco/eftl.js"></script>
     <script src="js/tibco/tibco-eftl.js"></script>
     <script src="js/tibco/tibco-eftl-display.js"></script>
+    <script src="js/robot-arm.js"></script>
 </head>
 
 <body>
@@ -78,45 +79,7 @@ AFRAME.registerComponent("raycaster-color-change", {
     }
 });
 
-AFRAME.registerComponent("robot-arm", {
-    init: function ()
-    {
-      var base = document.createElement('a-gltf-model');
-      base.setAttribute('src', `assets/arm/arm-01.glb`);
-      //base.setAttribute('shadow',"cast: true;receive: false");
-      base.object3D.position.z = 0.0;
-      base.object3D.position.x = 0.0;
-      base.object3D.position.y = 0.0;
-      var rotating = document.createElement('a-gltf-model');
-      rotating.setAttribute('src', `assets/arm/arm-02.glb`);
-      //rotating.setAttribute('shadow',"cast: true;receive: false");
-      rotating.object3D.position.z = 0.0;
-      rotating.object3D.position.x = 0.0;
-      rotating.object3D.position.y = 0.35;
 
-      var connecting = document.createElement('a-gltf-model');
-      connecting.setAttribute('src', `assets/arm/arm-connecting.gltf`);
-      //connecting.setAttribute('shadow',"cast: true;receive: false");
-
-      connecting.object3D.position.x = -0.17;
-      connecting.object3D.position.y = 0.25;
-      connecting.object3D.position.z = 0.0;
-
-      var forearm = document.createElement('a-gltf-model');
-      forearm.setAttribute('src', `assets/arm/arm-04.glb`);
-      //forearm.setAttribute('shadow',"cast: true;receive: false");
-
-      forearm.object3D.position.x = 0.0;
-      forearm.object3D.position.y = 0.817;
-      forearm.object3D.position.z = 0.0;
-      //this.el.appendChild(forearm);
-      rotating.appendChild(connecting);
-      connecting.appendChild(forearm);
-      base.appendChild(rotating);
-      this.el.appendChild(base);
-
-    }
-});
 
 
 </script>
@@ -183,7 +146,12 @@ AFRAME.registerComponent("robot-arm", {
    <a-cylinder id="table2" shadow="receive: true" color="#284a9e" height="1" radius="0.5" position="2 0.5 -2"></a-cylinder>
    <a-gltf-model on-top="target:#table2"  src="assets/arm/arm-connecting.gltf" shadow="cast: true;receive: false"></a-gltf-model>
    <a-cylinder id="table3" shadow="receive: true" color="#284a9e" height="1" radius="0.5" position="-2 0.5 -2"></a-cylinder>
-   <a-entity robot-arm on-top="target:#table3" shadow="cast: true;receive: false"></a-entity>
+   <a-entity robot-arm="baserotation:0;armrotation:-45;forearmrotation:0"
+   animation="property: robot-arm.baserotation; from:0;to:360; dur:10000; easing:linear; loop:true"
+   animation__2="property: robot-arm.armrotation; from:-30;to:45; dur:4000; dir:alternate; easing:linear; loop:true"
+   animation__3="property: robot-arm.forearmrotation; from:-45;to:15; dur:5000; dir:alternate; easing:linear; loop:true"
+   on-top="target:#table3" shadow="cast: true;receive: false">
+ </a-entity>
    <!--a-gltf-model on-top="target:#table"  src="assets/extinguisher/extinguisher.gltf" shadow="cast: true;receive: false"></a-gltf-model-->
    <a-entity position="-1.5 1 -1.5" tibco-eftl-display="eftlListenerId:#eftl"/>
 
