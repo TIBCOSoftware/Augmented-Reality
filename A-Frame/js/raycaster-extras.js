@@ -96,7 +96,7 @@ AFRAME.registerComponent('raycaster-extras', {
 
         // change color of beam when interacting with trigger or grip button ==================================
 
-        if ( this.controllerData.rightTrigger.pressing || this.controllerData.rightGrip.pressing )
+        if ( this.controllerData.leftTrigger.pressing || this.controllerData.leftGrip.pressing )
             this.beamEntity.object3D.children[0].material.color = this.beamColorActive; // setAttribute("material", "color", "cyan");
         else
             this.beamEntity.object3D.children[0].material.color = this.beamColorDefault; // setAttribute("material", "color", this.data.beamColor);
@@ -185,7 +185,7 @@ AFRAME.registerComponent('raycaster-extras', {
         // grab element =====================================================================================
 
 
-        if ( this.controllerData.rightGrip.pressed &&
+        if ( this.controllerData.leftGrip.pressed &&
              this.focusedElement != null && this.grabbedElement == null )
         {
             // if it can be grabbed...

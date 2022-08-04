@@ -5,7 +5,7 @@ AFRAME.registerComponent("player-move", {
         // the id of the element with constroller listener component attached
         controllerListenerId:  {type: 'string', default: "#controller-data"},
         // the id of the element with raycaster attached, for teleport movement
-        raycasterId:           {type: 'string', default: "#right-controller"},
+        raycasterId:           {type: 'string', default: "#left-controller"},
         navigationMeshClass:   {type: 'string', default: "navMesh"},
         teleportEnabled:       {type: 'boolean', default: true},
         motionEnabled:         {type: 'boolean', default: true},
@@ -111,7 +111,7 @@ AFRAME.registerComponent("player-move", {
             this.navTarget2.object3D.scale.set( 1-this.t, 1-this.t, 1 );
             this.navTarget2.object3D.children[0].material.opacity = this.alpha;
 
-            if (this.controllerData.rightTrigger.pressed && !this.fadeInProgress)
+            if (this.controllerData.leftTrigger.pressed && !this.fadeInProgress)
             {
                 // fade out, then set position, then fade back in
                 this.fadeSphere.object3D.visible = true;

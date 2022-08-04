@@ -7,10 +7,26 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 	<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="js/aframe-environment-component.js"></script>
-    <script src="js/controller-listener.js"></script>
+
+    <!-- hand tracking -->
+    <script src="js/ht/pinchable.js"></script>
+    <script src="js/ht/color-change.js"></script>
+    <script src="js/ht/slider.js"></script>
+    <script src="js/ht/size-change.js"></script>
+    <script src="js/ht/button.js"></script>
+    <script src="js/ht/menu.js"></script>
+    <script src="js/ht/pressable.js"></script>
+    <script src="js/ht/event-manager.js"></script>
+
+   <!-- other components -->
+   <script src="js/utils.js"></script>
+   <script src="js/raycaster-extras.js"></script>
+
+    <!-- movenment components -->
+    <script src="js/controller-listener-left.js"></script>
     <script src="js/player-move.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/raycaster-extras.js"></script>
+
+    <!-- tibco components -->
     <script src="js/tibco/credentials.js"></script>
     <script src="js/tibco/tibco-liveapps.js"></script>
     <script src="js/tibco/eftl.js"></script>
@@ -18,6 +34,9 @@
 
     <script src="js/tibco/tibco-eftl-display.js"></script>
     <script src="js/robot-arm.js"></script>
+
+
+
 </head>
 
 <body>
@@ -33,7 +52,7 @@
     <!-- use a simple mesh for raycasting/navigation -->
     <a-plane
         width="100" height="100"
-        rotation="-90 0 0"
+        rotation="0 0 0"
         position="0 0.01 0"
         visible="false"
         class="groundPlane"
@@ -50,27 +69,34 @@
 
         <a-entity
             id="controller-data"
-            controller-listener="leftControllerId:  #left-controller;
-                                 rightControllerId: #right-controller;">
+            controller-listener="leftControllerId:  #left-controller;">
         </a-entity>
 
         <a-entity
             id="left-controller"
-            oculus-touch-controls="hand: left">
+            oculus-touch-controls="hand: left"
+                raycaster="objects: .raycaster-target; interval: 0;"
+                raycaster-extras="controllerListenerId: #controller-data;
+                beamImageSrc: #gradient; beamLength: 0.5;">
         </a-entity>
 
         <!-- experiment with raycasting interval; slight performance improvement but jittery appearance in world -->
-        <a-entity
+        <!--a-entity
             id="right-controller"
             oculus-touch-controls="hand: right"
-            raycaster="objects: .raycaster-target; interval: 0;"
-            raycaster-extras="controllerListenerId: #controller-data;
-                              beamImageSrc: #gradient; beamLength: 0.5;">
-        </a-entity>
+                raycaster="objects: .raycaster-target; interval: 0;"
+                raycaster-extras="controllerListenerId: #controller-data;
+                beamImageSrc: #gradient; beamLength: 0.5;">
+        </a-entity-->
 
-		<a-camera>
+        <!-- Hand tracking minimals -->
+        <!--a-entity hand-tracking-controls="hand: left"></a-entity-->
+        <a-entity hand-tracking-controls="hand: right"></a-entity>
+
+        <!-- Look at cursor-->
+		<!--a-camera>
 			<a-cursor></a-cursor>
-		</a-camera>
+		</a-camera-->
 
     </a-entity>
 
@@ -79,8 +105,9 @@
 
     <a-entity id="eftl" tibco-eftl="URL:EFTL_URL;key:EFTL_KEY"></a-entity>
 
-    <a-entity position = "1 5 0"  light="type: directional; color: #BBB; target:#table; castShadow:true "></a-entity>
+    <a-entity position = "1 5 0"  light="type: directional; color: #BBB; target:#table1; castShadow:true "></a-entity>
 
+    <!-- look at obj-->
 	<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"
            event-set__enter="_event: mouseenter; color: #8FF7FF"
            event-set__leave="_event: mouseleave; color: #4CC3D9"></a-box>
@@ -94,11 +121,11 @@
    <a-gltf-model on-top="target:#table2"  src="assets/arm/arm-connecting.gltf" shadow="cast: true;receive: false"></a-gltf-model>
    <a-cylinder id="table3" shadow="receive: true" color="#284a9e" height="1" radius="0.5" position="-2 0.5 -2"></a-cylinder>
    <a-entity robot-arm="baserotation:0;armrotation:-45;forearmrotation:0"
-   animation="property: robot-arm.baserotation; from:0;to:360; dur:10000; easing:linear; loop:true"
-   animation__2="property: robot-arm.armrotation; from:-30;to:45; dur:4000; dir:alternate; easing:linear; loop:true"
-   animation__3="property: robot-arm.forearmrotation; from:-45;to:15; dur:5000; dir:alternate; easing:linear; loop:true"
-   on-top="target:#table3" shadow="cast: true;receive: false">
- </a-entity>
+        animation="property: robot-arm.baserotation; from:0;to:360; dur:10000; easing:linear; loop:true"
+        animation__2="property: robot-arm.armrotation; from:-30;to:45; dur:4000; dir:alternate; easing:linear; loop:true"
+        animation__3="property: robot-arm.forearmrotation; from:-45;to:15; dur:5000; dir:alternate; easing:linear; loop:true"
+        on-top="target:#table3" shadow="cast: true;receive: false">
+  </a-entity>
    <!--a-gltf-model on-top="target:#table"  src="assets/extinguisher/extinguisher.gltf" shadow="cast: true;receive: false"></a-gltf-model-->
    <a-entity position="-1.5 1 -1.5" tibco-eftl-display="eftlListenerId:#eftl"/>
 
@@ -110,6 +137,46 @@
     </a-sphere-->
 
 
+
+    <!-- hand tracking -->
+        <a-entity
+            id="boxGeometry"
+            position="1 1 -1"
+            rotation="45 45 0"
+            geometry="primitive: box; height: 0.6; width: 0.6; depth: 0.6"
+            material="color: #ff4b5c"
+            size-change
+            scale="0.5 0.5 0.5"
+        ></a-entity>
+        <a-entity
+            id="torusGeometry"
+            position="1 1 -1"
+            rotation="45 45 0"
+            geometry="primitive: torus; radius: 0.4; radius-tubular: 0.06"
+            material="color: #d2e603"
+            size-change
+            visible="false"
+            scale="0.5 0.5 0.5"
+        ></a-entity>
+        <a-entity
+            id="sphereGeometry"
+            position="1 1 -1"
+            rotation="45 45 0"
+            geometry="primitive: sphere; radius: 0.6;"
+            material="color: #fcdab7"
+            size-change
+            visible="false"
+            scale="0.5 0.5 0.5"
+        ></a-entity>
+        <a-entity id="menu" menu position="1.5 0.1 1" rotation="-45 0 0" event-manager>
+            <a-entity slider position="0 0.10 0"></a-entity>
+            <a-entity id="sphereButton" button="label: sphere" position="-0.15 0 0"></a-entity>
+            <a-entity id="boxButton" button="label: box" position="0 0 0"></a-entity>
+            <a-entity id="torusButton"button="label: torus" position="0.15 0 0"></a-entity>
+            <a-entity id="darkModeButton" button="label: Dark Mode; width: 0.20; toggable: true" position="0 -0.10 0"></a-entity>
+        </a-entity> 
+
+      
 
 </a-scene>
 
