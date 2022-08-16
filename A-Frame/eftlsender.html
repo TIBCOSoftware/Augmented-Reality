@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<script src="js/tibco/eftl.js"></script>
+<script src="js/tibco/credentials.js"></script>
+<script>
+
+  var eftl_connection;
+  eFTL.connect(credentials.EFTL_URL, {
+    password: credentials.EFTL_KEY,
+    clientId: 'art-'+(Math.random()*100000000).toString(),
+    onConnect: function(connection) {
+      console.log('Connected to TIBCO Cloud Messaging');
+      eftl_connection = connection;
+      // Disconnect when navigating away.
+      //
+      window.addEventListener('unload', function() {
+        eftl_connection.disconnect();
+      });
+    },
+    onDisconnect: function(connection, code, reason) {
+      console.log('Disconnected: ' + reason);
+    },
+  });
+</script>
+<body>
+
+  <h1>Send to EFTL</h1>
+
+  <form name="eftl" >
+
+    <textarea name="json" rows="5" cols="60" name="text" placeholder="Enter text"></textarea>
+    <br>
+    <input type="submit" value="Send">
+  </form>
+
+  <p>Click the "Submit" button and the form-data will be sent to a page on the
+    server called "action_page.php".</p>
+
+  </body>
+  <script>
+    var form = document.forms['eftl'];
+    form.onsubmit = function(e) {
+      e.preventDefault();
+      var json = form.json.value;
+      const obj = JSON.parse(json);
+      var message = new eFTLMessage();
+      message.set("type","message");
+      for (var k in obj) {
+        message.set(k,obj[k]);
+      }
+      eftl_connection.publish(message);
+    }
+
+  </script>
+  </html>
